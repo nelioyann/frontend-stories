@@ -1,16 +1,16 @@
+require('dotenv').config()
 const { Client } = require("@notionhq/client");
 const fs = require("fs");
 
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
-const DATABASE_ID = "623dfa60b8e64eeca34b06d2207a0aff";
-const PAGE_ID = "8b07763d79ed45bebbdeecae10128ec4";
+const DATABASE_ID = process.env.DATABASE_ID;
 
-async function makeMeAJSON(input) {
+async function makeMeAJSON(input, path = "./pages.json") {
   // convert JSON object to a string
   const data = JSON.stringify(input, null, 4);
 
   // write file to disk
-  fs.writeFile("./output.json", data, "utf8", (err) => {
+  fs.writeFile(path, data, "utf8", (err) => {
     if (err) {
       console.log(`Error writing file: ${err}`);
     } else {
@@ -24,13 +24,25 @@ const notion = new Client({
   auth: NOTION_TOKEN,
 });
 
-async function readDatabase() {
+async function readDatabase(database_id) {
   console.log("Reading database...");
   try {
     const response = await notion.databases.query({
-      database_id: DATABASE_ID,
+      database_id,
     });
     console.log(JSON.stringify(response));
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function readDatabasePagesId(database_id) {
+  console.log("Reading database...");
+  try {
+    const response = await notion.databases.query({
+      database_id,
+    });
+    return response.results.map((result) => result.id);
   } catch (error) {
     console.log(error);
   }
@@ -53,46 +65,63 @@ async function readProperty(page_id, property_id) {
       page_id,
       property_id,
     });
-    return sanitizeProperty(response, response.type);
-
+    return await sanitizeProperty(response, response.type);
   } catch (error) {
     console.log(error);
   }
 }
 
-function sanitizeProperty(response, property_type) {
+async function sanitizeProperty(response, property_type) {
   switch (property_type) {
     case "created_time":
       return response.created_time;
     case "multi_select":
       return response.multi_select;
     case "property_item":
-      return sanitizePropertyItem(response, response.property_item.type);
+      return await sanitizePropertyItem(response, response.property_item.type);
   }
 }
 
-function sanitizePropertyItem(response, propertyItem_type) {
+async function sanitizePropertyItem(response, propertyItem_type) {
   switch (propertyItem_type) {
     case "title":
       return response.results[0].title.plain_text;
     case "rich_text":
-      return response.results[0].rich_text.plain_text;
+      if(response.results.length > 0) {
+        return response.results[0].rich_text.plain_text;
+      } else {
+        return "";
+      }
     case "relation":
-      return response.results;
+      return response.results.map((reference) => reference.relation.id);
     default:
-      return response;
+      return "something went wrong";
   }
 }
 
 async function readPageExtended(page_id) {
   let page = await readPage(page_id);
-  let { properties } = page;
-  let extended_page = {};
+  let { properties, url } = page;
+  console.log(url);
+  let extended_page = { id: page_id, url };
   for (let key in properties) {
-    let property = await readProperty(PAGE_ID, properties[key].id);
-    extended_page[key] = property;
+    let property = await readProperty(page_id, properties[key].id);
+    extended_page[key.toLowerCase()] = property;
   }
-  makeMeAJSON(extended_page);
   return extended_page;
 }
-readPageExtended(PAGE_ID);
+
+
+
+async function fetchDatabase(database_id) {
+  let database_data = [];
+  let pagesId = await readDatabasePagesId(database_id);
+  for (let pageId of pagesId) {
+    let page_data = await readPageExtended(pageId);
+    database_data.push(page_data);
+  }
+  makeMeAJSON(database_data, "./src/_data/database.json");
+}
+
+fetchDatabase(DATABASE_ID);
+
