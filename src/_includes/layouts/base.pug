@@ -1,7 +1,12 @@
 doctype html
 html(lang="en")
-    body
-        main
+    include ../partials/head.pug
+    body(data-layout="cover")
+        include ../partials/header.pug
+        main(data-props="centered")
+            b #{title}
+            p #{description}
             ol
                 for page, i in database
                     li #{page.name}
+        include ../partials/footer.pug
