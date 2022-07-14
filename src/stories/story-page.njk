@@ -1,0 +1,49 @@
+---
+title: One story
+pagination: 
+    data: stories
+    size: 1
+    alias: story
+    addAllPagesToCollections: true
+permalink: false
+tags: 
+    - story-cover
+---
+
+{% extends "layouts/base.njk" %}
+{% block content %}
+    <article data-layout="cover box" data-props="x:start">
+        <ul>
+            {%- for category in story.categories %}
+                <li>{{ category.name }}</li>
+            {% endfor -%}
+        </ul>
+        <div data-props="centered">
+            <div data-layout="stack">
+                <h1>{{ story.name }}</h1>
+                <p>{{ story.description }}</p>
+            </div>
+        </div>
+        <nav
+            aria-labelledby="{{ story.id }}">
+            <b id="{{ story.id }}">Pagination</b>
+            <ol data-layout="cluster" data-props="x:between">
+                <li>
+                    {% if pagination.href.previous %}
+                        <a href="{{ pagination.href.previous }}">Previous</a>
+                        {% else %}Previous{% endif %}
+                </li>
+                {# {%- for pageEntry in pagination.pages %}
+                                                                    <li>
+                                                                        <a href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" {% endif %}>Page {{ loop.index }}</a>
+                                                                    </li>
+                                                                {%- endfor %} #}
+                <li>
+                    {% if pagination.href.next %}
+                        <a href="{{ pagination.href.next }}">Next</a>
+                        {% else %}Next{% endif %}
+                </li>
+            </ol>
+        </nav>
+    </article>
+{% endblock %}

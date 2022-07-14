@@ -98,7 +98,7 @@ h6 {
   /* Custom pairs */
   --space-m-2xl: clamp(1.5rem, calc(0.68rem + 4.09vw), 3.75rem);
 
-  --measure: 100ch;
+  --measure: 80ch;
 
   --border-thin: 1px;
   --border-thick: 4px;
@@ -440,6 +440,8 @@ h3 {
 }
 p, li{
   color: var(--gray-700);
+  max-width: var(--measure);
+  
 }
 
 ::-webkit-scrollbar {

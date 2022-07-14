@@ -120,7 +120,7 @@ async function fetchDatabase(database_id) {
     let page_data = await readPageExtended(pageId);
     database_data.push(page_data);
   }
-  makeMeAJSON(database_data, "./src/_data/database.json");
+  makeMeAJSON(database_data, "./src/_data/stories.json");
 }
 
 fetchDatabase(DATABASE_ID);
