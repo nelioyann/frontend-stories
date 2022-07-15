@@ -471,3 +471,56 @@ p, li{
   background: var(--gray-700);
 }
 
+
+
+
+
+/* CUSTOMS */
+:root{
+  --page-top: 192px;
+  --header-height: 44px;
+  --layer-header: 3;
+}
+main{
+  padding-top: var(--page-top);
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: var(--layer-header);
+  /* padding: 0 24px; */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-200);
+}
+.header:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--background, var(--color-light));
+  z-index: -1;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  mix-blend-mode: dark-plus;
+}
+.header a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* max-width: var(--content-width);
+  margin: 0 auto 0 var(--page-left); */
+}
+.header-bg {
+  position: absolute;
+  top: -1000px;
+  left: 0;
+  width: 100%;
+  height: calc(1000px + var(--page-top));
+  z-index: calc(var(--layer-header) + 1);
+}
+.header-bg{
+  background: var(--color-light);
+}

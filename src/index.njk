@@ -3,7 +3,8 @@ layout: layouts/home.njk
 title: Homepage
 description: Front stories with references
 ---
-<ul data-layout="stack" data-props="space:s">
+<p>{{title}}</p>
+<ul data-layout="stack box" data-props="space:s noBorder">
     {%- for card in collections.card -%}
         {{card.templateContent | safe}}
     {%- endfor -%}

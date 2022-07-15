@@ -1,5 +1,5 @@
 ---
-title: One story
+title: Story
 pagination: 
     data: stories
     size: 1
@@ -9,9 +9,10 @@ tags:
     - cover
 permalink: stories/{{story.name | slugify}}/
 ---
-
+{# TODO: Change to another layout where the header is not present #}
 {% extends "layouts/base.njk" %}
 {% block content %}
+    {# <p>{{ title }}</p> #}
     <article data-layout="cover box" data-props="x:start">
         <ul>
             {%- for category in story.categories %}
@@ -24,8 +25,7 @@ permalink: stories/{{story.name | slugify}}/
                 <p>{{ story.description }}</p>
             </div>
         </div>
-        <nav
-            aria-labelledby="{{ story.id }}">
+        <nav aria-labelledby="{{ story.id }}">
             <b id="{{ story.id }}">Pagination</b>
             <ol data-layout="cluster" data-props="x:between">
                 <li>
@@ -33,7 +33,6 @@ permalink: stories/{{story.name | slugify}}/
                         <a href="{{ pagination.href.previous }}">Previous</a>
                         {% else %}Previous{% endif %}
                 </li>
-
                 <li>
                     {% if pagination.href.next %}
                         <a href="{{ pagination.href.next }}">Next</a>
