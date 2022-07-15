@@ -5,9 +5,9 @@ pagination:
     size: 1
     alias: story
     addAllPagesToCollections: true
-permalink: false
 tags: 
-    - story-cover
+    - cover
+permalink: stories/{{story.name | slugify}}/
 ---
 
 {% extends "layouts/base.njk" %}
@@ -33,11 +33,7 @@ tags:
                         <a href="{{ pagination.href.previous }}">Previous</a>
                         {% else %}Previous{% endif %}
                 </li>
-                {# {%- for pageEntry in pagination.pages %}
-                                                                    <li>
-                                                                        <a href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" {% endif %}>Page {{ loop.index }}</a>
-                                                                    </li>
-                                                                {%- endfor %} #}
+
                 <li>
                     {% if pagination.href.next %}
                         <a href="{{ pagination.href.next }}">Next</a>

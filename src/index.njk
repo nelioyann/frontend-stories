@@ -3,12 +3,8 @@ layout: layouts/home.njk
 title: Homepage
 description: Front stories with references
 ---
-
-<ul>
-    {%- for story in stories -%}
-        {% set url = ["/stories/", story.name | slugify] | join %}
-        <li>
-            <a href="{{ url }}">{{ story.name }}</a>
-        </li>
+<ul data-layout="stack" data-props="space:s">
+    {%- for card in collections.card -%}
+        {{card.templateContent | safe}}
     {%- endfor -%}
 </ul>

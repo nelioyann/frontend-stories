@@ -307,6 +307,9 @@ h6 {
 [data-props~="x:end"] {
   --horizontal-alignment: flex-end;
 }
+[data-props~="x:stretch"] {
+  --horizontal-alignment: stretch;
+}
 
 [data-props~="y:center"] {
   --vertical-alignment: center;
@@ -319,6 +322,9 @@ h6 {
 }
 [data-props~="y:end"] {
   --vertical-alignment: flex-end;
+}
+[data-props~="y:stretch"] {
+  --vertical-alignment: stretch;
 }
 
 [data-props~="space:0"] {
@@ -417,7 +423,7 @@ button:hover {
 }
 :where(button, a):where(:not(:active)):focus-visible {
   outline-offset: 5px;
-  box-shadow: 0 0 0 0.2rem var(--color-focus-shadow);
+  /* box-shadow: 0 0 0 0.2rem var(--color-focus-shadow); */
 }
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
