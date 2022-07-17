@@ -1,4 +1,4 @@
-require('dotenv').config()
+require("dotenv").config();
 const { Client } = require("@notionhq/client");
 const fs = require("fs");
 
@@ -14,7 +14,7 @@ async function makeMeAJSON(input, path = "./pages.json") {
     if (err) {
       console.log(`Error writing file: ${err}`);
     } else {
-      console.log(`File is written successfully!`);
+      console.log(`File is written successfully! to ${path}`);
     }
   });
 }
@@ -23,6 +23,7 @@ async function makeMeAJSON(input, path = "./pages.json") {
 const notion = new Client({
   auth: NOTION_TOKEN,
 });
+notion;
 
 async function readDatabase(database_id) {
   console.log("Reading database...");
@@ -87,41 +88,60 @@ async function sanitizePropertyItem(response, propertyItem_type) {
     case "title":
       return response.results[0].title.plain_text;
     case "rich_text":
-      if(response.results.length > 0) {
+      if (response.results.length > 0) {
         return response.results[0].rich_text.plain_text;
       } else {
         return "";
       }
     case "relation":
-      return response.results.map((reference) => reference.relation.id);
+      let relation_pageIds = response.results.map(
+        (reference) => reference.relation.id
+      );
+      // let properties_id = ["title"];
+      let relation_pages = [];
+      for (let pageId of relation_pageIds) {
+        let name = await readProperty(pageId, "title");
+        let url = await readProperty(pageId, "URL");
+        let summary = await readProperty(pageId, "Summary");
+        let page = { name, url, summary };
+        relation_pages.push(page);
+      }
+      console.log({relation_pages});
+      return relation_pages;
+      // return relation_pages;
     default:
       return "something went wrong";
   }
 }
 
 async function readPageExtended(page_id) {
-  let page = await readPage(page_id);
-  let { properties, url } = page;
-  console.log(url);
-  let extended_page = { id: page_id, url };
-  for (let key in properties) {
-    let property = await readProperty(page_id, properties[key].id);
-    extended_page[key.toLowerCase()] = property;
+  try {
+    let page = await readPage(page_id);
+    let { properties, url } = page;
+    console.log(url);
+    let extended_page = { id: page_id, url };
+    for (let key in properties) {
+      let property = await readProperty(page_id, properties[key].id);
+      extended_page[key.toLowerCase()] = property;
+    }
+    return extended_page;
+  } catch (error) {
+    console.log(error);
   }
-  return extended_page;
 }
 
-
-
 async function fetchDatabase(database_id) {
-  let database_data = [];
-  let pagesId = await readDatabasePagesId(database_id);
-  for (let pageId of pagesId) {
-    let page_data = await readPageExtended(pageId);
-    database_data.push(page_data);
+  try {
+    let database_data = [];
+    let pagesId = await readDatabasePagesId(database_id);
+    for (let pageId of pagesId) {
+      let page_data = await readPageExtended(pageId);
+      database_data.push(page_data);
+    }
+    makeMeAJSON(database_data, "./src/_data/stories.json");
+  } catch (error) {
+    console.log(error);
   }
-  makeMeAJSON(database_data, "./src/_data/stories.json");
 }
 
 fetchDatabase(DATABASE_ID);
-
