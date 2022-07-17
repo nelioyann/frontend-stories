@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+    <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
+        <aside data-layout="stack">
+            <a aria-hidden data-heading="5" href="/">{{ title }}</a>
+            <nav data-layout="stack">
+                <a href="#summary">Overview</a>
+                <a href="#reference">Further reading</a>
+                <a href="#related">Related</a>
+            </nav>
+        </aside>
+        <article>
+            {{ content | safe }}
+        </article>
+    </div>
+    {# </article> #}
+{% endblock %}

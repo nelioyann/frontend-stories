@@ -1,11 +1,6 @@
 ---
 layout: layouts/home.njk
-title: Homepage
-description: Front stories with references
+title: Frontend Stories
+description: Welcome to Frontend Stories, a collection of referenced frontend guidelines! Browse the cards below to learn more
+    about the guidelines.
 ---
-<p>{{title}}</p>
-<ul data-layout="stack box" data-props="space:s noBorder">
-    {%- for card in collections.card -%}
-        {{card.templateContent | safe}}
-    {%- endfor -%}
-</ul>
