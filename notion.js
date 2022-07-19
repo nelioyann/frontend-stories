@@ -119,7 +119,7 @@ async function readPageExtended(page_id) {
     let page = await readPage(page_id);
     let { properties, url } = page;
     console.log(url);
-    let extended_page = { id: page_id, url };
+    let extended_page = { id: page_id };
     for (let key in properties) {
       let property = await readProperty(page_id, properties[key].id);
       extended_page[key.toLowerCase()] = property;

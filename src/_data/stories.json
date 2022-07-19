@@ -1,8 +1,7 @@
 [
     {
         "id": "4d5f6034-ef65-4200-95e5-9be8c35119d3",
-        "url": "https://www.notion.so/Avoid-replacing-a-standard-file-picker-with-a-drag-and-drop-interface-4d5f6034ef65420095e59be8c35119d3",
-        "references": [
+                "references": [
             {
                 "name": "Form design patterns",
                 "summary": ""
@@ -20,8 +19,7 @@
     },
     {
         "id": "a6aad506-d98f-46d8-b3a9-274ec9be5f5d",
-        "url": "https://www.notion.so/Do-not-disable-submit-buttons-until-the-form-becomes-valid-a6aad506d98f46d8b3a9274ec9be5f5d",
-        "references": [
+                "references": [
             {
                 "name": "Inclusive Components",
                 "summary": ""
@@ -43,8 +41,7 @@
     },
     {
         "id": "81a0658a-8a75-45e7-ad98-b7dc6a61f41b",
-        "url": "https://www.notion.so/Do-not-use-radio-buttons-and-checkboxes-interchangeably-81a0658a8a7545e7ad98b7dc6a61f41b",
-        "references": [
+                "references": [
             {
                 "name": "Checkboxes Are Never Round—Daniel De Laney",
                 "summary": "Interactive things have perceived affordances; the way they look tells us what they do and how to use them. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull."
@@ -62,8 +59,7 @@
     },
     {
         "id": "b2b908c7-f185-4b07-a6f2-3745550fbc85",
-        "url": "https://www.notion.so/Always-give-icons-a-text-label-b2b908c7f1854b07a6f23745550fbc85",
-        "references": [
+                "references": [
             {
                 "name": "The best icon is a text label — Thomas Byttebier",
                 "summary": "What good has a beautiful interface if it’s unclear? Hence it’s simple: only use an icon if its message is a 100% clear to everyone. Never give in."
@@ -85,8 +81,7 @@
     },
     {
         "id": "1407ac21-afe7-476d-9e9b-5f3567631902",
-        "url": "https://www.notion.so/Avoid-displaying-dropdown-menus-on-hover-1407ac21afe7476d9e9b5f3567631902",
-        "references": [
+                "references": [
             {
                 "name": "Form Design Patterns - Hover vs Click",
                 "summary": "Relying on hover to trigger menu violate a principle of Include Design as the user lose control of an interaction potentially unintentional. Moreover, such an interaction only works on desktop which produces incomparable experiences between users, and a bad one for those with motor impairments."
@@ -104,8 +99,7 @@
     },
     {
         "id": "f566b2dd-daa0-4684-9791-8ac5e34fbbbd",
-        "url": "https://www.notion.so/Always-provide-a-feedback-status-when-the-waiting-time-is-above-2-seconds-f566b2dddaa0468497918ac5e34fbbbd",
-        "references": [
+                "references": [
             {
                 "name": "A Study on Tolerable Waiting Time: How Long Are Web Users Willing to Wait?",
                 "summary": ""
@@ -127,8 +121,7 @@
     },
     {
         "id": "2bcc6f76-572c-48d3-9994-216f85eba96d",
-        "url": "https://www.notion.so/Communicate-with-users-after-a-significant-redesign-2bcc6f76572c48d39994216f85eba96d",
-        "references": [],
+                "references": [],
         "description": "When you significantly change a commonly used task flow to improve efficiency, it is critical to provide clear feedback to minimize the chance that users will automatically do it the old way.",
         "categories": [
             {
@@ -141,8 +134,7 @@
     },
     {
         "id": "88292fe0-cd93-4bb9-8761-1bf0df55d1df",
-        "url": "https://www.notion.so/Present-information-visually-rather-than-textually-88292fe0cd934bb987611bf0df55d1df",
-        "references": [
+                "references": [
             {
                 "name": "Imagery Vs Text. Which does the brain prefer?",
                 "summary": "we look at pictures and videos regularly and we consume them more quickly than we do text."
@@ -160,8 +152,7 @@
     },
     {
         "id": "684eaf0f-09fe-4114-8894-1ae2f8095f74",
-        "url": "https://www.notion.so/Avoid-unicode-characters-on-social-media-and-blog-posts-684eaf0f09fe411488941ae2f8095f74",
-        "references": [
+                "references": [
             {
                 "name": "Using voiceover with unicode characters is a nightmare",
                 "summary": "Reminder, for those "
@@ -179,8 +170,7 @@
     },
     {
         "id": "45ac45d6-d05a-4795-8779-223ef319ad51",
-        "url": "https://www.notion.so/Validate-data-entry-when-the-user-moves-to-the-next-field-45ac45d6d05a47958779223ef319ad51",
-        "references": [
+                "references": [
             {
                 "name": "Inline Validation in Web Forms – A List Apart",
                 "summary": "There’s some evidence to show that"
@@ -198,8 +188,7 @@
     },
     {
         "id": "76828bfb-303f-4b44-b91a-053ced589202",
-        "url": "https://www.notion.so/Use-custom-error-messages-to-describe-what-went-wrong-76828bfb303f4b44b91a053ced589202",
-        "references": [
+                "references": [
             {
                 "name": "Karl Sabino on the ROI of well designed error messages | 90 Percent Of Everything",
                 "summary": "One study showed that "
@@ -217,8 +206,7 @@
     },
     {
         "id": "8b07763d-79ed-45be-bbde-ecae10128ec4",
-        "url": "https://www.notion.so/Do-not-use-input-placeholders-for-storing-labels-or-hints-8b07763d79ed45bebbdeecae10128ec4",
-        "references": [
+                "references": [
             {
                 "name": "Don’t Put Hints Inside Text Boxes in Web Forms :: UXmatters",
                 "summary": "Don’t use placeholders to store labels or hints"
@@ -240,8 +228,7 @@
     },
     {
         "id": "eb7c38e3-38a0-47ad-b930-6dcf5540846d",
-        "url": "https://www.notion.so/Make-it-clear-where-hit-areas-in-visual-elements-lead-eb7c38e338a047adb9306dcf5540846d",
-        "references": [
+                "references": [
             {
                 "name": "Make It Clear Where Hit Areas in Visual Elements Lead: 33% of Sites Don’t – Articles – Baymard Institute",
                 "summary": "Make It Clear Where Hit Areas in Visual Elements Lead"

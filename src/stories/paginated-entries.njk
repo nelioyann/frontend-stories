@@ -1,15 +1,14 @@
 ---
-layout: layouts/home.njk
 title: Frontend Stories
-description: Welcome to Frontend Stories, a collection of referenced frontend guidelines! Browse the cards below to learn more
-    about the guidelines.
 pagination: 
-    data: stories
+    data: collections.stories
     size: 6
     alias: entries
-
+layout: layouts/home.njk
+permalink: "stories/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 {% set entries = entries %}
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
 {% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
 {% include "partials/story-card-list.njk"%}
+

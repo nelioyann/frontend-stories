@@ -378,7 +378,9 @@ h6 {
 :before {
   color: inherit;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 header h1 {
   font-size: var(--step--1);
   font-weight: 400;

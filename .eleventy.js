@@ -8,7 +8,14 @@ module.exports = function (eleventyConfig) {
   // Create collection from _data/customData.js
 
   eleventyConfig.addCollection("stories", (collection) => {
+    // const slug = eleventyConfig.getFilter("slugify");
     return collection.getAll()[0].data.stories;
+    // .map((story) => {
+    //   return {
+    //     ...story,
+    //     slug: `stories/${slug(story.name)}`,
+    //   };
+    // });
   });
   return {
     dir: {
