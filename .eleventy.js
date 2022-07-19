@@ -5,7 +5,11 @@ module.exports = function (eleventyConfig) {
   // Watch css files for changes
   eleventyConfig.addWatchTarget("./src/css/**/*.css");
   // eleventyConfig.addPassthroughCopy("./src/scripts");
-  
+  // Create collection from _data/customData.js
+
+  eleventyConfig.addCollection("stories", (collection) => {
+    return collection.getAll()[0].data.stories;
+  });
   return {
     dir: {
       input: "src",
