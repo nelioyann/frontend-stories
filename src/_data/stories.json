@@ -1,9 +1,29 @@
 [
     {
+        "id": "c4cb83f2-5329-4473-8f23-2c180e8d2f10",
+        "references": [
+            {
+                "name": "Are you sure that’s a number input? | Kilian Valkhof",
+                "url": "https://kilianvalkhof.com/2022/css-html/are-you-sure-thats-a-number-input/",
+                "summary": "Not all inputs that accept digits should be inputs with type=\"number\". Make sure that you use it for numbers, not for things that just happen to be made up of digits."
+            }
+        ],
+        "description": "Not all inputs that accept digits should be inputs with type=\"number\". Make sure that you use it for numbers, not for things that just happen to be made up of digits.",
+        "categories": [
+            {
+                "id": "28bd0fb5-b75d-4e9a-a711-9c2d2c801761",
+                "name": "forms",
+                "color": "blue"
+            }
+        ],
+        "name": "Only use input type number for incremental values"
+    },
+    {
         "id": "4d5f6034-ef65-4200-95e5-9be8c35119d3",
-                "references": [
+        "references": [
             {
                 "name": "Form design patterns",
+                "url": null,
                 "summary": ""
             }
         ],
@@ -19,13 +39,15 @@
     },
     {
         "id": "a6aad506-d98f-46d8-b3a9-274ec9be5f5d",
-                "references": [
+        "references": [
             {
                 "name": "Inclusive Components",
+                "url": null,
                 "summary": ""
             },
             {
                 "name": "Form design patterns",
+                "url": null,
                 "summary": ""
             }
         ],
@@ -41,9 +63,10 @@
     },
     {
         "id": "81a0658a-8a75-45e7-ad98-b7dc6a61f41b",
-                "references": [
+        "references": [
             {
                 "name": "Checkboxes Are Never Round—Daniel De Laney",
+                "url": "http://danieldelaney.net/checkboxes/",
                 "summary": "Interactive things have perceived affordances; the way they look tells us what they do and how to use them. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull."
             }
         ],
@@ -59,13 +82,15 @@
     },
     {
         "id": "b2b908c7-f185-4b07-a6f2-3745550fbc85",
-                "references": [
+        "references": [
             {
                 "name": "The best icon is a text label — Thomas Byttebier",
+                "url": "https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label",
                 "summary": "What good has a beautiful interface if it’s unclear? Hence it’s simple: only use an icon if its message is a 100% clear to everyone. Never give in."
             },
             {
                 "name": "Misused mobile UX patterns. If you are an experienced designer, you… | by Zoltan Kollin | Medium",
+                "url": "https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570",
                 "summary": ""
             }
         ],
@@ -81,9 +106,10 @@
     },
     {
         "id": "1407ac21-afe7-476d-9e9b-5f3567631902",
-                "references": [
+        "references": [
             {
                 "name": "Form Design Patterns - Hover vs Click",
+                "url": null,
                 "summary": "Relying on hover to trigger menu violate a principle of Include Design as the user lose control of an interaction potentially unintentional. Moreover, such an interaction only works on desktop which produces incomparable experiences between users, and a bad one for those with motor impairments."
             }
         ],
@@ -99,13 +125,15 @@
     },
     {
         "id": "f566b2dd-daa0-4684-9791-8ac5e34fbbbd",
-                "references": [
+        "references": [
             {
                 "name": "A Study on Tolerable Waiting Time: How Long Are Web Users Willing to Wait?",
+                "url": "https://www.researchgate.net/publication/220893869_A_Study_on_Tolerable_Waiting_Time_How_Long_Are_Web_Users_Willing_to_Wait",
                 "summary": ""
             },
             {
                 "name": "Adding delays to increase perceived value: does it work? | 90 Percent Of Everything",
+                "url": "https://90percentofeverything.com/2010/12/16/adding-delays-to-increase-perceived-value-does-it-work/index.html",
                 "summary": "Adding delays to process can increase the perceived value"
             }
         ],
@@ -120,23 +148,11 @@
         "name": "Always provide a feedback status when the waiting time is above 2 seconds"
     },
     {
-        "id": "2bcc6f76-572c-48d3-9994-216f85eba96d",
-                "references": [],
-        "description": "When you significantly change a commonly used task flow to improve efficiency, it is critical to provide clear feedback to minimize the chance that users will automatically do it the old way.",
-        "categories": [
-            {
-                "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
-                "name": "task flow redesign",
-                "color": "red"
-            }
-        ],
-        "name": "Communicate with users after a significant redesign"
-    },
-    {
         "id": "88292fe0-cd93-4bb9-8761-1bf0df55d1df",
-                "references": [
+        "references": [
             {
                 "name": "Imagery Vs Text. Which does the brain prefer?",
+                "url": "https://www.learnevents.com/blog/2015/09/07/imagery-vs-text-which-does-the-brain-prefer/",
                 "summary": "we look at pictures and videos regularly and we consume them more quickly than we do text."
             }
         ],
@@ -152,10 +168,11 @@
     },
     {
         "id": "684eaf0f-09fe-4114-8894-1ae2f8095f74",
-                "references": [
+        "references": [
             {
                 "name": "Using voiceover with unicode characters is a nightmare",
-                "summary": "Reminder, for those "
+                "url": "https://twitter.com/kentcdodds/status/1083073242330361856",
+                "summary": "Reminder, for those using the cute and fun little Unicode characters on social media or blog posts, that this is a nightmare for screen reader users (or anyone with reading issues, some dyslexic people, people with ADHD, etc.)"
             }
         ],
         "description": "Use unicode characters sparingly as screen readers can not process them adequately.",
@@ -170,10 +187,11 @@
     },
     {
         "id": "45ac45d6-d05a-4795-8779-223ef319ad51",
-                "references": [
+        "references": [
             {
                 "name": "Inline Validation in Web Forms – A List Apart",
-                "summary": "There’s some evidence to show that"
+                "url": "https://alistapart.com/article/inline-validation-in-web-forms/",
+                "summary": "There’s some evidence to show that live inline validation improves accuracy and decreases completion times in long forms"
             }
         ],
         "description": "Show the user where they have made mistakes as soon as possible. This approach reduces server calls and improves the user experience.",
@@ -188,10 +206,11 @@
     },
     {
         "id": "76828bfb-303f-4b44-b91a-053ced589202",
-                "references": [
+        "references": [
             {
                 "name": "Karl Sabino on the ROI of well designed error messages | 90 Percent Of Everything",
-                "summary": "One study showed that "
+                "url": "https://90percentofeverything.com/2009/02/16/karl-sabino-on-the-roi-of-well-designed-error-messages/index.html",
+                "summary": "One study showed that showing custom error messages increased conversions by 0.5% which equated to more than £250,000 in yearly revenue."
             }
         ],
         "description": "Showing custom error messages in forms lead to a better user experience.",
@@ -206,17 +225,19 @@
     },
     {
         "id": "8b07763d-79ed-45be-bbde-ecae10128ec4",
-                "references": [
+        "references": [
             {
                 "name": "Don’t Put Hints Inside Text Boxes in Web Forms :: UXmatters",
+                "url": "https://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php",
                 "summary": "Don’t use placeholders to store labels or hints"
             },
             {
                 "name": "The Input (Form Input) element - HTML: HyperText Markup Language | MDN",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder",
                 "summary": "The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".\nNote: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content."
             }
         ],
-        "description": "If you include hint text inside your form’s text boxes, many users—quite likely, the majority—will interpret the hint text as a default.",
+        "description": "If you include hint text inside your form’s text boxes, many users—quite likely, the majority—will interpret the hint text as a default.\n# This is a title\nThis is a paragraph\nLet’s write a list:\n\n- One\n- Two\n- Three",
         "categories": [
             {
                 "id": "28bd0fb5-b75d-4e9a-a711-9c2d2c801761",
@@ -228,9 +249,10 @@
     },
     {
         "id": "eb7c38e3-38a0-47ad-b930-6dcf5540846d",
-                "references": [
+        "references": [
             {
                 "name": "Make It Clear Where Hit Areas in Visual Elements Lead: 33% of Sites Don’t – Articles – Baymard Institute",
+                "url": "https://baymard.com/blog/hit-areas-in-visual-elements?utm_source=swlinks-tw",
                 "summary": "Make It Clear Where Hit Areas in Visual Elements Lead"
             }
         ],

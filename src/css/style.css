@@ -196,7 +196,7 @@ h6 {
 [data-layout~="cover"] {
   display: flex;
   flex-direction: column;
-  min-height: var(--min-height, 80vh);
+  min-height: var(--min-height, 60vh);
   padding: var(--padding, var(--space-s));
 }
 [data-layout~="cover"] > * {

@@ -1,0 +1,79 @@
+---
+title: Frontend Stories
+pagination: 
+    data: collections.stories
+    size: 1
+    alias: story
+layout: layouts/story.njk
+
+permalink: stories/{{story.name | slugify}}/
+---
+
+{% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
+{% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
+{# {% set story = story %} #}
+<div data-layout="stack" data-props="space:xl recursive">
+    <div data-layout="cover box" data-props="x:start noPad">
+        <nav aria-labelledby="{{ story.id }}" data-layout="cluster" data-props="x:between">
+            {% if pagination.href.previous %}
+                <a data-layout="box" data-props="noCurve noBorder invert" href="{{ pagination.href.previous }}">
+                    <span>Previous</span>
+                </a>
+            {% endif %}
+            {% if pagination.href.next %}
+                <a data-layout="box" data-props="noCurve noBorder invert space:0" href="{{ pagination.href.next }}">
+                    <span>Next</span>
+                </a>
+            {% endif %}
+        </nav>
+        <div data-layout="box" data-props="centered noBorder">
+            <h1>{{ story.name }}</h1>
+        </div>
+        <ul data-layout="box" data-props=" noBorder ">
+            {%- for category in story.categories %}
+                <li class="story-tag">{{ category.name }}</li>
+            {% endfor -%}
+        </ul>
+    </div>
+    <section id="summary" data-layout="cover" data-props="noPad">
+        <h2>Overview</h2>
+        <div data-mardown data-props="space:s">
+            {% renderTemplate "md, liquid", story %}
+            <span>
+                {{ description }}
+            </span>
+            {% endrenderTemplate %}
+        </div>
+    </section>
+    <section id="reference" data-layout="cover" data-props="noPad">
+        <h2>Further Readings</h2>
+        <ul data-layout="stack" data-props="noPad x:stretch">
+            {%- for reference in story.references %}
+                <a data-layout="box" target="{{'_blank' if reference.url}}" href="{{(reference.url if reference.url else '#')}}">{{ reference.name }}</a>
+            {% endfor -%}
+        </ul>
+    </section>
+    <section id="related" data-layout="cover" data-props="noPad">
+        <h2 data-heading="4">Related Stories</h2>
+        <p data-props="space:s">Insert related</p>
+        <ul data-layout="stack" data-props="noPad x:stretch">
+            {% set entries = stories | similarStories(story.id, story.categories) %}
+            {%- for entry in entries %}
+                {% include "partials/story-card-entry.njk"%}
+            {% endfor -%}
+        </ul>
+    </section>
+    <span data-heading="5" id="pagination-nav">Pagination</span>
+    <nav aria-labelledby="pagination-nav" data-layout="switcher" data-props="x:between">
+        {% if pagination.href.previous %}
+            <a data-layout="box stack" href="{{ pagination.href.previous }}">
+                <span>Previous</span>
+            </a>
+        {% endif %}
+        {% if pagination.href.next %}
+            <a data-layout="box stack" data-props="space:0" href="{{ pagination.href.next }}">
+                <span>Next</span>
+            </a>
+        {% endif %}
+    </nav>
+</div>

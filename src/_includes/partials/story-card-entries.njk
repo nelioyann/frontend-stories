@@ -1,0 +1,27 @@
+<div data-layout="cover" data-props="space:xl">
+    <ul data-layout="cluster" data-props="space:s noPad y:stretch centered"> 
+        {%- for entry in entries -%}
+            {% include "partials/story-card-entry.njk"%}
+        {%- endfor -%}
+    </ul>
+    <nav aria-label="Pagination" data-props="x:center">
+        {# <h2 data-heading="5" id="my-pagination">Pagination</h2> #}
+        <ol data-layout="box cluster" data-props="noBorder noPad">
+            <li data-layout="box">
+                {% if pagination.href.previous %}
+                    <a href="{{ pagination.href.previous }}">Previous</a>
+                    {% else %}Previous{% endif %}
+            </li>
+            {%- for pageEntry in pagination.pages %}
+                <li data-layout="box" data-props="{{'invert' if page.url == pagination.hrefs[ loop.index0 ] }}">
+                    <a href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" {% endif %}>{{ loop.index }}</a>
+                </li>
+            {%- endfor %}
+            <li data-layout="box">
+                {% if pagination.href.next %}
+                    <a href="{{ pagination.href.next }}">Next</a>
+                    {% else %}Next{% endif %}
+            </li>
+        </ol>
+    </nav>
+</div>

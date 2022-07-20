@@ -3,8 +3,9 @@
     {% include "partials/site-head.njk" %}
     <body data-layout="cover" data-props="noPad">
         {% include "partials/site-header.njk" %}
-        <main data-layout="stack" data-props="centered x:start">
+        <main data-layout="stack" data-props="centered x:stretch">
             {% block content %}
+            {# TODO: handle empty pages #}
                 This page does not have any content
             {% endblock %}
         </main>
