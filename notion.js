@@ -78,6 +78,8 @@ async function sanitizeProperty(response, property_type) {
       return response.created_time;
     case "multi_select":
       return response.multi_select;
+    case "url":
+      return response.url;
     case "property_item":
       return await sanitizePropertyItem(response, response.property_item.type);
   }
