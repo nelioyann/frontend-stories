@@ -1,0 +1,21 @@
+---
+layout: layouts/category.njk
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: "/categories/{{ category | slugify }}/index.html"
+---
+
+<h1 data-heading="3">
+  <b> <span aria-hidden>🔖</span> {{ category }}</b>
+  </h1>
+<p>
+  Here are some stories relating to the subject of {{ category }}.
+  <ul data-layout="stack" data-props="noPad x:stretch">
+    {% set entries = stories | filterByCategory(category) %}
+    {%- for entry in entries %}
+      {% include "partials/story-card-entry.njk" %}
+    {% endfor -%}
+  </ul>
+</p>

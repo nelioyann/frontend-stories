@@ -3,7 +3,7 @@
     {% if entry.categories.length %}
         <div data-layout="cluster">
             {%- for category in entry.categories %}
-                <span class="story-tag">{{ category.name }}</span>
+                <a href="/categories/{{category.name | slugify}}" class="story-tag">{{ category.name }}</a>
             {% endfor -%}
         </div>
     {% endif %}

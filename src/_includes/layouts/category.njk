@@ -1,0 +1,7 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+    <article data-layout="stack" data-props="space:l">
+        <a aria-hidden data-heading="5" href="/">{{ meta.site_name }}</a>
+        {{ content | safe }}
+    </article>
+{% endblock %}
