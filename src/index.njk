@@ -5,7 +5,8 @@ pagination:
     data: stories
     size: 4
     alias: entries
-
+tags: 
+    - pages
 ---
 {% set entries = entries %}
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
