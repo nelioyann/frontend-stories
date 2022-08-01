@@ -489,7 +489,7 @@ li {
 /* CUSTOMS */
 :root {
   --page-top: 12rem;
-  --header-height: var(--space-l-xl);
+  --header-height: var(--space-xl-2xl);
   --layer-header: 3;
   --responsive-padding: var(--space-s-3xl);
   --alpha: rgba(255, 255, 255, 0.7);
