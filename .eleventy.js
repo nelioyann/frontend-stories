@@ -1,9 +1,9 @@
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
-const getSimilarCategoriesCount = function(categoriesA, categoriesB) {
+const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
   let categoriesNamesA = categoriesA.map((category) => category.name);
   let categoriesNamesB = categoriesB.map((category) => category.name);
-  return categoriesNamesA.filter(c => categoriesNamesB.includes(c)).length;
-}
+  return categoriesNamesA.filter((c) => categoriesNamesB.includes(c)).length;
+};
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy("./src/images");
@@ -23,14 +23,45 @@ module.exports = function (eleventyConfig) {
     //   };
     // });
   });
-
-  eleventyConfig.addFilter("similarStories", function(stories, currentStoryId, categories){
-    return stories.filter((story) => {
-      return getSimilarCategoriesCount(categories, story.categories) >= 1 && story.id !== currentStoryId;
-    }).sort((a,b) => {
-      return getSimilarCategoriesCount(b.categories, categories) - getSimilarCategoriesCount(a.categories, categories);
+  eleventyConfig.addCollection("categories", function (collectionApi) {
+    let categories_set = new Set();
+    let stories = collectionApi.getAll()[0].data.stories;
+    stories.forEach((story) => {
+      story.categories.forEach((category) => categories_set.add(category.name));
     });
+    return Array.from(categories_set);
   });
+  eleventyConfig.addFilter(
+    "similarStories",
+    function (stories, currentStoryId, categories) {
+      return stories
+        .filter((story) => {
+          return (
+            getSimilarCategoriesCount(categories, story.categories) >= 1 &&
+            story.id !== currentStoryId
+          );
+        })
+        .sort((a, b) => {
+          return (
+            getSimilarCategoriesCount(b.categories, categories) -
+            getSimilarCategoriesCount(a.categories, categories)
+          );
+        });
+    }
+  );
+  eleventyConfig.addFilter("filterByCategory", function(posts, category) {
+    /*
+    case matters, so let's lowercase the desired category, cat
+    and we will lowercase our posts categories
+    */
+    category = category.toLowerCase();
+    let result = posts.filter(p => {
+      let p_categories = p.categories.map(c => c.name.toLowerCase());
+      return p_categories.includes(category);
+    });
+    return result;
+  });
+
 
   return {
     dir: {
