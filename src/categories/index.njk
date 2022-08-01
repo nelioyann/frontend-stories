@@ -5,6 +5,8 @@ pagination:
   size: 1
   alias: category
 permalink: "/categories/{{ category | slugify }}/index.html"
+eleventyComputed:
+  title: "Category: {{ category }}"
 ---
 
 <h1 data-heading="3">
@@ -12,10 +14,10 @@ permalink: "/categories/{{ category | slugify }}/index.html"
   </h1>
 <p>
   Here are some stories relating to the subject of {{ category }}.
-  <ul data-layout="stack" data-props="noPad x:stretch">
+  <div data-layout="grid" >
     {% set entries = stories | filterByCategory(category) %}
     {%- for entry in entries %}
       {% include "partials/story-card-entry.njk" %}
     {% endfor -%}
-  </ul>
+  </div>
 </p>

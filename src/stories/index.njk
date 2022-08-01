@@ -1,12 +1,12 @@
 ---
-title: Frontend Stories
 pagination: 
     data: collections.stories
     size: 1
     alias: story
 layout: layouts/story.njk
-
 permalink: stories/{{story.name | slugify}}/
+eleventyComputed:
+  title: "Story #{{ pagination.pageNumber }}"
 ---
 
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
@@ -22,7 +22,7 @@ permalink: stories/{{story.name | slugify}}/
             {% endfor -%}
         </ul>
         <div data-layout="box" data-props="centered noBorder">
-            <h1>{{ story.name }}</h1>
+            <h1 data-heading="3" style="text-transform: uppercase;">{{ story.name }}</h1>
         </div>
         <nav aria-labelledby="{{ story.id }}" data-layout="box cluster" data-props="x:between invert">
             <div class="box">
@@ -42,7 +42,7 @@ permalink: stories/{{story.name | slugify}}/
         </nav>
     </div>
     <section id="summary" data-layout="cover" data-props="noPad">
-        <h2>Why it matters</h2>
+        <h2 data-heading="4">Why it matters</h2>
         <div data-mardown data-props="space:s">
             {% renderTemplate "md, liquid", story %}
             <span>
@@ -52,7 +52,7 @@ permalink: stories/{{story.name | slugify}}/
         </div>
     </section>
     <section id="reference" data-layout="cover" data-props="noPad">
-        <h2>Further Readings</h2>
+        <h2 data-heading="4">Further Readings</h2>
         <ul data-layout="stack" data-props="noPad x:stretch">
             {%- for reference in story.references %}
                 <a data-layout="box" target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">{{ reference.name }}</a>
@@ -63,7 +63,7 @@ permalink: stories/{{story.name | slugify}}/
         <h2 data-heading="4">Related Stories</h2>
         {% set entries = stories | similarStories(story.id, story.categories) %}
         {% if entries.length > 0 %}
-            <ul data-layout="stack" data-props="noPad x:stretch">
+            <ul data-layout="grid" role="list" data-props="noPad x:stretch">
             {%- for entry in entries %}
                 {% include "partials/story-card-entry.njk" %}
             {% endfor -%}
