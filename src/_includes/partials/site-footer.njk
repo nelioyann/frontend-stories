@@ -1,20 +1,20 @@
 <footer data-layout="switcher box" data-props="invert  noBorder noCurve" >
     <div class="footer" data-layout="switcher">
         
-    <div class="stack">
-        <h4 data-heading="5">About</h4>
+    <div data-layout="stack" data-props="x:start">
+        <h3 data-heading="5">About</h3>
         <p>{{meta.site_description}}</p>
     </div>
-    <div class="stack">
-        <h4 data-heading="5">Categories</h4>
+    <div data-layout="stack" data-props="x:start">
+        <h3 data-heading="5">Categories</h3>
         <div data-layout="cluster">
             {%- for category in collections.categories %}
                 <a href="/categories/{{category | slugify}}" class="story-tag">{{ category }}</a>
             {% endfor -%}
         </div>
     </div>
-    <div class="stack">
-        <h4 data-heading="5">Pages</h4>
+    <div data-layout="stack" data-props="x:start">
+        <h3 data-heading="5">Pages</h3>
         <div data-layout="stack" data-props="x:start">
             {%- for page in collections.pages %}
                 <a href="{{page.url}}" >{{ page.data.title }}</a>
