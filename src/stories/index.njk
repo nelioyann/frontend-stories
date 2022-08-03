@@ -14,10 +14,10 @@ eleventyComputed:
 {# {% set story = story %} #}
 <div data-layout="stack" data-props="space:xl">
     <div data-layout="cover box" data-props="x:start noPad">
-        <ul data-layout="box" data-props=" noBorder ">
+        <ul data-layout="box cluster" data-props="noBorder" role="list">
             {%- for category in story.categories %}
-                <li class="story-tag">
-                    <a href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                <li>
+                    <a class="story-tag" href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
                 </li>
             {% endfor -%}
         </ul>
@@ -55,7 +55,12 @@ eleventyComputed:
         <h2 data-heading="4">Further Readings</h2>
         <ul data-layout="stack" data-props="noPad x:stretch">
             {%- for reference in story.references %}
-                <a data-layout="box" target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">{{ reference.name }}</a>
+                <a data-layout="box stack" target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+                    <b>{{ reference.name + " " + reference.cite }}</b>
+                    {% if reference.summary %}
+                        <span>{{ reference.summary }}</span>
+                    {% endif %}
+                </a>
             {% endfor -%}
         </ul>
     </section>
@@ -64,14 +69,13 @@ eleventyComputed:
         {% set entries = stories | similarStories(story.id, story.categories) %}
         {% if entries.length > 0 %}
             <ul data-layout="grid" role="list" data-props="noPad x:stretch">
-            {%- for entry in entries %}
-                {% include "partials/story-card-entry.njk" %}
-            {% endfor -%}
-        </ul>
-            {%else%}
+                {%- for entry in entries %}
+                    {% include "partials/story-card-entry.njk" %}
+                {% endfor -%}
+            </ul>
+        {% else %}
             <p>No related stories found</p>
         {% endif %}
-        
     </section>
     <span data-heading="5" id="pagination-nav">Pagination</span>
     <nav aria-labelledby="pagination-nav" data-layout="switcher" data-props="x:between">
