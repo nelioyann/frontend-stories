@@ -17,7 +17,7 @@ eleventyComputed:
         <ul data-layout="box cluster" data-props="noBorder" role="list">
             {%- for category in story.categories %}
                 <li>
-                    <a class="story-tag" href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                    <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
                 </li>
             {% endfor -%}
         </ul>

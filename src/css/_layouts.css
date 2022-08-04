@@ -1,0 +1,256 @@
+/*----------  Box Layout  ----------*/
+[data-layout~="box"] {
+  /* --color-light: var(--gray-100);
+    --color-dark: var(--gray-900); */
+  --padding: var(--space-s);
+  display: block;
+  padding-top: var(--padding);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  padding-bottom: var(--padding);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border: var(--border-width) solid;
+  outline: var(--border-width) transparent;
+  outline-offset: calc(var(--border-width) * -1);
+}
+/* [data-layout~="box"] *:not([data-layout~="box"]) {
+    color: inherit;
+  } */
+
+/*
+  [data-layout~="box"][data-props~="invert"] {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+  }
+  */
+[data-layout~="box"][data-props~="invert"] {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+/* [data-layout~="box"][data-props~="invert"] {
+    filter: invert(100%);
+  } */
+
+/*----------  Center Layout  ----------*/
+
+[data-layout~="center"] {
+  box-sizing: content-box;
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--padding, var(--space-s));
+  padding-right: var(--padding, var(--space-s));
+}
+[data-layout~="center"][data-props~="andText"] {
+  text-align: center;
+}
+/* Allows centering of a child element */
+[data-layout~="center"][data-props~="intrinsic"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*----------  Stack Layout  ----------*/
+[data-layout~="stack"] {
+  --space: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--vertical-alignment, flex-start);
+  align-items: var(--horizontal-alignment, center);
+}
+[data-layout~="stack"] > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+[data-layout~="stack"] > :only-child {
+  height: 100%;
+}
+[data-layout~="stack"][data-props~="recursive"] * + *,
+[data-layout~="stack"]:not([data-props~="recursive"]) > * + * {
+  margin-top: var(--space, 1em);
+}
+[data-layout~="stack"] > [data-props~="split"] {
+  margin-bottom: auto;
+}
+
+/*----------  Cover Layout FIXME: move noPad  ----------*/
+[data-layout~="cover"] {
+  display: flex;
+  flex-direction: column;
+  min-height: var(--min-height, 60vh);
+  padding: var(--padding, var(--space-s));
+}
+[data-layout~="cover"] > * {
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+}
+[data-layout~="cover"] > :first-child:not([data-props~="centered"]) {
+  margin-top: 0;
+}
+[data-layout~="cover"] > :last-child:not([data-props~="centered"]) {
+  margin-bottom: 0;
+}
+[data-layout~="cover"] > [data-props~="centered"] {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*----------  CLUSTER Layout   ----------*/
+[data-layout~="cluster"] {
+  /* --space: var(--space-s);  */
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, var(--space-s, 0));
+  justify-content: var(--horizontal-alignment, flex-start);
+  align-items: var(--vertical-alignment, center);
+}
+
+/*----------  Sidebar   ----------*/
+[data-layout~="with-sidebar"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space, var(--space-s)); /* */
+  justify-content: stretch;
+  align-items: var(--vertical-alignment, stretch);
+}
+
+/* [data-layout~="with-sidebar"] > * {
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+/* Sidebar */
+[data-layout~="with-sidebar"][data-props~="side:left"] > :nth-child(1),
+[data-layout~="with-sidebar"][data-props~="side:right"] > :nth-child(2) {
+  /** sideWidth Represents the width of the sidebar adjacent. If not set ( ) it defaults to the sidebar's content width */
+  flex-basis: var(--side-width, auto);
+  flex-grow: 1;
+}
+[data-layout~="with-sidebar"][data-props~="side:left"] > :nth-child(2),
+[data-layout~="with-sidebar"][data-props~="side:right"] > :nth-child(1) {
+  flex-basis: 0;
+  flex-grow: 999;
+  /**  contentMin A CSS value. The minimum width of the content element in the horizontal configuration. Prefer % values */
+  min-width: var(--content-min, 50%);
+}
+
+/*----------  Switcher  ----------*/
+[data-layout~="switcher"] {
+  --space: var(--space-s);
+  --threshold: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+}
+[data-layout~="switcher"] > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+[data-layout~="switcher"] > :nth-child(n + 5),
+[data-layout~="switcher"] > :nth-child(n + 5) ~ * {
+  /* Switch to a vertical configuration if there are more than 4 child elements */
+  flex-basis: 100%;
+}
+
+/* The Icon */
+[data-layout~="icon"] {
+  height: var(--icon-size, 0.75em);
+  height: 1cap;
+  width: var(--icon-size, 0.75em);
+  width: 1cap;
+}
+[data-layout~="with-icon"] {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: var(--horizontal-alignment, flex-start);
+  align-items: var(--vertical-alignment, baseline);
+}
+[data-layout~="with-icon"] [data-layout~="icon"] {
+  margin-right: var(--space, var(--space-xs));
+}
+
+/* THE GRID */
+[data-layout~="grid"] {
+  --grid-min-item-size: 20rem;
+  --grid-placement: auto-fill;
+  display: grid;
+  grid-gap: var(--space, 1.5rem);
+  grid-template-columns: repeat(
+    var(--grid-placement),
+    minmax(var(--grid-min-item-size), 1fr)
+  );
+}
+
+@supports (width: min(var(--grid-min-item-size), 100%)) {
+  [data-layout~="grid"] {
+    grid-template-columns: repeat(
+      var(--grid-placement),
+      minmax(min(var(--grid-min-item-size), 100%), 1fr)
+    );
+  }
+}
+
+/*----------  TOKENS  ----------*/
+/* COVER */
+[data-props~="noPad"] {
+  padding: 0;
+}
+
+[data-props~="x:center"] {
+  --horizontal-alignment: center;
+}
+[data-props~="x:between"] {
+  --horizontal-alignment: space-between;
+}
+[data-props~="x:start"] {
+  --horizontal-alignment: flex-start;
+}
+[data-props~="x:end"] {
+  --horizontal-alignment: flex-end;
+}
+[data-props~="x:stretch"] {
+  --horizontal-alignment: stretch;
+}
+
+[data-props~="y:center"] {
+  --vertical-alignment: center;
+}
+[data-props~="y:between"] {
+  --vertical-alignment: space-between;
+}
+[data-props~="y:start"] {
+  --vertical-alignment: flex-start;
+}
+[data-props~="y:end"] {
+  --vertical-alignment: flex-end;
+}
+[data-props~="y:stretch"] {
+  --vertical-alignment: stretch;
+}
+
+[data-props~="space:0"] {
+  --space: 0;
+}
+[data-props~="space:s"] {
+  --space: var(--space-s);
+}
+[data-props~="space:m"] {
+  --space: var(--space-m);
+}
+[data-props~="space:l"] {
+  --space: var(--space-l);
+}
+[data-props~="space:xl"] {
+  --space: var(--space-xl);
+}
+
+[data-props~="noBorder"] {
+  border-width: 0;
+}
+[data-props~="noCurve"] {
+  --border-radius: 0;
+}
+
+/*=====  End of LAYOUT UTILITIES  ======*/

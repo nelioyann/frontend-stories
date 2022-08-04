@@ -1,9 +1,9 @@
-<li class="story-card" data-layout="box stack" >
-    <a data-heading="5" href="/stories/{{ entry.name | slugify }}">{{ entry.name }}</a>
+<li class="story-card" data-layout="cluster" data-props="x:between">
+    <a class="story-card__title"  href="/stories/{{ entry.name | slugify }}">{{ entry.name }}</a>
     {% if entry.categories.length %}
-        <div data-layout="cluster">
+        <div class="story-card__categories" data-layout="cluster" >
             {%- for category in entry.categories %}
-                <a href="/categories/{{category.name | slugify}}" class="story-tag">{{ category.name }}</a>
+                <a href="/categories/{{category.name | slugify}}" data-tag>{{ category.name }}</a>
             {% endfor -%}
         </div>
     {% endif %}

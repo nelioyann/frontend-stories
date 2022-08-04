@@ -5,12 +5,12 @@ const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
   return categoriesNamesA.filter((c) => categoriesNamesB.includes(c)).length;
 };
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addPassthroughCopy("./src/images");
+  eleventyConfig.addPassthroughCopy("./src/css/style.css");
+  eleventyConfig.addPassthroughCopy("./src/images/");
+  eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
   // Watch css files for changes
   eleventyConfig.addWatchTarget("./src/css/**/*.css");
-  // eleventyConfig.addPassthroughCopy("./src/scripts");
   // Create collection from _data/customData.js
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addCollection("stories", (collection) => {
