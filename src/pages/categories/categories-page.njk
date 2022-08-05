@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+permalink: /categories/
+tags: pages
+---
+<div data-layout="cluster">
+    {%- for category in collections.categories %}
+        <a href="/categories/{{ category | slugify }}" data-tag>{{ category }}</a>
+    {% endfor -%}
+</div>

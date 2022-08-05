@@ -6,25 +6,23 @@ pagination:
 layout: layouts/story.njk
 permalink: stories/{{story.name | slugify}}/
 eleventyComputed:
-  title: "Story #{{ pagination.pageNumber }}"
+  title: "Story : {{ story.name | truncate(15) }} "
 ---
 
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
 {% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
 {# {% set story = story %} #}
 <div data-layout="stack" data-props="space:xl">
-    <div data-layout="cover box" data-props="x:start noPad">
-        <ul data-layout="box cluster" data-props="noBorder" role="list">
+    <div data-layout="cover" data-props="x:start noPad ">
+        <ul data-layout="cluster" role="list">
             {%- for category in story.categories %}
                 <li>
                     <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
                 </li>
             {% endfor -%}
         </ul>
-        <div data-layout="box" data-props="centered noBorder">
-            <h1 data-heading="3" style="text-transform: uppercase;">{{ story.name }}</h1>
-        </div>
-        <nav aria-labelledby="{{ story.id }}" data-layout="box cluster" data-props="x:between invert">
+            <h1 data-heading="3" data-props="centered noBorder" >{{ story.name }}</h1>
+        {# <nav aria-labelledby="{{ story.id }}" data-layout="box cluster" data-props="x:between invert">
             <div class="box">
                 {% if pagination.href.previous %}
                     <a data-layout="box" data-props="noCurve noBorder " href="{{ pagination.href.previous }}">
@@ -39,7 +37,7 @@ eleventyComputed:
                     </a>
                 {% endif %}
             </div>
-        </nav>
+        </nav> #}
     </div>
     <section id="summary" data-layout="cover" data-props="noPad">
         <h2 data-heading="4">Why it matters</h2>
@@ -56,7 +54,7 @@ eleventyComputed:
         <ul data-layout="stack" data-props="noPad x:stretch">
             {%- for reference in story.references %}
                 <a data-layout="box stack" target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
-                    <b>{{ reference.name + " " + reference.cite }}</b>
+                    <span>{{ reference.name + " " + reference.cite }}</span>
                     {% if reference.summary %}
                         <span>{{ reference.summary }}</span>
                     {% endif %}
@@ -66,7 +64,7 @@ eleventyComputed:
     </section>
     <section id="related" data-layout="cover" data-props="noPad">
         <h2 data-heading="4">Related Stories</h2>
-        {% set entries = stories | similarStories(story.id, story.categories) %}
+        {% set entries = stories | similarStories(story.id, story.categories) | limitTo(3) %}
         {% if entries.length > 0 %}
             <ul data-layout="grid" role="list" data-props="noPad x:stretch">
                 {%- for entry in entries %}
@@ -80,12 +78,12 @@ eleventyComputed:
     <span data-heading="5" id="pagination-nav">Pagination</span>
     <nav aria-labelledby="pagination-nav" data-layout="switcher" data-props="x:between">
         {% if pagination.href.previous %}
-            <a data-layout="box stack" href="{{ pagination.href.previous }}">
+            <a data-button href="{{ pagination.href.previous }}">
                 <span>Previous</span>
             </a>
         {% endif %}
         {% if pagination.href.next %}
-            <a data-layout="box stack" data-props="space:0" href="{{ pagination.href.next }}">
+            <a data-button href="{{ pagination.href.next }}">
                 <span>Next</span>
             </a>
         {% endif %}
