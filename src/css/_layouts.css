@@ -195,8 +195,46 @@
   }
 }
 
+/* The Reel */
+[data-layout~="reel"] {
+  --space: var(--space-s);
+  --threshold: 30rem;
+  display: flex;
+  height: var(--reel-height, auto);
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-style: solid;
+  border-width: var(--border-thick, 2px);
+}
+[data-layout~="reel"][data-props~="overflowing"] {
+  padding: var(--space, var(--space-s));
+}
+[data-layout~="reel"][data-props~="overflowing:noBar"] {
+  scrollbar-width: none;
+}
+
+[data-layout~="reel"] > img {
+  height: 100% ;
+  flex-basis: auto ;
+  width: auto;
+}
+[data-layout~="reel"] > * {
+  flex: 0 0 var(--reel-item-width, 25ch);
+  margin: var(--reel-item-margin, var(--space-s));
+}
+[data-layout~="reel"] > * + * {
+  margin-left: var(--space, var(--space-s));
+}
+[data-layout~="reel"]::after{
+  content: "";
+  flex-basis: var(--space-s, 0.25rem);
+  flex-shrink: 0;
+}
+/* FIXME: Experimental full width for singleton */
+[data-layout~="reel"] > *:only-child {
+  flex-grow: 1;
+}
 /*----------  TOKENS  ----------*/
-/* COVER */
 [data-props~="noPad"] {
   padding: 0;
 }

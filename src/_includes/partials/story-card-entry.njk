@@ -1,7 +1,7 @@
-<li class="story-card" data-layout="cluster" data-props="x:between">
-    <a class="story-card__title"  href="/stories/{{ entry.name | slugify }}">{{ entry.name }}</a>
+<li class="story-card" data-layout="stack" data-props="">
+    <a class="story-card__title" data-props="split"  href="/stories/{{ entry.name | slugify }}">{{ entry.name }}</a>
     {% if entry.categories.length %}
-        <div class="story-card__categories" data-layout="cluster" >
+        <div class="story-card__categories" data-layout="cluster " >
             {%- for category in entry.categories %}
                 <a href="/categories/{{category.name | slugify}}" data-tag>{{ category.name }}</a>
             {% endfor -%}

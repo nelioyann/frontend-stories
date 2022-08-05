@@ -11,7 +11,6 @@ eleventyComputed:
 
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
 {% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
-{# {% set story = story %} #}
 <div data-layout="stack" data-props="space:xl">
     <div data-layout="cover" data-props="x:start noPad ">
         <ul data-layout="cluster" role="list" data-props="noPad">
@@ -21,23 +20,7 @@ eleventyComputed:
                 </li>
             {% endfor -%}
         </ul>
-            <h1 data-heading="3" data-props="centered noBorder" >{{ story.name }}</h1>
-        {# <nav aria-labelledby="{{ story.id }}" data-layout="box cluster" data-props="x:between invert">
-            <div class="box">
-                {% if pagination.href.previous %}
-                    <a data-layout="box" data-props="noCurve noBorder " href="{{ pagination.href.previous }}">
-                        <span>Previous</span>
-                    </a>
-                {% endif %}
-            </div>
-            <div class="box">
-                {% if pagination.href.next %}
-                    <a data-layout="box" data-props="noCurve noBorder space:0" href="{{ pagination.href.next }}">
-                        <span>Next</span>
-                    </a>
-                {% endif %}
-            </div>
-        </nav> #}
+        <h1 data-heading="3" data-props="centered noBorder">{{ story.name }}</h1>
     </div>
     <section id="summary" data-layout="cover" data-props="noPad">
         <h2 data-heading="4">Overview</h2>
@@ -53,20 +36,22 @@ eleventyComputed:
         <h2 data-heading="4">Further Readings</h2>
         <ul data-layout="stack" data-props="noPad x:stretch">
             {%- for reference in story.references %}
-                <a data-layout="box stack" target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
-                    <span>{{ reference.name + " " + reference.cite }}</span>
+                <li data-layout="stack">
+                    <a target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+                        <span data-heading="5">{{ reference.name + " " + reference.cite }}</span>
+                    </a>
                     {% if reference.summary %}
-                        <span>{{ reference.summary }}</span>
+                        <p>{{ reference.summary }}</p>
                     {% endif %}
-                </a>
+                </li>
             {% endfor -%}
         </ul>
     </section>
     <section id="related" data-layout="cover" data-props="noPad">
         <h2 data-heading="4">Related Stories</h2>
-        {% set entries = stories | similarStories(story.id, story.categories) | limitTo(3) %}
+        {% set entries = stories | similarStories(story.id, story.categories) | limitTo(5) %}
         {% if entries.length > 0 %}
-            <ul data-layout="grid" role="list" data-props="noPad x:stretch">
+            <ul data-layout="reel" role="list" data-props="noPad overflowing:noBar">
                 {%- for entry in entries %}
                     {% include "partials/story-card-entry.njk" %}
                 {% endfor -%}
