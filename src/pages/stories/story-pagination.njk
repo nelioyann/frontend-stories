@@ -60,6 +60,8 @@ eleventyComputed:
             <p>No related stories found</p>
         {% endif %}
     </section>
+    {# <img src="{{ url | qrcode }}" alt="QR code for this URL."> #}
+    {{page.url | log}}
     <span data-heading="5" id="pagination-nav">Pagination</span>
     <nav aria-labelledby="pagination-nav" data-layout="switcher" data-props="x:between">
         {% if pagination.href.previous %}

@@ -1,4 +1,5 @@
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const qrCode = require('qrcode');
 const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
   let categoriesNamesA = categoriesA.map((category) => category.name);
   let categoriesNamesB = categoriesB.map((category) => category.name);
@@ -69,7 +70,11 @@ module.exports = function (eleventyConfig) {
   }
   );
 
+  eleventyConfig.addFilter("qrcode", async function(value) {
 
+		return await qrCode.toDataURL(value);
+
+	});
   return {
     dir: {
       input: "src",
