@@ -5,8 +5,7 @@
         {% include "partials/site-header.njk" %}
         <main data-layout="stack" data-props="centered x:stretch">
             {% block content %}
-            {# TODO: handle empty pages #}
-                This page does not have any content
+                {{content | safe}}
             {% endblock %}
         </main>
         {% include "partials/site-footer.njk" %}
