@@ -62,6 +62,13 @@ module.exports = function (eleventyConfig) {
     return result;
   });
 
+  // Filter for limiting the number of items in array
+  // https://gist.github.com/jbmoelker/9693778
+  eleventyConfig.addFilter("limitTo", function (array, limit) {
+    return array.slice(0, limit);
+  }
+  );
+
 
   return {
     dir: {
