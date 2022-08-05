@@ -10,14 +10,15 @@ eleventyComputed:
 ---
 
 <h1 data-heading="3">
-  <b> <span aria-hidden>🔖</span> {{ category }}</b>
-  </h1>
+  <span aria-hidden="true">🔖</span>
+  {{ category }}
+</h1>
 <p>
   Here are some stories relating to the subject of {{ category }}.
-  <div data-layout="grid" >
+  <ul data-layout="grid">
     {% set entries = stories | filterByCategory(category) %}
     {%- for entry in entries %}
       {% include "partials/story-card-entry.njk" %}
     {% endfor -%}
-  </div>
+  </ul>
 </p>

@@ -1,15 +1,20 @@
 ---
 layout: layouts/home.njk
 title: Home
-pagination: 
-    data: stories
-    size: 30
-    alias: entries
 tags: 
     - webpage
 permalink: /
 ---
-{% set entries = entries %}
-{% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
-{% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
-{% include "partials/story-card-entries.njk"%}
+
+<article data-layout="stack" data-props="space:l">
+    <h1>Frontend Stories</h1>
+    {# <section data-layou="stack">
+        <h2 data-heading="4">Recently added</h2>
+        <ul data-layout="reel" data-props="noBorder">
+            {% set entries = stories | limitTo(6) %}
+            {%- for entry in entries %}
+                {% include "partials/story-card-entry.njk" %}
+            {% endfor -%}
+        </ul>
+    </section> #}
+</article>

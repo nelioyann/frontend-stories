@@ -12,18 +12,30 @@ eleventyComputed:
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
 {% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
 <div data-layout="stack" data-props="space:xl">
-    <div data-layout="cover" data-props="x:start noPad ">
+    <section
+        id="cover" data-layout="stack">
+        <h2 class="visually-hidden" data-heading="4">Cover</h2>
+        <div data-layout="cover box" data-props="x:start invert">
+            
+            <h1 data-heading="3" data-props="centered noBorder">{{ story.name }}</h1>
+            <figure>
+                {{ meta.site_url| qrcode | safe }}
+                <figcaption class="visually-hidden">Share link</figcaption>
+            </figure>
+        </div>
         <ul data-layout="cluster" role="list" data-props="noPad">
-            {%- for category in story.categories %}
-                <li>
-                    <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
-                </li>
-            {% endfor -%}
-        </ul>
-        <h1 data-heading="3" data-props="centered noBorder">{{ story.name }}</h1>
-    </div>
+                {%- for category in story.categories %}
+                    <li>
+                        <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                    </li>
+                {% endfor -%}
+            </ul>
+    </section>
     <section id="summary" data-layout="cover" data-props="noPad">
         <h2 data-heading="4">Overview</h2>
+        <p>Last updated:
+            <time datetime={{ story.edited }}>{{ story.created | readableDate }}</time>
+        </p>
         <div data-mardown data-props="space:s">
             {% renderTemplate "md, liquid", story %}
             <span>
@@ -34,14 +46,25 @@ eleventyComputed:
     </section>
     <section id="reference" data-layout="cover" data-props="noPad">
         <h2 data-heading="4">Further Readings</h2>
-        <ul data-layout="stack" data-props="noPad x:stretch">
+        <ul data-layout="stack" data-props="noPad x:stretch" data-props="space:xs">
             {%- for reference in story.references %}
-                <li data-layout="stack">
-                    <a target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
-                        <span data-heading="5">{{ reference.name + " " + reference.cite }}</span>
+                <li data-layout="box stack" >
+                    <a data-button  target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+                        <span data-heading="5">{{ reference.name }}</span>
                     </a>
+                    <div data-layout="cluster" data-props="x:between">
+
+                    {% if reference.cite %}
+                        <p>{{ reference.cite }}</p>
+                    {% endif %}
+
+                    <p>({{reference.type.name}})</p>
+                    </div>
                     {% if reference.summary %}
-                        <p>{{ reference.summary }}</p>
+                        <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>
+                    {% endif %}
+                    {% if reference.citation %}
+                        <small>{{ reference.citation }}</small>
                     {% endif %}
                 </li>
             {% endfor -%}
@@ -60,9 +83,8 @@ eleventyComputed:
             <p>No related stories found</p>
         {% endif %}
     </section>
-    {# <img src="{{ url | qrcode }}" alt="QR code for this URL."> #}
-    {{page.url | log}}
-    <span data-heading="5" id="pagination-nav">Pagination</span>
+    {# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
+    <span data-heading="6" id="pagination-nav">Navigate to other stories</span>
     <nav aria-labelledby="pagination-nav" data-layout="switcher" data-props="x:between">
         {% if pagination.href.previous %}
             <a data-button href="{{ pagination.href.previous }}">

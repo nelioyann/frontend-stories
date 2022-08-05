@@ -2,11 +2,23 @@
 {% block content %}
     <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
         <aside>
-            <nav aria-labelledby="story-toc" data-layout="stack">
-            <span data-heading="5" id="story-toc">Table of contents</span>
-                <a href="#summary">Overview</a>
-                <a href="#reference">Further reading</a>
-                <a href="#related">Related</a>
+            <nav>
+                <details>
+                    <summary>
+                        Table of contents
+                    </summary>
+                    <ol data-layout="stack" data-props="split">
+                        <li>
+                            <a href="#summary">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#reference">Further reading</a>
+                        </li>
+                        <li>
+                            <a href="#related">Related</a>
+                        </li>
+                    </ol>
+                </details>
             </nav>
         </aside>
         <article>
