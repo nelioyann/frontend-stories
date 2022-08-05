@@ -34,12 +34,14 @@ main {
 =============================================*/
 .story-with-sidebar {
   --side-width: calc(var(--space-l-xl, 2rem) * 5);
+  --content-min: 60%;
 }
 .story-with-sidebar,
 .story-with-sidebar article [data-layout~="cover"],
 .story-with-sidebar article nav {
   width: 100%;
 }
+
 .story-with-sidebar aside nav {
   padding-top: var(--space-xs);
   padding-bottom: var(--space-xs);
@@ -47,6 +49,17 @@ main {
   top: var(--header-height);
 }
 
+
+.story-with-sidebar svg{
+  width: calc(var(--space-2xl) * 2);
+  height: calc(var(--space-2xl) * 2);
+  padding: var(--space-s);
+  border-radius: var(--space-m);
+
+}
+.story-with-sidebar svg > path{
+  fill: var(--gray-100);
+}
 
 /* [data-shadow] {
   --element-offset: 0;
@@ -64,3 +77,9 @@ main {
 } */
 
 /*=====  End of Story  ======*/
+
+[data-link]:hover{
+  background-color: var(--gray-200);
+  box-shadow:0 0 0 8px var(--gray-200);
+  border-radius: var(--space-2xs);
+}
