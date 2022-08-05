@@ -1,36 +1,4 @@
-
-
-header h1 {
-  font-size: var(--step--1);
-  font-weight: 400;
-}
-/* small,
-footer {
-  font-size: var(--step--1);
-} */
-
-button {
-  /* min-width: 250px; */
-  width: max-content;
-  border-radius: var(--border-radius);
-  min-height: 46px;
-  font-weight: 500;
-  line-height: 46px;
-  text-align: center;
-  cursor: pointer;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  /* color: var(--color-dark); */
-
-  /* transition-property: all; */
-}
-[data-variant="primary"] {
-  background-color: var(--gray-900);
-  color: var(--gray-100);
-}
-[data-variant="primary"]:hover {
-  background-color: var(--gray-800);
-}
+/* 
 input,
 button,
 a {
@@ -38,14 +6,9 @@ a {
   transition-timing-function: var(--bezier-swift);
   transition-property: background-color, color, border-color, box-shadow,
     transform, outline-offset;
-}
-button:hover {
-  box-shadow: 0 2px 8px 0 rgb(34 35 40 / 30%);
-}
-:where(button, a):where(:not(:active)):focus-visible {
-  outline-offset: 5px;
-  /* box-shadow: 0 0 0 0.2rem var(--color-focus-shadow); */
-}
+} */
+
+
 
 /* CUSTOMS */
 
@@ -54,9 +17,6 @@ main {
   padding-bottom: var(--page-top);
 }
 
-body > footer {
-  min-height: 20rem;
-}
 
 .header {
   position: fixed;
@@ -65,39 +25,12 @@ body > footer {
   width: 100%;
   height: var(--header-height);
   z-index: var(--layer-header);
-  display: flex;
-  align-items: center;
   border-bottom: 1px solid var(--gray-200);
-}
-.header:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--alpha);
-  z-index: -1;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  mix-blend-mode: dark-plus;
-}
-.header a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.header-bg {
-  position: absolute;
-  top: -1000px;
-  left: 0;
-  width: 100%;
-  height: calc(1000px + var(--page-top));
-  z-index: calc(var(--layer-header) + 1);
-}
-.header-bg {
-  background: var(--color-light);
+  background-color: var(--gray-100);
 }
 
 /*=============================================
-=            Story            =
+=            Story   styles TODO: extract         =
 =============================================*/
 .story-with-sidebar {
   --side-width: calc(var(--space-l-xl, 2rem) * 5);
@@ -114,12 +47,7 @@ body > footer {
   top: var(--header-height);
 }
 
-
-/* [data-layout~="box"] {
-  border-radius: var(--border-radius);
-} */
-
-[data-shadow] {
+/* [data-shadow] {
   --element-offset: 0;
   --shadow-offset: calc(var(--border-thick) * 1.5);
   box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0 var(--color-dark);
@@ -127,7 +55,7 @@ body > footer {
   transition-duration: 0.3s;
   transition-timing-function: var(--bezier-snappy);
   transition-property: none;
-}
+} */
 /* [data-shadow~="hoverable"]:hover, */
 /* [data-shadow~="focusable"]:focus-within {
   --element-offset: var(--border-thick);

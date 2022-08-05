@@ -14,7 +14,7 @@ eleventyComputed:
 {# {% set story = story %} #}
 <div data-layout="stack" data-props="space:xl">
     <div data-layout="cover" data-props="x:start noPad ">
-        <ul data-layout="cluster" role="list">
+        <ul data-layout="cluster" role="list" data-props="noPad">
             {%- for category in story.categories %}
                 <li>
                     <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
@@ -40,7 +40,7 @@ eleventyComputed:
         </nav> #}
     </div>
     <section id="summary" data-layout="cover" data-props="noPad">
-        <h2 data-heading="4">Why it matters</h2>
+        <h2 data-heading="4">Overview</h2>
         <div data-mardown data-props="space:s">
             {% renderTemplate "md, liquid", story %}
             <span>
