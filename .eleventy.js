@@ -70,11 +70,23 @@ module.exports = function (eleventyConfig) {
   }
   );
 
-  eleventyConfig.addFilter("qrcode", async function(value) {
+  // eleventyConfig.addFilter("qrcode", async function(value) {
+	// 	return await qrCode.toString(value, { type: 'svg' });
 
-		return await qrCode.toDataURL(value);
-
+	// });
+  eleventyConfig.addNunjucksAsyncFilter("qrcode", async function(value, callback) {
+		let result = await qrCode.toString(value, { type: 'svg', margin: 4 });
+		callback(null,result);
 	});
+  // Convert ISO date to readable date of day month and year
+  eleventyConfig.addFilter("readableDate", function (date) {
+    return new Date(date).toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+      day: "numeric",
+    });
+  }
+  );
   return {
     dir: {
       input: "src",
