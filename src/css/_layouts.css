@@ -25,6 +25,9 @@
   }
   */
 [data-layout~="box"][data-props~="invert"] {
+  /* --OFF: ;
+  --ON: initial;
+  --inverted: var(--ON); */
   color: var(--color-light);
   background-color: var(--color-dark);
 }

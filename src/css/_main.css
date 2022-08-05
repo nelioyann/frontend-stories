@@ -1,33 +1,13 @@
 
-:root {
-  --color-primary: hsl(225, 73%, 59%);
-  --color-light: var(--gray-100);
-  --color-dark: var(--gray-900);
-
-  --color-text: var(--gray-600);
-  --color-heading: hsl(225deg, 15%, 15%);
-
-  --color-muted: var(--gray-100);
-  --color-muted-dark: var(--gray-200);
-  --border-radius: 0.5rem;
-
-  --color-focus: var(--gray-900);
-  --color-focus-shadow: var(--gray-600);
-  /* --safe-height: auto; */
-
-  --bezier-snappy: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --bezier-swift: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
 
 header h1 {
   font-size: var(--step--1);
   font-weight: 400;
 }
-small,
+/* small,
 footer {
   font-size: var(--step--1);
-  /* color: var(--gray-700); */
-}
+} */
 
 button {
   /* min-width: 250px; */
