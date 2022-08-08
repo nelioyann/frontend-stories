@@ -1,7 +1,7 @@
 module.exports = {
     name: "Frontend Stories",
     site_name: "Frontend Stories",
-    site_description: "Collection of reasearch-backed findings and insights on the web.",
+    site_description: "Collection of reasearch-backed findings and insights about frontend development.",
     site_url: "https://frontendstories.com",
     site_thumbnail: "https://frontendstories.com/images/thumbnail.png",
     theme_color: "#000",

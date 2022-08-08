@@ -11,31 +11,36 @@ eleventyComputed:
 
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
 {% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
-<div data-layout="stack" data-props="space:xl">
-    <section
-        id="cover" data-layout="stack">
+<div data-layout="stack" data-props="space:2xl ">
+    <section id="cover" data-layout="stack">
         <h2 class="visually-hidden" data-heading="4">Cover</h2>
         <div data-layout="cover box" data-props="x:start invert">
-            
             <h1 data-heading="3" data-props="centered noBorder">{{ story.name }}</h1>
             <figure>
                 {{ meta.site_url| qrcode | safe }}
                 <figcaption class="visually-hidden">Share link</figcaption>
             </figure>
         </div>
-        <ul data-layout="cluster" role="list" data-props="noPad">
+        
+    </section>
+    <section id="summary" data-layout="cover" data-props="noPad">
+        <h2 data-heading="4">Overview</h2>
+        <div>
+            <div data-layout="cluster">
+            <span>Tagged:
+            </span>
+            <ul data-layout="cluster" role="list" data-props="noPad">
                 {%- for category in story.categories %}
                     <li>
                         <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
                     </li>
                 {% endfor -%}
             </ul>
-    </section>
-    <section id="summary" data-layout="cover" data-props="noPad">
-        <h2 data-heading="4">Overview</h2>
-        <p>Last updated:
+        </div>
+        <p>Last modified:
             <time datetime={{ story.edited }}>{{ story.created | readableDate }}</time>
         </p>
+        </div>
         <div data-mardown data-props="space:s">
             {% renderTemplate "md, liquid", story %}
             <span>
@@ -45,20 +50,18 @@ eleventyComputed:
         </div>
     </section>
     <section id="reference" data-layout="cover" data-props="noPad">
-        <h2 data-heading="4">Further Readings</h2>
+        <h2 data-heading="4">Sources</h2>
         <ul data-layout="stack" data-props="noPad x:stretch" data-props="space:xs">
             {%- for reference in story.references %}
-                <li data-layout="box stack" >
-                    <a data-button  target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+                <li data-layout="box stack">
+                    <a data-button target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
                         <span data-heading="5">{{ reference.name }}</span>
                     </a>
                     <div data-layout="cluster" data-props="x:between">
-
-                    {% if reference.cite %}
-                        <p>{{ reference.cite }}</p>
-                    {% endif %}
-
-                    <p>({{reference.type.name}})</p>
+                        {% if reference.cite %}
+                            <p>{{ reference.cite }}</p>
+                        {% endif %}
+                        <p>({{ reference.type.name }})</p>
                     </div>
                     {% if reference.summary %}
                         <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>
@@ -71,10 +74,10 @@ eleventyComputed:
         </ul>
     </section>
     <section id="related" data-layout="cover" data-props="noPad">
-        <h2 data-heading="4">Related Stories</h2>
+        <h2 data-heading="4">In the same category</h2>
         {% set entries = stories | similarStories(story.id, story.categories) | limitTo(5) %}
         {% if entries.length > 0 %}
-            <ul data-layout="reel" role="list" data-props="noPad overflowing:noBar">
+            <ul data-layout="reel" role="list" data-props="noPad noBorder overflowing:noBar">
                 {%- for entry in entries %}
                     {% include "partials/story-card-entry.njk" %}
                 {% endfor -%}
@@ -92,7 +95,7 @@ eleventyComputed:
             </a>
         {% endif %}
         {% if pagination.href.next %}
-            <a data-button href="{{ pagination.href.next }}">
+            <a data-button data-props="space:0" href="{{ pagination.href.next }}">
                 <span>Next</span>
             </a>
         {% endif %}

@@ -1,7 +1,9 @@
 [data-button] {
   --minimum-height: 46px;
-  --border-radius: var(--space-2xs);
-  padding: var(--space-xs) var(--space-m);
+  --border-radius: 0;
+  --y-padding: var(--space-xs);
+  --x-padding: var(--space-m);
+  padding: var(--y-padding) var(--x-padding);
   border-radius: var(--border-radius);
   min-height: var(--minimum-height);
   font-weight: 500;
@@ -11,11 +13,27 @@
   color: var(--gray-900);
   background-color: var(--gray-100);
   cursor: pointer;
+  display: inline-block;
   border-style: solid;
   border-width: var(--border-thin, 1px);
+  border-color: var(--gray-400);
+  font-size: var(--step-0);
+
+}
+[data-button~="variant:primary"]{
+  background-color: var(--gray-800);
+  color: var(--gray-100);
+
+}
+[data-button~="small"]{
+  --minimum-height: 32px;
+  --y-padding: var(--space-2xs);
+  --x-padding: var(--space-2xs);
+  font-size: var(--step--1);
 }
 [data-button]:hover {
   background-color: var(--gray-200);
+  color: var(--gray-900);
 }
 [data-button~="active"],
 [data-button]:active {

@@ -274,6 +274,12 @@
 [data-props~="space:0"] {
   --space: 0;
 }
+[data-props~="space:2xs"] {
+  --space: var(--space-2xs);
+}
+[data-props~="space:xs"] {
+  --space: var(--space-xs);
+}
 [data-props~="space:s"] {
   --space: var(--space-s);
 }
@@ -288,7 +294,7 @@
 }
 
 [data-props~="noBorder"] {
-  border-width: 0;
+  border-width: 0 !important;
 }
 [data-props~="noCurve"] {
   --border-radius: 0;

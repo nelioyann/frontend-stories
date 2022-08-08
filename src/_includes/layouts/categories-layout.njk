@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "partials/site-head.njk" %}
+    <body data-layout="cover" data-props="noPad space:xl">
+        {% include "partials/site-header.njk" %}
+        <main data-layout="stack" data-props="centered x:stretch">
+            {% set previousPageHref = "/" %}
+            {% set previousPageIcon = "🏡" %}
+            {% set previousPageLabel = "go back Home" %}
+            {% include "../partials/page-return-navigation.njk" %}
+            {% block content %}
+                {{ content | safe }}
+            {% endblock %}
+        </main>
+        {% include "partials/site-footer.njk" %}
+    </body>
+</html>

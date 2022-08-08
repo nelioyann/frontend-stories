@@ -1,0 +1,10 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+    <article data-layout="stack" data-props="space:l">
+        {% set previousPageHref = "/categories"%}
+        {% set previousPageIcon = "👈"%}
+        {% set previousPageLabel = "view all categories"%}
+        {% include "../partials/page-return-navigation.njk"%}
+        {{ content | safe }}
+    </article>
+{% endblock %}
