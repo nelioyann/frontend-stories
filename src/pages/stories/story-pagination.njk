@@ -25,7 +25,7 @@ eleventyComputed:
     </section>
     <section id="summary" data-layout="cover" data-props="noPad">
         <h2 data-heading="4">Overview</h2>
-        <div>
+        {# <div>
             <div data-layout="cluster">
             <span>Tagged:
             </span>
@@ -38,9 +38,9 @@ eleventyComputed:
             </ul>
         </div>
         <p>Last modified:
-            <time datetime={{ story.edited }}>{{ story.created | readableDate }}</time>
+            <time datetime="{{ story.edited }}">{{ story.created | readableDate }}</time>
         </p>
-        </div>
+        </div> #}
         <div data-mardown data-props="space:s">
             {% renderTemplate "md, liquid", story %}
             <span>
@@ -77,7 +77,7 @@ eleventyComputed:
         <h2 data-heading="4">In the same category</h2>
         {% set entries = stories | similarStories(story.id, story.categories) | limitTo(5) %}
         {% if entries.length > 0 %}
-            <ul data-layout="reel" role="list" data-props="noPad noBorder overflowing:noBar">
+            <ul data-layout="reel" role="list" data-props="noPad noBorder overflowing:noBar" style="--reel-item-width: calc(var(--space-m) * 10);">
                 {%- for entry in entries %}
                     {% include "partials/story-card-entry.njk" %}
                 {% endfor -%}
