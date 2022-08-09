@@ -2,20 +2,23 @@
 {% block content %}
     <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
         <aside>
+            {% set previousPageHref = "/stories" %}
+            {% set previousPageLabel = "view all stories" %}
             <nav>
-                <details>
+            {% include "partials/page-return-navigation.njk" %}
+                <details data-layout="stack" open>
                     <summary>
                         Table of contents
                     </summary>
                     <ol data-layout="stack" data-props="split">
                         <li>
-                            <a href="#summary">Overview</a>
+                            <a data-link href="#summary">Overview</a>
                         </li>
                         <li>
-                            <a href="#reference">Further reading</a>
+                            <a data-link href="#reference">Further reading</a>
                         </li>
                         <li>
-                            <a href="#related">Related</a>
+                            <a data-link href="#related">Related</a>
                         </li>
                     </ol>
                 </details>

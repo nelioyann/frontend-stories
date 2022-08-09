@@ -1,8 +1,6 @@
 <nav>
-    <a data-button="small" data-layout="with-icon" data-props="space:xs noBorder" href="{{previousPageHref}}">
-        <span aria-hidden="true" data-layout="icon">
-            {{previousPageIcon}}
-        </span>
+    <a data-button data-layout="cluster" data-props="y:center" href="{{previousPageHref}}">
+        {% include "icons/back-icon.njk" %}
         <span>
             {{previousPageLabel}}
         </span>
