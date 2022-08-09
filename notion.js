@@ -25,17 +25,6 @@ const notion = new Client({
 });
 notion;
 
-async function readDatabase(database_id) {
-  console.log("Reading database...");
-  try {
-    const response = await notion.databases.query({
-      database_id,
-    });
-    console.log(JSON.stringify(response));
-  } catch (error) {
-    console.log(error);
-  }
-}
 
 async function readDatabasePagesId(database_id) {
   console.log("Reading database...");
@@ -73,11 +62,18 @@ async function readProperty(page_id, property_id) {
 }
 
 async function sanitizeProperty(response, property_type) {
+  // https://developers.notion.com/reference/property-object
+  // TODO: Add remaining property types
+  // TODO: Turn into cycle to handle all property types
   switch (property_type) {
     case "created_time":
       return response.created_time;
+    case "last_edited_time":
+      return response.last_edited_time;
     case "multi_select":
       return response.multi_select;
+    case "select":
+      return response.select;
     case "url":
       return response.url;
     case "property_item":
@@ -102,15 +98,10 @@ async function sanitizePropertyItem(response, propertyItem_type) {
       // let properties_id = ["title"];
       let relation_pages = [];
       for (let pageId of relation_pageIds) {
-        let name = await readProperty(pageId, "title");
-        let url = await readProperty(pageId, "URL");
-        let summary = await readProperty(pageId, "Summary");
-        let page = { name, url, summary };
+        let page = await readPageExtended(pageId);
         relation_pages.push(page);
       }
-      console.log({relation_pages});
       return relation_pages;
-      // return relation_pages;
     default:
       return "something went wrong";
   }

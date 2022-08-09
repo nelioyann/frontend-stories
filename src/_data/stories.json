@@ -1,269 +1,694 @@
 [
     {
-        "id": "c4cb83f2-5329-4473-8f23-2c180e8d2f10",
+        "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
+        "edited": "2022-08-03T13:58:00.000Z",
+        "created": "2022-07-21T23:10:00.000Z",
+        "description": "How long can users tolerate waiting times ?",
         "references": [
             {
-                "name": "Are you sure that’s a number input? | Kilian Valkhof",
-                "url": "https://kilianvalkhof.com/2022/css-html/are-you-sure-thats-a-number-input/",
-                "summary": "Not all inputs that accept digits should be inputs with type=\"number\". Make sure that you use it for numbers, not for things that just happen to be made up of digits."
+                "id": "e916b1b3-c109-4844-a63e-e7e1ab0755ca",
+                "citation": "Nah, F. F. H. (2004). \"A study on tolerable waiting time: how long are Web users willing to wait?\" ",
+                "url": "https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f",
+                "summary": "Web users often face a long waiting time for downloading Web pages. Although various technologies and techniques have been implemented to alleviate the situation and to comfort the impatient users, little research has been done to assess what constitutes an acceptable and tolerable waiting time for Web users. This research reviews the literature on computer response time and users' waiting time for download of Web pages, and assesses Web users' tolerable waiting time in information retrieval. It addresses the following questions through an experimental study: What is the effect of feedback on users' tolerable waiting time? How long are users willing to wait for a Web page to be downloaded before abandoning it? The results from this study suggest that the presence of feedback prolongs Web users' tolerable waiting time and the tolerable waiting time for information retrieval is approximately 2 seconds.",
+                "cite": "Nah, 2004",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "A study on tolerable waiting time: how long are Web users willing to wait?"
             }
         ],
-        "description": "Not all inputs that accept digits should be inputs with type=\"number\". Make sure that you use it for numbers, not for things that just happen to be made up of digits.",
-        "categories": [
-            {
-                "id": "28bd0fb5-b75d-4e9a-a711-9c2d2c801761",
-                "name": "forms",
-                "color": "blue"
-            }
-        ],
-        "name": "Only use input type number for incremental values"
-    },
-    {
-        "id": "4d5f6034-ef65-4200-95e5-9be8c35119d3",
-        "references": [
-            {
-                "name": "Form design patterns",
-                "url": null,
-                "summary": ""
-            }
-        ],
-        "description": "Depending on the situation, the humble file picker may be all that users need to upload files. In this case, you may not need to worry about adding a drag-and-drop enhancement at all. This way, there’s less code to send to the user. As a result, page load times are faster, and the interface is simplified at the same time.",
-        "categories": [
-            {
-                "id": "201de05f-daa9-487b-bdf2-64619842dafd",
-                "name": "ux",
-                "color": "pink"
-            }
-        ],
-        "name": "Avoid replacing a standard file picker with a drag-and-drop interface."
-    },
-    {
-        "id": "a6aad506-d98f-46d8-b3a9-274ec9be5f5d",
-        "references": [
-            {
-                "name": "Inclusive Components",
-                "url": null,
-                "summary": ""
-            },
-            {
-                "name": "Form design patterns",
-                "url": null,
-                "summary": ""
-            }
-        ],
-        "description": "Be wary of disabling buttons in this way. Making buttons unfocusable can often mean they are missed — especially since screen reader users will most likely be navigating by Tab within a form. It’s usually better to let users focus and press the button, , then let them know if there are any errors.",
-        "categories": [
-            {
-                "id": "28bd0fb5-b75d-4e9a-a711-9c2d2c801761",
-                "name": "forms",
-                "color": "blue"
-            }
-        ],
-        "name": "Do not disable submit buttons until the form becomes valid."
-    },
-    {
-        "id": "81a0658a-8a75-45e7-ad98-b7dc6a61f41b",
-        "references": [
-            {
-                "name": "Checkboxes Are Never Round—Daniel De Laney",
-                "url": "http://danieldelaney.net/checkboxes/",
-                "summary": "Interactive things have perceived affordances; the way they look tells us what they do and how to use them. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull."
-            }
-        ],
-        "description": "Interactive things have perceived affordances; the way they look tells us what they do and how to use them. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull.",
-        "categories": [
-            {
-                "id": "28bd0fb5-b75d-4e9a-a711-9c2d2c801761",
-                "name": "forms",
-                "color": "blue"
-            }
-        ],
-        "name": "Do not use radio buttons and checkboxes interchangeably"
-    },
-    {
-        "id": "b2b908c7-f185-4b07-a6f2-3745550fbc85",
-        "references": [
-            {
-                "name": "The best icon is a text label — Thomas Byttebier",
-                "url": "https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label",
-                "summary": "What good has a beautiful interface if it’s unclear? Hence it’s simple: only use an icon if its message is a 100% clear to everyone. Never give in."
-            },
-            {
-                "name": "Misused mobile UX patterns. If you are an experienced designer, you… | by Zoltan Kollin | Medium",
-                "url": "https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570",
-                "summary": ""
-            }
-        ],
-        "description": "Only use an icon if its message is a 100% clear to everyone. Adding a text labels along side icons can increase clarity.",
-        "categories": [
-            {
-                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-                "name": "effective web content",
-                "color": "default"
-            }
-        ],
-        "name": "Always give icons a text label"
-    },
-    {
-        "id": "1407ac21-afe7-476d-9e9b-5f3567631902",
-        "references": [
-            {
-                "name": "Form Design Patterns - Hover vs Click",
-                "url": null,
-                "summary": "Relying on hover to trigger menu violate a principle of Include Design as the user lose control of an interaction potentially unintentional. Moreover, such an interaction only works on desktop which produces incomparable experiences between users, and a bad one for those with motor impairments."
-            }
-        ],
-        "description": "Relying on hover to trigger menu violate a principle of Include Design as the user lose control of an interaction potentially unintentional. Moreover, such an interaction only works on desktop which produces incomparable experiences between users, and a bad one for those with motor impairments.",
-        "categories": [
-            {
-                "id": "aa0d797c-fc3f-41dc-9c4c-50c6634682bd",
-                "name": "a11ty",
-                "color": "pink"
-            }
-        ],
-        "name": "Avoid displaying dropdown menus on hover"
-    },
-    {
-        "id": "f566b2dd-daa0-4684-9791-8ac5e34fbbbd",
-        "references": [
-            {
-                "name": "A Study on Tolerable Waiting Time: How Long Are Web Users Willing to Wait?",
-                "url": "https://www.researchgate.net/publication/220893869_A_Study_on_Tolerable_Waiting_Time_How_Long_Are_Web_Users_Willing_to_Wait",
-                "summary": ""
-            },
-            {
-                "name": "Adding delays to increase perceived value: does it work? | 90 Percent Of Everything",
-                "url": "https://90percentofeverything.com/2010/12/16/adding-delays-to-increase-perceived-value-does-it-work/index.html",
-                "summary": "Adding delays to process can increase the perceived value"
-            }
-        ],
-        "description": "results from this,study suggest that the presence of feedback prolongs Web users’ tolerable waiting time and the tolerable waiting time for information retrieval is approximately2 seconds.",
-        "categories": [
-            {
-                "id": "842795e6-946a-48fe-884b-eea79b5c38c1",
-                "name": "wait tolerance",
-                "color": "gray"
-            }
-        ],
-        "name": "Always provide a feedback status when the waiting time is above 2 seconds"
-    },
-    {
-        "id": "88292fe0-cd93-4bb9-8761-1bf0df55d1df",
-        "references": [
-            {
-                "name": "Imagery Vs Text. Which does the brain prefer?",
-                "url": "https://www.learnevents.com/blog/2015/09/07/imagery-vs-text-which-does-the-brain-prefer/",
-                "summary": "we look at pictures and videos regularly and we consume them more quickly than we do text."
-            }
-        ],
-        "description": "Studies have shown that visual information are processed far quicker than textual information. When presenting content, use visuals as much as possible while providing an alternative description. ",
-        "categories": [
-            {
-                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-                "name": "effective web content",
-                "color": "default"
-            }
-        ],
-        "name": "Present information visually rather than textually"
-    },
-    {
-        "id": "684eaf0f-09fe-4114-8894-1ae2f8095f74",
-        "references": [
-            {
-                "name": "Using voiceover with unicode characters is a nightmare",
-                "url": "https://twitter.com/kentcdodds/status/1083073242330361856",
-                "summary": "Reminder, for those using the cute and fun little Unicode characters on social media or blog posts, that this is a nightmare for screen reader users (or anyone with reading issues, some dyslexic people, people with ADHD, etc.)"
-            }
-        ],
-        "description": "Use unicode characters sparingly as screen readers can not process them adequately.",
-        "categories": [
-            {
-                "id": "aa0d797c-fc3f-41dc-9c4c-50c6634682bd",
-                "name": "a11ty",
-                "color": "pink"
-            }
-        ],
-        "name": "Avoid unicode characters on social media and blog posts"
-    },
-    {
-        "id": "45ac45d6-d05a-4795-8779-223ef319ad51",
-        "references": [
-            {
-                "name": "Inline Validation in Web Forms – A List Apart",
-                "url": "https://alistapart.com/article/inline-validation-in-web-forms/",
-                "summary": "There’s some evidence to show that live inline validation improves accuracy and decreases completion times in long forms"
-            }
-        ],
-        "description": "Show the user where they have made mistakes as soon as possible. This approach reduces server calls and improves the user experience.",
         "categories": [
             {
                 "id": "00ceebbe-808b-48a4-b72c-306c38353336",
-                "name": "error messages",
+                "name": "Notifications",
                 "color": "green"
             }
         ],
-        "name": "Validate data entry when the user moves to the next field"
+        "name": "Tolerable wait time is about 2 seconds. Users will wait somewhat longer if there is feedback that something is happening"
     },
     {
-        "id": "76828bfb-303f-4b44-b91a-053ced589202",
+        "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
+        "edited": "2022-08-03T14:04:00.000Z",
+        "created": "2022-07-21T23:07:00.000Z",
+        "description": "Do you care if a computer says sorry?",
         "references": [
             {
-                "name": "Karl Sabino on the ROI of well designed error messages | 90 Percent Of Everything",
-                "url": "https://90percentofeverything.com/2009/02/16/karl-sabino-on-the-roi-of-well-designed-error-messages/index.html",
-                "summary": "One study showed that showing custom error messages increased conversions by 0.5% which equated to more than £250,000 in yearly revenue."
+                "id": "3b1f7313-53a0-4ac8-a7e8-02cde70c4440",
+                "citation": "Jeng-Yi Tzeng. 2004. Toward a more civilized design: studying the effects of computers that apologize. Int. J. Hum.-Comput. Stud. 61, 3 (September 2004), 319–345.",
+                "url": "https://www.sciencedirect.com/science/article/abs/pii/S1071581904000060",
+                "summary": "While it is difficult to create completely error-free interactions in software design, the issue of how to make users feel better when they encounter errors is critical to the concept of user-centered design. Neilsen argued for offering a slightly apologetic statement before an error message provided by web servers, but the notion of a computer apologizing to its users inevitably triggers a debate about the appropriateness of providing humanized messages to users. To understand how users react to computers' apologies (presented by textual or visual formats), a computer-guessing game was designed to test users' reactions. The game features three treatments (difficulty levels, feedback types, and emotional icons), each having two levels (difficult vs. easy, apologetic feedback vs. non-apologetic feedback, with emotional icons vs. without emotional icons). Two-hundred and sixty nine high school students participated in this study and were randomly assigned to one of eight groups. The results show that while the computers' actual performances still dominated the users' assessments of the program, the computer apologies help to create more desirable psychological experiences for the users, and emotional icons help to improve the aesthetic quality of the program.",
+                "cite": "Tzeng, 2004",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Toward a more civilized design: studying the effects of computers that apologize"
             }
         ],
-        "description": "Showing custom error messages in forms lead to a better user experience.",
         "categories": [
             {
                 "id": "00ceebbe-808b-48a4-b72c-306c38353336",
-                "name": "error messages",
+                "name": "Notifications",
                 "color": "green"
             }
         ],
-        "name": "Use custom error messages to describe what went wrong"
+        "name": "Sympathetic error messages and emoticons can influence users' perceptions of the application."
     },
     {
-        "id": "8b07763d-79ed-45be-bbde-ecae10128ec4",
+        "id": "3ffefcf2-f179-4ea6-9dbe-b03a21c5d0a4",
+        "edited": "2022-08-04T23:05:00.000Z",
+        "created": "2022-07-21T23:06:00.000Z",
+        "description": "This is a very widespread idea, which could potentially be founded. The associated reference is nonetheless wrong. \n\n[Source](https://www.linkedin.com/pulse/lin-2004-did-discover-margins-white-space-increase-20-carl-myhill/)",
         "references": [
             {
-                "name": "Don’t Put Hints Inside Text Boxes in Web Forms :: UXmatters",
-                "url": "https://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php",
-                "summary": "Don’t use placeholders to store labels or hints"
+                "id": "d980e0a1-c3fb-44e2-8315-e043b6a6d67b",
+                "citation": "Lin, D. Y. M. (2004). \"Evaluating older adults' retention in hypertext perusal: impacts of presentation media as a function of text topology.\" ",
+                "url": "https://www.sciencedirect.com/science/article/abs/pii/S074756320300075X",
+                "summary": "The present study attempts to examine how older adults react to multimedia interface in hypertext perusal. Twenty-four older subjects participated in an experiment where presentation media and text topology were manipulated. A hypermedia system of tourist guide was developed to test the subject's perusal performance in terms of retention accuracy. Results showed that the main effects and interaction were significant. The use of animated graphs, static pictures, and pure text resulted in significantly descending retention when the hierarchical topology was perused. However, the advantage of animated graphs over static pictures disappeared for the referential topology but both media rendered higher retention scores than the text-only presentation. It was suggested that hypermedia interface for the aged should be designed towards the use of graph-based presentations on a hierarchical topology for better retention. Detailed implications were discussed.",
+                "cite": "Lin, 2004",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Evaluating older adults' retention in hypertext perusal: impacts of presentation media as a function of text topology"
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            }
+        ],
+        "name": "Use of whitespace between paragraphs and in the left and right margins increased comprehension by almost 20%."
+    },
+    {
+        "id": "a1043815-b340-41d4-888b-9271bf10e94b",
+        "edited": "2022-08-03T14:22:00.000Z",
+        "created": "2022-07-21T23:04:00.000Z",
+        "description": "How to effectively write effective and satisfying web content?",
+        "references": [
+            {
+                "id": "26cc1452-8f99-4ceb-b4a5-7740825a2cf8",
+                "citation": "Morkes, J., and Nielsen, J. (1998). \"Applying Writing Guidelines to Web Pages.\" White Paper.",
+                "url": "https://dl.acm.org/doi/10.1145/286498.286792",
+                "summary": "Web users generally prefer writing that is concise, easy to scan, and objective (rather than promotional) in style. We incorporated these and other attributes into a redesign of Web content. Doing so required trade-offs and some hard decisions, but the results were positive. The rewritten website scored 159% higher than the original in measured usability. Compared with original-site users, users of the rewritten site reported higher subjective satisfaction and performed better in terms of task time, task errors, and memory. Implications for website writing and design are discussed.",
+                "cite": "Morkes and Nielsen, 1998",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Applying Writing Guidelines to Web Pages"
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            }
+        ],
+        "name": "Well written copy has significant implications for user satisfaction and effective message distribution."
+    },
+    {
+        "id": "d9827565-4e51-4064-878e-0911b072311d",
+        "edited": "2022-08-03T15:12:00.000Z",
+        "created": "2022-07-21T23:04:00.000Z",
+        "description": "- Hrm",
+        "references": [
+            {
+                "id": "daa61147-ac83-4683-a660-e52d46f0c7a5",
+                "citation": "Olsen, G., D. (2002). \"Salient Stimuli in Advertising: The Effect of Contrast Interval Length and Type on Recall\" ",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12240929/",
+                "summary": "Salient auditory stimuli (e.g., music or sound effects) are commonly used in advertising to elicit attention. However, issues related to the effectiveness of such stimuli are not well understood. This research examines the ability of a salient auditory stimulus, in the form of a contrast interval (CI), to enhance recall of message-related information. Researches have argued that the effectiveness of the CI is a function of the temporal duration between the onset and offset of the change in the background stimulus and the nature of this stimulus. Three experiments investigate these propositions and indicate that recall is enhanced, providing the CI is 3 s or less. Information highlighted with silence is recalled better than information highlighted with music.",
+                "cite": "Olsen, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Salient Stimuli in Advertising: The Effect of Contrast Interval Length and Type on Recall"
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            }
+        ],
+        "name": "Users tend not to recall more than one or two highlighted items unless surrounded by white space"
+    },
+    {
+        "id": "943c2cf2-3650-48e5-8b95-d1d7044c0c1e",
+        "edited": "2022-08-03T14:57:00.000Z",
+        "created": "2022-07-21T23:02:00.000Z",
+        "description": "How do page layouts impact how users consume web content?",
+        "references": [
+            {
+                "id": "5d1673f6-785f-44ab-a938-4743575165f1",
+                "citation": "Chaparro, B. S., Shaikh, A. D., and Baker, J. R. (2005). \"Reading Online Text with a Poor Layout: Is Performance Worse?\" ",
+                "url": "https://api.semanticscholar.org/CorpusID:62068343",
+                "summary": "This study examined the effects of enhanced layout (headers,\nindentation, and figure placement) on reading performance,\ncomprehension, and satisfaction. Participants read text passages with and\nwithout enhanced layout. Results showed that reading speed and\ncomprehension were not affected by layout, however, participants were\nmore satisfied with the enhanced layout and reported it to be less fatiguing\nto read.",
+                "cite": "Chaperro, Shaikh, and Baker, 2005",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Reading Online Text with a Poor Layout: Is Performance Worse?"
+            }
+        ],
+        "categories": [
+            {
+                "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
+                "name": "Design",
+                "color": "red"
+            }
+        ],
+        "name": "Layout on a Web page may not measurably influence performance, but it does influence satisfaction."
+    },
+    {
+        "id": "9866540b-5589-474a-b998-e602fa2a4779",
+        "edited": "2022-08-05T14:25:00.000Z",
+        "created": "2022-07-21T22:58:00.000Z",
+        "description": "**",
+        "references": [
+            {
+                "id": "307ea6e6-534b-4d6c-9dcc-f05098f2e601",
+                "citation": "Hull, S. S. (2004). \"Influence of Training and Exposure on the Usage of Breadcrumb Navigation.\" Usability News, 6(1).",
+                "url": "https://www.researchgate.net/publication/254409807_The_Influence_of_Mere_Exposure_on_Web_Based_Breadcrumb_Navigation",
+                "summary": "Research has reported that breadcrumb navigation improves site efficiency [1, 2]. However, when given a choice, users choose the Back button or navigation bar to navigate rather than the breadcrumb trail [3]. Lida-Rogers & Chaparro (2003) found that participants who used the breadcrumb trail used the Back button less often than users who did not use it; however, no differences were found in other efficiency measures such as total pages visited or total time. Participants may not understand the function of the breadcrumb trail as a navigational tool and understanding its’ purpose or minimal training might impact usage and/or efficiency [4]. Mere exposure was considered as a means of introducing participants to breadcrumb trails. According to Zajonc (1968), if the function of orienting behavior is eventually to change a novel stimulus into a familiar one, it is also its consequence to render the stimulus object eventually more attractive [5]. Zajonc (1968) states that the mere repeated exposure of the individual to a stimulus object enhances his attitude toward it [5]. Thus, it was hypothesized that mere exposure of the breadcrumb trail would influence participants’ use of breadcrumb trail navigation during a search task procedure.",
+                "cite": "Hull, 2004",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Influence of Training and Exposure on the Usage of Breadcrumb Navigation"
+            }
+        ],
+        "categories": [
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            }
+        ],
+        "name": "People who are taught about breadcrumbs tend to use them more often. However, users still do not use them spontaneously."
+    },
+    {
+        "id": "7b28aeb1-ecc4-43a4-8d3a-e229554bfe18",
+        "edited": "2022-07-21T23:04:00.000Z",
+        "created": "2022-07-21T22:52:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "7622615f-e739-432b-ae3a-89637f3968f4",
+                "citation": "Users' eyes are drawn to pictures of human faces the first time they see a page. (Riegelsberger, Sasse & McCarthy, 2002)",
+                "url": "https://www.researchgate.net/publication/220895891_Eye-Catcher_or_Blind_Spot_The_Effect_of_Photographs_of_Faces_on_E-Commerce_Sites",
+                "summary": "E-commerce still suffers from consumers' lack of trust. Most e-commerce researchers focus on building trust through cues that appeal to rational decision-making. These cues are usually implemented as text (e.g. privacy policies). In print advertising, affective attitudes and trust are commonly built by using photographs of people. On the web, however, users as well as interface design experts believe that photos impair task performance by attracting visual attention. In this study we compared online-shoppers' gaze patterns on pages with a photo of a person to pages with a text box of the same size. Our data does not support the claim that photographs decrease task performance. In fact, users spend more time looking at the text box. We found that the photograph attracts more attention than the text box on a first time view of a particular page. However, participants quickly learn the structure of a page and ignore the photo on subsequent pages. We outline further research, incorporating physiological measurements to infer user cost and affective responses",
+                "cite": "Riegelsberger, Sasse & McCarthy, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Eye-Catcher or Blind Spot? The Effect of Photographs of Faces on E-Commerce Sites"
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
             },
             {
-                "name": "The Input (Form Input) element - HTML: HyperText Markup Language | MDN",
-                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder",
-                "summary": "The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".\nNote: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content."
+                "id": "dab3ba03-db92-44f0-98d9-0938c4c774c7",
+                "name": "Multimedia",
+                "color": "brown"
             }
         ],
-        "description": "If you include hint text inside your form’s text boxes, many users—quite likely, the majority—will interpret the hint text as a default.\n# This is a title\nThis is a paragraph\nLet’s write a list:\n\n- One\n- Two\n- Three",
-        "categories": [
-            {
-                "id": "28bd0fb5-b75d-4e9a-a711-9c2d2c801761",
-                "name": "forms",
-                "color": "blue"
-            }
-        ],
-        "name": "Do not use input placeholders for storing labels or hints"
+        "name": "Users' eyes are drawn to pictures of human faces the first time they see a page"
     },
     {
-        "id": "eb7c38e3-38a0-47ad-b930-6dcf5540846d",
+        "id": "ac4db596-9d89-4452-8cfd-160c3475ae9b",
+        "edited": "2022-07-21T22:49:00.000Z",
+        "created": "2022-07-21T22:39:00.000Z",
+        "description": "",
         "references": [
             {
-                "name": "Make It Clear Where Hit Areas in Visual Elements Lead: 33% of Sites Don’t – Articles – Baymard Institute",
-                "url": "https://baymard.com/blog/hit-areas-in-visual-elements?utm_source=swlinks-tw",
-                "summary": "Make It Clear Where Hit Areas in Visual Elements Lead"
+                "id": "d87f3a64-1f3e-4e88-a329-a147c7a4bdd5",
+                "citation": "Hornoff, A.J. and Halverson T., (2003), Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays, Proceedings of the ACM Computer Human Interaction Conference. Ft. Lauderdale, FL.",
+                "url": "https://dl.acm.org/doi/abs/10.1145/642611.642656",
+                "summary": "This research investigates the cognitive strategies and eye movements that people use to search for a known item in a hierarchical computer display. Computational cognitive models were built to simulate the visual-perceptual and oculomotor processing required to search hierarchical and nonhierarchical displays. Eye movement data were collected and compared on over a dozen measures with the \"a priori\" predictions of the models. Though it is well accepted that hierarchical layouts are easier to search than nonhierarchical layouts, the underlying cognitive basis for this design heuristic has not yet been established. This work combines cognitive modeling and eye tracking to explain this and numerous other visual design guidelines. This research also demonstrates the power of cognitive modeling for predicting, explaining, and interpreting eye movement data, and how to use eye tracking data to confirm and disconfirm modeling details.",
+                "cite": "Hornoff and Halverson, 2003",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays"
             }
         ],
-        "description": "If the number or destination of hit areas are unclear, as they are on 33% of sites, our large-scale testing has shown that users can experience unnecessary disruption or disorientation",
         "categories": [
             {
-                "id": "04ffa6b7-db1f-4a06-bce8-1517046c780b",
-                "name": "perception",
-                "color": "orange"
+                "id": "594cddf0-5776-437e-a875-24cca3db4061",
+                "name": "Interaction",
+                "color": "purple"
             }
         ],
-        "name": "Make it clear where hit areas in visual elements lead"
+        "name": "Delays greater than 100ms effectively \"hold the perceptual system hostage”"
+    },
+    {
+        "id": "e04fcb63-f807-4c05-a249-5577b0c1062e",
+        "edited": "2022-08-05T14:24:00.000Z",
+        "created": "2022-07-21T22:35:00.000Z",
+        "description": "**How can page titles enhance the navigation ?**",
+        "references": [
+            {
+                "id": "571951b9-11bd-4b41-ab8b-292716c9f872",
+                "citation": "Cockburn, A., McKenzie B.and Jason-Smith, M., (2002), Pushing Back: browsers, International Journal of Human-Computer Studies 57, 397-414.",
+                "url": "https://www.sciencedirect.com/science/article/abs/pii/S1071581902910256",
+                "summary": "The Back button on web browsers is one of the world's most heavily used user interface components, yet its behavior is commonly misunderstood. This paper describes the evaluation of a “temporal” alternative to the normal “stack-based” behavior of Back and Forward. The main difference of the temporal scheme is that it maintains a complete list of previously visited pages. The evaluation compares the efficiency of the stack and temporal schemes in an “out of the box” scenario in which participants were asked to use a “new” version of a commercial browser without any explanation of the presence or absence of new features. This scenario allows us to predict the likely usability impact if commercial browsers were released supporting the temporal scheme. The results showed that the relative efficiency of the two schemes differed across different types of navigational task. In particular, the temporal system poorly supported backtracking to parent pages, but performed better for more distant navigation tasks. The temporal scheme also caused extreme usage patterns, with the subjects either solving tasks very efficiently or very inefficiently, depending on whether they used the Back menu. This observation indicates that adaptations of the temporal system that improve the effectiveness of the Back menu may enhance web navigation.",
+                "cite": "Cockburn, McKenzie and Jason-Smith, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Pushing back: evaluating a new behaviour for the back and forward buttons in web browsers"
+            }
+        ],
+        "categories": [
+            {
+                "id": "594cddf0-5776-437e-a875-24cca3db4061",
+                "name": "Interaction",
+                "color": "purple"
+            }
+        ],
+        "name": "Poorly titled pages make using the Back Button / Browser History harder."
+    },
+    {
+        "id": "03ec748a-33db-4376-aaf5-7f7a1e674473",
+        "edited": "2022-08-05T14:32:00.000Z",
+        "created": "2022-07-21T22:32:00.000Z",
+        "description": "Where do users expect web objects ?",
+        "references": [
+            {
+                "id": "b0cfe5aa-63b6-4653-a27f-4ca6168b7101",
+                "citation": "Bernard M. (2002), Examining User Expectations for the Location of Common E-Commerce Web Objects, Usability News 4.1.",
+                "url": "https://www.researchgate.net/publication/279336189_Examining_User_Expectations_for_the_Location_of_Common_E-Commerce_Web_Objects",
+                "summary": "This study examined where individuals expect specific web-related objects to be located on a typical e-commerce web page. The objects examined were: 1) shopping cart button 2) login/register button, 3) help/service button, 4) account/order status button, 5) internal search engine, 6) “back to homepage” link and 7) grouping of links that go to individual merchandise items. The results provide evidence that users do have definable expectations concerning the location of these web objects on e-commerce web pages. Implications for theses findings are discussed.",
+                "cite": "Bernard, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Examining User Expectations for the Location of Common E-Commerce Web Objects"
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            }
+        ],
+        "name": "Users expect Help / Service to appear in the upper right corner of a page."
+    },
+    {
+        "id": "585f9c99-8c18-4468-9306-181fe6a16ab0",
+        "edited": "2022-08-05T14:25:00.000Z",
+        "created": "2022-07-21T22:23:00.000Z",
+        "description": "Which font type do users prefer ?",
+        "references": [
+            {
+                "id": "f8199a86-33d2-47ea-a9f9-e97dd1ed19b8",
+                "citation": "Bernard, M., Lida, B., Riley, S., Hackler, T. and Janzen, K.A., (2000), comparison of popular online fonts, Usability News.",
+                "url": "https://www.semanticscholar.org/paper/A-Comparison-of-Popular-Online-Fonts%3A-Which-Size-is-Bernard-Lida/21a32bc134881ef07726c0e45e3d01923418f14a",
+                "summary": "In the last edition of Usability News we discussed our findings in regard to the performance and preference of twelve different fonts at the 12-point size. We are now able to compare these fonts at the10-, 12-, and 14-point sizes. To do this, we examined some of the most commonly used fonts for differences in reading effectiveness, reading time, perceptions of font legibility, font attractiveness, and general preference.",
+                "cite": "Bernard, M., Lida, B., Riley, S., Hackler, T. and Janzen, K.A., (2000)",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Comparison of popular online fonts"
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            }
+        ],
+        "name": "Users prefer sans-serif fonts to serif fonts on the Web though there is no significant performance change."
+    },
+    {
+        "id": "2c50d7ad-73ce-47f5-9ea7-9aa2b1b3eb2c",
+        "edited": "2022-08-05T14:32:00.000Z",
+        "created": "2022-07-21T22:22:00.000Z",
+        "description": "Where do users expect web objects ?",
+        "references": [
+            {
+                "id": "b0cfe5aa-63b6-4653-a27f-4ca6168b7101",
+                "citation": "Bernard M. (2002), Examining User Expectations for the Location of Common E-Commerce Web Objects, Usability News 4.1.",
+                "url": "https://www.researchgate.net/publication/279336189_Examining_User_Expectations_for_the_Location_of_Common_E-Commerce_Web_Objects",
+                "summary": "This study examined where individuals expect specific web-related objects to be located on a typical e-commerce web page. The objects examined were: 1) shopping cart button 2) login/register button, 3) help/service button, 4) account/order status button, 5) internal search engine, 6) “back to homepage” link and 7) grouping of links that go to individual merchandise items. The results provide evidence that users do have definable expectations concerning the location of these web objects on e-commerce web pages. Implications for theses findings are discussed.",
+                "cite": "Bernard, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Examining User Expectations for the Location of Common E-Commerce Web Objects"
+            }
+        ],
+        "categories": [
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            },
+            {
+                "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
+                "name": "Design",
+                "color": "red"
+            }
+        ],
+        "name": "Expectations of footer links are fading."
+    },
+    {
+        "id": "6e9e47af-ba33-475c-99c3-2c0721b0cb68",
+        "edited": "2022-07-21T23:04:00.000Z",
+        "created": "2022-07-21T22:21:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "0b141331-d5b4-43bf-9ac4-36cd933663eb",
+                "citation": "Beck DM, Palmer SE. Top-down influences on perceptual grouping. Journal of Experimental Psychology: Human Perception and Performance. 2002;28:1071–1084.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12421056/",
+                "summary": "Observers are faster to find and discriminate a target pair of adjacent, same-shaped objects that are within the same perceptual group (within group) versus within adjacent perceptual groups. Manipulating the probability of a within-group pair modulated this grouping effect such that it increased as the percentage of within-group trials (25%, 50%, or 75%) increased. This probability effect was stronger for extrinsic grouping factors (common region and connectedness) than for intrinsic factors (proximity and color similarity). Further experiments, however, suggested that this extrinsic-intrinsic difference was due to differences in overall speed with which the target pair was found. The results are interpreted as indicating that grouping is sensitive to top-down influences as long as there is sufficient time for feedback to operate.",
+                "cite": "Beck and Palmer, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Top-down influences on perceptual grouping."
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            },
+            {
+                "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
+                "name": "Design",
+                "color": "red"
+            }
+        ],
+        "name": "Proximity has a stronger perceptual influence than common ground for grouping."
+    },
+    {
+        "id": "94f8141a-28ef-4d9a-b6a3-50ddbd5b42d3",
+        "edited": "2022-08-05T14:32:00.000Z",
+        "created": "2022-07-21T22:21:00.000Z",
+        "description": "Where do users expect web objects ?",
+        "references": [
+            {
+                "id": "b0cfe5aa-63b6-4653-a27f-4ca6168b7101",
+                "citation": "Bernard M. (2002), Examining User Expectations for the Location of Common E-Commerce Web Objects, Usability News 4.1.",
+                "url": "https://www.researchgate.net/publication/279336189_Examining_User_Expectations_for_the_Location_of_Common_E-Commerce_Web_Objects",
+                "summary": "This study examined where individuals expect specific web-related objects to be located on a typical e-commerce web page. The objects examined were: 1) shopping cart button 2) login/register button, 3) help/service button, 4) account/order status button, 5) internal search engine, 6) “back to homepage” link and 7) grouping of links that go to individual merchandise items. The results provide evidence that users do have definable expectations concerning the location of these web objects on e-commerce web pages. Implications for theses findings are discussed.",
+                "cite": "Bernard, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Examining User Expectations for the Location of Common E-Commerce Web Objects"
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            },
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            }
+        ],
+        "name": "Users expect a back-to-home link in the upper left corner of the page."
+    },
+    {
+        "id": "c129717b-a341-4165-b723-9ebed0472bc1",
+        "edited": "2022-07-21T23:04:00.000Z",
+        "created": "2022-07-21T22:21:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "0b141331-d5b4-43bf-9ac4-36cd933663eb",
+                "citation": "Beck DM, Palmer SE. Top-down influences on perceptual grouping. Journal of Experimental Psychology: Human Perception and Performance. 2002;28:1071–1084.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12421056/",
+                "summary": "Observers are faster to find and discriminate a target pair of adjacent, same-shaped objects that are within the same perceptual group (within group) versus within adjacent perceptual groups. Manipulating the probability of a within-group pair modulated this grouping effect such that it increased as the percentage of within-group trials (25%, 50%, or 75%) increased. This probability effect was stronger for extrinsic grouping factors (common region and connectedness) than for intrinsic factors (proximity and color similarity). Further experiments, however, suggested that this extrinsic-intrinsic difference was due to differences in overall speed with which the target pair was found. The results are interpreted as indicating that grouping is sensitive to top-down influences as long as there is sufficient time for feedback to operate.",
+                "cite": "Beck and Palmer, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Top-down influences on perceptual grouping."
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            },
+            {
+                "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
+                "name": "Design",
+                "color": "red"
+            }
+        ],
+        "name": "Color, shared background and co-location are stronger grouping cues than outlines."
+    },
+    {
+        "id": "7d5e7577-5c51-4ea5-90e8-88e8c9f4ad85",
+        "edited": "2022-07-21T23:04:00.000Z",
+        "created": "2022-07-21T22:20:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "0b141331-d5b4-43bf-9ac4-36cd933663eb",
+                "citation": "Beck DM, Palmer SE. Top-down influences on perceptual grouping. Journal of Experimental Psychology: Human Perception and Performance. 2002;28:1071–1084.",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12421056/",
+                "summary": "Observers are faster to find and discriminate a target pair of adjacent, same-shaped objects that are within the same perceptual group (within group) versus within adjacent perceptual groups. Manipulating the probability of a within-group pair modulated this grouping effect such that it increased as the percentage of within-group trials (25%, 50%, or 75%) increased. This probability effect was stronger for extrinsic grouping factors (common region and connectedness) than for intrinsic factors (proximity and color similarity). Further experiments, however, suggested that this extrinsic-intrinsic difference was due to differences in overall speed with which the target pair was found. The results are interpreted as indicating that grouping is sensitive to top-down influences as long as there is sufficient time for feedback to operate.",
+                "cite": "Beck and Palmer, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Top-down influences on perceptual grouping."
+            }
+        ],
+        "categories": [
+            {
+                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
+                "name": "Effective Web Content",
+                "color": "default"
+            }
+        ],
+        "name": "Users find it difficult to ignore gestalt grouping principles of color similarity and common ground."
+    },
+    {
+        "id": "2601b3b7-ba19-4d70-ab8f-3bb15a1c2d2d",
+        "edited": "2022-07-21T22:50:00.000Z",
+        "created": "2022-07-21T21:55:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "fe231080-5d94-4815-a9bd-b9820c0703c6",
+                "citation": "Bernard, M., Baker, R., & Fernandez, M., (2002) Paging vs. Scrolling: Looking for the Best Way to Present Search Results, Usability News 4.1.",
+                "url": "https://www.researchgate.net/publication/242537467_Paging_vs_Scrolling_Looking_for_the_Best_Way_to_Present_Search_Results",
+                "summary": "Web designers are constantly confronted with the problem of displaying large amounts of information in confined spaces. To deal with this designers usually have two options, either present the information on one long scrolling page or divide it into smaller amounts on multiple web pages. Studies have found that shorter documents that require more paging tend to be superior in both performance and preference to longer pages that require more scrolling. For example, Piolat, Roussey, & Thunin (1998) found that participants who paged through documents had a better mental model of the text and were better able to locate relevant information and remember its main ideas than those who scrolled. Schwarz, Beldie, & Pastoor (1983) found that paging was preferred by inexperienced users but did not find significant differences in task completion time or search performance. Other studies have also found no differences between the two methods in terms of user performance (see Mills & Weldon, 1986). However, almost all of the studies that have been conducted were done prior to the advent of the Web. In today's Web environment users quickly scan most information, particularly search engine results. Because of this, it is possible that presenting long, scrollable pages may facilitate more efficient scanning, since users will not have to focus as much on paging while searching for the information. On the other hand, longer pages may be more disorienting, particularly for search tasks. Thus, the question posed in this study is how much information should be presented at one time on a search result web page?",
+                "cite": "Bernard, Baker and Fernandez, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Paging vs. Scrolling: Looking for the Best Way to Present Search Results"
+            }
+        ],
+        "categories": [
+            {
+                "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
+                "name": "Design",
+                "color": "red"
+            }
+        ],
+        "name": "Presenting 10 to 50 search returns per results page optimizes both performance and preference"
+    },
+    {
+        "id": "7b4f3d21-2028-4ef7-be33-8cb4c88e4c58",
+        "edited": "2022-08-05T10:54:00.000Z",
+        "created": "2022-07-21T21:55:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "86061cf1-b9e7-4fd8-aa53-7ce9852106bb",
+                "citation": "Simon, D. and Chabris, C.F., (1999), Gorrillas in our Midst: sustained inattentional blindness for dynamic events, Perception 28, 1059-1074.",
+                "url": "https://www.researchgate.net/publication/12620563_Gorillas_in_Our_Midst_Sustained_Inattentional_Blindness_for_Dynamic_Events",
+                "summary": "With each eye fixation, we experience a richly detailed visual world. Yet recent work on visual integration and change direction reveals that we are surprisingly unaware of the details of our environment from one view to the next: we often do not detect large changes to objects and scenes ('change blindness'). Furthermore, without attention, we may not even perceive objects ('inattentional blindness'). Taken together, these findings suggest that we perceive and remember only those objects and details that receive focused attention. In this paper, we briefly review and discuss evidence for these cognitive forms of 'blindness'. We then present a new study that builds on classic studies of divided visual attention to examine inattentional blindness for complex objects and events in dynamic scenes. Our results suggest that the likelihood of noticing an unexpected object depends on the similarity of that object to other objects in the display and on how difficult the priming monitoring task is. Interestingly, spatial proximity of the critical unattended object to attended locations does not appear to affect detection, suggesting that observers attend to objects and events, not spatial positions. We discuss the implications of these results for visual representations and awareness of our visual environment.",
+                "cite": "Simon & Chabris, 1999",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Gorrillas in our Midst: sustained inattentional blindness for dynamic events"
+            }
+        ],
+        "categories": [
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            }
+        ],
+        "name": "Users only perceive and encode elements of the display that they are directly focused on"
+    },
+    {
+        "id": "99ba6f8a-eff4-4ae2-b58d-8a896678b8f9",
+        "edited": "2022-07-21T22:43:00.000Z",
+        "created": "2022-07-21T21:54:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "fc0a27e0-f728-4341-847b-d86e992783ce",
+                "citation": "Baker, Bernard and Riley, (2002). Reading Online News: A Comparison of Three Presentation Formats, Usability News 4.2.",
+                "url": "https://www.semanticscholar.org/paper/Reading-Online-News%3A-A-Comparison-of-Three-Formats-Chaparro-Baker/db7a7f4ddb9d70d8b4793c1d29b8045ac4c03456",
+                "summary": "With the ever-increasing progression towards online newsletters as a principal source of information presentation, the Web has offered many opportunities as well as challenges that are unique to this environment. For instance, the traditional newspaper presents information within the confines of evenly-spaced, gridded columns. This has worked quite well in the past, and readers have become very accustomed to this style of information presentation. However, with the advent of the Web, it is now possible to place information in multiple sources that are connected by link titles—permitting online newsletters to initially present only a small amount of pertinent information through the use of these links. That is to say, online newsletters may only need to present links that provide enough information to give the reader a general idea pertaining to that article. This, obviously, might reduce the amount of information clutter that the reader has to initially wade through. Yet, unfortunately, little is known about the most efficient, as well as the most preferred way to present information within this type of medium. Accordingly, this study addressed the question of how information should be presented within a news-style web page. For example, should all the information related to a single article be presented on one page, or should the newsletter contain a page that lists only the link titles that relate to each specific article, and which is presented on another page? Moreover, if the newsletter presents initial information in the form of link titles, should they present supplementary information that provides a general overview of the entire article, along with the link title?",
+                "cite": "Baker, Bernard & Riley, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Reading Online News: A Comparison of Three Presentation Formats"
+            }
+        ],
+        "categories": [
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            }
+        ],
+        "name": "Presenting short summaries with text links helps users understand and predict the content associated with the link."
+    },
+    {
+        "id": "d5d1d384-e160-46d6-b7d5-580694ca8e66",
+        "edited": "2022-08-05T10:52:00.000Z",
+        "created": "2022-07-21T21:54:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "e9cbebc7-1535-4e70-b6da-456f8bec80d6",
+                "citation": "Hornoff, A.J. and Halverson T., (2003), Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays, Proceedings of the ACM Computer Human Interaction Conference. Ft. Lauderdale, FL.",
+                "url": "https://www.researchgate.net/publication/221515762_Cognitive_strategies_and_eye_movements_for_searching_hierarchical_computer_displays",
+                "summary": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.People use a hierarchy. When a useful hierarchy is present, people can focus their attention on one level of the hierarchy at a time. They adopt a more systematic search strategy which requires fewer revisits and fewer fixations overall.\nDesign recommendation:\nSupport a multitiered search. Do not make users infer the label by studying a few items in the group. Make labels salient. Make it easy to move from label to label with a single eye movement.People can examine multiple items with a single fixation.\nDesign recommendation:\nFacilitate foveal coverage of more than one item at a time. Position relevant options next to each other, in vertical lists instead of horizontal lists. Left- justify keywords.People can navigate white space with single eye movements. Users keep their eyes on relevant screen items, and jump over stretches of white space—in this case, up to 8° of visual angle between columns—with single cascades.\nDesign recommendation:\nFollow the advice of graphic designers and organize visual layouts with whitespace. This study shows how the human visual system interacts with this design element.People anticipate visual locations. People can move their eyes well into an anticipated layout and start “searching”before the layout had even appeared.\nDesign recommendation:\nProvide consistent screen layouts that accommodate anticipatory eye movements to known locations. Consistency is critical even at the level of visual-perceptual and oculomotor processing.People prime for visual onset. When anticipating the appearance of a layout, it appears as if the perceptual-oculomotor system is primed and ready, waiting for the onset.\nDesign recommendation:\nDesign guidelines already recommend providing response times under 100 ms.Perhaps computer responses over 100 ms are annoying not only because they delay task completion and break the illusion of control, but because they effectively hold the perceptual-oculomotor system hostage",
+                "cite": "Hornoff and Halverson, 2003",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays"
+            }
+        ],
+        "categories": [
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            }
+        ],
+        "name": "Users move their eyes where the desired information will appear on the next screen."
+    },
+    {
+        "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
+        "edited": "2022-07-21T22:42:00.000Z",
+        "created": "2022-07-21T21:53:00.000Z",
+        "description": "",
+        "references": [
+            {
+                "id": "36f7fbe7-3101-44cc-9f78-87b8570eaac7",
+                "citation": "Lida, B., Hull, K., and Pilcher, K., (2003), Breadcrumb Navigation: An exploratory study of usage, Usability News 5.1.",
+                "url": "https://www.semanticscholar.org/paper/Breadcrumb-Navigation%3A-An-Exploratory-Study-of-Chaparro-Lida/88aadc6e6fd42c91bb5aa011c06ee651d8ee8ab5",
+                "summary": "Just as Hansel and Gretel created a breadcrumb trail to find their path back home, today's internet user often finds a need to get back to a website's previously visited locations; hence, the cyber \"breadcrumb trail\" was created. This textual representation of where and how information is located within the website allows the user to link to major categories of information along a continuum of sequential order. For example, the breadcrumb path for a leather chair on the Office Max website would be: Home > Furniture > Chairs > Leather Chairs. The location of the navigational path is often prominently placed in the upper left quarter of the website page.",
+                "cite": "Lida, Hull and Pilcher, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Breadcrumb Navigation: An exploratory study of usage"
+            }
+        ],
+        "categories": [
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            }
+        ],
+        "name": "Less than half of users take advantage of breadcrumbs (even when most report having noticed them)."
+    },
+    {
+        "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
+        "edited": "2022-08-03T13:58:00.000Z",
+        "created": "2022-07-21T21:49:00.000Z",
+        "description": "How useful is a sitemap for navigating a website ?",
+        "references": [
+            {
+                "id": "42c44b6e-0102-44ae-965f-1e2eb289b145",
+                "citation": "Danielson, D., (2002), Web navigation and the behavioral effects of constantly visible site maps, Interacting with Computers 14 pp. 601-618.",
+                "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953543802000243",
+                "summary": "Knowledge regarding how Web information-seekers behave with respect to the structures and cues they are provided with may shed light on general principles of navigation in electronic spaces, and assist designers in making more informed structural decisions. This study examines user movement through hierarchically structured Web sites and the behavioral effects of a constantly visible, textual contents list for relatively small sites or more extensive local views than are generally used on the Web today. The site overview resulted in users abandoning fewer information-seeking tasks. Users with such context dig deeper into the site structure, make less use of the browser's Back button, and frequently make navigational movements of great hierarchical distances. Navigational correlates of success and reported confidence for users with the overview differ from those without such context. Both with and without a constant overview, the relationship between the source and destination pages may help predict the amount of time spent at the destination. Experimental reports are preceded by a review of click-stream navigation behavior research.",
+                "cite": "Danielson, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Web navigation and the behavioral effects of constantly visible site maps"
+            }
+        ],
+        "categories": [
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            }
+        ],
+        "name": "Providing a visible sitemap facilitates site learning and encourages comprehensive exploration of a site"
     }
 ]

@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: All Stories
+tags: 
+    - webpage
+permalink: /stories/index.html
+---
+
+{% set previousPageHref = "/" %}
+{% set previousPageLabel = "go to Homepage" %}
+{% include "partials/page-return-navigation.njk" %}
+<h1 data-heading="3">
+    {{ title }}
+</h1>
+<ul data-layout="stack" role="list">
+    {% for story in collections.stories %}
+        <li>
+            <a data-button class="story-card__title" href="/stories/{{ story.name | slugify }}">
+                {% include "icons/story-icon.njk" %}
+                <span>
+                    {{ story.name }}
+                </span>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

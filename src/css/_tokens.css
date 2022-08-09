@@ -1,0 +1,50 @@
+:root {
+  /*----------  UTOPIA FLUID SCALE  ----------*/
+
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1200,20,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+  --step--1: clamp(0.89rem, calc(0.87rem + 0.09vw), 0.94rem);
+  --step-0: clamp(1rem, calc(0.91rem + 0.45vw), 1.25rem);
+  --step-1: clamp(1.13rem, calc(0.93rem + 0.98vw), 1.67rem);
+  --step-2: clamp(1.27rem, calc(0.92rem + 1.74vw), 2.22rem);
+  --step-3: clamp(1.42rem, calc(0.86rem + 2.79vw), 2.96rem);
+  --step-4: clamp(1.6rem, calc(0.75rem + 4.26vw), 3.95rem);
+  --step-5: clamp(1.8rem, calc(0.54rem + 6.29vw), 5.26rem);
+  --step-6: clamp(2.03rem, calc(0.21rem + 9.06vw), 7.01rem);
+
+  /* @link https://utopia.fyi/space/calculator/?c=320,16,1.125,1200,20,1.333,6,1,&s=0.75,1.5%7C2%7C3%7C4%7C5,m-2xl%7Cs-3xl */
+  --space-2xs: clamp(0.50rem, calc(0.45rem + 0.23vw), 0.63rem);
+  --space-xs: clamp(0.75rem, calc(0.68rem + 0.34vw), 0.94rem);
+  --space-s: clamp(1rem, calc(0.91rem + 0.45vw), 1.25rem);
+  --space-m: clamp(1.5rem, calc(1.36rem + 0.68vw), 1.88rem);
+  --space-l: clamp(2rem, calc(1.82rem + 0.91vw), 2.5rem);
+  --space-xl: clamp(3rem, calc(2.73rem + 1.36vw), 3.75rem);
+  --space-2xl: clamp(4rem, calc(3.64rem + 1.82vw), 5rem);
+  --space-3xl: clamp(5rem, calc(4.55rem + 2.27vw), 6.25rem);
+  /* One-up pairs */
+  --space-xs-s: clamp(0.75rem, calc(0.57rem + 0.91vw), 1.25rem);
+  --space-s-m: clamp(1rem, calc(0.68rem + 1.59vw), 1.88rem);
+  --space-m-l: clamp(1.5rem, calc(1.14rem + 1.82vw), 2.5rem);
+  --space-l-xl: clamp(2rem, calc(1.36rem + 3.18vw), 3.75rem);
+  --space-xl-2xl: clamp(3rem, calc(2.27rem + 3.64vw), 5rem);
+  --space-2xl-3xl: clamp(4rem, calc(3.18rem + 4.09vw), 6.25rem);
+  /* Custom pairs */
+  --space-m-2xl: clamp(1.5rem, calc(0.23rem + 6.36vw), 5rem);
+  --space-s-3xl: clamp(1rem, calc(-0.91rem + 9.55vw), 6.25rem);
+
+  --measure: 80ch;
+
+  --border-thin: 1px;
+  --border-thick: 4px;
+  --border-width: var(--border-thick);
+
+  --gray-50: rgb(250, 250, 250);
+  --gray-100: rgb(244, 244, 245);
+  --gray-200: rgb(228, 228, 231);
+  --gray-300: rgb(212, 212, 216);
+  --gray-400: rgb(161, 161, 170);
+  --gray-500: rgb(113, 113, 122);
+  --gray-600: rgb(82, 82, 91);
+  --gray-700: rgb(63, 63, 70);
+  --gray-800: rgb(39, 39, 42);
+  --gray-900: rgb(24, 24, 27);
+}

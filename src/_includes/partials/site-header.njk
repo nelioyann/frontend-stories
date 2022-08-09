@@ -1,8 +1,18 @@
 <header>
-    <div aria-hidden="true" class="header-bg"></div>
-    <div class="header">
-    <a data-heading="5" href="/" aria-label="Front Stories">
-        {{title}}
-    </a>
+    <div class="header" data-layout="cluster" data-props="y:center x:between">
+        <a data-layout="cluster" data-props="space:xs" data-heading="5" href="/">
+            {% include "icons/fs-icon.njk" %}
+            <span>
+                {{ meta.site_name }}
+            </span>
+        </a>
+        <a data-button="small" data-props="noBorder" href="#">
+            <span aria-hidden="true">
+                {% include "../icons/search-icon.njk" %}
+            </span>
+            <span class="visually-hidden">
+                Search
+            </span>
+        </a>
     </div>
 </header>
