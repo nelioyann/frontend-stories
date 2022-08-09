@@ -1,4 +1,4 @@
-/* 
+/* TODO: Adapt accross website */
 input,
 button,
 a {
@@ -6,9 +6,15 @@ a {
   transition-timing-function: var(--bezier-swift);
   transition-property: background-color, color, border-color, box-shadow,
     transform, outline-offset;
-} */
+}
 
-
+@media (prefers-reduced-motion: reduce) {
+  input,
+  button,
+  a {
+    transition-duration: 0s;
+  }
+}
 
 /* CUSTOMS */
 
@@ -50,31 +56,16 @@ main {
 }
 
 
-.story-with-sidebar svg{
+.story-with-sidebar #cover svg{
   width: calc(var(--space-2xl) * 2);
   height: calc(var(--space-2xl) * 2);
   padding: var(--space-s);
   border-radius: var(--space-m);
 
 }
-.story-with-sidebar svg > path{
+.story-with-sidebar #cover svg > path{
   fill: var(--gray-100);
 }
-
-/* [data-shadow] {
-  --element-offset: 0;
-  --shadow-offset: calc(var(--border-thick) * 1.5);
-  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0 var(--color-dark);
-  transform: translate(var(--element-offset), var(--element-offset));
-  transition-duration: 0.3s;
-  transition-timing-function: var(--bezier-snappy);
-  transition-property: none;
-} */
-/* [data-shadow~="hoverable"]:hover, */
-/* [data-shadow~="focusable"]:focus-within {
-  --element-offset: var(--border-thick);
-  --shadow-offset: 0;
-} */
 
 /*=====  End of Story  ======*/
 
