@@ -5,51 +5,56 @@ pagination:
     alias: story
 layout: layouts/story-layout.njk
 permalink: stories/{{story.name | slugify}}/
+og_type: article
 eleventyComputed:
   title: "Story : {{ story.name | truncate(15) }} "
 ---
 
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
 {% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
-<div data-layout="stack" data-props="space:2xl ">
-    <section id="cover" data-layout="stack">
-        <h2 class="visually-hidden" data-heading="4">Cover</h2>
-        <div data-layout="cover box" data-props="x:start invert">
-            <h1 data-heading="3" data-props="centered noBorder">{{ story.name }}</h1>
-            <figure>
-                {{ meta.site_url| qrcode | safe }}
-                <figcaption class="visually-hidden">Share link</figcaption>
-            </figure>
+<section aria-labelledby="story-name" id="cover">
+    <div data-layout="cover box" data-props="x:start invert">
+        <h1 id="story-name" data-heading="3" data-props="centered noBorder">{{ story.name }}</h1>
+        <figure>
+            {{ meta.site_url| qrcode | safe }}
+            <figcaption class="visually-hidden">Share link</figcaption>
+        </figure>
+    </div>
+</section>
+<section aria-labelledby="summary">
+    <div data-layout="stack" data-props="space:xs">
+        <h2 id="summary" data-heading="4 anchor">
+            <a href="#summary">Summary</a>
+        </h2>
+        <div>
+            {# <div data-layout="cluster">
+                                                    <span>Tagged:
+                                                    </span>
+                                                    <ul data-layout="cluster" role="list" data-props="noPad">
+                                                        {%- for category in story.categories %}
+                                                            <li>
+                                                                <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                                                            </li>
+                                                        {% endfor -%}
+                                                    </ul>
+                                                </div> #}
+            <small>Last modified:
+                <time datetime="{{ story.edited }}">{{ story.created | readableDate }}</time>
+            </small>
         </div>
-    </section>
-    <section id="summary" data-layout="cover" data-props="noPad">
-        <h2 data-heading="4">Overview</h2>
-        {# <div>
-                    <div data-layout="cluster">
-                    <span>Tagged:
-                    </span>
-                    <ul data-layout="cluster" role="list" data-props="noPad">
-                        {%- for category in story.categories %}
-                            <li>
-                                <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
-                            </li>
-                        {% endfor -%}
-                    </ul>
-                </div>
-                <p>Last modified:
-                    <time datetime="{{ story.edited }}">{{ story.created | readableDate }}</time>
-                </p>
-                </div> #}
-        <div data-mardown data-props="space:s">
+        <div data-mardown>
             {% renderTemplate "md, liquid", story %}
-            <span>
-                {{ description }}
-            </span>
+            {{ description }}
             {% endrenderTemplate %}
         </div>
-    </section>
-    <section id="reference" data-layout="cover" data-props="noPad">
-        <h2 data-heading="4">Sources</h2>
+    </div>
+</section>
+<section aria-labelledby="sources">
+    <div data-layout="stack" data-props="space:xs">
+        <h2 id="sources" data-heading="4 anchor">
+            <a href="#sources">Sources</a>
+        </h2>
+        <p>Sources and ressources about this story:</p>
         <ul data-layout="stack" data-props="noPad x:stretch" data-props="space:xs">
             {%- for reference in story.references %}
                 <li data-layout="box stack">
@@ -71,16 +76,21 @@ eleventyComputed:
                 </li>
             {% endfor -%}
         </ul>
-    </section>
-    <section id="related" data-layout="cover" data-props="noPad">
-        <h2 data-heading="4">In the same category</h2>
+    </div>
+</section>
+<section aria-labelledby="related">
+    <div data-layout="stack" data-props="space:xs">
+        <h2 id="related" data-heading="4 anchor">
+            <a href="#related">Related</a>
+        </h2>
+        <p>Explore related stories:</p>
         {% set entries = stories | similarStories(story.id, story.categories) | limitTo(5) %}
         {% if entries.length > 0 %}
             <ul
                 data-layout="reel"
                 role="list"
                 data-props="noPad noBorder overflowing:noBar"
-                style="--reel-item-width: calc(var(--space-m) * 10);">
+                style="--reel-item-width: calc(var(--space-m) * 10); --reel-item-margin: 0;">
                 {%- for entry in entries %}
                     {% include "partials/story-card-entry.njk" %}
                 {% endfor -%}
@@ -88,9 +98,10 @@ eleventyComputed:
         {% else %}
             <p>No related stories found</p>
         {% endif %}
-    </section>
-    {# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
-    {# <span data-heading="6" id="pagination-nav">Navigate to other stories</span>
+    </div>
+</section>
+{# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
+{# <span data-heading="6" id="pagination-nav">Navigate to other stories</span>
         <nav aria-labelledby="pagination-nav" data-layout="cluster" data-props="x:between">
             {% if pagination.href.previous %}
                 <a data-button data-props="space:xs y:center" href="{{ pagination.href.previous }}">
@@ -104,4 +115,3 @@ eleventyComputed:
                 </a>
             {% endif %}
         </nav> #}
-</div>

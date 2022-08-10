@@ -23,7 +23,6 @@ main {
   padding-bottom: var(--page-top);
 }
 
-
 .header {
   position: fixed;
   top: 0;
@@ -49,27 +48,61 @@ main {
 }
 
 .story-with-sidebar aside nav {
-  padding-top: var(--space-xs);
+  /* padding-top: var(--space-xs); */
   padding-bottom: var(--space-xs);
   position: sticky;
   top: var(--header-height);
 }
 
-
-.story-with-sidebar #cover svg{
+.story-with-sidebar figure svg {
   width: calc(var(--space-2xl) * 2);
   height: calc(var(--space-2xl) * 2);
   padding: var(--space-s);
   border-radius: var(--space-m);
-
 }
-.story-with-sidebar #cover svg > path{
+.story-with-sidebar #cover svg > path {
   fill: var(--gray-100);
 }
 
 /*=====  End of Story  ======*/
+[data-link]{
+  transition-timing-function: var(--bezier-snappy);
 
-[data-link]:hover{
+}
+[data-link]:hover {
   background-color: var(--gray-200);
-  box-shadow:0 0 0 8px var(--gray-200);
+  box-shadow: 0 0 0 8px var(--gray-200);
+}
+
+/*=============================================
+=            Anchor Link            =
+source: https://codepen.io/thierry/pen/qBqYmgw
+=============================================*/
+
+[data-heading~="anchor"] a:hover {
+  text-decoration: underline;
+}
+@media (hover: hover) {
+  [data-heading~="anchor"] {
+    margin-left: -1em;
+    padding-left: 1em;
+    scroll-margin-top: var(--header-height);
+  }
+  [data-heading~="anchor"] a {
+    text-decoration: none;
+    pointer-events: none;
+    color: var(--gray-900);
+  }
+  [data-heading~="anchor"] a::before {
+    content: "#";
+    float: left;
+    padding: 0 0.15em; /* to make the "#" a bigger target */
+    margin-left: -1em;
+    pointer-events: auto;
+    color: var(--gray-600);
+    display: none;
+  }
+  [data-heading~="anchor"]:hover a::before {
+    display: block;
+  }
 }

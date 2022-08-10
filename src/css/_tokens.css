@@ -48,3 +48,79 @@
   --gray-800: rgb(39, 39, 42);
   --gray-900: rgb(24, 24, 27);
 }
+/*----------  TOKENS Utilities  ----------*/
+[data-props~="noPad"] {
+  padding: 0;
+}
+
+[data-props~="x:center"] {
+  --horizontal-alignment: center;
+}
+[data-props~="x:between"] {
+  --horizontal-alignment: space-between;
+}
+[data-props~="x:start"] {
+  --horizontal-alignment: flex-start;
+}
+[data-props~="x:end"] {
+  --horizontal-alignment: flex-end;
+}
+[data-props~="x:stretch"] {
+  --horizontal-alignment: stretch;
+}
+
+[data-props~="y:center"] {
+  --vertical-alignment: center;
+}
+[data-props~="y:between"] {
+  --vertical-alignment: space-between;
+}
+[data-props~="y:start"] {
+  --vertical-alignment: flex-start;
+}
+[data-props~="y:end"] {
+  --vertical-alignment: flex-end;
+}
+[data-props~="y:stretch"] {
+  --vertical-alignment: stretch;
+}
+
+[data-props~="space:0"] {
+  --space: 0;
+}
+[data-props~="space:2xs"] {
+  --space: var(--space-2xs);
+}
+[data-props~="space:xs"] {
+  --space: var(--space-xs);
+}
+[data-props~="space:s"] {
+  --space: var(--space-s);
+}
+[data-props~="space:m"] {
+  --space: var(--space-m);
+}
+[data-props~="space:l"] {
+  --space: var(--space-l);
+}
+[data-props~="space:xl"] {
+  --space: var(--space-xl);
+}
+[data-props~="space:2xl"] {
+  --space: var(--space-xl);
+}
+[data-props~="space:3xl"] {
+  --space: var(--space-xl);
+}
+
+[data-props~="noBorder"] {
+  border-width: 0 !important;
+}
+[data-props~="noCurve"] {
+  --border-radius: 0;
+}
+[data-props~="noMeasure"]{
+  --measure: initial;
+}
+
+/*=====  End of LAYOUT UTILITIES  ======*/
