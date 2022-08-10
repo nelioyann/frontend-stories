@@ -1,9 +1,9 @@
 [
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
-        "edited": "2022-08-03T13:58:00.000Z",
+        "edited": "2022-08-10T12:04:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
-        "description": "How long can users tolerate waiting times ?",
+        "description": "**How long are users willing to wait for a Web page to be downloaded before abandoning it?**\n\nThe litterature indicate that web pages that load faster are perceived as more interesting than those that are slower.\n**Ramsay, Barbesi and Preece (1998)",
         "references": [
             {
                 "id": "e916b1b3-c109-4844-a63e-e7e1ab0755ca",
@@ -17,6 +17,19 @@
                     "color": "blue"
                 },
                 "name": "A study on tolerable waiting time: how long are Web users willing to wait?"
+            },
+            {
+                "id": "dcb6c13e-c044-467b-96c5-360ffa07f21a",
+                "citation": "Ramsay, J., Barbesi, A. and Preece, J., 1998, A psychological investigation of long retrieval times on the world wide web. Interacting with Computer",
+                "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953543897000192",
+                "summary": "With the increasingly rapid uptake of the World Wide Web, even those pages classed as ‘the best of the web’ are not immune to large download latencies. This paper investigates whether the latency between requesting a page and receiving it influence user perceptions of the page. The paper describes a study in which users are presented with seven different web pages with delays ranging from 2 s to 2 min, and are then asked to rate the pages on a number of criteria. Predetermined delays were injected into the page loading process. Pages which were retrieved faster were judged significantly more interesting than their slower counterparts. The implications for web page design are discussed.",
+                "cite": "Ramsay, Barbesi and Preece (1998)",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "A psychological investigation of long retrieval times on the World Wide Web"
             }
         ],
         "categories": [
@@ -26,13 +39,13 @@
                 "color": "green"
             }
         ],
-        "name": "Tolerable wait time is about 2 seconds. Users will wait somewhat longer if there is feedback that something is happening"
+        "name": "The time tolerated by users is about 2 seconds when there is no feedback about the wait"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
-        "edited": "2022-08-03T14:04:00.000Z",
+        "edited": "2022-08-10T12:04:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
-        "description": "Do you care if a computer says sorry?",
+        "description": "**Do you care if a computer says sorry?**\n\nSeveral research studies showed that interaction time between a system and its users who received emotional message from a computer was longer than the time between the system and those who received generic feedback.\n\n- users who received flattery from a computer thought that the interaction was more enjoyable than did users who received generic feedback (Nass, 1997)\n- Tzeng showed that apologetic statements made subjects feel better about the interaction of the program (Tzeng, 2004)",
         "references": [
             {
                 "id": "3b1f7313-53a0-4ac8-a7e8-02cde70c4440",
@@ -46,6 +59,19 @@
                     "color": "blue"
                 },
                 "name": "Toward a more civilized design: studying the effects of computers that apologize"
+            },
+            {
+                "id": "f46ceac8-e9c7-4afd-bdc3-6d5c012f6d72",
+                "citation": "B.J. Fogg, and C. Nass. “Silicon Sycophans: The Effects of Computers That Flatter.”International Journal of Human-Computer Studies",
+                "url": "https://www.sciencedirect.com/science/article/pii/S1071581996901044",
+                "summary": "A laboratory experiment examines the claims that (1) humans are susceptible to flattery from computers and (2) the effects of flattery from computers are the same as the effects of flattery from humans. In a cooperative task with a computer, subjects (N=41) received one of three types of feedback from a computer: “sincere praise”, “flattery” (insincere praise) or “generic feedback”. Compared to generic-feedback subjects, flattery subjects reported more positive affect, better performance, more positive evaluations of the interaction and more positive regard for the computer, even though subjects knew that the flattery from the computer was simply non contingent feedback. Subjects in the sincere praise condition responded similarly to those in the flattery condition. The study concludes that the effects of flattery from a computer can produce the same general effects as flattery from humans, as described in the psychology literature. These findings may suggest significant implications for the design of interactive technologies.",
+                "cite": "Fogg, Nass, 1997",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Silicon sycophants: the effects of computers that flatter"
             }
         ],
         "categories": [
@@ -55,11 +81,11 @@
                 "color": "green"
             }
         ],
-        "name": "Sympathetic error messages and emoticons can influence users' perceptions of the application."
+        "name": "Sympathetic error messages can positively influence users' perceptions of the application."
     },
     {
         "id": "3ffefcf2-f179-4ea6-9dbe-b03a21c5d0a4",
-        "edited": "2022-08-04T23:05:00.000Z",
+        "edited": "2022-08-10T12:32:00.000Z",
         "created": "2022-07-21T23:06:00.000Z",
         "description": "This is a very widespread idea, which could potentially be founded. The associated reference is nonetheless wrong. \n\n[Source](https://www.linkedin.com/pulse/lin-2004-did-discover-margins-white-space-increase-20-carl-myhill/)",
         "references": [
@@ -204,7 +230,7 @@
     },
     {
         "id": "7b28aeb1-ecc4-43a4-8d3a-e229554bfe18",
-        "edited": "2022-07-21T23:04:00.000Z",
+        "edited": "2022-08-10T12:35:00.000Z",
         "created": "2022-07-21T22:52:00.000Z",
         "description": "",
         "references": [
@@ -223,11 +249,6 @@
             }
         ],
         "categories": [
-            {
-                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-                "name": "Effective Web Content",
-                "color": "default"
-            },
             {
                 "id": "dab3ba03-db92-44f0-98d9-0938c4c774c7",
                 "name": "Multimedia",
@@ -293,35 +314,6 @@
             }
         ],
         "name": "Poorly titled pages make using the Back Button / Browser History harder."
-    },
-    {
-        "id": "03ec748a-33db-4376-aaf5-7f7a1e674473",
-        "edited": "2022-08-05T14:32:00.000Z",
-        "created": "2022-07-21T22:32:00.000Z",
-        "description": "Where do users expect web objects ?",
-        "references": [
-            {
-                "id": "b0cfe5aa-63b6-4653-a27f-4ca6168b7101",
-                "citation": "Bernard M. (2002), Examining User Expectations for the Location of Common E-Commerce Web Objects, Usability News 4.1.",
-                "url": "https://www.researchgate.net/publication/279336189_Examining_User_Expectations_for_the_Location_of_Common_E-Commerce_Web_Objects",
-                "summary": "This study examined where individuals expect specific web-related objects to be located on a typical e-commerce web page. The objects examined were: 1) shopping cart button 2) login/register button, 3) help/service button, 4) account/order status button, 5) internal search engine, 6) “back to homepage” link and 7) grouping of links that go to individual merchandise items. The results provide evidence that users do have definable expectations concerning the location of these web objects on e-commerce web pages. Implications for theses findings are discussed.",
-                "cite": "Bernard, 2002",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Examining User Expectations for the Location of Common E-Commerce Web Objects"
-            }
-        ],
-        "categories": [
-            {
-                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-                "name": "Effective Web Content",
-                "color": "default"
-            }
-        ],
-        "name": "Users expect Help / Service to appear in the upper right corner of a page."
     },
     {
         "id": "585f9c99-8c18-4468-9306-181fe6a16ab0",
@@ -419,74 +411,6 @@
             }
         ],
         "name": "Proximity has a stronger perceptual influence than common ground for grouping."
-    },
-    {
-        "id": "94f8141a-28ef-4d9a-b6a3-50ddbd5b42d3",
-        "edited": "2022-08-05T14:32:00.000Z",
-        "created": "2022-07-21T22:21:00.000Z",
-        "description": "Where do users expect web objects ?",
-        "references": [
-            {
-                "id": "b0cfe5aa-63b6-4653-a27f-4ca6168b7101",
-                "citation": "Bernard M. (2002), Examining User Expectations for the Location of Common E-Commerce Web Objects, Usability News 4.1.",
-                "url": "https://www.researchgate.net/publication/279336189_Examining_User_Expectations_for_the_Location_of_Common_E-Commerce_Web_Objects",
-                "summary": "This study examined where individuals expect specific web-related objects to be located on a typical e-commerce web page. The objects examined were: 1) shopping cart button 2) login/register button, 3) help/service button, 4) account/order status button, 5) internal search engine, 6) “back to homepage” link and 7) grouping of links that go to individual merchandise items. The results provide evidence that users do have definable expectations concerning the location of these web objects on e-commerce web pages. Implications for theses findings are discussed.",
-                "cite": "Bernard, 2002",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Examining User Expectations for the Location of Common E-Commerce Web Objects"
-            }
-        ],
-        "categories": [
-            {
-                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-                "name": "Effective Web Content",
-                "color": "default"
-            },
-            {
-                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
-                "name": "Navigation",
-                "color": "yellow"
-            }
-        ],
-        "name": "Users expect a back-to-home link in the upper left corner of the page."
-    },
-    {
-        "id": "c129717b-a341-4165-b723-9ebed0472bc1",
-        "edited": "2022-07-21T23:04:00.000Z",
-        "created": "2022-07-21T22:21:00.000Z",
-        "description": "",
-        "references": [
-            {
-                "id": "0b141331-d5b4-43bf-9ac4-36cd933663eb",
-                "citation": "Beck DM, Palmer SE. Top-down influences on perceptual grouping. Journal of Experimental Psychology: Human Perception and Performance. 2002;28:1071–1084.",
-                "url": "https://pubmed.ncbi.nlm.nih.gov/12421056/",
-                "summary": "Observers are faster to find and discriminate a target pair of adjacent, same-shaped objects that are within the same perceptual group (within group) versus within adjacent perceptual groups. Manipulating the probability of a within-group pair modulated this grouping effect such that it increased as the percentage of within-group trials (25%, 50%, or 75%) increased. This probability effect was stronger for extrinsic grouping factors (common region and connectedness) than for intrinsic factors (proximity and color similarity). Further experiments, however, suggested that this extrinsic-intrinsic difference was due to differences in overall speed with which the target pair was found. The results are interpreted as indicating that grouping is sensitive to top-down influences as long as there is sufficient time for feedback to operate.",
-                "cite": "Beck and Palmer, 2002",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Top-down influences on perceptual grouping."
-            }
-        ],
-        "categories": [
-            {
-                "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-                "name": "Effective Web Content",
-                "color": "default"
-            },
-            {
-                "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
-                "name": "Design",
-                "color": "red"
-            }
-        ],
-        "name": "Color, shared background and co-location are stronger grouping cues than outlines."
     },
     {
         "id": "7d5e7577-5c51-4ea5-90e8-88e8c9f4ad85",
@@ -664,9 +588,9 @@
     },
     {
         "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
-        "edited": "2022-08-03T13:58:00.000Z",
+        "edited": "2022-08-10T11:49:00.000Z",
         "created": "2022-07-21T21:49:00.000Z",
-        "description": "How useful is a sitemap for navigating a website ?",
+        "description": "**How might a constantly visible site map affect the behavior of users seeking an information ?**\n\nA sitemap is a file where you provide information about the pages, videos, and their files on your site, and the relationships between them (Google Search Central). \n\n- Sitemaps reduced how many times users used the back button, which can be explained by a more useful navigational support alternative",
         "references": [
             {
                 "id": "42c44b6e-0102-44ae-965f-1e2eb289b145",
