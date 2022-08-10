@@ -75,7 +75,9 @@ a:hover {
 a {
   text-decoration: none;
 }
-
+ul, ol{
+  padding-left: var(--padding, var(--space-2xs));
+}
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
