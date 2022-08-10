@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 title: All Stories
+description: All stories on the site grouped by categories.
 tags: 
     - webpage
 permalink: /stories/index.html
@@ -12,15 +13,24 @@ permalink: /stories/index.html
 <h1 data-heading="3">
     {{ title }}
 </h1>
-<ul data-layout="stack" role="list">
-    {% for story in collections.stories %}
+<p>
+    {{ description }}
+</p>
+<ul data-layout="stack" data-props="noMeasure space:xl">
+    {%- for category in collections.categories %}
         <li>
-            <a data-button class="story-card__title" href="/stories/{{ story.name | slugify }}">
-                {% include "icons/story-icon.njk" %}
-                <span>
-                    {{ story.name }}
-                </span>
-            </a>
+            <span data-heading="5">{{ category }}</span>
+            <ul data-layout="stack">
+                {% for story in collections.stories | filterByCategory(category) %}
+                    <li data-props="noMeasure">
+                        <a data-link class="story-card__title" href="/stories/{{ story.name | slugify }}">
+                            <span>
+                                {{ story.name }}
+                            </span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </li>
-    {% endfor %}
+    {% endfor -%}
 </ul>

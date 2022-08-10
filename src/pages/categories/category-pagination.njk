@@ -18,7 +18,7 @@ eleventyComputed:
 </h1>
 <p>
   Here are some stories relating to the subject of {{ category }}.
-  <ul data-layout="grid">
+  <ul data-layout="grid" data-props="noPad">
     {% set entries = stories | filterByCategory(category) %}
     {%- for entry in entries %}
       {% include "partials/story-card-entry.njk" %}

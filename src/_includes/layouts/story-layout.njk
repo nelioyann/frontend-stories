@@ -4,27 +4,25 @@
         <aside>
             {% set previousPageHref = "/stories" %}
             {% set previousPageLabel = "view all stories" %}
-            <nav>
-            {% include "partials/page-return-navigation.njk" %}
-                <details data-layout="stack" open>
-                    <summary>
-                        Table of contents
-                    </summary>
-                    <ol data-layout="stack" data-props="split">
-                        <li>
-                            <a data-link href="#summary">Overview</a>
-                        </li>
-                        <li>
-                            <a data-link href="#reference">Further reading</a>
-                        </li>
-                        <li>
-                            <a data-link href="#related">Related</a>
-                        </li>
-                    </ol>
-                </details>
+            <nav aria-label="Table of contents">
+                {% include "partials/page-return-navigation.njk" %}
+                <ol data-layout="stack" data-props="split">
+                    <li>
+                        <a data-link href="#cover">Cover</a>
+                    </li>
+                    <li>
+                        <a data-link href="#summary">Summary</a>
+                    </li>
+                    <li>
+                        <a data-link href="#sources">Sources</a>
+                    </li>
+                    <li>
+                        <a data-link href="#related">Related</a>
+                    </li>
+                </ol>
             </nav>
         </aside>
-        <article>
+        <article data-layout="stack" data-props="space:2xl">
             {{ content | safe }}
         </article>
     </div>

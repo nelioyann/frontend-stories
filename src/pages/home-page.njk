@@ -1,37 +1,42 @@
 ---
 layout: layouts/home.njk
 title: Home
+description: Collection of the latest findings and insights about frontend development.
 tags: 
     - webpage
 permalink: /
 ---
 
-<article data-layout="stack" data-props="space:l">
+<article data-layout="stack" data-props="space:2xl">
     <section data-layout="cover" data-props="noPad">
-        <h1>Frontend Stories</h1>
-        <p>{{ meta.site_description }}</p>
-        <div>
-            <a data-button="variant:primary" href="/categories">Browse all categories</a>
+        <div data-layout="stack" data-props="centered space:m">
+            <h1>Frontend Stories</h1>
+            <p>{{ description or meta.site_description }}</p>
+            <div>
+                <a data-button="variant:primary" href="/categories">Browse all categories</a>
+            </div>
         </div>
     </section>
-    <section data-layou="stack">
-        <div data-layout="cluster" data-props="x:between y:center">
+    <section>
+        <div data-layout="stack">
             <h2 data-layout="cluster" data-props="space:xs" data-heading="4">
                 {% include "icons/content-icon.njk" %}
                 <span>
                     Effective web content
                 </span>
             </h2>
+            <ul
+                data-layout="reel"
+                data-props="noBorder"
+                style="--reel-item-width: calc(var(--space-l) * 10); --reel-item-margin: var(--space-xs);">
+                {% set entries = stories | limitTo(6) %}
+                {%- for entry in entries %}
+                    {% include "partials/story-card-entry.njk" %}
+                {% endfor -%}
+            </ul>
             <a data-link href="/categories/effective-web-content/">
-                See more
-                {# <span aria-hidden="true">👁</span> #}
+                see more
             </a>
         </div>
-        <ul data-layout="reel" data-props="noBorder">
-            {% set entries = stories | limitTo(6) %}
-            {%- for entry in entries %}
-                {% include "partials/story-card-entry.njk" %}
-            {% endfor -%}
-        </ul>
     </section>
 </article>
