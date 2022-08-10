@@ -106,3 +106,24 @@ source: https://codepen.io/thierry/pen/qBqYmgw
     display: block;
   }
 }
+
+[data-markdown]{
+  border-width: var(--border-thin);
+  border-style: solid;
+  border-color: var(--gray-400);
+  padding: var(--space-s) var(--space-xs);
+  background-color: var(--gray-200);
+  border-radius: 3px;
+}
+[data-markdown] ul > li + li {
+  margin-top: var(--space-xs);
+}
+
+
+[data-markdown] strong{
+  font-size: var(--step-1);
+  font-weight: 500;
+}
+[data-markdown] a{
+  border-bottom: 1px solid black;
+}

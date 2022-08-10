@@ -28,21 +28,21 @@ eleventyComputed:
         </h2>
         <div>
             {# <div data-layout="cluster">
-                                                    <span>Tagged:
-                                                    </span>
-                                                    <ul data-layout="cluster" role="list" data-props="noPad">
-                                                        {%- for category in story.categories %}
-                                                            <li>
-                                                                <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
-                                                            </li>
-                                                        {% endfor -%}
-                                                    </ul>
-                                                </div> #}
+                                                                <span>Tagged:
+                                                                </span>
+                                                                <ul data-layout="cluster" role="list" data-props="noPad">
+                                                                    {%- for category in story.categories %}
+                                                                        <li>
+                                                                            <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                                                                        </li>
+                                                                    {% endfor -%}
+                                                                </ul>
+                                                            </div> #}
             <small>Last modified:
                 <time datetime="{{ story.edited }}">{{ story.created | readableDate }}</time>
             </small>
         </div>
-        <div data-mardown>
+        <div data-layout="stack" data-markdown>
             {% renderTemplate "md, liquid", story %}
             {{ description }}
             {% endrenderTemplate %}
@@ -55,7 +55,11 @@ eleventyComputed:
             <a href="#sources">Sources</a>
         </h2>
         <p>Sources and ressources about this story:</p>
-        <ul data-layout="stack" data-props="noPad x:stretch" data-props="space:xs">
+        <ul
+            role="list"
+            data-layout="switcher"
+            data-props="noPad x:stretch space:xs"
+            style="--threshold: calc(var(--space-l) * 25);">
             {%- for reference in story.references %}
                 <li data-layout="box stack">
                     <a data-button target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
@@ -90,7 +94,7 @@ eleventyComputed:
                 data-layout="reel"
                 role="list"
                 data-props="noPad noBorder overflowing:noBar"
-                style="--reel-item-width: calc(var(--space-m) * 10); --reel-item-margin: 0;">
+                style="--reel-item-width: calc(var(--space-l) * 10); --reel-item-margin: 0;">
                 {%- for entry in entries %}
                     {% include "partials/story-card-entry.njk" %}
                 {% endfor -%}
