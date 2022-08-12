@@ -4,7 +4,7 @@ pagination:
     size: 1
     alias: story
 layout: layouts/story-layout.njk
-permalink: stories/{{story.name | slugify}}/
+permalink: /{{story.slug}}/
 og_type: article
 eleventyComputed:
   title: "Story : {{ story.name | truncate(15) }} "
@@ -28,16 +28,16 @@ eleventyComputed:
         </h2>
         <div>
             {# <div data-layout="cluster">
-                                                                <span>Tagged:
-                                                                </span>
-                                                                <ul data-layout="cluster" role="list" data-props="noPad">
-                                                                    {%- for category in story.categories %}
-                                                                        <li>
-                                                                            <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
-                                                                        </li>
-                                                                    {% endfor -%}
-                                                                </ul>
-                                                            </div> #}
+                                                                            <span>Tagged:
+                                                                            </span>
+                                                                            <ul data-layout="cluster" role="list" data-props="noPad">
+                                                                                {%- for category in story.categories %}
+                                                                                    <li>
+                                                                                        <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                                                                                    </li>
+                                                                                {% endfor -%}
+                                                                            </ul>
+                                                                        </div> #}
             <small>Last modified:
                 <time datetime="{{ story.edited }}">{{ story.created | readableDate }}</time>
             </small>
@@ -87,9 +87,9 @@ eleventyComputed:
         <h2 id="related" data-heading="4 anchor">
             <a href="#related">Related</a>
         </h2>
-        <p>Explore related stories:</p>
-        {% set entries = stories | similarStories(story.id, story.categories) | limitTo(5) %}
+        {% set entries = collections.stories | similarStories(story.id, story.categories) | limitTo(5) %}
         {% if entries.length > 0 %}
+            <p>Explore related stories:</p>
             <ul
                 data-layout="reel"
                 role="list"

@@ -26,11 +26,17 @@ const notion = new Client({
 notion;
 
 
-async function readDatabasePagesId(database_id) {
+async function getDatabasePagesId(database_id) {
   console.log("Reading database...");
   try {
     const response = await notion.databases.query({
       database_id,
+      filter: {
+        property: "Status",
+        select: {
+          equals: "Published",
+        }
+      }
     });
     return response.results.map((result) => result.id);
   } catch (error) {
@@ -126,7 +132,7 @@ async function readPageExtended(page_id) {
 async function fetchDatabase(database_id) {
   try {
     let database_data = [];
-    let pagesId = await readDatabasePagesId(database_id);
+    let pagesId = await getDatabasePagesId(database_id);
     for (let pageId of pagesId) {
       let page_data = await readPageExtended(pageId);
       database_data.push(page_data);

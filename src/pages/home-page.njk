@@ -29,7 +29,7 @@ permalink: /
                 data-layout="reel"
                 data-props="noBorder"
                 style="--reel-item-width: calc(var(--space-l) * 10); --reel-item-margin: var(--space-xs);">
-                {% set entries = stories | limitTo(6) %}
+                {% set entries = stories | filterByCategory("content")| limitTo(6) %}
                 {%- for entry in entries %}
                     {% include "partials/story-card-entry.njk" %}
                 {% endfor -%}

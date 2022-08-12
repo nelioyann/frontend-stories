@@ -15,14 +15,14 @@ module.exports = function (eleventyConfig) {
   // Create collection from _data/customData.js
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addCollection("stories", (collection) => {
-    // const slug = eleventyConfig.getFilter("slugify");
-    return collection.getAll()[0].data.stories;
-    // .map((story) => {
-    //   return {
-    //     ...story,
-    //     slug: `stories/${slug(story.name)}`,
-    //   };
-    // });
+    const slug = eleventyConfig.getFilter("slugify");
+    return collection.getAll()[0].data.stories
+    .map((story) => {
+      return {
+        ...story,
+        slug: `stories/${slug(story.slugwords)}`,
+      };
+    });
   });
   eleventyConfig.addCollection("categories", function (collectionApi) {
     let categories_set = new Set();
@@ -70,10 +70,7 @@ module.exports = function (eleventyConfig) {
   }
   );
 
-  // eleventyConfig.addFilter("qrcode", async function(value) {
-	// 	return await qrCode.toString(value, { type: 'svg' });
 
-	// });
   eleventyConfig.addNunjucksAsyncFilter("qrcode", async function(value, callback) {
 		let result = await qrCode.toString(value, { type: 'svg', margin: 4 });
 		callback(null,result);
