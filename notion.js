@@ -25,7 +25,6 @@ const notion = new Client({
 });
 notion;
 
-
 async function getDatabasePagesId(database_id) {
   console.log("Reading database...");
   try {
@@ -35,8 +34,8 @@ async function getDatabasePagesId(database_id) {
         property: "Status",
         select: {
           equals: "Published",
-        }
-      }
+        },
+      },
     });
     return response.results.map((result) => result.id);
   } catch (error) {
@@ -83,8 +82,6 @@ async function sanitizeProperty(response, property_type) {
       return response.select;
     case "url":
       return response.url;
-    case "cover":
-      return response.cover.external.url;
     case "property_item":
       return await sanitizePropertyItem(response, response.property_item.type);
   }
@@ -108,6 +105,7 @@ async function sanitizePropertyItem(response, propertyItem_type) {
       let relation_pages = [];
       for (let pageId of relation_pageIds) {
         let page = await readPageExtended(pageId);
+        console.log(page);
         relation_pages.push(page);
       }
       return relation_pages;
@@ -119,9 +117,15 @@ async function sanitizePropertyItem(response, propertyItem_type) {
 async function readPageExtended(page_id) {
   try {
     let page = await readPage(page_id);
-    let { properties, url, cover } = page;
-    let extended_page = { id: page_id, cover: cover?.external.url, notion_url: url };
+    let { properties, url, cover, icon } = page;
+    let extended_page = {
+      id: page_id,
+      cover: cover?.external.url,
+      notion_url: url,
+      icon: icon?.emoji,
+    };
     for (let key in properties) {
+      console.log(key);
       let property = await readProperty(page_id, properties[key].id);
       extended_page[key.toLowerCase()] = property;
     }

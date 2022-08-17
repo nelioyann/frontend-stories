@@ -9,6 +9,7 @@ og_type: article
 eleventyComputed:
   title: "Story : {{ story.name | truncate(15) }} "
   thumbnail: "{{ story.cover }}"
+  emojicon: "{{ story.icon }}"
 ---
 
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
