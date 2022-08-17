@@ -17,26 +17,4 @@ permalink: /
             </div>
         </div>
     </section>
-    <section>
-        <div data-layout="stack">
-            <h2 data-layout="cluster" data-props="space:xs" data-heading="4">
-                {% include "icons/content-icon.njk" %}
-                <span>
-                    Effective web content
-                </span>
-            </h2>
-            <ul
-                data-layout="reel"
-                data-props="noBorder"
-                style="--reel-item-width: calc(var(--space-l) * 10); --reel-item-margin: var(--space-xs);">
-                {% set entries = stories | filterByCategory("content")| limitTo(6) %}
-                {%- for entry in entries %}
-                    {% include "partials/story-card-entry.njk" %}
-                {% endfor -%}
-            </ul>
-            <a data-link href="/categories/effective-web-content/">
-                see more
-            </a>
-        </div>
-    </section>
 </article>

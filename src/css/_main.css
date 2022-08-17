@@ -30,7 +30,6 @@ main {
   width: 100%;
   height: var(--header-height);
   z-index: var(--layer-header);
-  border-bottom: 1px solid var(--gray-400);
   background-color: var(--gray-100);
 }
 
@@ -108,15 +107,14 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 }
 
 [data-markdown]{
+  /* Remove width constraints from generated markdown */
+  --measure: initial;
   border-width: var(--border-thin);
   border-style: solid;
   border-color: var(--gray-400);
   padding: var(--space-s) var(--space-xs);
   background-color: var(--gray-200);
   border-radius: 3px;
-}
-[data-markdown] ul > li + li {
-  margin-top: var(--space-xs);
 }
 
 
