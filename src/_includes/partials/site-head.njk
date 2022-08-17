@@ -10,7 +10,7 @@
     <meta name="title" content="{{title}}">
     <meta name="generator" content="{{ eleventy.generator }}">
     <!-- Open graph - Facebook 1200 x 628 -->
-    <meta property="og:image" content="{{meta.site_thumbnail}}">
+    <meta property="og:image" content="{{thumbnail or meta.site_thumbnail}}">
     <meta property="og:site_name" content="{{meta.site_name}}">
     <meta property="og:type" content="{{og_type}}">
     <meta property="og:url" content="{{page.url or meta.site_url}}">

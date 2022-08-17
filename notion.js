@@ -49,6 +49,7 @@ async function readPage(page_id) {
     const page = await notion.pages.retrieve({
       page_id,
     });
+    console.log(page);
     return page;
   } catch (error) {
     console.log(error);
@@ -82,6 +83,8 @@ async function sanitizeProperty(response, property_type) {
       return response.select;
     case "url":
       return response.url;
+    case "cover":
+      return response.cover.external.url;
     case "property_item":
       return await sanitizePropertyItem(response, response.property_item.type);
   }
@@ -116,9 +119,8 @@ async function sanitizePropertyItem(response, propertyItem_type) {
 async function readPageExtended(page_id) {
   try {
     let page = await readPage(page_id);
-    let { properties, url } = page;
-    console.log(url);
-    let extended_page = { id: page_id };
+    let { properties, url, cover } = page;
+    let extended_page = { id: page_id, cover: cover?.external.url, notion_url: url };
     for (let key in properties) {
       let property = await readProperty(page_id, properties[key].id);
       extended_page[key.toLowerCase()] = property;

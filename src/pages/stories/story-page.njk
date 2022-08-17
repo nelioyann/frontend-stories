@@ -8,6 +8,7 @@ permalink: /{{story.slug}}/
 og_type: article
 eleventyComputed:
   title: "Story : {{ story.name | truncate(15) }} "
+  thumbnail: "{{ story.cover }}"
 ---
 
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
@@ -27,7 +28,7 @@ eleventyComputed:
             <a href="#summary">Summary</a>
         </h2>
         <div>
-            {# <div data-layout="cluster">
+            <div data-layout="cluster">
                                                                             <span>Tagged:
                                                                             </span>
                                                                             <ul data-layout="cluster" role="list" data-props="noPad">
@@ -37,9 +38,9 @@ eleventyComputed:
                                                                                     </li>
                                                                                 {% endfor -%}
                                                                             </ul>
-                                                                        </div> #}
-            <small>Last modified:
-                <time datetime="{{ story.edited }}">{{ story.created | readableDate }}</time>
+                                                                        </div>
+            <small>Last edited:
+                <time datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </small>
         </div>
         <div data-layout="stack" data-markdown>
