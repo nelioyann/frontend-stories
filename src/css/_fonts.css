@@ -53,7 +53,23 @@
          url('../fonts/roboto-serif-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
+
+  /* noto-emoji-regular - emoji */
+@font-face {
+     font-family: 'Noto Emoji';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+          url('../fonts/noto-emoji-v26-emoji-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/noto-emoji-v26-emoji-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+
 :root{
      --serif-font: 'Roboto Serif', serif;
-     --sans-font: Verdana, Geneva, Tahoma, sans-serif;
+     --sans-font: 'Noto Emoji', system-ui, sans-serif;
 }
+
+[data-emoji]{
+     font-family: var(--sans-font);
+}
+/* TODO: remove unused font weights*/
