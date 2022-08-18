@@ -97,7 +97,7 @@ main,
 }
 
 :where(button, a):where(:not(:active)):focus-visible {
-  outline-offset: 5px;
+  outline-offset: var(--outline-offset, 5px);
 }
 
 .visually-hidden {

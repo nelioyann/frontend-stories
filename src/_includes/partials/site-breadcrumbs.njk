@@ -1,0 +1,6 @@
+{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key , {allowMissing: true, includeSelf: true}) %}
+{% if navPages.length > 0 %}
+    <nav aria-label="Breadcrumbs" class="breadcrumbs-navigation">
+        {{ navPages | eleventyNavigationToHtml | safe }}
+    </nav>
+{% endif %}

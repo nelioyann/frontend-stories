@@ -2,10 +2,8 @@
 {% block content %}
     <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
         <aside>
-            {% set previousPageHref = "/stories" %}
-            {% set previousPageLabel = "view all stories" %}
-            <nav aria-label="Table of contents">
-                {% include "partials/page-return-navigation.njk" %}
+            <nav data-layout="stack" class="toc-navigation" aria-labelledby="toc-heading">
+                <span id="toc-heading" data-heading="5">Page navigation</span>
                 <ol data-layout="stack" data-props="split" role="list">
                     <li>
                         <a data-link href="#cover">Cover</a>

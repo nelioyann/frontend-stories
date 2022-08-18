@@ -42,11 +42,11 @@ main {
 }
 .story-with-sidebar,
 .story-with-sidebar article [data-layout~="cover"],
-.story-with-sidebar article nav {
+.story-with-sidebar article .toc-navigation {
   width: 100%;
 }
 
-.story-with-sidebar aside nav {
+.story-with-sidebar aside .toc-navigation {
   /* padding-top: var(--space-xs); */
   padding-bottom: var(--space-xs);
   position: sticky;
@@ -123,6 +123,7 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 [data-markdown] a {
   border-bottom: 1px solid black;
 }
+/* BREADCRUMBS */
 .breadcrumbs-navigation {
   --measure: initial;
 }
@@ -132,19 +133,22 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 .breadcrumbs-navigation li,
 .breadcrumbs-navigation li a {
   display: inline-flex;
+  align-items: center;
 }
 
 .breadcrumbs-navigation ul {
-  padding: var(--space-s);
+  padding-left: 0;
   display: inline-flex;
   overflow-x: auto;
   overflow-y: visible;
   /* flex-wrap: wrap; */
 }
 .breadcrumbs-navigation li a {
+  --outline-offset: -1px;
+  padding: var(--space-2xs);
   color: var(--gray-500);
   transition-timing-function: var(--bezier-snappy);
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 .breadcrumbs-navigation li a:hover {
   background-color: var(--gray-200);
