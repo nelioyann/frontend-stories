@@ -2,7 +2,7 @@
 title: About
 tags: 
     - webpage
-layout: layouts/base.njk
+layout: layouts/nested-page-layout.njk
 ---
 ### About Frontend Stories
 

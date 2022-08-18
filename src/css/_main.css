@@ -24,13 +24,9 @@ main {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: var(--header-height);
-  z-index: var(--layer-header);
-  background-color: var(--gray-100);
+
 }
 
 /*=============================================

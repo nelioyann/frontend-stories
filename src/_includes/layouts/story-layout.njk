@@ -1,5 +1,6 @@
-{% extends "layouts/base.njk" %}
+{% extends "layouts/base-layout.njk" %}
 {% block content %}
+    {% include "partials/site-breadcrumbs.njk" %}
     <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
         <aside>
             <nav data-layout="stack" class="toc-navigation" aria-labelledby="toc-heading">

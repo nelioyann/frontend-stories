@@ -1,8 +1,8 @@
 [data-button] {
   --minimum-height: 46px;
   --border-radius: 0;
-  --y-padding: var(--space-xs);
-  --x-padding: var(--space-m);
+  --y-padding: var(--space-2xs);
+  --x-padding: var(--space-s);
   padding: var(--y-padding) var(--x-padding);
   border-radius: var(--border-radius);
   min-height: var(--minimum-height);
