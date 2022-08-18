@@ -64,9 +64,8 @@ main {
 }
 
 /*=====  End of Story  ======*/
-[data-link]{
+[data-link] {
   transition-timing-function: var(--bezier-snappy);
-
 }
 [data-link]:hover {
   background-color: var(--gray-200);
@@ -106,7 +105,7 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   }
 }
 
-[data-markdown]{
+[data-markdown] {
   /* Remove width constraints from generated markdown */
   --measure: initial;
   border-width: var(--border-thin);
@@ -117,11 +116,50 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   border-radius: 3px;
 }
 
-
-[data-markdown] strong{
+[data-markdown] strong {
   font-size: var(--step-1);
   font-weight: 500;
 }
-[data-markdown] a{
+[data-markdown] a {
   border-bottom: 1px solid black;
+}
+.breadcrumbs-navigation {
+  --measure: initial;
+}
+.breadcrumbs-navigation li {
+  margin-right: var(--space-xs);
+}
+.breadcrumbs-navigation li,
+.breadcrumbs-navigation li a {
+  display: inline-flex;
+}
+
+.breadcrumbs-navigation ul {
+  padding: var(--space-s);
+  display: inline-flex;
+  overflow-x: auto;
+  overflow-y: visible;
+  /* flex-wrap: wrap; */
+}
+.breadcrumbs-navigation li a {
+  color: var(--gray-500);
+  transition-timing-function: var(--bezier-snappy);
+  transition-duration: 0.3s;
+}
+.breadcrumbs-navigation li a:hover {
+  background-color: var(--gray-200);
+  box-shadow: 0 0 0 8px var(--gray-200);
+}
+.breadcrumbs-navigation li:not(:last-child)::after {
+  content: " \BB   ";
+  margin-left: var(--space-s, 5px);
+}
+.breadcrumbs-navigation li:last-child {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.breadcrumbs-navigation li a:hover, .breadcrumbs-navigation li:last-child a {
+  color: var(--gray-900);
+
 }

@@ -3,13 +3,18 @@ pagination:
     data: collections.stories
     size: 1
     alias: story
+    addAllPagesToCollections: true
 layout: layouts/story-layout.njk
 permalink: /{{story.slug}}/
 og_type: article
 eleventyComputed:
-  title: "Story : {{ story.name | truncate(15) }} "
-  thumbnail: "{{ story.cover }}"
-  emojicon: "{{ story.icon }}"
+    title: "Story : {{ story.name | truncate(15) }} "
+    thumbnail: "{{ story.cover }}"
+    emojicon: "{{ story.icon }}"
+    eleventyNavigation:
+        key: "{{story.id}}"
+        title: "{{story.name}}"
+        parent: Stories
 ---
 
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
@@ -30,19 +35,26 @@ eleventyComputed:
         </h2>
         <div>
             <div data-layout="cluster">
-                                                                            <span>Tagged:
-                                                                            </span>
-                                                                            <ul data-layout="cluster" role="list" data-props="noPad">
-                                                                                {%- for category in story.categories %}
-                                                                                    <li>
-                                                                                        <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
-                                                                                    </li>
-                                                                                {% endfor -%}
-                                                                            </ul>
-                                                                        </div>
-            <small>Last edited:
-                <time datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
+                <span>Tagged:
+                </span>
+                <ul data-layout="cluster" role="list" data-props="noPad">
+                    {%- for category in story.categories %}
+                        <li>
+                            <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                        </li>
+                    {% endfor -%}
+                </ul>
+            </div>
+            <div data-layout="cluster">
+
+            <small>Added on:
+                <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
             </small>
+            -
+            <small>(Last edited:
+                <time datetime="{{ story.edited }}">{{ story.edited | readableDate }})</time>
+            </small>
+            </div>
         </div>
         <div data-layout="stack" data-markdown>
             {% renderTemplate "md, liquid", story %}
@@ -108,16 +120,16 @@ eleventyComputed:
 </section>
 {# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
 {# <span data-heading="6" id="pagination-nav">Navigate to other stories</span>
-        <nav aria-labelledby="pagination-nav" data-layout="cluster" data-props="x:between">
-            {% if pagination.href.previous %}
-                <a data-button data-props="space:xs y:center" href="{{ pagination.href.previous }}">
-                    {% include "icons/back.njk"%}
-                    <span>Previous</span>
-                </a>
-            {% endif %}
-            {% if pagination.href.next %}
-                <a data-button data-props="space:0" href="{{ pagination.href.next }}">
-                    <span>Next</span>
-                </a>
-            {% endif %}
-        </nav> #}
+		<nav aria-labelledby="pagination-nav" data-layout="cluster" data-props="x:between">
+			{% if pagination.href.previous %}
+				<a data-button data-props="space:xs y:center" href="{{ pagination.href.previous }}">
+					{% include "icons/back.njk"%}
+					<span>Previous</span>
+				</a>
+			{% endif %}
+			{% if pagination.href.next %}
+				<a data-button data-props="space:0" href="{{ pagination.href.next }}">
+					<span>Next</span>
+				</a>
+			{% endif %}
+		</nav> #}

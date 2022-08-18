@@ -1,4 +1,6 @@
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 const qrCode = require('qrcode');
 const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
   let categoriesNamesA = categoriesA.map((category) => category.name);
@@ -14,6 +16,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/css/**/*.css");
   // Create collection from _data/customData.js
   eleventyConfig.addPlugin(EleventyRenderPlugin);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addCollection("stories", (collection) => {
     const slug = eleventyConfig.getFilter("slugify");
     return collection.getAll()[0].data.stories
