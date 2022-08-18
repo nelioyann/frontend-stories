@@ -4,9 +4,9 @@
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
         "notion_url": "https://www.notion.so/Users-can-tolerate-about-2-seconds-for-a-page-to-load-or-more-if-a-feedback-is-provided-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
-        "edited": "2022-08-18T21:16:00.000Z",
+        "edited": "2022-08-18T22:42:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
-        "description": "How long are users willing to wait for a web page to be downloaded?\n\nIt has been shown that web pages that load faster are perceived as more interesting than those that are slower. (Ramsay, Barbesi and Preece (1998)",
+        "description": "How long are users willing to wait for a web page to load?\n\nPage load time is the time it takes to display all the content of a web page in a user's browser after they click on the site.\n\nIt is proven that web pages that load faster are perceived as more interesting than those that are slower. (Ramsay, Barbesi and Preece (1998). However, many processes involving a request to a server often take a long time, and exceed the tolerable waiting time of 2 seconds highlighted by (Nah, 2004). In such cases, reducing page load time seems to be technically challenging. \n\nFortunately, there is also evidence to suggest that the availability of feedback extends the tolerable waiting time of Web users. Consequently, it is advantageous for browsers or websites to provide users with feedback when there is an expected wait for a page to load. This information not only reduces uncertainty about the wait, but also fills in the wait time so that Web users are less aware of how long the wait is.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -55,11 +55,11 @@
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
-        "notion_url": "https://www.notion.so/Sympathetic-error-messages-can-positively-influence-users-perceptions-of-the-application-af855c922a3b45ceb4ea0a8156daf7b9",
+        "notion_url": "https://www.notion.so/Friendly-error-messages-can-positively-influence-the-users-perception-of-an-app-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
-        "edited": "2022-08-17T21:21:00.000Z",
+        "edited": "2022-08-18T22:45:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
-        "description": "Do you care if a computer says sorry?\n\nResearch have shown that users spent more time interacting with a system that provided emotional messages compared to one providing generic feedback.\n\n- Nass demonstrated that users who received flattery from a computer thought that the interaction was more enjoyable than did users who received generic feedback (Nass, 1997)\n- Tzeng showed that apologetic statements made users feel better about the interaction of the program (Tzeng, 2004)",
+        "description": "Do you care if a computer says sorry?\n\nResearch has found that users spent more time engaging with a system that provided emotional responses than with one providing generic feedback.\n\nKey takeaways:\n- Nass demonstrated that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997).\n- Tzeng found that apologetic responses made users feel better about the overall interaction with the system (Tzeng, 2004).",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -103,14 +103,53 @@
             }
         ],
         "slugwords": "when computers apologize",
-        "name": "Sympathetic error messages can positively influence users' perceptions of the application."
+        "name": "Friendly error messages can positively influence the users' perception of an app"
+    },
+    {
+        "id": "d5d1d384-e160-46d6-b7d5-580694ca8e66",
+        "cover": "https://images.unsplash.com/photo-1581239125393-67d48d3dd429?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
+        "notion_url": "https://www.notion.so/Users-eye-movements-provide-insights-for-designing-better-layouts-d5d1d384e16046d6b7d5580694ca8e66",
+        "icon": "👀",
+        "edited": "2022-08-18T22:53:00.000Z",
+        "created": "2022-07-21T21:54:00.000Z",
+        "description": "Recommendations based on users' eye movements:\n- Make labels prominent and easy to navigate\n- Position form items in a vertical rather than horizontal list\n- Organize visual layouts with white space\n- Provide cohesive layouts, since users will build a mental model of your entire page to anticipate the placement of elements before they appear.\n- Provide response times of under 100ms; waiting longer than 100ms holds the perception of the user hostage while they wait for something to happen.",
+        "status": {
+            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
+            "name": "Published",
+            "color": "green"
+        },
+        "references": [
+            {
+                "id": "e9cbebc7-1535-4e70-b6da-456f8bec80d6",
+                "notion_url": "https://www.notion.so/Cognitive-Strategies-and-Eye-Movements-for-Searching-Hierarchical-Computer-Displays-e9cbebc715354e70b6da456f8bec80d6",
+                "citation": "Hornoff, A.J. and Halverson T., (2003), Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays, Proceedings of the ACM Computer Human Interaction Conference. Ft. Lauderdale, FL.",
+                "url": "https://www.researchgate.net/publication/221515762_Cognitive_strategies_and_eye_movements_for_searching_hierarchical_computer_displays",
+                "summary": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.People use a hierarchy. When a useful hierarchy is present, people can focus their attention on one level of the hierarchy at a time. They adopt a more systematic search strategy which requires fewer revisits and fewer fixations overall.\nDesign recommendation:\nSupport a multitiered search. Do not make users infer the label by studying a few items in the group. Make labels salient. Make it easy to move from label to label with a single eye movement.People can examine multiple items with a single fixation.\nDesign recommendation:\nFacilitate foveal coverage of more than one item at a time. Position relevant options next to each other, in vertical lists instead of horizontal lists. Left- justify keywords.People can navigate white space with single eye movements. Users keep their eyes on relevant screen items, and jump over stretches of white space—in this case, up to 8° of visual angle between columns—with single cascades.\nDesign recommendation:\nFollow the advice of graphic designers and organize visual layouts with whitespace. This study shows how the human visual system interacts with this design element.People anticipate visual locations. People can move their eyes well into an anticipated layout and start “searching”before the layout had even appeared.\nDesign recommendation:\nProvide consistent screen layouts that accommodate anticipatory eye movements to known locations. Consistency is critical even at the level of visual-perceptual and oculomotor processing.People prime for visual onset. When anticipating the appearance of a layout, it appears as if the perceptual-oculomotor system is primed and ready, waiting for the onset.\nDesign recommendation:\nDesign guidelines already recommend providing response times under 100 ms.Perhaps computer responses over 100 ms are annoying not only because they delay task completion and break the illusion of control, but because they effectively hold the perceptual-oculomotor system hostage",
+                "cite": "Hornoff and Halverson, 2003",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays"
+            }
+        ],
+        "categories": [
+            {
+                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+                "name": "Navigation",
+                "color": "yellow"
+            }
+        ],
+        "slugwords": "better user experience from eye movements",
+        "name": "Users eye movements provide insights for designing better layouts"
     },
     {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
         "notion_url": "https://www.notion.so/Less-than-half-of-users-take-advantage-of-breadcrumbs-even-when-most-report-having-noticed-them-eae8ae69c02546d68d127de14c71ded5",
         "icon": "🧭",
-        "edited": "2022-08-18T22:22:00.000Z",
+        "edited": "2022-08-18T22:25:00.000Z",
         "created": "2022-07-21T21:53:00.000Z",
         "description": "Do breadcrumbs serve as a navigational shortcut?\n\nBreadcrumbs are textual representations of a user's location within the structure of a site, for example, `Home > Furniture > Chairs > Leather Chairs`.\n\nIn general, they are used to achieve the following goals:\n1. They provide information to the user about where they are in the site\n2. They provide shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\nKey takeaway from studies:\n- Less than half of users use the breadcrumb trail to navigate a website.\n- Most users reported that they noticed its presence.\n- Being taught about the usefulness of breadcrumb trails led to increased usage, as well as faster completion times, fewer page views and minimal use of the back button.",
         "status": {
