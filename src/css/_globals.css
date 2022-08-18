@@ -17,7 +17,7 @@ h3, h4, h5, h6 {
   line-height: 1.2;
   max-width: 40ch;
   font-weight: 400;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 h1,
 [data-heading~="1"] {
@@ -66,15 +66,6 @@ p,
   background: var(--gray-700);
 }
 
-/* a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-} */
-a {
-  text-decoration: none;
-}
 
 ul[role="list"],
 ol[role="list"] {
@@ -85,13 +76,12 @@ ol[role="list"] {
 :root {
   --page-top: var(--space-s-3xl, 12rem);
   --header-height: var(--space-xl-2xl);
-  --layer-header: 3;
   --responsive-padding: var(--space-s-3xl);
-  --alpha: rgba(255, 255, 255, 0.7);
 }
 main,
 .header,
-.footer {
+.footer,
+.padded-container {
   padding-left: var(--responsive-padding);
   padding-right: var(--responsive-padding);
 }

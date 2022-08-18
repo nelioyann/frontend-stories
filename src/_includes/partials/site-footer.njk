@@ -1,26 +1,24 @@
-<footer data-layout="switcher box" data-props="invert  noBorder noCurve" >
-    <div class="footer" data-layout="switcher">
-        
-    <div data-layout="stack" data-props="x:start">
-        <h3 data-heading="5">About</h3>
-        <p>{{meta.site_description}}</p>
-    </div>
-    <div data-layout="stack" data-props="x:start">
-        <h3 data-heading="5">Categories</h3>
-        <div data-layout="cluster">
-            {%- for category in collections.categories %}
-                <a href="/categories/{{category | slugify}}" data-tag>{{ category }}</a>
-            {% endfor -%}
-        </div>
-    </div>
-    <div data-layout="stack" data-props="x:start">
-        <h3 data-heading="5">Pages</h3>
+<footer class="site-footer" data-layout="switcher" data-props="invert">
+    <div class="padded-container" data-layout="switcher">
         <div data-layout="stack" data-props="x:start">
-            {%- for page in collections.webpage %}
-                <a href="{{page.url}}" >{{ page.data.title }}</a>
-            {% endfor -%}
+            <h3 data-heading="5">About</h3>
+            <p>{{ about or meta.site_description }}</p>
+        </div>
+        <div data-layout="stack" data-props="x:start">
+            <h3 data-heading="5">Categories</h3>
+            <div data-layout="cluster">
+                {%- for category in collections.categories %}
+                    <a href="/categories/{{ category | slugify }}" data-tag>{{ category }}</a>
+                {% endfor -%}
+            </div>
+        </div>
+        <div data-layout="stack" data-props="x:start">
+            <h3 data-heading="5">Pages</h3>
+            <div data-layout="stack" data-props="x:start">
+                {%- for page in collections.webpage %}
+                    <a data-link href="{{ page.url }}">{{ page.data.title }}</a>
+                {% endfor -%}
+            </div>
         </div>
     </div>
-    </div>
-
 </footer>

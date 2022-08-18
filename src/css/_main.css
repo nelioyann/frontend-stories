@@ -26,7 +26,6 @@ main {
 .header {
   width: 100%;
   height: var(--header-height);
-
 }
 
 /*=============================================
@@ -60,16 +59,9 @@ main {
 }
 
 /*=====  End of Story  ======*/
-[data-link] {
-  transition-timing-function: var(--bezier-snappy);
-}
-[data-link]:hover {
-  background-color: var(--gray-200);
-  box-shadow: 0 0 0 8px var(--gray-200);
-}
 
 /*=============================================
-=            Anchor Link            =
+=            Anchor Heading            =
 source: https://codepen.io/thierry/pen/qBqYmgw
 =============================================*/
 
@@ -140,15 +132,13 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   /* flex-wrap: wrap; */
 }
 .breadcrumbs-navigation li a {
-  --outline-offset: -1px;
-  padding: var(--space-2xs);
-  color: var(--gray-500);
-  transition-timing-function: var(--bezier-snappy);
-  transition-duration: 0.1s;
+  --outline-offset: 0px;
+  color: var(--gray-400);
+  text-decoration: none;
+
 }
 .breadcrumbs-navigation li a:hover {
-  background-color: var(--gray-200);
-  box-shadow: 0 0 0 8px var(--gray-200);
+  text-decoration: underline;
 }
 .breadcrumbs-navigation li:not(:last-child)::after {
   content: " \BB   ";
@@ -159,7 +149,16 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   flex-shrink: 0;
 }
 
-.breadcrumbs-navigation li a:hover, .breadcrumbs-navigation li:last-child a {
+.breadcrumbs-navigation li a:hover,
+.breadcrumbs-navigation li:last-child a {
   color: var(--gray-900);
+}
 
+
+.site-footer{
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-l);
+}
+.sans-serif {
+  font-family: var(--sans-font);
 }

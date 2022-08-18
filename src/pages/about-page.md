@@ -6,6 +6,8 @@ layout: layouts/nested-page-layout.njk
 ---
 ### About Frontend Stories
 
+ Frontend Stories a project maintained by [Yannick Nana](https://twitter.com/nelioyann). It uses [Eleventy](https://www.11ty.dev/), [Notion](https://notion.so/), and [Netlify](https://www.netlify.com/). The source code is available on [GitHub](https://github.com).
+
 #### Why
 The goal of Frontend Stories is to provide a collection of research-backed findings on which developpers or companies can build their own guidelines.
 

@@ -20,42 +20,43 @@ eleventyComputed:
 {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
 {% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
 <section aria-labelledby="story-name" id="cover">
-    <div data-layout="cover box" data-props="x:start invert">
-        <h1 id="story-name" data-heading="3" data-props="centered noBorder">{{ story.name }}</h1>
-        <figure>
-            {{ meta.site_url| qrcode | safe }}
-            <figcaption class="visually-hidden">Share link</figcaption>
-        </figure>
+    <div data-layout="cover box" data-props="x:start invert noBorder">
+        <h1 id="story-name" data-heading="3" data-props="centered noBorder">
+            {% if emojicon %}
+                <span aria-hidden class="sans-serif">{{ emojicon }}</span>
+            {% endif %}
+            {{ story.name }}</h1>
+        {# <figure>
+                    {{ meta.site_url| qrcode | safe }}
+                    <figcaption class="visually-hidden">Share link</figcaption>
+                </figure> #}
     </div>
 </section>
 <section aria-labelledby="summary">
-    <div data-layout="stack" data-props="space:xs">
+    <div
+        data-layout="stack" data-props="space:xs">
+        {# <div>
+                    <div data-layout="cluster">
+                        <small>Tagged:
+                        </small>
+                        <ul data-layout="cluster" role="list" data-props="noPad">
+                            {%- for category in story.categories %}
+                                <li>
+                                    <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                                </li>
+                            {% endfor -%}
+                        </ul>
+                    </div>
+                    <div data-layout="cluster">
+        
+                    <small>This page was added on:
+                        <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
+                    </small>
+                    </div>
+                </div> #}
         <h2 id="summary" data-heading="4 anchor">
             <a href="#summary">Summary</a>
         </h2>
-        <div>
-            <div data-layout="cluster">
-                <span>Tagged:
-                </span>
-                <ul data-layout="cluster" role="list" data-props="noPad">
-                    {%- for category in story.categories %}
-                        <li>
-                            <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
-                        </li>
-                    {% endfor -%}
-                </ul>
-            </div>
-            <div data-layout="cluster">
-
-            <small>Added on:
-                <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
-            </small>
-            -
-            <small>(Last edited:
-                <time datetime="{{ story.edited }}">{{ story.edited | readableDate }})</time>
-            </small>
-            </div>
-        </div>
         <div data-layout="stack" data-markdown>
             {% renderTemplate "md, liquid", story %}
             {{ description }}

@@ -51,3 +51,21 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+
+/* [data-link] {
+  transition-timing-function: var(--bezier-snappy);
+}
+[data-link]:hover {
+  background-color: var(--gray-200);
+  box-shadow: 0 0 0 8px var(--gray-200);
+} */
+@media (hover: hover) {
+  [data-link] {
+    text-decoration: none;
+  }
+  [data-link]:hover {
+    transition: box-shadow 200ms ease 0s;
+    box-shadow: 0px 2px 0px currentColor;
+  }
+}

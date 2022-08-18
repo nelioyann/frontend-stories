@@ -4,7 +4,7 @@
     <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
         <aside>
             <nav data-layout="stack" class="toc-navigation" aria-labelledby="toc-heading">
-                <span id="toc-heading" data-heading="5">Page navigation</span>
+                <span id="toc-heading" data-heading="5">Table of contents</span>
                 <ol data-layout="stack" data-props="split" role="list">
                     <li>
                         <a data-link href="#cover">Cover</a>
@@ -21,7 +21,7 @@
                 </ol>
             </nav>
         </aside>
-        <article data-layout="stack" data-props="space:2xl">
+        <article data-layout="stack" style="--space: var(--space-2xl, 3rem);">
             {{ content | safe }}
         </article>
     </div>

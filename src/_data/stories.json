@@ -2,9 +2,9 @@
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
-        "notion_url": "https://www.notion.so/Users-can-tolerate-about-2-seconds-for-a-page-to-load-unless-there-is-feedback-728073c284d043d58a4403c7f479d72a",
+        "notion_url": "https://www.notion.so/Users-can-tolerate-about-2-seconds-for-a-page-to-load-or-more-if-a-feedback-is-provided-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
-        "edited": "2022-08-17T21:21:00.000Z",
+        "edited": "2022-08-18T21:16:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
         "description": "How long are users willing to wait for a web page to be downloaded?\n\nIt has been shown that web pages that load faster are perceived as more interesting than those that are slower. (Ramsay, Barbesi and Preece (1998)",
         "status": {
@@ -50,7 +50,7 @@
             }
         ],
         "slugwords": "how long users can wait",
-        "name": "Users can tolerate about 2 seconds for a page to load unless there is feedback"
+        "name": "Users can tolerate about 2 seconds for a page to load or more if a feedback is provided"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
@@ -110,9 +110,9 @@
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
         "notion_url": "https://www.notion.so/Less-than-half-of-users-take-advantage-of-breadcrumbs-even-when-most-report-having-noticed-them-eae8ae69c02546d68d127de14c71ded5",
         "icon": "🧭",
-        "edited": "2022-08-17T20:38:00.000Z",
+        "edited": "2022-08-18T22:22:00.000Z",
         "created": "2022-07-21T21:53:00.000Z",
-        "description": "Are breadcrumbs used as a navigation shortcut ?\n\nA breadcrumb trail is a textual representation of a user’s location in a site’s structure, e.g., `Home > Furniture > Chairs > Leather Chairs`.\n\nBreadcrumbs are used for the following purposes:\n\n1. they provide information to the user as to where they are located within the site\n2. they offer shortcut links for users to \"jump\" to previous categories in the sequence without using the Back key.\n\nTake Home Messages:\n- Less than half of users use breadcrumbs to navigate on a website.\n- Most users declared noticing its presence.\n- Being introduced to the purpose of breadcrumbs lead to increased usage as well as quicker completion times, fewer page visited and minimal use of the back button ",
+        "description": "Do breadcrumbs serve as a navigational shortcut?\n\nBreadcrumbs are textual representations of a user's location within the structure of a site, for example, `Home > Furniture > Chairs > Leather Chairs`.\n\nIn general, they are used to achieve the following goals:\n1. They provide information to the user about where they are in the site\n2. They provide shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\nKey takeaway from studies:\n- Less than half of users use the breadcrumb trail to navigate a website.\n- Most users reported that they noticed its presence.\n- Being taught about the usefulness of breadcrumb trails led to increased usage, as well as faster completion times, fewer page views and minimal use of the back button.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
