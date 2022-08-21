@@ -35,6 +35,15 @@ module.exports = function (eleventyConfig) {
     });
     return Array.from(categories_set);
   });
+  eleventyConfig.addCollection("categoriesAndAll", function (collectionApi) {
+    let categories_set = new Set();
+    categories_set.add("All")
+    let stories = collectionApi.getAll()[0].data.stories;
+    stories.forEach((story) => {
+      story.categories.forEach((category) => categories_set.add(category.name));
+    });
+    return Array.from(categories_set);
+  });
   eleventyConfig.addFilter(
     "similarStories",
     function (stories, currentStoryId, categories) {
@@ -59,6 +68,9 @@ module.exports = function (eleventyConfig) {
     and we will lowercase our posts categories
     */
     category = category.toLowerCase();
+    if (category === "all") {
+      return posts;
+    }
     let result = posts.filter(p => {
       let p_categories = p.categories.map(c => c.name.toLowerCase());
       return p_categories.includes(category);

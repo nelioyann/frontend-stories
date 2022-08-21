@@ -56,7 +56,7 @@
 
 /*----------  Stack Layout  ----------*/
 [data-layout~="stack"] {
-  --space: 1em;
+  /* --space: 1em; */
   display: flex;
   flex-direction: column;
   justify-content: var(--vertical-alignment, flex-start);

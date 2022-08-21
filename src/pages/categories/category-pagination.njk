@@ -19,7 +19,7 @@ eleventyComputed:
   <ul  data-props="noPad">
     {% set entries = collections.stories | filterByCategory(category) %}
     {%- for entry in entries %}
-      {% include "partials/story-card-entry.njk" %}
+      {% include "partials/story-line-entry.njk" %}
     {% endfor -%}
   </ul>
 </p>

@@ -155,10 +155,58 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 }
 
 
+.categories-navigation {
+  border-top: var(--border-thin) solid var(--gray-400);
+  --reel-item-margin: 0;
+  --reel-item-width: 20ch;
+}
+
+.categories-navigation li {
+  display: flex;
+  border-top-width: var(--border-thick);
+  border-top-style: solid;
+  border-top-color: var(--gray-100);
+}
+.categories-navigation li[data-active="true"] {
+  border-top-color: var(--gray-900);
+}
+.categories-navigation a {
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+}
+
 .site-footer{
   padding-top: var(--space-l);
   padding-bottom: var(--space-l);
 }
 .sans-serif {
   font-family: var(--sans-font);
+}
+
+
+/*=============================================
+=            Story card            =
+=============================================*/
+
+/* .story-card{
+  border: var(--border-thin) solid var(--gray-400);
+} */
+.story-card__cover{
+  height: calc(var(--space-2xl-3xl) * 2);
+  display: grid;
+  place-content: center;
+  background-color: var(--gray-200);
+}
+
+
+
+/*=============================================
+=            STory Cards            =
+=============================================*/
+
+
+
+
+.story-cards[data-layout~="grid"]{
+  --grid-min-item-size: 30rem;
 }
