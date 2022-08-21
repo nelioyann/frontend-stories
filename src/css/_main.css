@@ -96,12 +96,12 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 [data-markdown] {
   /* Remove width constraints from generated markdown */
   --measure: initial;
-  border-width: var(--border-thin);
+  padding: var(--space-s) var(--space-xs);
+  /* border-width: var(--border-thin);
   border-style: solid;
   border-color: var(--gray-400);
-  padding: var(--space-s) var(--space-xs);
   background-color: var(--gray-200);
-  border-radius: 3px;
+  border-radius: 3px; */
 }
 
 [data-markdown] strong {
