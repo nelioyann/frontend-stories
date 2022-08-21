@@ -9,7 +9,7 @@ const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
 };
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css/style.css");
-  eleventyConfig.addPassthroughCopy("./src/images/");
+  eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
   // Watch css files for changes
