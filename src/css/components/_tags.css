@@ -6,15 +6,11 @@
   width: max-content;
   padding: calc(var(--space-xs) * 0.2) var(--space-xs);
   border-color: var(--color-dark);
-  font-size: var(--step--1);
-  /* font-weight: 500; */
-  /* border: var(--border-thin) solid; */
   border-radius: 3px;
   text-decoration: none;
-  font-family: var(--sans-font);
 }
 
 
-[data-tag~="color:green"]{
+/* [data-tag~="color:green"]{
   background-color: var(--color-green);
-}
+} */

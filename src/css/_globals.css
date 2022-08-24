@@ -50,20 +50,25 @@ p,
 
 ::-webkit-scrollbar {
   width: 10px;
+  height: var(--space-2xs);
+
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--gray-300);
+  border-radius: 15px;
+  border: var(--border-thin, 1px) solid var(--gray-300);
+
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-900);
+  background: var(--gray-700);
+  border-radius: 15px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gray-700);
+  background: var(--gray-900);
 }
 
 

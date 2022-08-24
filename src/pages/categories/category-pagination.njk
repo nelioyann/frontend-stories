@@ -16,10 +16,10 @@ eleventyComputed:
 </h1>
 <p>
   Here are some stories relating to the subject of {{ category }}.
-  <ul  data-props="noPad">
+  <ul data-layout="grid" role="list" data-props="noPad">
     {% set entries = collections.stories | filterByCategory(category) %}
     {%- for entry in entries %}
-      {% include "partials/story-line-entry.njk" %}
+      {% include "partials/story-card-entry.njk" %}
     {% endfor -%}
   </ul>
 </p>

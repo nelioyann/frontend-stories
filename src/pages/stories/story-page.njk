@@ -64,7 +64,7 @@ eleventyComputed:
             <h2 id="sources" data-heading="4 anchor">
                 <a href="#sources">Sources</a>
             </h2>
-            <p>Sources and ressources about this story:</p>
+            {# <p>Sources</p> #}
             <ul
                 role="list"
                 data-layout="switcher"
@@ -115,16 +115,16 @@ eleventyComputed:
         </div>
     </section> #}
     {# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
-    {# <span data-heading="6" id="pagination-nav">Navigate to other stories</span> #}
+    <span data-heading="6" id="pagination-nav">Navigate to other stories</span>
     <nav class="story-pagination-navigation" aria-labelledby="pagination-nav" data-layout="cluster" data-props="x:between">
         {% if pagination.href.previous %}
             <a data-button data-props="space:xs y:center" href="{{ pagination.href.previous }}">
-                <span>Previous item</span>
+                <span><span aria-hidden="true" data-font="emoji">◀️</span> Previous item</span>
             </a>
         {% endif %}
         {% if pagination.href.next %}
             <a class="story-pagination-navigation__next-button" data-button data-props="space:0" href="{{ pagination.href.next }}">
-                <span>Next item</span>
+                <span>Next item <span aria-hidden="true" data-font="emoji">▶️</span></span>
             </a>
         {% endif %}
     </nav>

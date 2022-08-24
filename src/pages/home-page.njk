@@ -31,8 +31,7 @@ eleventyComputed:
             <ul role="list" data-layout="reel" data-props="noPad noBorder overflowing:noBar">
                 {%- for category in collections.categoriesAndAll %}
                     <li data-active="{{ 'true' if currentCategory == category else 'false' }}">
-                        {# <a data-link href="/{{'' if category == 'All' else category | slugify }}#stories">{{ 'Latest' if category == 'All' else category }}</a> #}
-                        <a data-link href="/{{'' if category == 'All' else category | slugify }}">{{ 'Latest' if category == 'All' else category }}</a>
+                        <a  data-link href="/{{'' if category == 'All' else category | slugify }}">{{ 'Latest' if category == 'All' else category }}</a>
                     </li>
                 {% endfor -%}
             </ul>

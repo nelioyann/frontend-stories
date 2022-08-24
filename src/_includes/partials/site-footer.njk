@@ -1,11 +1,11 @@
 <footer class="site-footer" data-layout="switcher" data-props="invert">
     <div class="padded-container" data-layout="switcher">
         <div data-layout="stack" data-props="x:start">
-            <h3 data-heading="5">About</h3>
+            <h2 data-heading="5">About</h2>
             <p>{{ about or meta.site_description }}</p>
         </div>
         <div data-layout="stack" data-props="x:start">
-            <h3 data-heading="5">Categories</h3>
+            <h2 data-heading="5">Categories</h2>
             <div data-layout="cluster">
                 {%- for category in collections.categories %}
                     <a href="/categories/{{ category | slugify }}" data-tag>{{ category }}</a>
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div data-layout="stack" data-props="x:start">
-            <h3 data-heading="5">Pages</h3>
+            <h2 data-heading="5">Pages</h2>
             <div data-layout="stack" data-props="x:start">
                 {%- for page in collections.webpage %}
                     <a data-link href="{{ page.url }}">{{ page.data.title }}</a>
