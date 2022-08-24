@@ -3,7 +3,7 @@ title: About
 tags: 
     - webpage
 layout: layouts/nested-page-layout.njk
-permalink: /about
+permalink: /about.html
 ---
 
 # About
