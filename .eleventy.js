@@ -2,7 +2,7 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 
-const qrCode = require('qrcode');
+const qrCode = require("qrcode");
 const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
   let categoriesNamesA = categoriesA.map((category) => category.name);
   let categoriesNamesB = categoriesB.map((category) => category.name);
@@ -21,11 +21,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(emojiReadTime);
   eleventyConfig.addCollection("stories", (collection) => {
     const slug = eleventyConfig.getFilter("slugify");
-    return collection.getAll()[0].data.stories
-    .map((story) => {
+    return collection.getAll()[0].data.stories.map((story) => {
+    let excerpt = story.description.split("\n\n")[0];
       return {
         ...story,
         slug: `stories/${slug(story.slugwords)}`,
+        excerpt
       };
     });
   });
@@ -39,7 +40,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("categoriesAndAll", function (collectionApi) {
     let categories_set = new Set();
-    categories_set.add("All")
+    categories_set.add("All");
     let stories = collectionApi.getAll()[0].data.stories;
     stories.forEach((story) => {
       story.categories.forEach((category) => categories_set.add(category.name));
@@ -64,7 +65,7 @@ module.exports = function (eleventyConfig) {
         });
     }
   );
-  eleventyConfig.addFilter("filterByCategory", function(posts, category) {
+  eleventyConfig.addFilter("filterByCategory", function (posts, category) {
     /*
     case matters, so let's lowercase the desired category, cat
     and we will lowercase our posts categories
@@ -73,8 +74,8 @@ module.exports = function (eleventyConfig) {
     if (category === "all") {
       return posts;
     }
-    let result = posts.filter(p => {
-      let p_categories = p.categories.map(c => c.name.toLowerCase());
+    let result = posts.filter((p) => {
+      let p_categories = p.categories.map((c) => c.name.toLowerCase());
       return p_categories.includes(category);
     });
     return result;
@@ -84,14 +85,15 @@ module.exports = function (eleventyConfig) {
   // https://gist.github.com/jbmoelker/9693778
   eleventyConfig.addFilter("limitTo", function (array, limit) {
     return array.slice(0, limit);
-  }
+  });
+
+  eleventyConfig.addNunjucksAsyncFilter(
+    "qrcode",
+    async function (value, callback) {
+      let result = await qrCode.toString(value, { type: "svg", margin: 4 });
+      callback(null, result);
+    }
   );
-
-
-  eleventyConfig.addNunjucksAsyncFilter("qrcode", async function(value, callback) {
-		let result = await qrCode.toString(value, { type: 'svg', margin: 4 });
-		callback(null,result);
-	});
   // Convert ISO date to readable date of day month and year
   eleventyConfig.addFilter("readableDate", function (date) {
     return new Date(date).toLocaleDateString("en-US", {
@@ -99,8 +101,12 @@ module.exports = function (eleventyConfig) {
       year: "numeric",
       day: "numeric",
     });
-  }
-  );
+  });
+
+
+  
+
+  // DEfault return
   return {
     dir: {
       input: "src",

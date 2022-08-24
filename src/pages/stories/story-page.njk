@@ -8,9 +8,10 @@ layout: layouts/base-layout.njk
 permalink: /{{story.slug}}/
 og_type: article
 eleventyComputed:
-    title: "Story : {{ story.name | truncate(150) }} "
+    title: "{{ story.name | truncate(150) }} "
     thumbnail: "{{ story.cover }}"
     emojicon: "{{ story.icon }}"
+    description: "{{story.excerpt}}"
     eleventyNavigation:
         key: "{{story.id}}"
         title: "{{story.name}}"
