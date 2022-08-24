@@ -20,6 +20,7 @@ eleventyComputed:
 {% extends "layouts/story-layout.njk" %}
 {% block aside %}
     <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
+    <p>{{ story.description | emojiReadTime }}</p>
     {# <figure>
         {{ meta.site_url| qrcode | safe }}
         <figcaption class="visually-hidden">Share link</figcaption>
