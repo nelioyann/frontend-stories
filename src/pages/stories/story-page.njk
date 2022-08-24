@@ -33,7 +33,7 @@ eleventyComputed:
         <div data-layout="cover box" data-props="x:start invert noBorder">
             <h1 id="story-name" data-heading="3" data-props="centered noBorder">
                 {% if emojicon %}
-                    <span aria-hidden class="sans-serif">{{ emojicon }}</span>
+                    <span aria-hidden data-font="emoji">{{ emojicon }}</span>
                 {% endif %}
                 {{ story.name }}</h1>
         </div>
@@ -48,7 +48,7 @@ eleventyComputed:
                 {{ description }}
                 {% endrenderTemplate %}
             </div>
-            <div>
+            {# <div>
                 <ul data-layout="cluster" role="list" data-props="noPad">
                     {%- for category in story.categories %}
                         <li>
@@ -56,7 +56,7 @@ eleventyComputed:
                         </li>
                     {% endfor -%}
                 </ul>
-            </div>
+            </div> #}
         </div>
     </section>
     <section aria-labelledby="sources">
@@ -81,18 +81,18 @@ eleventyComputed:
                             {% endif %}
                             <p>({{ reference.type.name }})</p>
                         </div>
-                        {% if reference.summary %}
+                        {# {% if reference.summary %}
                             <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>
-                        {% endif %}
-                        {% if reference.citation %}
+                        {% endif %} #}
+                        {# {% if reference.citation %}
                             <small>{{ reference.citation }}</small>
-                        {% endif %}
+                        {% endif %} #}
                     </li>
                 {% endfor -%}
             </ul>
         </div>
     </section>
-    <section aria-labelledby="related">
+    {# <section aria-labelledby="related">
         <div data-layout="stack" data-props="space:xs">
             <h2 id="related" data-heading="4 anchor">
                 <a href="#related">Related</a>
@@ -113,18 +113,18 @@ eleventyComputed:
                 <p>No related stories found</p>
             {% endif %}
         </div>
-    </section>
+    </section> #}
     {# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
     {# <span data-heading="6" id="pagination-nav">Navigate to other stories</span> #}
     <nav class="story-pagination-navigation" aria-labelledby="pagination-nav" data-layout="cluster" data-props="x:between">
         {% if pagination.href.previous %}
             <a data-button data-props="space:xs y:center" href="{{ pagination.href.previous }}">
-                <span>Newer post</span>
+                <span>Previous item</span>
             </a>
         {% endif %}
         {% if pagination.href.next %}
             <a class="story-pagination-navigation__next-button" data-button data-props="space:0" href="{{ pagination.href.next }}">
-                <span>Older post</span>
+                <span>Next item</span>
             </a>
         {% endif %}
     </nav>

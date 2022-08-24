@@ -32,8 +32,8 @@ main {
 =            Story   styles TODO: extract         =
 =============================================*/
 .story-with-sidebar {
-  --side-width: calc(var(--space-l-xl, 2rem) * 5);
-  --content-min: 60%;
+  --side-width: calc(var(--space-l-xl, 2rem) * 3);
+  --content-min: 80%;
 }
 .story-with-sidebar,
 .story-with-sidebar article [data-layout~="cover"],
