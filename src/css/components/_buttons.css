@@ -68,4 +68,8 @@
     transition: box-shadow 200ms ease 0s;
     box-shadow: 0px 2px 0px currentColor;
   }
+  [data-link="noHover"]:hover {
+    transition: none;
+    box-shadow: unset;
+  }
 }

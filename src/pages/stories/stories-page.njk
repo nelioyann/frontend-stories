@@ -23,7 +23,7 @@ eleventyNavigation:
             <ul data-layout="stack">
                 {% for story in collections.stories | filterByCategory(category) %}
                     <li data-props="noMeasure">
-                        <a data-link class="story-card__title" href="/{{ story.slug }}">
+                        <a data-link href="/{{ story.slug }}">
                             <span>
                                 {{ story.name }}
                             </span>

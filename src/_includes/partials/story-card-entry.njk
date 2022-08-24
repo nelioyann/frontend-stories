@@ -2,7 +2,7 @@
     <div class="story-card__cover sans-serif" aria-hidden="true">
         <span data-heading="2">{{entry.icon if entry.icon else '📄'}}</span>
     </div>
-    <a data-link class="story-card__title" href="/{{ entry.slug }}">{{ entry.name }}</a>
+    <a data-link="noHover" class="story-card__title" href="/{{ entry.slug }}">{{ entry.name }}</a>
 
     {# {% if entry.categories.length %}
             <div class="story-card__categories" data-layout="cluster" >

@@ -31,13 +31,14 @@ eleventyComputed:
             <ul role="list" data-layout="reel" data-props="noPad noBorder overflowing:noBar">
                 {%- for category in collections.categoriesAndAll %}
                     <li data-active="{{ 'true' if currentCategory == category else 'false' }}">
-                        <a data-link href="/{{'' if category == 'All' else category | slugify }}#stories">{{ 'Latest' if category == 'All' else category }}</a>
+                        {# <a data-link href="/{{'' if category == 'All' else category | slugify }}#stories">{{ 'Latest' if category == 'All' else category }}</a> #}
+                        <a data-link href="/{{'' if category == 'All' else category | slugify }}">{{ 'Latest' if category == 'All' else category }}</a>
                     </li>
                 {% endfor -%}
             </ul>
         </nav>
         <ul class="story-cards" data-layout="grid" data-props="noPad" role="list">
-            {% set entries = collections.stories | filterByCategory(currentCategory) %}
+            {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(6) %}
             {%- for entry in entries %}
                 {% include "partials/story-card-entry.njk" %}
             {% endfor -%}

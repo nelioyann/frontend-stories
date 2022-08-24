@@ -41,12 +41,6 @@ main {
   width: 100%;
 }
 
-.story-with-sidebar aside .toc-navigation {
-  /* padding-top: var(--space-xs); */
-  padding-bottom: var(--space-xs);
-  position: sticky;
-  top: var(--header-height);
-}
 
 .story-with-sidebar figure svg {
   width: calc(var(--space-2xl) * 2);
@@ -167,7 +161,8 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   border-top-style: solid;
   border-top-color: var(--gray-100);
 }
-.categories-navigation li[data-active="true"] {
+.categories-navigation li[data-active="true"],
+.categories-navigation li:hover {
   border-top-color: var(--gray-900);
 }
 .categories-navigation a {
@@ -188,14 +183,31 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 =            Story card            =
 =============================================*/
 
-/* .story-card{
+.story-card{
+  border: var(--border-thin) solid var(--gray-100);
+  padding: var(--space-s) var(--space-s);
+  border-radius: var(--border-radius);
+  position: relative;
+
+}
+.story-card:hover,
+.story-card:focus-within{
   border: var(--border-thin) solid var(--gray-400);
-} */
+
+}
 .story-card__cover{
   height: calc(var(--space-2xl-3xl) * 2);
   display: grid;
   place-content: center;
   background-color: var(--gray-200);
+}
+a.story-card__title::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -209,4 +221,8 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 
 .story-cards[data-layout~="grid"]{
   --grid-min-item-size: 30rem;
+}
+
+.story-pagination-navigation__next-button{
+  margin-left: auto;
 }

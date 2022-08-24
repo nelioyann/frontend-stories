@@ -1,28 +1,11 @@
-{% extends "layouts/base-layout.njk" %}
 {% block content %}
     {% include "partials/site-breadcrumbs.njk" %}
     <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
         <aside>
-            <nav data-layout="stack" class="toc-navigation" aria-labelledby="toc-heading">
-                <span id="toc-heading" data-heading="5">Table of contents</span>
-                <ol data-layout="stack" data-props="split" role="list">
-                    <li>
-                        <a data-link href="#cover">Cover</a>
-                    </li>
-                    <li>
-                        <a data-link href="#summary">Summary</a>
-                    </li>
-                    <li>
-                        <a data-link href="#sources">Sources</a>
-                    </li>
-                    <li>
-                        <a data-link href="#related">Related</a>
-                    </li>
-                </ol>
-            </nav>
+            {% block aside %}{% endblock %}
         </aside>
         <article data-layout="stack" style="--space: var(--space-2xl, 3rem);">
-            {{ content | safe }}
+            {% block main %}{% endblock %}
         </article>
     </div>
 {% endblock %}

@@ -4,11 +4,11 @@ pagination:
     size: 1
     alias: story
     addAllPagesToCollections: true
-layout: layouts/story-layout.njk
+layout: layouts/base-layout.njk
 permalink: /{{story.slug}}/
 og_type: article
 eleventyComputed:
-    title: "Story : {{ story.name | truncate(15) }} "
+    title: "Story : {{ story.name | truncate(150) }} "
     thumbnail: "{{ story.cover }}"
     emojicon: "{{ story.icon }}"
     eleventyNavigation:
@@ -17,120 +17,114 @@ eleventyComputed:
         parent: Stories
 ---
 
-{% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
-{% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
-<section aria-labelledby="story-name" id="cover">
-    <div data-layout="cover box" data-props="x:start invert noBorder">
-        <h1 id="story-name" data-heading="3" data-props="centered noBorder">
-            {% if emojicon %}
-                <span aria-hidden class="sans-serif">{{ emojicon }}</span>
-            {% endif %}
-            {{ story.name }}</h1>
-        {# <figure>
-                    {{ meta.site_url| qrcode | safe }}
-                    <figcaption class="visually-hidden">Share link</figcaption>
-                </figure> #}
-    </div>
-</section>
-<section aria-labelledby="summary">
-    <div
-        data-layout="stack" data-props="space:xs">
-        {# <div>
-                    <div data-layout="cluster">
-                        <small>Tagged:
-                        </small>
-                        <ul data-layout="cluster" role="list" data-props="noPad">
-                            {%- for category in story.categories %}
-                                <li>
-                                    <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
-                                </li>
-                            {% endfor -%}
-                        </ul>
-                    </div>
-                    <div data-layout="cluster">
-        
-                    <small>This page was added on:
-                        <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
-                    </small>
-                    </div>
-                </div> #}
-        <h2 id="summary" data-heading="4 anchor">
-            <a href="#summary">Summary</a>
-        </h2>
-        <div data-layout="stack" data-markdown>
-            {% renderTemplate "md, liquid", story %}
-            {{ description }}
-            {% endrenderTemplate %}
+{% extends "layouts/story-layout.njk" %}
+{% block aside %}
+    <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
+    {# <figure>
+        {{ meta.site_url| qrcode | safe }}
+        <figcaption class="visually-hidden">Share link</figcaption>
+    </figure> #}
+{% endblock %}
+{% block main %}
+    {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
+    {% set previousStory = collections.stories | getPreviousCollectionItem(pagination.page) %}
+    <section aria-labelledby="story-name" id="cover">
+        <div data-layout="cover box" data-props="x:start invert noBorder">
+            <h1 id="story-name" data-heading="3" data-props="centered noBorder">
+                {% if emojicon %}
+                    <span aria-hidden class="sans-serif">{{ emojicon }}</span>
+                {% endif %}
+                {{ story.name }}</h1>
         </div>
-    </div>
-</section>
-<section aria-labelledby="sources">
-    <div data-layout="stack" data-props="space:xs">
-        <h2 id="sources" data-heading="4 anchor">
-            <a href="#sources">Sources</a>
-        </h2>
-        <p>Sources and ressources about this story:</p>
-        <ul
-            role="list"
-            data-layout="switcher"
-            data-props="noPad x:stretch space:xs"
-            style="--threshold: calc(var(--space-l) * 25);">
-            {%- for reference in story.references %}
-                <li data-layout="box stack">
-                    <a data-button target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
-                        <span data-heading="5">{{ reference.name }}</span>
-                    </a>
-                    <div data-layout="cluster" data-props="x:between">
-                        {% if reference.cite %}
-                            <p>{{ reference.cite }}</p>
-                        {% endif %}
-                        <p>({{ reference.type.name }})</p>
-                    </div>
-                    {% if reference.summary %}
-                        <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>
-                    {% endif %}
-                    {% if reference.citation %}
-                        <small>{{ reference.citation }}</small>
-                    {% endif %}
-                </li>
-            {% endfor -%}
-        </ul>
-    </div>
-</section>
-<section aria-labelledby="related">
-    <div data-layout="stack" data-props="space:xs">
-        <h2 id="related" data-heading="4 anchor">
-            <a href="#related">Related</a>
-        </h2>
-        {% set entries = collections.stories | similarStories(story.id, story.categories) | limitTo(5) %}
-        {% if entries.length > 0 %}
-            <p>Explore related stories:</p>
+    </section>
+    <section aria-labelledby="summary">
+        <div data-layout="stack" data-props="space:xs">
+            <h2 id="summary" data-heading="4 anchor">
+                <a href="#summary">Summary</a>
+            </h2>
+            <div data-layout="stack" data-markdown>
+                {% renderTemplate "md, liquid", story %}
+                {{ description }}
+                {% endrenderTemplate %}
+            </div>
+            <div>
+                <ul data-layout="cluster" role="list" data-props="noPad">
+                    {%- for category in story.categories %}
+                        <li>
+                            <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
+                        </li>
+                    {% endfor -%}
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section aria-labelledby="sources">
+        <div data-layout="stack" data-props="space:xs">
+            <h2 id="sources" data-heading="4 anchor">
+                <a href="#sources">Sources</a>
+            </h2>
+            <p>Sources and ressources about this story:</p>
             <ul
-                data-layout="reel"
                 role="list"
-                data-props="noPad noBorder overflowing:noBar"
-                style="--reel-item-width: calc(var(--space-l) * 10); --reel-item-margin: 0;">
-                {%- for entry in entries %}
-                    {% include "partials/story-card-entry.njk" %}
+                data-layout="switcher"
+                data-props="noPad x:stretch space:xs"
+                style="--threshold: calc(var(--space-l) * 25);">
+                {%- for reference in story.references %}
+                    <li data-layout="box stack">
+                        <a data-button target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+                            <span data-heading="5">{{ reference.name }}</span>
+                        </a>
+                        <div data-layout="cluster" data-props="x:between">
+                            {% if reference.cite %}
+                                <p>{{ reference.cite }}</p>
+                            {% endif %}
+                            <p>({{ reference.type.name }})</p>
+                        </div>
+                        {% if reference.summary %}
+                            <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>
+                        {% endif %}
+                        {% if reference.citation %}
+                            <small>{{ reference.citation }}</small>
+                        {% endif %}
+                    </li>
                 {% endfor -%}
             </ul>
-        {% else %}
-            <p>No related stories found</p>
+        </div>
+    </section>
+    <section aria-labelledby="related">
+        <div data-layout="stack" data-props="space:xs">
+            <h2 id="related" data-heading="4 anchor">
+                <a href="#related">Related</a>
+            </h2>
+            {% set entries = collections.stories | similarStories(story.id, story.categories) | limitTo(5) %}
+            {% if entries.length > 0 %}
+                <p>Explore related stories:</p>
+                <ul
+                    data-layout="reel"
+                    role="list"
+                    data-props="noPad noBorder overflowing:noBar"
+                    style="--reel-item-width: calc(var(--space-l) * 10); --reel-item-margin: 0;">
+                    {%- for entry in entries %}
+                        {% include "partials/story-card-entry.njk" %}
+                    {% endfor -%}
+                </ul>
+            {% else %}
+                <p>No related stories found</p>
+            {% endif %}
+        </div>
+    </section>
+    {# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
+    {# <span data-heading="6" id="pagination-nav">Navigate to other stories</span> #}
+    <nav class="story-pagination-navigation" aria-labelledby="pagination-nav" data-layout="cluster" data-props="x:between">
+        {% if pagination.href.previous %}
+            <a data-button data-props="space:xs y:center" href="{{ pagination.href.previous }}">
+                <span>Newer post</span>
+            </a>
         {% endif %}
-    </div>
-</section>
-{# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
-{# <span data-heading="6" id="pagination-nav">Navigate to other stories</span>
-		<nav aria-labelledby="pagination-nav" data-layout="cluster" data-props="x:between">
-			{% if pagination.href.previous %}
-				<a data-button data-props="space:xs y:center" href="{{ pagination.href.previous }}">
-					{% include "icons/back.njk"%}
-					<span>Previous</span>
-				</a>
-			{% endif %}
-			{% if pagination.href.next %}
-				<a data-button data-props="space:0" href="{{ pagination.href.next }}">
-					<span>Next</span>
-				</a>
-			{% endif %}
-		</nav> #}
+        {% if pagination.href.next %}
+            <a class="story-pagination-navigation__next-button" data-button data-props="space:0" href="{{ pagination.href.next }}">
+                <span>Older post</span>
+            </a>
+        {% endif %}
+    </nav>
+{% endblock %}
