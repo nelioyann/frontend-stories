@@ -3,6 +3,9 @@
     --color-primary: hsl(225, 73%, 59%);
     --color-light: var(--gray-100);
     --color-dark: var(--gray-900);
+
+    --color-green-shade: #18794e;
+    --color-green-tint: #ddf3e4;
   
     --color-text: var(--gray-600);
     --color-heading: hsl(225deg, 15%, 15%);
@@ -16,4 +19,13 @@
   
     --bezier-snappy: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --bezier-swift: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
   }
+/* TODO: complete colors */
+
+
+/* [data-color="green"]{
+  background-color: var(--color-green-tint);
+  color: var(--color-green-shade);
+} */

@@ -1,7 +1,5 @@
 /*----------  Box Layout  ----------*/
 [data-layout~="box"] {
-  /* --color-light: var(--gray-100);
-    --color-dark: var(--gray-900); */
   --padding: var(--space-s);
   display: block;
   padding-top: var(--padding);
@@ -24,7 +22,8 @@
     background-color: var(--color-dark);
   }
   */
-[data-layout~="box"][data-props~="invert"] {
+/* [data-layout~="box"] */
+[data-props~="invert"] {
   /* --OFF: ;
   --ON: initial;
   --inverted: var(--ON); */
@@ -57,7 +56,7 @@
 
 /*----------  Stack Layout  ----------*/
 [data-layout~="stack"] {
-  --space: 1em;
+  /* --space: 1em; */
   display: flex;
   flex-direction: column;
   justify-content: var(--vertical-alignment, flex-start);
@@ -118,11 +117,6 @@
   justify-content: stretch;
   align-items: var(--vertical-alignment, stretch);
 }
-
-/* [data-layout~="with-sidebar"] > * {
-    display: flex;
-    flex-wrap: wrap;
-  } */
 
 /* Sidebar */
 [data-layout~="with-sidebar"][data-props~="side:left"] > :nth-child(1),
@@ -230,74 +224,7 @@
   flex-basis: var(--space-s, 0.25rem);
   flex-shrink: 0;
 }
-/* FIXME: Experimental full width for singleton */
 [data-layout~="reel"] > *:only-child {
   flex-grow: 1;
 }
-/*----------  TOKENS  ----------*/
-[data-props~="noPad"] {
-  padding: 0;
-}
 
-[data-props~="x:center"] {
-  --horizontal-alignment: center;
-}
-[data-props~="x:between"] {
-  --horizontal-alignment: space-between;
-}
-[data-props~="x:start"] {
-  --horizontal-alignment: flex-start;
-}
-[data-props~="x:end"] {
-  --horizontal-alignment: flex-end;
-}
-[data-props~="x:stretch"] {
-  --horizontal-alignment: stretch;
-}
-
-[data-props~="y:center"] {
-  --vertical-alignment: center;
-}
-[data-props~="y:between"] {
-  --vertical-alignment: space-between;
-}
-[data-props~="y:start"] {
-  --vertical-alignment: flex-start;
-}
-[data-props~="y:end"] {
-  --vertical-alignment: flex-end;
-}
-[data-props~="y:stretch"] {
-  --vertical-alignment: stretch;
-}
-
-[data-props~="space:0"] {
-  --space: 0;
-}
-[data-props~="space:2xs"] {
-  --space: var(--space-2xs);
-}
-[data-props~="space:xs"] {
-  --space: var(--space-xs);
-}
-[data-props~="space:s"] {
-  --space: var(--space-s);
-}
-[data-props~="space:m"] {
-  --space: var(--space-m);
-}
-[data-props~="space:l"] {
-  --space: var(--space-l);
-}
-[data-props~="space:xl"] {
-  --space: var(--space-xl);
-}
-
-[data-props~="noBorder"] {
-  border-width: 0 !important;
-}
-[data-props~="noCurve"] {
-  --border-radius: 0;
-}
-
-/*=====  End of LAYOUT UTILITIES  ======*/

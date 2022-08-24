@@ -1,10 +1,8 @@
-<li class="story-card" data-layout="box stack">
-    <a data-link class="story-card__title" data-props="split"  href="/stories/{{ entry.name | slugify }}">{{ entry.name }}</a>
-    {% if entry.categories.length %}
-        <div class="story-card__categories" data-layout="cluster" >
-            {%- for category in entry.categories %}
-                <a  href="/categories/{{category.name | slugify}}" data-tag>{{ category.name }}</a>
-            {% endfor -%}
-        </div>
-    {% endif %}
+<li class="story-card" data-layout="stack" data-props="space:xs">
+    {% set color = entry.categories[0].color%}
+    {{color | log}}
+    <div class="story-card__cover" data-font="emoji" data-color="{{color}}" aria-hidden="true">
+        <span data-heading="2">{{entry.icon if entry.icon else '📄'}}</span>
+    </div>
+    <a data-link="noHover" class="story-card__title" href="/{{ entry.slug }}">{{ entry.name }}</a>
 </li>

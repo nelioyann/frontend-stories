@@ -1,59 +1,56 @@
-/* roboto-serif-200 - latin */
+/* atkinson-hyperlegible-regular - latin */
 @font-face {
-    font-family: 'Roboto Serif';
-    font-style: normal;
-    font-weight: 200;
-    src: local(''),
-         url('../fonts/roboto-serif-v7-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-serif-v7-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-serif-300 - latin */
-  @font-face {
-    font-family: 'Roboto Serif';
-    font-style: normal;
-    font-weight: 300;
-    src: local(''),
-         url('../fonts/roboto-serif-v7-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-serif-v7-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-serif-regular - latin */
-  @font-face {
-    font-family: 'Roboto Serif';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/roboto-serif-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-serif-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-serif-500 - latin */
-  @font-face {
-    font-family: 'Roboto Serif';
-    font-style: normal;
-    font-weight: 500;
-    src: local(''),
-         url('../fonts/roboto-serif-v7-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-serif-v7-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-serif-600 - latin */
-  @font-face {
-    font-family: 'Roboto Serif';
-    font-style: normal;
-    font-weight: 600;
-    src: local(''),
-         url('../fonts/roboto-serif-v7-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-serif-v7-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* roboto-serif-700 - latin */
-  @font-face {
-    font-family: 'Roboto Serif';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-         url('../fonts/roboto-serif-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/roboto-serif-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+     font-family: 'Atkinson Hyperlegible';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+          url('../fonts/atkinson-hyperlegible-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/atkinson-hyperlegible-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+   /* atkinson-hyperlegible-italic - latin */
+   @font-face {
+     font-family: 'Atkinson Hyperlegible';
+     font-style: italic;
+     font-weight: 400;
+     src: local(''),
+          url('../fonts/atkinson-hyperlegible-v9-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/atkinson-hyperlegible-v9-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+   /* atkinson-hyperlegible-700 - latin */
+   @font-face {
+     font-family: 'Atkinson Hyperlegible';
+     font-style: normal;
+     font-weight: 700;
+     src: local(''),
+          url('../fonts/atkinson-hyperlegible-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/atkinson-hyperlegible-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+
+
+  /* noto-emoji-regular - emoji */
+@font-face {
+     font-family: 'Noto Emoji';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+          url('../fonts/noto-emoji-v26-emoji-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/noto-emoji-v26-emoji-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+   /* noto-emoji-600 - emoji */
+@font-face {
+     font-family: 'Noto Emoji';
+     font-style: normal;
+     font-weight: 600;
+     src: local(''),
+          url('../fonts/noto-emoji-v26-emoji-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/noto-emoji-v26-emoji-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
 
 :root{
-     --serif-font: 'Roboto Serif', serif;
-     --sans-font: Verdana, Geneva, Tahoma, sans-serif;
+     --font-body: 'Atkinson Hyperlegible', sans-serif;
+     --font-emoji: 'Noto Emoji', system-ui, sans-serif;
+}
+
+[data-font="emoji"]{
+     font-family: var(--font-emoji);
 }

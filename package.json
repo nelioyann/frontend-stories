@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/nelioyann/front-stories#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.12"
+    "@11ty/eleventy": "^2.0.0-canary.12",
+    "@11ty/eleventy-navigation": "^0.3.4"
   },
   "dependencies": {
+    "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
     "@notionhq/client": "^2.0.0",
     "dotenv": "^16.0.1",
     "qrcode": "^1.5.1"

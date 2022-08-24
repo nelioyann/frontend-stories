@@ -23,53 +23,204 @@ main {
   padding-bottom: var(--page-top);
 }
 
-
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: var(--header-height);
-  z-index: var(--layer-header);
-  border-bottom: 1px solid var(--gray-400);
-  background-color: var(--gray-100);
 }
 
 /*=============================================
 =            Story   styles TODO: extract         =
 =============================================*/
 .story-with-sidebar {
-  --side-width: calc(var(--space-l-xl, 2rem) * 5);
-  --content-min: 60%;
+  --side-width: calc(var(--space-l-xl, 2rem) * 3);
+  --content-min: 80%;
 }
 .story-with-sidebar,
 .story-with-sidebar article [data-layout~="cover"],
-.story-with-sidebar article nav {
+.story-with-sidebar article .toc-navigation {
   width: 100%;
 }
 
-.story-with-sidebar aside nav {
-  padding-top: var(--space-xs);
-  padding-bottom: var(--space-xs);
-  position: sticky;
-  top: var(--header-height);
-}
 
-
-.story-with-sidebar #cover svg{
+.story-with-sidebar figure svg {
   width: calc(var(--space-2xl) * 2);
   height: calc(var(--space-2xl) * 2);
   padding: var(--space-s);
   border-radius: var(--space-m);
-
 }
-.story-with-sidebar #cover svg > path{
+.story-with-sidebar #cover svg > path {
   fill: var(--gray-100);
 }
 
 /*=====  End of Story  ======*/
 
-[data-link]:hover{
+/*=============================================
+=            Anchor Heading            =
+source: https://codepen.io/thierry/pen/qBqYmgw
+=============================================*/
+
+[data-heading~="anchor"] a:hover {
+  text-decoration: underline;
+}
+@media (hover: hover) {
+  [data-heading~="anchor"] {
+    margin-left: -1em;
+    padding-left: 1em;
+    scroll-margin-top: var(--header-height);
+  }
+  [data-heading~="anchor"] a {
+    text-decoration: none;
+    pointer-events: none;
+    color: var(--gray-900);
+  }
+  [data-heading~="anchor"] a::before {
+    content: "#";
+    float: left;
+    padding: 0 0.15em; /* to make the "#" a bigger target */
+    margin-left: -1em;
+    pointer-events: auto;
+    color: var(--gray-600);
+    display: none;
+  }
+  [data-heading~="anchor"]:hover a::before {
+    display: block;
+  }
+}
+
+[data-markdown] {
+  /* Remove width constraints from generated markdown */
+  --measure: initial;
+  padding: var(--space-s) var(--space-xs);
+  /* border-width: var(--border-thin);
+  border-style: solid;
+  border-color: var(--gray-400);
   background-color: var(--gray-200);
-  box-shadow:0 0 0 8px var(--gray-200);
+  border-radius: 3px; */
+}
+
+[data-markdown] strong {
+  font-size: var(--step-1);
+  font-weight: 500;
+}
+[data-markdown] a {
+  border-bottom: 1px solid black;
+}
+/* BREADCRUMBS */
+.breadcrumbs-navigation {
+  --measure: initial;
+}
+.breadcrumbs-navigation li {
+  margin-right: var(--space-xs);
+}
+.breadcrumbs-navigation li,
+.breadcrumbs-navigation li a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumbs-navigation ul {
+  padding-left: 0;
+  display: inline-flex;
+  overflow-x: auto;
+  overflow-y: visible;
+  /* flex-wrap: wrap; */
+}
+.breadcrumbs-navigation li a {
+  --outline-offset: 0px;
+  color: var(--gray-400);
+  text-decoration: none;
+
+}
+.breadcrumbs-navigation li a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs-navigation li:not(:last-child)::after {
+  content: " \BB   ";
+  margin-left: var(--space-s, 5px);
+}
+.breadcrumbs-navigation li:last-child {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.breadcrumbs-navigation li a:hover,
+.breadcrumbs-navigation li:last-child a {
+  color: var(--gray-900);
+}
+
+
+.categories-navigation {
+  border-top: var(--border-thin) solid var(--gray-400);
+  --reel-item-margin: 0;
+  --reel-item-width: 20ch;
+}
+
+.categories-navigation li {
+  display: flex;
+  border-top-width: var(--border-thick);
+  border-top-style: solid;
+  border-top-color: var(--gray-100);
+}
+.categories-navigation li[data-active="true"],
+.categories-navigation li:hover {
+  border-top-color: var(--gray-900);
+}
+.categories-navigation a {
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+}
+
+.site-footer{
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-l);
+}
+.sans-serif {
+  font-family: var(--sans-font);
+}
+
+
+/*=============================================
+=            Story card            =
+=============================================*/
+
+.story-card{
+  border: var(--border-thin) solid var(--gray-200);
+  padding: var(--space-s) var(--space-s);
+  border-radius: var(--border-radius);
+  position: relative;
+  background-color: var(--gray-50);
+
+}
+.story-card:hover,
+.story-card:focus-within{
+  border: var(--border-thin) solid var(--gray-400);
+
+}
+/* .story-card__cover{
+
+} */
+a.story-card__title::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*=============================================
+=            STory Cards            =
+=============================================*/
+
+
+
+
+.story-cards[data-layout~="grid"]{
+  --grid-min-item-size: 30rem;
+}
+
+.story-pagination-navigation__next-button{
+  margin-left: auto;
 }

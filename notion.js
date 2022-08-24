@@ -25,12 +25,17 @@ const notion = new Client({
 });
 notion;
 
-
-async function readDatabasePagesId(database_id) {
+async function getDatabasePagesId(database_id) {
   console.log("Reading database...");
   try {
     const response = await notion.databases.query({
       database_id,
+      filter: {
+        property: "Status",
+        select: {
+          equals: "Published",
+        },
+      },
     });
     return response.results.map((result) => result.id);
   } catch (error) {
@@ -43,6 +48,7 @@ async function readPage(page_id) {
     const page = await notion.pages.retrieve({
       page_id,
     });
+    console.log(page);
     return page;
   } catch (error) {
     console.log(error);
@@ -99,6 +105,7 @@ async function sanitizePropertyItem(response, propertyItem_type) {
       let relation_pages = [];
       for (let pageId of relation_pageIds) {
         let page = await readPageExtended(pageId);
+        console.log(page);
         relation_pages.push(page);
       }
       return relation_pages;
@@ -110,10 +117,15 @@ async function sanitizePropertyItem(response, propertyItem_type) {
 async function readPageExtended(page_id) {
   try {
     let page = await readPage(page_id);
-    let { properties, url } = page;
-    console.log(url);
-    let extended_page = { id: page_id };
+    let { properties, url, cover, icon } = page;
+    let extended_page = {
+      id: page_id,
+      cover: cover?.external.url,
+      notion_url: url,
+      icon: icon?.emoji,
+    };
     for (let key in properties) {
+      console.log(key);
       let property = await readProperty(page_id, properties[key].id);
       extended_page[key.toLowerCase()] = property;
     }
@@ -126,7 +138,7 @@ async function readPageExtended(page_id) {
 async function fetchDatabase(database_id) {
   try {
     let database_data = [];
-    let pagesId = await readDatabasePagesId(database_id);
+    let pagesId = await getDatabasePagesId(database_id);
     for (let pageId of pagesId) {
       let page_data = await readPageExtended(pageId);
       database_data.push(page_data);

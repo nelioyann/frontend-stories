@@ -1,17 +1,9 @@
 <header>
-    <div class="header" data-layout="cluster" data-props="y:center x:between">
-        <a data-layout="cluster" data-props="space:xs" data-heading="5" href="/">
-            {% include "icons/fs-icon.njk" %}
+    <div class="padded-container header" data-layout="cluster" data-props="y:center x:between invert">
+        <a data-link="noHover" href="/">
+            <span aria-hidden="true" data-heading="4" data-font="emoji">🎓</span>
             <span>
-                {{ meta.site_name }}
-            </span>
-        </a>
-        <a data-button="small" data-props="noBorder" href="#">
-            <span aria-hidden="true">
-                {% include "../icons/search-icon.njk" %}
-            </span>
-            <span class="visually-hidden">
-                Search
+                {{meta.site_name}}
             </span>
         </a>
     </div>

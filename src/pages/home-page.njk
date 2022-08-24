@@ -1,34 +1,43 @@
 ---
-layout: layouts/home.njk
+layout: layouts/home-layout.njk
 title: Home
+description: Collection of documented findings and insights on frontend development.
+about: >-
+    Frontend Stories 2022 ©
 tags: 
     - webpage
-permalink: /
+pagination: 
+    data: collections.categoriesAndAll
+    size: 1
+    alias: currentCategory
+permalink: "{% if currentCategory == 'All'%}/{% else %}/{{currentCategory | slugify}}/index.html{% endif %}"
+eleventyComputed:
+    eleventyNavigation:
+        key: Home
 ---
 
-<article data-layout="stack" data-props="space:l">
-    <section data-layout="cover" data-props="noPad">
-        <h1>Frontend Stories</h1>
-        <p>{{ meta.site_description }}</p>
-        <div>
-            <a data-button="variant:primary" href="/categories">Browse all categories</a>
+<article data-layout="stack" data-props="space:2xl">  
+    <section>
+        <div data-layout="stack" data-props="centered space:m">
+            <h1 class="visually-hidden">Frontend Stories</h1>
+            <p>{{ description or meta.site_description }}</p>
+            {# <div>
+                <a data-button="variant:primary" href="/stories">Browse all stories</a>
+            </div> #}
         </div>
     </section>
-    <section data-layou="stack">
-        <div data-layout="cluster" data-props="x:between y:center">
-            <h2 data-layout="cluster" data-props="space:xs" data-heading="4">
-                {% include "icons/content-icon.njk" %}
-                <span>
-                    Effective web content
-                </span>
-            </h2>
-            <a data-link href="/categories/effective-web-content/">
-                See more
-                {# <span aria-hidden="true">👁</span> #}
-            </a>
-        </div>
-        <ul data-layout="reel" data-props="noBorder">
-            {% set entries = stories | limitTo(6) %}
+    <section id="stories" data-layout="stack" data-props="space:m">
+        <nav class="categories-navigation">
+            <ul role="list" data-layout="reel" data-props="noPad noBorder overflowing:noBar">
+                {%- for category in collections.categoriesAndAll %}
+                    <li data-active="{{ 'true' if currentCategory == category else 'false' }}">
+                        <a  data-link href="/{{'' if category == 'All' else category | slugify }}">{{ 'Latest' if category == 'All' else category }}</a>
+                    </li>
+                {% endfor -%}
+            </ul>
+        </nav>
+        <ul class="story-cards" data-layout="grid" data-props="noPad" role="list">
+            {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(6) %}
             {%- for entry in entries %}
                 {% include "partials/story-card-entry.njk" %}
             {% endfor -%}

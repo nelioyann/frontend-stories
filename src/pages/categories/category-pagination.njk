@@ -4,22 +4,20 @@ pagination:
   data: collections.categories
   size: 1
   alias: category
+  addAllPagesToCollections: true
 permalink: "/categories/{{ category | slugify }}/index.html"
 eleventyComputed:
   title: "Category: {{ category }}"
 ---
 
-{% set previousPageHref = "/categories" %}
-{% set previousPageLabel = "view all categories" %}
-{% include "partials/page-return-navigation.njk" %}
+
 <h1 data-heading="3">
-  <span aria-hidden="true">🔖</span>
   {{ category }}
 </h1>
 <p>
   Here are some stories relating to the subject of {{ category }}.
-  <ul data-layout="grid">
-    {% set entries = stories | filterByCategory(category) %}
+  <ul data-layout="grid" role="list" data-props="noPad">
+    {% set entries = collections.stories | filterByCategory(category) %}
     {%- for entry in entries %}
       {% include "partials/story-card-entry.njk" %}
     {% endfor -%}

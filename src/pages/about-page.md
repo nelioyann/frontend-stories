@@ -2,26 +2,14 @@
 title: About
 tags: 
     - webpage
-layout: layouts/base.njk
+layout: layouts/nested-page-layout.njk
+permalink: /about.html
 ---
-### About Frontend Stories
 
-#### Why
-The goal of Frontend Stories is to provide a collection of research-backed findings on which developpers or companies can build their own guidelines.
+# About
 
-#### Providing the necessary tools
-Opinions easily overlap documented facts in this sphere. And what can be once true can become obsolete in another context or in a later date. And for that reason I will focus mainly on papers with available references instead of blog articles.
+Frontend Stories is intended for enterprises and front-end developers. It aims to facilitate access to research data, as well as facts, quotes and articles on which developers can build their own development guidelines. It offers insights to address common concerns related to improving content writing accessibility and performance.
 
-In an early version, it also included blog articles, tweets and books.
-This approach made sense as there are also nuggets of knowledge hidden in books or article. However, it is also true that 
-false information can be propagated through those same medium. 
+*This project is maintained by [Yannick Nana](https://twitter.com/nelioyann).*
 
-After encountering such viraly untrue ideas I decided to stick with research papers and documented case studies.
-
-#### Socials
-You can follow the latest stories on twitter:
-
-- [Follow on Twitter](https://twitter.com/FrontendStories)
-- RSS Feed
-    - Follow the RSS feed to get notified about new posts
 

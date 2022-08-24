@@ -1,31 +1,11 @@
-{% extends "layouts/base.njk" %}
 {% block content %}
+    {% include "partials/site-breadcrumbs.njk" %}
     <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
         <aside>
-            {% set previousPageHref = "/stories" %}
-            {% set previousPageLabel = "view all stories" %}
-            <nav>
-            {% include "partials/page-return-navigation.njk" %}
-                <details data-layout="stack" open>
-                    <summary>
-                        Table of contents
-                    </summary>
-                    <ol data-layout="stack" data-props="split">
-                        <li>
-                            <a data-link href="#summary">Overview</a>
-                        </li>
-                        <li>
-                            <a data-link href="#reference">Further reading</a>
-                        </li>
-                        <li>
-                            <a data-link href="#related">Related</a>
-                        </li>
-                    </ol>
-                </details>
-            </nav>
+            {% block aside %}{% endblock %}
         </aside>
-        <article>
-            {{ content | safe }}
+        <article data-layout="stack" style="--space: var(--space-2xl, 3rem);">
+            {% block main %}{% endblock %}
         </article>
     </div>
 {% endblock %}
