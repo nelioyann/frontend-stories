@@ -25,7 +25,7 @@ module.exports = function (eleventyConfig) {
     let excerpt = story.description.split("\n\n")[0];
       return {
         ...story,
-        slug: `stories/${slug(story.slugwords)}`,
+        slug: `stories/${slug(story.slugs)}`,
         excerpt
       };
     });
@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
     let categories_set = new Set();
     let stories = collectionApi.getAll()[0].data.stories;
     stories.forEach((story) => {
-      story.categories.forEach((category) => categories_set.add(category.name));
+      categories_set.add(story.category.name)
     });
     return Array.from(categories_set);
   });
@@ -43,40 +43,35 @@ module.exports = function (eleventyConfig) {
     categories_set.add("All");
     let stories = collectionApi.getAll()[0].data.stories;
     stories.forEach((story) => {
-      story.categories.forEach((category) => categories_set.add(category.name));
+      categories_set.add(story.category.name);
     });
     return Array.from(categories_set);
   });
   eleventyConfig.addFilter(
     "similarStories",
-    function (stories, currentStoryId, categories) {
+    function (stories, currentStoryId, category) {
       return stories
         .filter((story) => {
           return (
-            getSimilarCategoriesCount(categories, story.categories) >= 1 &&
+            story.category.name === category &&
             story.id !== currentStoryId
           );
         })
-        .sort((a, b) => {
-          return (
-            getSimilarCategoriesCount(b.categories, categories) -
-            getSimilarCategoriesCount(a.categories, categories)
-          );
-        });
+        
     }
   );
-  eleventyConfig.addFilter("filterByCategory", function (posts, category) {
+  eleventyConfig.addFilter("filterByCategory", function (stories, category) {
     /*
     case matters, so let's lowercase the desired category, cat
     and we will lowercase our posts categories
     */
     category = category.toLowerCase();
     if (category === "all") {
-      return posts;
+      return stories;
     }
-    let result = posts.filter((p) => {
-      let p_categories = p.categories.map((c) => c.name.toLowerCase());
-      return p_categories.includes(category);
+    let result = stories.filter((story) => {
+      let story_category = story.category.name.toLowerCase();
+      return story_category === category;
     });
     return result;
   });

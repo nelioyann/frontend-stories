@@ -90,7 +90,7 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 [data-markdown] {
   /* Remove width constraints from generated markdown */
   --measure: initial;
-  padding: var(--space-s) var(--space-xs);
+  /* padding: var(--space-s) var(--space-xs); */
   /* border-width: var(--border-thin);
   border-style: solid;
   border-color: var(--gray-400);
@@ -98,13 +98,6 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   border-radius: 3px; */
 }
 
-[data-markdown] strong {
-  font-size: var(--step-1);
-  font-weight: 500;
-}
-[data-markdown] a {
-  border-bottom: 1px solid black;
-}
 /* BREADCRUMBS */
 .breadcrumbs-navigation {
   --measure: initial;
