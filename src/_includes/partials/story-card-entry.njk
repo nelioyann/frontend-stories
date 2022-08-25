@@ -1,5 +1,5 @@
 <li class="story-card" data-layout="stack" data-props="space:xs">
-    {% set color = entry.categories[0].color%}
+    {% set color = entry.category.color%}
     {{color | log}}
     <div class="story-card__cover" data-font="emoji" data-color="{{color}}" aria-hidden="true">
         <span data-heading="2">{{entry.icon if entry.icon else '📄'}}</span>

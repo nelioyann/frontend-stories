@@ -23,9 +23,9 @@ eleventyComputed:
     <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
     <p>{{ story.description | emojiReadTime }}</p>
     {# <figure>
-        {{ meta.site_url| qrcode | safe }}
-        <figcaption class="visually-hidden">Share link</figcaption>
-    </figure> #}
+                {{ meta.site_url| qrcode | safe }}
+                <figcaption class="visually-hidden">Share link</figcaption>
+            </figure> #}
 {% endblock %}
 {% block main %}
     {% set nextStory = collections.stories | getNextCollectionItem(pagination.page) %}
@@ -49,23 +49,14 @@ eleventyComputed:
                 {{ description }}
                 {% endrenderTemplate %}
             </div>
-            {# <div>
-                <ul data-layout="cluster" role="list" data-props="noPad">
-                    {%- for category in story.categories %}
-                        <li>
-                            <a data-tag href="/categories/{{ category.name | slugify }}/">{{ category.name }}</a>
-                        </li>
-                    {% endfor -%}
-                </ul>
-            </div> #}
+
         </div>
     </section>
-    <section aria-labelledby="sources">
+    <section aria-labelledby="references">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="sources" data-heading="4 anchor">
-                <a href="#sources">Sources</a>
+            <h2 id="references" data-heading="4 anchor">
+                <a href="#references">References</a>
             </h2>
-            {# <p>Sources</p> #}
             <ul
                 role="list"
                 data-layout="switcher"
@@ -73,59 +64,51 @@ eleventyComputed:
                 style="--threshold: calc(var(--space-l) * 25);">
                 {%- for reference in story.references %}
                     <li data-layout="box stack">
-                        <a data-button target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
-                            <span data-heading="5">{{ reference.name }}</span>
-                        </a>
                         <div data-layout="cluster" data-props="x:between">
                             {% if reference.cite %}
                                 <p>{{ reference.cite }}</p>
                             {% endif %}
                             <p>({{ reference.type.name }})</p>
                         </div>
+                        <a data-button target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+                            <span data-heading="5">{{ reference.name }}</span>
+                        </a>
                         {# {% if reference.summary %}
-                            <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>
-                        {% endif %} #}
+                                                                            <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>
+                                                                        {% endif %} #}
                         {# {% if reference.citation %}
-                            <small>{{ reference.citation }}</small>
-                        {% endif %} #}
+                                                                            <small>{{ reference.citation }}</small>
+                                                                        {% endif %} #}
                     </li>
                 {% endfor -%}
             </ul>
         </div>
     </section>
-    {# <section aria-labelledby="related">
+    <section aria-labelledby="contribute">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="related" data-heading="4 anchor">
-                <a href="#related">Related</a>
+            <h2 id="contribute" data-heading="4 anchor">
+                <a href="#contribute">Contribute and give feedback</a>
             </h2>
-            {% set entries = collections.stories | similarStories(story.id, story.categories) | limitTo(5) %}
-            {% if entries.length > 0 %}
-                <p>Explore related stories:</p>
-                <ul
-                    data-layout="reel"
-                    role="list"
-                    data-props="noPad noBorder overflowing:noBar"
-                    style="--reel-item-width: calc(var(--space-l) * 10); --reel-item-margin: 0;">
-                    {%- for entry in entries %}
-                        {% include "partials/story-card-entry.njk" %}
-                    {% endfor -%}
-                </ul>
-            {% else %}
-                <p>No related stories found</p>
-            {% endif %}
+            <p>If you would like to provide feedback or contribute content on this resource, please fill out the
+                <b><a data-link href="{{ contribute.tally_url }}?slugs={{ story.slugs }}&title={{ story.name }}&category={{ story.category.name }}&description={{ story.description }}" target="_blank">this form</a></b>.
+            </p>
         </div>
-    </section> #}
+    </section>
     {# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
-    <span data-heading="6" id="pagination-nav">Navigate to other stories</span>
+    <span class="visually-hidden" data-heading="6" id="pagination-nav">Navigate to other stories</span>
     <nav class="story-pagination-navigation" aria-labelledby="pagination-nav" data-layout="cluster" data-props="x:between">
         {% if pagination.href.previous %}
             <a data-button data-props="space:xs y:center" href="{{ pagination.href.previous }}">
-                <span><span aria-hidden="true" data-font="emoji">◀️</span> Previous item</span>
+                <span>
+                    <span aria-hidden="true" data-font="emoji">◀️</span>
+                    Previous item</span>
             </a>
         {% endif %}
         {% if pagination.href.next %}
             <a class="story-pagination-navigation__next-button" data-button data-props="space:0" href="{{ pagination.href.next }}">
-                <span>Next item <span aria-hidden="true" data-font="emoji">▶️</span></span>
+                <span>Next item
+                    <span aria-hidden="true" data-font="emoji">▶️</span>
+                </span>
             </a>
         {% endif %}
     </nav>

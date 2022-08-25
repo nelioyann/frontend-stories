@@ -2,14 +2,14 @@
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
-        "notion_url": "https://www.notion.so/Users-can-tolerate-about-2-seconds-for-a-page-to-load-or-more-if-a-feedback-is-provided-728073c284d043d58a4403c7f479d72a",
+        "notion_url": "https://www.notion.so/Users-can-tolerate-about-2-seconds-for-a-page-to-load-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-24T10:58:00.000Z",
+        "edited": "2022-08-25T19:26:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
         "description": "Page load time is the time it takes to display all the content of a web page in a user's browser after they click on the site. Depending on various factors, loading times can be significantly long. So how long are users willing to wait for a web page to load?\n\n\nIt is proven that web pages that load faster are perceived as more interesting than those that are slower. (Ramsay, Barbesi and Preece (1998). However, many processes involving a request to a server often take a long time, and exceed the tolerable waiting time of 2 seconds highlighted by (Nah, 2004). The average page loading speed for a web page is 10.3 seconds on desktop and 27.3 seconds on mobile.In such cases, reducing page load time seems to be technically challenging. \n\nFortunately, there is also evidence to suggest that the availability of feedback extends the tolerable waiting time of Web users. Consequently, it is advantageous for browsers or websites to provide users with feedback when there is an expected wait for a page to load. This information not only reduces uncertainty about the wait, but also fills in the wait time so that Web users are less aware of how long the wait is.",
         "status": {
@@ -25,6 +25,7 @@
                 "url": "https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f",
                 "summary": "Web users often face a long waiting time for downloading Web pages. Although various technologies and techniques have been implemented to alleviate the situation and to comfort the impatient users, little research has been done to assess what constitutes an acceptable and tolerable waiting time for Web users. This research reviews the literature on computer response time and users' waiting time for download of Web pages, and assesses Web users' tolerable waiting time in information retrieval. It addresses the following questions through an experimental study: What is the effect of feedback on users' tolerable waiting time? How long are users willing to wait for a Web page to be downloaded before abandoning it? The results from this study suggest that the presence of feedback prolongs Web users' tolerable waiting time and the tolerable waiting time for information retrieval is approximately 2 seconds.",
                 "cite": "Nah, 2004",
+                "related to fs - findings (1) (references)": [],
                 "type": {
                     "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
                     "name": "Research Paper",
@@ -39,6 +40,7 @@
                 "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953543897000192",
                 "summary": "With the increasingly rapid uptake of the World Wide Web, even those pages classed as ‘the best of the web’ are not immune to large download latencies. This paper investigates whether the latency between requesting a page and receiving it influence user perceptions of the page. The paper describes a study in which users are presented with seven different web pages with delays ranging from 2 s to 2 min, and are then asked to rate the pages on a number of criteria. Predetermined delays were injected into the page loading process. Pages which were retrieved faster were judged significantly more interesting than their slower counterparts. The implications for web page design are discussed.",
                 "cite": "Ramsay, Barbesi and Preece (1998)",
+                "related to fs - findings (1) (references)": [],
                 "type": {
                     "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
                     "name": "Research Paper",
@@ -47,28 +49,26 @@
                 "name": "A psychological investigation of long retrieval times on the World Wide Web"
             }
         ],
-        "categories": [
-            {
-                "id": "00ceebbe-808b-48a4-b72c-306c38353336",
-                "name": "Notifications",
-                "color": "green"
-            }
-        ],
+        "category": {
+            "id": "00ceebbe-808b-48a4-b72c-306c38353336",
+            "name": "Notifications",
+            "color": "green"
+        },
         "tags": [],
-        "slugwords": "how long users can wait",
-        "name": "Users can tolerate about 2 seconds for a page to load or more if a feedback is provided"
+        "slugs": "how-long-users-can-wait",
+        "name": "Users can tolerate about 2 seconds for a page to load"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
-        "notion_url": "https://www.notion.so/Friendly-error-messages-can-positively-influence-the-users-perception-of-an-app-af855c922a3b45ceb4ea0a8156daf7b9",
+        "notion_url": "https://www.notion.so/Friendly-error-messages-can-positively-influence-users-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-24T11:06:00.000Z",
+        "edited": "2022-08-25T19:26:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
         "description": "Interacting with a system is bound to generate some bugs. In such cases, the feedback you receive from computers may fall somewhere between a \"friendly apologetic message\" and a \"generic message. Would you be more sensitive to a computer saying sorry?\n\nResearch has found that users spent more time engaging with a system that provided emotional responses than with one providing generic feedback.\n\nKey takeaways:\n- Nass demonstrated that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997).\n- Tzeng found that apologetic responses made users feel better about the overall interaction with the system (Tzeng, 2004).",
         "status": {
@@ -84,6 +84,7 @@
                 "url": "https://www.sciencedirect.com/science/article/abs/pii/S1071581904000060",
                 "summary": "While it is difficult to create completely error-free interactions in software design, the issue of how to make users feel better when they encounter errors is critical to the concept of user-centered design. Neilsen argued for offering a slightly apologetic statement before an error message provided by web servers, but the notion of a computer apologizing to its users inevitably triggers a debate about the appropriateness of providing humanized messages to users. To understand how users react to computers' apologies (presented by textual or visual formats), a computer-guessing game was designed to test users' reactions. The game features three treatments (difficulty levels, feedback types, and emotional icons), each having two levels (difficult vs. easy, apologetic feedback vs. non-apologetic feedback, with emotional icons vs. without emotional icons). Two-hundred and sixty nine high school students participated in this study and were randomly assigned to one of eight groups. The results show that while the computers' actual performances still dominated the users' assessments of the program, the computer apologies help to create more desirable psychological experiences for the users, and emotional icons help to improve the aesthetic quality of the program.",
                 "cite": "Tzeng, 2004",
+                "related to fs - findings (1) (references)": [],
                 "type": {
                     "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
                     "name": "Research Paper",
@@ -98,6 +99,7 @@
                 "url": "https://www.sciencedirect.com/science/article/pii/S1071581996901044",
                 "summary": "A laboratory experiment examines the claims that (1) humans are susceptible to flattery from computers and (2) the effects of flattery from computers are the same as the effects of flattery from humans. In a cooperative task with a computer, subjects (N=41) received one of three types of feedback from a computer: “sincere praise”, “flattery” (insincere praise) or “generic feedback”. Compared to generic-feedback subjects, flattery subjects reported more positive affect, better performance, more positive evaluations of the interaction and more positive regard for the computer, even though subjects knew that the flattery from the computer was simply non contingent feedback. Subjects in the sincere praise condition responded similarly to those in the flattery condition. The study concludes that the effects of flattery from a computer can produce the same general effects as flattery from humans, as described in the psychology literature. These findings may suggest significant implications for the design of interactive technologies.",
                 "cite": "Fogg, 1997",
+                "related to fs - findings (1) (references)": [],
                 "type": {
                     "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
                     "name": "Research Paper",
@@ -106,28 +108,26 @@
                 "name": "Silicon sycophants: the effects of computers that flatter"
             }
         ],
-        "categories": [
-            {
-                "id": "00ceebbe-808b-48a4-b72c-306c38353336",
-                "name": "Notifications",
-                "color": "green"
-            }
-        ],
+        "category": {
+            "id": "00ceebbe-808b-48a4-b72c-306c38353336",
+            "name": "Notifications",
+            "color": "green"
+        },
         "tags": [],
-        "slugwords": "when computers apologize",
-        "name": "Friendly error messages can positively influence the users' perception of an app"
+        "slugs": "when-computers-apologize",
+        "name": "Friendly error messages can positively influence users"
     },
     {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
-        "notion_url": "https://www.notion.so/Less-than-half-of-users-take-advantage-of-breadcrumbs-even-when-most-report-having-noticed-them-eae8ae69c02546d68d127de14c71ded5",
+        "notion_url": "https://www.notion.so/Less-than-half-of-users-take-advantage-of-breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
         "icon": "🧭",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-24T10:54:00.000Z",
+        "edited": "2022-08-25T19:25:00.000Z",
         "created": "2022-07-21T21:53:00.000Z",
         "description": "Breadcrumbs are textual representations of a user's location within the structure of a site. Present on blogs, it allows users to understand the current page position in a website hierarchy. Do breadcrumbs serve as a navigational shortcut?\n\nExample, `Home > Furniture > Chairs > Leather Chairs`.\n\nIn general, they are used to achieve the following goals:\n1. They provide information to the user about where they are in the site\n2. They provide shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\nStudies have shown that:\n- Less than half of users use the breadcrumb trail to navigate a website.\n- Most users reported that they noticed its presence.\n- Being taught about the usefulness of breadcrumb trails led to increased usage, as well as faster completion times, fewer page views and minimal use of the back button.",
         "status": {
@@ -143,6 +143,7 @@
                 "url": "https://www.semanticscholar.org/paper/Breadcrumb-Navigation%3A-An-Exploratory-Study-of-Chaparro-Lida/88aadc6e6fd42c91bb5aa011c06ee651d8ee8ab5",
                 "summary": "Just as Hansel and Gretel created a breadcrumb trail to find their path back home, today's internet user often finds a need to get back to a website's previously visited locations; hence, the cyber \"breadcrumb trail\" was created. This textual representation of where and how information is located within the website allows the user to link to major categories of information along a continuum of sequential order. For example, the breadcrumb path for a leather chair on the Office Max website would be: Home > Furniture > Chairs > Leather Chairs. The location of the navigational path is often prominently placed in the upper left quarter of the website page.",
                 "cite": "Lida, 2002",
+                "related to fs - findings (1) (references)": [],
                 "type": {
                     "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
                     "name": "Research Paper",
@@ -157,6 +158,7 @@
                 "url": "https://www.researchgate.net/publication/254409807_The_Influence_of_Mere_Exposure_on_Web_Based_Breadcrumb_Navigation",
                 "summary": "Research has reported that breadcrumb navigation improves site efficiency [1, 2]. However, when given a choice, users choose the Back button or navigation bar to navigate rather than the breadcrumb trail [3]. Lida-Rogers & Chaparro (2003) found that participants who used the breadcrumb trail used the Back button less often than users who did not use it; however, no differences were found in other efficiency measures such as total pages visited or total time. Participants may not understand the function of the breadcrumb trail as a navigational tool and understanding its’ purpose or minimal training might impact usage and/or efficiency [4]. Mere exposure was considered as a means of introducing participants to breadcrumb trails. According to Zajonc (1968), if the function of orienting behavior is eventually to change a novel stimulus into a familiar one, it is also its consequence to render the stimulus object eventually more attractive [5]. Zajonc (1968) states that the mere repeated exposure of the individual to a stimulus object enhances his attitude toward it [5]. Thus, it was hypothesized that mere exposure of the breadcrumb trail would influence participants’ use of breadcrumb trail navigation during a search task procedure.",
                 "cite": "Hull, 2004",
+                "related to fs - findings (1) (references)": [],
                 "type": {
                     "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
                     "name": "Research Paper",
@@ -165,28 +167,26 @@
                 "name": "Influence of Training and Exposure on the Usage of Breadcrumb Navigation"
             }
         ],
-        "categories": [
-            {
-                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
-                "name": "Navigation",
-                "color": "yellow"
-            }
-        ],
+        "category": {
+            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+            "name": "Navigation",
+            "color": "yellow"
+        },
         "tags": [],
-        "slugwords": "do users use breadcrumbs",
-        "name": "Less than half of users take advantage of breadcrumbs, even when most report having noticed them"
+        "slugs": "do-users-use-breadcrumbs",
+        "name": "Less than half of users take advantage of breadcrumbs"
     },
     {
         "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
         "cover": "https://images.unsplash.com/photo-1591117752671-541f3495dc93?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy",
-        "notion_url": "https://www.notion.so/Providing-a-visible-sitemap-facilitates-site-learning-and-encourages-comprehensive-exploration-of-a--7edbc73cbef944248cccfa87b8722d64",
+        "notion_url": "https://www.notion.so/Providing-a-visible-sitemap-facilitates-exploration-of-a-site-7edbc73cbef944248cccfa87b8722d64",
         "icon": "🗺️",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-24T10:55:00.000Z",
+        "edited": "2022-08-25T19:25:00.000Z",
         "created": "2022-07-21T21:49:00.000Z",
         "description": "A sitemap is a file where you provide information about the pages, videos, and their files on your site, and the relationships between them. How might a constantly visible site map affect the behavior of users seeking an information ?\n\nMostly used for improving websites ranking in search results it can also be used to explore the architecture of a website.\n\nIt has been shown that users with such context dig deeper into the site structure, make less use of the browser's Back button, and frequently make navigational movements of great hierarchical distances.\n",
         "status": {
@@ -202,6 +202,7 @@
                 "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953543802000243",
                 "summary": "Knowledge regarding how Web information-seekers behave with respect to the structures and cues they are provided with may shed light on general principles of navigation in electronic spaces, and assist designers in making more informed structural decisions. This study examines user movement through hierarchically structured Web sites and the behavioral effects of a constantly visible, textual contents list for relatively small sites or more extensive local views than are generally used on the Web today. The site overview resulted in users abandoning fewer information-seeking tasks. Users with such context dig deeper into the site structure, make less use of the browser's Back button, and frequently make navigational movements of great hierarchical distances. Navigational correlates of success and reported confidence for users with the overview differ from those without such context. Both with and without a constant overview, the relationship between the source and destination pages may help predict the amount of time spent at the destination. Experimental reports are preceded by a review of click-stream navigation behavior research.",
                 "cite": "Danielson, 2002",
+                "related to fs - findings (1) (references)": [],
                 "type": {
                     "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
                     "name": "Research Paper",
@@ -210,15 +211,13 @@
                 "name": "Web navigation and the behavioral effects of constantly visible site maps"
             }
         ],
-        "categories": [
-            {
-                "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
-                "name": "Navigation",
-                "color": "yellow"
-            }
-        ],
+        "category": {
+            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+            "name": "Navigation",
+            "color": "yellow"
+        },
         "tags": [],
-        "slugwords": "sitemap facilitates navigation",
-        "name": "Providing a visible sitemap facilitates site learning and encourages comprehensive exploration of a site"
+        "slugs": "sitemap-facilitates-navigation",
+        "name": "Providing a visible sitemap facilitates exploration of a site"
     }
 ]

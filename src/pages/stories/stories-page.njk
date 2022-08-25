@@ -16,19 +16,13 @@ eleventyNavigation:
 <p>
     {{ description }}
 </p>
-<ul data-layout="stack" data-props="noMeasure space:xl">
+<ul role="list" data-layout="stack" data-props="noMeasure space:xl">
     {%- for category in collections.categories %}
-        <li>
-            <span data-heading="5">{{ category }}</span>
-            <ul data-layout="stack">
-                {% for story in collections.stories | filterByCategory(category) %}
-                    <li data-props="noMeasure">
-                        <a data-link href="/{{ story.slug }}">
-                            <span>
-                                {{ story.name }}
-                            </span>
-                        </a>
-                    </li>
+        <li data-layout="stack">
+            <h2 data-heading="5">{{ category }}</h2>
+            <ul class="story-cards" data-props="noPad space:m" role="list" data-layout="grid">
+                {% for entry in collections.stories | filterByCategory(category) %}
+                {% include "partials/story-card-entry.njk" %}
                 {% endfor %}
             </ul>
         </li>

@@ -1,6 +1,6 @@
 ---
 layout: layouts/home-layout.njk
-title: Home
+title: "Home"
 description: Collection of documented findings and insights on frontend development.
 about: >-
     Frontend Stories 2022 ©
@@ -14,6 +14,7 @@ permalink: "{% if currentCategory == 'All'%}/{% else %}/{{currentCategory | slug
 eleventyComputed:
     eleventyNavigation:
         key: Home
+        title: Home
 ---
 
 <article data-layout="stack" data-props="space:2xl">  
