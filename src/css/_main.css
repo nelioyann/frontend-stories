@@ -25,7 +25,11 @@ main {
 
 .header {
   width: 100%;
-  height: var(--header-height);
+  min-height: var(--header-height);
+  border-bottom: var(--border-thin) solid var(--gray-600);
+  position: fixed;
+  background-color: var(--color-light);
+  z-index: 10;
 }
 
 /*=============================================
@@ -75,11 +79,11 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   }
   [data-heading~="anchor"] a::before {
     content: "#";
+    font-weight: normal;
     float: left;
     padding: 0 0.15em; /* to make the "#" a bigger target */
     margin-left: -1em;
     pointer-events: auto;
-    color: var(--gray-600);
     display: none;
   }
   [data-heading~="anchor"]:hover a::before {
@@ -89,13 +93,44 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 
 [data-markdown] {
   /* Remove width constraints from generated markdown */
-  --measure: initial;
-  /* padding: var(--space-s) var(--space-xs); */
-  /* border-width: var(--border-thin);
-  border-style: solid;
-  border-color: var(--gray-400);
-  background-color: var(--gray-200);
-  border-radius: 3px; */
+  --measure: 60ch;
+}
+
+[data-markdown] > ol {
+  --space: var(--space-s);
+  --threshold: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+  justify-content: var(--horizontal-alignment, flex-start);
+  /* align-items: var(--vertical-alignment, center); */
+  list-style-type: none;
+  counter-reset: list;
+  padding-left: 0;
+
+}
+[data-markdown] h3{
+  font-size: var(--step-1);
+  font-weight: normal;
+}
+[data-markdown] > ol > li {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+  /* ---- */
+  position: relative;
+}
+[data-markdown] > ol > li::before {
+  counter-increment: list;
+  content: counter(list);
+  display: block;
+  border-bottom: var(--border-thin) solid var(--gray-400);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+[data-markdown] > ol > li:nth-child(n + 4),
+[data-markdown] > ol > li:nth-child(n + 4) ~ * {
+  /* Switch to a vertical configuration if there are more than 4 child elements */
+  flex-basis: 100%;
 }
 
 /* BREADCRUMBS */
@@ -120,12 +155,15 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 }
 .breadcrumbs-navigation li a {
   --outline-offset: 0px;
-  color: var(--gray-400);
   text-decoration: none;
+  border-bottom-width: var(--border-thin);
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
 
 }
 .breadcrumbs-navigation li a:hover {
-  text-decoration: underline;
+  border-bottom-color: var(--gray-900);
+
 }
 .breadcrumbs-navigation li:not(:last-child)::after {
   content: " \BB   ";
@@ -143,32 +181,17 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 
 
 .categories-navigation {
-  border-top: var(--border-thin) solid var(--gray-400);
-  --reel-item-margin: 0;
   --reel-item-width: 20ch;
 }
-
-.categories-navigation li {
-  display: flex;
-  border-top-width: var(--border-thick);
-  border-top-style: solid;
-  border-top-color: var(--gray-100);
-}
-.categories-navigation li[data-active="true"],
-.categories-navigation li:hover {
-  border-top-color: var(--gray-900);
-}
 .categories-navigation a {
-  padding-top: var(--space-s);
-  padding-bottom: var(--space-s);
+  flex-grow: 1;
+  text-align: center;
+  border-width: var(--border-thin);
 }
 
 .site-footer{
   padding-top: var(--space-l);
   padding-bottom: var(--space-l);
-}
-.sans-serif {
-  font-family: var(--sans-font);
 }
 
 
@@ -177,22 +200,24 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 =============================================*/
 
 .story-card{
-  border: var(--border-thin) solid var(--gray-200);
-  padding: var(--space-s) var(--space-s);
+  padding: var(--space-xs) var(--space-xs);
   border-radius: var(--border-radius);
   position: relative;
   background-color: var(--gray-50);
+  box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.2);
 
 }
 .story-card:hover,
 .story-card:focus-within{
-  border: var(--border-thin) solid var(--gray-400);
-
+  box-shadow: 0px 0px 0px var(--border-thick) var(--color-dark);
 }
 /* .story-card__cover{
 
 } */
-a.story-card__title::before{
+.story-card__title:focus{
+  outline: 0px;
+}
+.story-card__title::before{
   position: absolute;
   content: "";
   top: 0;
@@ -216,4 +241,82 @@ a.story-card__title::before{
 
 .story-pagination-navigation__next-button{
   margin-left: auto;
+}
+
+
+.contribute-story-sidebar{
+  --side-width: 600px;
+}
+.contribute-story-form input,
+.contribute-story-form textarea,
+.contribute-story-form select{
+  --space: var(--space-2xs);
+}
+.contribute-story-form select{
+  max-width: 20ch;
+}
+.contribute-story-form label{
+  font-weight: bold;
+}
+.contribute-story-form small{
+  --space: var(--space-2xs);
+}
+.contribute-story-form input,
+.contribute-story-form textarea{
+  max-width: 50ch;
+
+}
+.contribute-story-form textarea{
+  resize: none;
+}
+
+
+
+
+[data-accordion] summary {
+  padding: var(--space-s);
+  border-bottom: var(--border-thin) solid var(--gray-400);
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+}
+[data-accordion] summary:hover {
+  background-color: var(--gray-200);
+}
+[data-accordion] summary::before {
+  content: "▶";
+  font-family: var(--font-emoji);
+  display: inline-block;
+  font-size: var(--step-1);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+[data-accordion] details[open] > summary::before {
+  transform: rotate(90deg);
+
+}
+[data-accordion] summary ~ *:not(summary) {
+  padding-left: var(--space-l);
+  padding-top: var(--space-xs);
+  color: var(--gray-700);
+  font-size: var(--step--1);
+}
+details > summary::-webkit-details-marker,
+details > summary::marker {
+  content: "";
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  cursor: pointer;
+}
+
+input, select, textarea{
+  min-height: 46px;
+  padding-left: var(--space-2xs);
+  padding-right: var(--space-2xs);
+  border: var(--border-thin) solid;
+  border-color:  var(--gray-600);
+  width: 100%;
 }

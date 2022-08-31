@@ -1,0 +1,21 @@
+<li class="reference-item" id="fn{{ loop.index0 }}">
+    {# <div data-layout="cluster" data-props="x:between">
+                                    {% if reference.cite %}
+                                        <p>{{ reference.cite }}</p>
+                                    {% endif %}
+                                    <p>({{ reference.type.name }})</p>
+                                </div> #}
+    {# <a  target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+        {{ reference.name }}
+    </a> #}
+        {{ reference.cite if reference.cite }} {{ reference.name }}
+       <a data-button="link"  target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+        View source <span data-font="emoji">↪</span>
+       </a>
+    {# {% if reference.summary %}
+                                                                                    <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>
+                                                                                {% endif %} #}
+    {# {% if reference.citation %}
+                                                                                    <small>{{ reference.citation }}</small>
+                                                                                {% endif %} #}
+</li>

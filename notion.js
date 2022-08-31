@@ -105,7 +105,6 @@ async function sanitizePropertyItem(response, propertyItem_type) {
       let relation_pages = [];
       for (let pageId of relation_pageIds) {
         let page = await readPageExtended(pageId);
-        console.log(page);
         relation_pages.push(page);
       }
       return relation_pages;
@@ -120,12 +119,11 @@ async function readPageExtended(page_id) {
     let { properties, url, cover, icon } = page;
     let extended_page = {
       id: page_id,
-      cover: cover?.external.url,
+      cover: cover?.external.url?.split("?")[0],
       notion_url: url,
       icon: icon?.emoji,
     };
     for (let key in properties) {
-      console.log(key);
       let property = await readProperty(page_id, properties[key].id);
       extended_page[key.toLowerCase()] = property;
     }
@@ -144,6 +142,7 @@ async function fetchDatabase(database_id) {
       database_data.push(page_data);
     }
     makeMeAJSON(database_data, "./src/_data/stories.json");
+    console.log(database_data.length, "pages generated.")
   } catch (error) {
     console.log(error);
   }

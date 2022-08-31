@@ -140,6 +140,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space);
+  justify-content: var(--horizontal-alignment, flex-start);
+  align-items: var(--vertical-alignment, center);
 }
 [data-layout~="switcher"] > * {
   flex-grow: 1;

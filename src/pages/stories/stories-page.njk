@@ -1,7 +1,7 @@
 ---
 layout: layouts/nested-page-layout.njk
 title: All Stories
-description: All stories on the site grouped by categories.
+description: Stories grouped by category.
 tags: 
     - webpage
 permalink: /stories/index.html
@@ -16,15 +16,24 @@ eleventyNavigation:
 <p>
     {{ description }}
 </p>
-<ul role="list" data-layout="stack" data-props="noMeasure space:xl">
+<ul role="list" data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
-        <li data-layout="stack">
-            <h2 data-heading="5">{{ category }}</h2>
+        {# <h2 data-heading="5">{{ category }}</h2> #}
+        {% set entries = collections.stories | filterByCategory(category) %}
+        <details data-layout="stack">
+            <summary>
+                <span>
+                    {{ category }}
+                </span>
+                <span>
+                    ({{ entries.length }})
+                </span>
+            </summary>
             <ul class="story-cards" data-props="noPad space:m" role="list" data-layout="grid">
                 {% for entry in collections.stories | filterByCategory(category) %}
-                {% include "partials/story-card-entry.njk" %}
+                    {% include "partials/story-card-entry.njk" %}
                 {% endfor %}
             </ul>
-        </li>
+        </details>
     {% endfor -%}
 </ul>

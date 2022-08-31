@@ -1,13 +1,15 @@
 <header>
-    <div class="padded-container header" data-layout="cluster" data-props="y:center x:between invert">
-        <a data-link="noHover" href="/">
+    <div class="padded-container header" data-layout="cluster" data-props="y:center x:between">
+        <a  data-heading="5" data-link="noHover" href="/">
             <span aria-hidden="true" data-heading="4" data-font="emoji">🎓</span>
-            <span>
-                {{meta.site_name}}
-            </span>
         </a>
-        <a data-link href="/about">
-            About
-        </a>
+        <div data-layout="cluster" data-props="space:s">
+            <a data-link="data-link" href="/stories">
+                Stories
+            </a>
+            <a data-link="data-link" href="/about">
+                About
+            </a>
+        </div>
     </div>
 </header>

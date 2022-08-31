@@ -16,7 +16,7 @@ h2,
 h3, h4, h5, h6 {
   line-height: 1.2;
   max-width: 40ch;
-  font-weight: 400;
+  /* font-weight: normal; */
   /* text-transform: capitalize; */
 }
 h1,
@@ -81,10 +81,9 @@ ol[role="list"] {
 :root {
   --page-top: var(--space-s-3xl, 12rem);
   --header-height: var(--space-xl-2xl);
-  --responsive-padding: var(--space-s-3xl);
+  --responsive-padding: var(--space-s-6xl);
 }
 main,
-.header,
 .footer,
 .padded-container {
   padding-left: var(--responsive-padding);
