@@ -1,7 +1,7 @@
 ---
 layout: layouts/home-layout.njk
 title: "Home"
-description: Collection of documented findings and insights on frontend development.
+description: A collection of research findings, insights on frontend development.
 about: >-
     Frontend Stories 2022 ©
 tags: 
@@ -17,31 +17,48 @@ eleventyComputed:
         title: Home
 ---
 
-<article data-layout="stack" data-props="space:2xl">  
-    <section>
-        <div data-layout="stack" data-props="centered space:m">
-            <h1 class="visually-hidden">Frontend Stories</h1>
+{# <article data-layout="stack" data-props="space:2xl"> #}
+<section>
+    <div data-layout="stack" data-props="centered space:m">
+        <div data-layout="stack">
+            <h1 data-heading="2">{{meta.site_name}}</h1>
             <p>{{ description or meta.site_description }}</p>
             {# <div>
-                <a data-button="variant:primary" href="/stories">Browse all stories</a>
+                <a data-button href="/stories">Browse all stories</a>
             </div> #}
         </div>
-    </section>
-    <section id="stories" data-layout="stack" data-props="space:m">
-        <nav class="categories-navigation">
-            <ul role="list" data-layout="reel" data-props="noPad noBorder overflowing:noBar">
-                {%- for category in collections.categoriesAndAll %}
-                    <li data-active="{{ 'true' if currentCategory == category else 'false' }}">
-                        <a  data-link href="/{{'' if category == 'All' else category | slugify }}">{{ 'Latest' if category == 'All' else category }}</a>
-                    </li>
-                {% endfor -%}
-            </ul>
-        </nav>
-        <ul class="story-cards" data-layout="grid" data-props="noPad" role="list">
-            {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(6) %}
-            {%- for entry in entries %}
-                {% include "partials/story-card-entry.njk" %}
+    </div>
+</section>
+<section id="stories" data-layout="stack" data-props="space:m">
+    <h2 data-heading="5">Browsing {{currentCategory}} stories</h2>
+    <nav class="categories-navigation">
+        <ul role="list" data-layout="reel" data-props="noPad noBorder overflowing:noBar">
+            {%- for category in collections.categoriesAndAll %}
+                <li data-layout="stack"  data-active="{{ 'true' if currentCategory == category else 'false' }}">
+                    <a data-props="x:center" data-button="{{'active' if currentCategory == category}}" href="/{{ '' if category == 'All' else category | slugify }}#stories">{{ 'Latest' if category == 'All' else category }}</a>
+                </li>
             {% endfor -%}
         </ul>
-    </section>
-</article>
+    </nav>
+    <ul class="story-cards" data-layout="grid" data-props="noPad" role="list">
+        {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(6) %}
+        {%- for entry in entries %}
+            {% include "partials/story-card-entry.njk" %}
+        {% endfor -%}
+    </ul>
+</section>
+{# <section>
+    <button data-button="primary">Base</button>
+    <button data-button="outline">Base</button>
+    <button data-button="text">Base</button>
+    <br/>
+    <button disabled data-button="primary">Base</button>
+    <button disabled data-button="outline">Base</button>
+    <button disabled data-button="text">Base</button>
+    <form action="{{ contribute.tally_url }}" target="_blank" method="get" name="contribution">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required="true"/>
+        <button data-button="primary">Submit</button>
+    </form>
+</section> #}
+{# </article> #}
