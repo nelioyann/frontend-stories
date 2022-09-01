@@ -1,0 +1,18 @@
+---
+permalink: /netlify.toml
+eleventyExcludeFromCollections: true
+---
+[[redirects]]
+  from = "{{meta.site_url}}/js/script.js"
+  to = "https://plausible.io/js/script.js"
+  status = 200
+
+[[redirects]]
+  from = "{{meta.site_url}}/api/event"
+  to = "https://plausible.io/api/event"
+  status = 202
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
