@@ -181,7 +181,8 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 
 
 .categories-navigation {
-  --reel-item-width: 20ch;
+  --reel-item-width: 10ch;
+  --reel-item-margin: var(--space-xs);
 }
 .categories-navigation a {
   flex-grow: 1;
