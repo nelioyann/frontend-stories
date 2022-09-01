@@ -1,8 +1,16 @@
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
-
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const qrCode = require("qrcode");
+
+
+// add a leading 0 to a number if it is only one digit
+function addLeadingZero(num) {
+  num = num.toString();
+  while (num.length < 2) num = "0" + num;
+  return num;
+}
 const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
   let categoriesNamesA = categoriesA.map((category) => category.name);
   let categoriesNamesB = categoriesB.map((category) => category.name);
@@ -19,6 +27,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(emojiReadTime);
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addCollection("stories", (collection) => {
     const slug = eleventyConfig.getFilter("slugify");
     return collection.getAll()[0].data.stories.map((story) => {
@@ -26,7 +35,8 @@ module.exports = function (eleventyConfig) {
       return {
         ...story,
         slug: `stories/${slug(story.slugs)}`,
-        excerpt
+        excerpt,
+        date: story.edited
       };
     });
   });
@@ -97,6 +107,26 @@ module.exports = function (eleventyConfig) {
       day: "numeric",
     });
   });
+  eleventyConfig.addFilter("buildRFC822Date", function (dateString) {
+  const dayStrings = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const monthStrings = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  const timeStamp = Date.parse(dateString);
+  const date = new Date(timeStamp);
+
+  const day = dayStrings[date.getDay()];
+  const dayNumber = addLeadingZero(date.getDate());
+  const month = monthStrings[date.getMonth()];
+  const year = date.getFullYear();
+  const time = `${addLeadingZero(date.getHours())}:${addLeadingZero(date.getMinutes())}:00`;
+  // const timezone = date.getTimezoneOffset() === 0 ? "GMT" : "BST";
+  const timezone = "GMT";
+
+  //Wed, 02 Oct 2002 13:00:00 GMT
+  return `${day}, ${dayNumber} ${month} ${year} ${time} ${timezone}`;
+}
+  
+  );
 
 
   
