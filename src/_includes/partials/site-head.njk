@@ -10,6 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="{{meta.theme_color}}">
     <meta name="title" content="{{meta.site_name + " - " + title or " "}}">
     <meta name="generator" content="{{ eleventy.generator }}">
+    <link rel="alternate" type="application/rss+xml" href="{{ meta.site_url }}/feed.xml" />
     <!-- Open graph - Facebook 1200 x 628 -->
     <meta property="og:image" content="{{thumbnail or meta.site_thumbnail}}">
     <meta property="og:site_name" content="{{meta.site_name}}">

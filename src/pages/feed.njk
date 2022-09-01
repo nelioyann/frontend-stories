@@ -1,0 +1,28 @@
+---
+permalink: "feed.xml"
+eleventyExcludeFromCollections: true
+title: "Frontend Stories"
+subtitle: "Collection of research findings about frontend development"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ meta.site_url}}" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ title }}</title>
+    <link>{{ meta.site_url }}</link>
+    <atom:link href="{{ permalink | absoluteUrl(meta.site_url) }}" rel="self" type="application/rss+xml" />
+    <description>{{ subtitle }}</description>
+    <language>{{ meta.lang }}</language>
+    {%- for story in collections.stories | reverse %}
+        {%- set absoluteStoryUrl = story.slug | absoluteUrl(meta.site_url)  %}
+        {{story.slug | absoluteUrl(meta.site_url) | url | log}}
+    <item>
+      <title>{{ story.name }}</title>
+      <link>{{ absoluteStoryUrl }}</link>
+      <description><![CDATA[{{ story.excerpt | safe }}]]></description>
+      <pubDate>{{ story.edited | buildRFC822Date }}</pubDate>
+      <dc:creator>{{ meta.author.name }}</dc:creator>
+      <guid>{{ absoluteStoryUrl }}</guid>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>
