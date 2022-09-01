@@ -6,13 +6,14 @@
     <meta name="description" content="{{description or meta.site_description}}">
     <link rel="stylesheet" href="/css/style.css">
     <meta name="theme-color" content="{{meta.theme_color}}">
+    <link rel="apple-touch-icon" href="/assets/icon/app_icons/icon-180.png">
     <meta name="apple-mobile-web-app-status-bar-style" content="{{meta.theme_color}}">
     <meta name="title" content="{{meta.site_name + " - " + title or " "}}">
     <meta name="generator" content="{{ eleventy.generator }}">
     <!-- Open graph - Facebook 1200 x 628 -->
     <meta property="og:image" content="{{thumbnail or meta.site_thumbnail}}">
     <meta property="og:site_name" content="{{meta.site_name}}">
-    <meta property="og:type" content="{{og_type}}">
+    <meta property="og:type" content="{{og_type or "website"}}">
     <meta property="og:url" content="{{page.url or meta.site_url}}">
     <meta property="og:title" content="{{title or meta.site_name}}">
     <meta property="og:description" content="{{description or meta.site_description}}">
@@ -22,20 +23,14 @@
     <meta name="twitter:creator" content="{{meta.twitter_name}}">
     <meta name="twitter:site" content="{{meta.twitter_name}}">
     <meta name="twitter:text:title" content="{{meta.site_name + " - " + title or " " }}">
-
-
-  <link rel="manifest" href="/manifest.json" />
-
-    <!-- Favicon -->
+    <link rel="manifest" href="/manifest.json" />
     {% if emojicon %}
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{emojicon}}</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{emojicon}}</text></svg>">
     {% else%}
-        <link rel="shortcut icon" href="/images/icons/icon-16.png" type="image/x-icon" sizes="16x16" />
-        <link rel="shortcut icon" href="/images/icons/icon-32.png" type="image/x-icon" sizes="32x32" />
-        <link rel="icon" type="image/png" sizes="196x196" href="images/icons/icon-196.png">
-        <link rel="apple-touch-icon" href="images/icons/icon-180.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="images/icons/icon-196.png">
     {% endif %}
-    {# Author etc #}
+    <link rel="shortcut icon" href="/images/icons/icon-32.png" type="image/x-icon" sizes="32x32" />
+    <link rel="shortcut icon" href="/images/icons/icon-16.png" type="image/x-icon" sizes="16x16" />
+    <link rel="apple-touch-icon" href="images/icons/icon-180.png">
     <meta name="author" content="{{meta.site_author}}">
-
 </head>
