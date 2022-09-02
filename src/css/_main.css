@@ -128,8 +128,8 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   content: counter(list);
   display: block;
   border-bottom: var(--border-thin) solid var(--gray-400);
-  padding-bottom: var(--space-xs);
-  margin-bottom: var(--space-xs);
+  padding-bottom: var(--space-2xs);
+  margin-bottom: var(--space-2xs);
 }
 [data-markdown] > ol > li:nth-child(n + 4),
 [data-markdown] > ol > li:nth-child(n + 4) ~ * {

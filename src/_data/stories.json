@@ -8,9 +8,9 @@
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-08-31T21:09:00.000Z",
+        "edited": "2022-09-02T07:01:00.000Z",
         "created": "2022-08-29T12:03:00.000Z",
-        "description": "Checkboxes are used when a list of more than one choice is needed. HTML `< input >` tags are\noften used to construct them, but the form type attribute is set to checkbox.\nRadio buttons are used when out of many options, just one option is required to be\nselected. They are also created using HTML tag but type attribute is set to radio.\nInteractive things have perceived affordances; the way they look tells us what they do and how to use them. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull.",
+        "description": "Checkboxes are used when a list of more than one choice is needed. HTML `< input >` tags are\noften used to construct them, but the form type attribute is set to checkbox.\n\nRadio buttons are used when out of many options, just one option is required to be selected. They are also created using HTML tag but type attribute is set to radio.\n\nInteractive things have perceived affordances; the way they look tells us what they do and how to use them. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -45,7 +45,7 @@
             "name": "Interaction",
             "color": "purple"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "checkboxes-or-radio-buttons",
         "name": "Do not use radio buttons and checkboxes interchangeably"
     },
@@ -104,7 +104,7 @@
             "name": "Accessibility",
             "color": "pink"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "placeholders-for-hint-text",
         "name": "Do not use input placeholders for storing labels or hints"
     },
@@ -163,7 +163,7 @@
             "name": "Notifications",
             "color": "green"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "how-long-users-can-wait",
         "name": "Users can tolerate about 2 seconds for a page to load"
     },
@@ -222,7 +222,7 @@
             "name": "Notifications",
             "color": "green"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "when-computers-apologize",
         "name": "Friendly error messages can positively influence users"
     },
@@ -266,23 +266,23 @@
             "name": "Content",
             "color": "default"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "webpages-copy-writing-guidelines",
         "name": "Well written copy improves performance and satisfaction"
     },
     {
         "id": "7b28aeb1-ecc4-43a4-8d3a-e229554bfe18",
         "cover": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a",
-        "notion_url": "https://www.notion.so/Pictures-of-human-faces-attract-attention-7b28aeb1ecc443a48d3ae229554bfe18",
+        "notion_url": "https://www.notion.so/Pictures-of-faces-on-a-website-attract-attention-7b28aeb1ecc443a48d3ae229554bfe18",
         "icon": "😄",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-31T21:11:00.000Z",
+        "edited": "2022-09-01T14:45:00.000Z",
         "created": "2022-07-21T22:52:00.000Z",
-        "description": "Faces are fundamentally captivating to people, since most of the non-verbal information is built upon analysing and understanding others facial features. Be it in real life or through visual images, it holds true. So what happens on the Web? Would it be possible to make less attention-grabbing areas of a web page a little more interesting by including human faces?\n\n### Takeaways\n1. When banners including human faces with mutual gaze towards users, the focus of attention was localized more on the face region rather than on the text or product, weakening any memory benefits for the brand and advertising message.\n2. Whereas, banners of human faces with averted gaze increased attention to the banner overall as well as to the advertising text and product.\n\nInclusion of human faces with averted gaze in banner advertisements provides a promising means for marketers to increase the attention paid to such adverts, thereby enhancing memory for advertising information.",
+        "description": "Faces are fundamentally captivating to people, since most of the non-verbal information is built upon analysing and understanding others facial features. Be it in real life or through visual images, it holds true. So what happens on the Web? Would it be possible to make less attention-grabbing areas of a web page a little more interesting by including human faces?\n\n### Takeaways\n1. When banners including human faces with mutual gaze towards users, the focus of attention was localized more on the face region rather than on the text or product, weakening any memory benefits for the brand and advertising message.\n2. Whereas, banners of human faces with averted gaze increased attention to the banner overall as well as to the advertising text and product.\n### Conclusion\nInclusion of human faces with averted gaze in banner advertisements provides a promising means for marketers to increase the attention paid to such adverts, thereby enhancing memory for advertising information.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -340,9 +340,9 @@
             "name": "Multimedia",
             "color": "brown"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "human-faces-attract-attention",
-        "name": "Pictures of human faces attract attention"
+        "name": "Pictures of faces on a website attract attention"
     },
     {
         "id": "d5d1d384-e160-46d6-b7d5-580694ca8e66",
@@ -354,9 +354,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-31T21:12:00.000Z",
+        "edited": "2022-09-02T06:56:00.000Z",
         "created": "2022-07-21T21:54:00.000Z",
-        "description": "### Takeaways\n- Make labels prominent and easy to navigate\n- Position form items in a vertical rather than horizontal list\n- Organize visual layouts with white space\n- Provide cohesive layouts, since users will build a mental model of your entire page to anticipate the placement of elements before they appear.\n- Provide response times of under 100ms; waiting longer than 100ms holds the perception of the user hostage while they wait for something to happen.",
+        "description": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.\n\n### Design recommendation\n\n- Make labels prominent and easy to navigate\n- Position form items in a vertical rather than horizontal list\n- Organize visual layouts with white space\n- Provide cohesive layouts, since users will build a mental model of your entire page to anticipate the placement of elements before they appear.\n- Provide response times of under 100ms; waiting longer than 100ms holds the perception of the user hostage while they wait for something to happen.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -384,7 +384,7 @@
             "name": "Navigation",
             "color": "yellow"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "better-ui-from-eye-movements",
         "name": "Users eye movements provide insights for designing better layouts"
     },
@@ -443,7 +443,7 @@
             "name": "Navigation",
             "color": "yellow"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "do-users-use-breadcrumbs",
         "name": "Less than half of users take advantage of breadcrumbs"
     },
@@ -487,7 +487,7 @@
             "name": "Navigation",
             "color": "yellow"
         },
-        "tags": [],
+        "topics": [],
         "slugs": "sitemap-facilitates-navigation",
         "name": "Providing a visible sitemap facilitates exploration of a site"
     }
