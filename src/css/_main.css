@@ -110,8 +110,12 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 
 }
 [data-markdown] h3{
-  font-size: var(--step-1);
-  font-weight: normal;
+  font-size: var(--step-0);
+  /* font-weight: normal; */
+}
+[data-markdown] code{
+  border: 1px solid var(--gray-400);
+  background-color: var(--gray-200);
 }
 [data-markdown] > ol > li {
   flex-grow: 1;
@@ -124,8 +128,8 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   content: counter(list);
   display: block;
   border-bottom: var(--border-thin) solid var(--gray-400);
-  padding-bottom: var(--space-xs);
-  margin-bottom: var(--space-xs);
+  padding-bottom: var(--space-2xs);
+  margin-bottom: var(--space-2xs);
 }
 [data-markdown] > ol > li:nth-child(n + 4),
 [data-markdown] > ol > li:nth-child(n + 4) ~ * {
