@@ -20,12 +20,11 @@ subtitle: "Collection of research findings about frontend development"
     <item>
       <title>{{ story.name }}</title>
       <link>{{ absoluteStoryUrl }}</link>
-      <description><![CDATA[{{ story.excerpt | safe }}]]></description>
-      <content:encoded>
+      <description>
         <![CDATA[{% renderTemplate "md, liquid", story %}
             {{ description }}
         {% endrenderTemplate %}]]>
-      </content:encoded>
+      </description>
       <pubDate>{{ story.edited | buildRFC822Date }}</pubDate>
       <dc:creator>{{ meta.author.name }}</dc:creator>
       <guid>{{ absoluteStoryUrl }}</guid>
