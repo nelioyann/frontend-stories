@@ -227,50 +227,6 @@
         "name": "Friendly error messages can positively influence users"
     },
     {
-        "id": "a1043815-b340-41d4-888b-9271bf10e94b",
-        "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
-        "notion_url": "https://www.notion.so/Well-written-copy-improves-performance-and-satisfaction-a1043815b34041d4888b9271bf10e94b",
-        "icon": "📝",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-08-31T21:11:00.000Z",
-        "created": "2022-07-21T23:04:00.000Z",
-        "description": "According to research, web users generally prefer writing that is concise, easy to scan, and objective (rather than promotional) in style. How to effectively write effective and satisfying web content?\n\n\n### Recommendation for writting copy text\n1. Conciseness can be achieved by removing small details.\n2. Ease of reading can be achieved by adding tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n3. Greater objectivity is possible by removing commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "26cc1452-8f99-4ceb-b4a5-7740825a2cf8",
-                "notion_url": "https://www.notion.so/Applying-Writing-Guidelines-to-Web-Pages-26cc14528f994cebb4a57740825a2cf8",
-                "citation": "Morkes, J., and Nielsen, J. (1998). \"Applying Writing Guidelines to Web Pages.\" White Paper.",
-                "url": "https://dl.acm.org/doi/10.1145/286498.286792",
-                "summary": "Web users generally prefer writing that is concise, easy to scan, and objective (rather than promotional) in style. We incorporated these and other attributes into a redesign of Web content. Doing so required trade-offs and some hard decisions, but the results were positive. The rewritten website scored 159% higher than the original in measured usability. Compared with original-site users, users of the rewritten site reported higher subjective satisfaction and performed better in terms of task time, task errors, and memory. Implications for website writing and design are discussed.",
-                "cite": "Morkes and Nielsen, 1998",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Applying Writing Guidelines to Web Pages",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-            "name": "Content",
-            "color": "default"
-        },
-        "topics": [],
-        "slugs": "webpages-copy-writing-guidelines",
-        "name": "Well written copy improves performance and satisfaction"
-    },
-    {
         "id": "7b28aeb1-ecc4-43a4-8d3a-e229554bfe18",
         "cover": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a",
         "notion_url": "https://www.notion.so/Pictures-of-faces-on-a-website-attract-attention-7b28aeb1ecc443a48d3ae229554bfe18",

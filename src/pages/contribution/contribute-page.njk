@@ -7,10 +7,10 @@ permalink: /contribute.html
 ---
 
 <header>
-    <h1>{{ title }}</h1>
+    <h1 data-heading="2">{{ title }}</h1>
 </header>
 <section class="contribute-story-sidebar" data-layout="with-sidebar" data-props="side:right">
-    <div>
+    <div data-layout="stack">
         <h2 data-heading="4">Add a story</h2>
         <p>
             If you would like to provide feedback or contribute content to Frontend Stories, you can submit a form on a specific
@@ -18,22 +18,22 @@ permalink: /contribute.html
         </p>
     </div>
     <div>
-
-    <form class="contribute-story-form" data-layout="stack" data-props="y:start x:start" action="{{ contribute.tally_url }}" target="_blank" method="get" name="contribution">
-            <label for="title" >Title</label>
-            <input type="text" id="title" name="title" required="true" />
-            <small>The core message </small>
+        <form class="contribute-story-form" data-layout="stack" data-props="y:start x:start" action="{{ contribute.tally_url }}" target="_blank" method="get" name="contribution">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required="true"/>
+            <small>The core message
+            </small>
             <label for="description">Description</label>
-            <textarea rows="4" maxlength="500" type="text" id="description" name="description" required="true" ></textarea>
+            <textarea rows="4" maxlength="500" type="text" id="description" name="description" required="true"></textarea>
             <label for="category">Category</label>
-            <select name="category" id="category" >
+            <select name="category" id="category">
                 {%- for category in collections.categories %}
                     <option value="{{ category }}">{{ category }}</option>
                 {% endfor %}
             </select>
-        {# </div> #}
-        <button data-button="primary">Submit</button>
-    </form>
+            {# </div> #}
+            <button data-button="primary">Submit</button>
+        </form>
     </div>
 </section>
 {# <section data-layout="stack" data-props="x:start space:s">

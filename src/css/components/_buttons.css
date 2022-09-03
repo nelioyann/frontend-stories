@@ -93,7 +93,9 @@
   border-width: var(--border-thin, 1px);
   border-color: var(--color-dark);
 }
-@media (hover: hover) {
+
+
+/* @media (hover: hover) { */
   /* On desktop and hover capable screens */
   [data-link] {
     text-decoration: none;
@@ -111,4 +113,4 @@
     background-color: var(--color-dark);
     color: var(--color-light);
   }
-}
+/* } */

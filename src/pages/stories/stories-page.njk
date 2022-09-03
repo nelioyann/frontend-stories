@@ -20,7 +20,7 @@ eleventyNavigation:
     {%- for category in collections.categories %}
         {# <h2 data-heading="5">{{ category }}</h2> #}
         {% set entries = collections.stories | filterByCategory(category) %}
-        <details data-layout="stack">
+        <details>
             <summary>
                 <span>
                     {{ category }}

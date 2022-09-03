@@ -6,6 +6,7 @@ module.exports = {
     site_thumbnail: "https://frontendstories.com/images/thumbnail.png",
     theme_color: "#000",
     primary_color: "#000",
+    background_color: "#f4f4f5",
     author: {
         name: "Yannick Nana",
         email: "contact@yannicknana.fr"
