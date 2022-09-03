@@ -21,12 +21,13 @@ a {
 main {
   padding-top: var(--page-top);
   padding-bottom: var(--page-top);
+  color: var(--gray-900);
 }
 
 .header {
   width: 100%;
   min-height: var(--header-height);
-  border-bottom: var(--border-thin) solid var(--gray-600);
+  box-shadow: var(--shadow-elevation-low);
   position: fixed;
   background-color: var(--color-light);
   z-index: 10;
@@ -44,7 +45,6 @@ main {
 .story-with-sidebar article .toc-navigation {
   width: 100%;
 }
-
 
 .story-with-sidebar figure svg {
   width: calc(var(--space-2xl) * 2);
@@ -107,13 +107,12 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   list-style-type: none;
   counter-reset: list;
   padding-left: 0;
-
 }
-[data-markdown] h3{
+[data-markdown] h3 {
   font-size: var(--step-0);
   /* font-weight: normal; */
 }
-[data-markdown] code{
+[data-markdown] code {
   border: 1px solid var(--gray-400);
   background-color: var(--gray-200);
 }
@@ -163,11 +162,9 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   border-bottom-width: var(--border-thin);
   border-bottom-style: solid;
   border-bottom-color: transparent;
-
 }
 .breadcrumbs-navigation li a:hover {
   border-bottom-color: var(--gray-900);
-
 }
 .breadcrumbs-navigation li:not(:last-child)::after {
   content: " \BB   ";
@@ -183,7 +180,6 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   color: var(--gray-900);
 }
 
-
 .categories-navigation {
   --reel-item-width: 10ch;
   --reel-item-margin: var(--space-xs);
@@ -192,37 +188,59 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   flex-grow: 1;
   text-align: center;
   border-width: var(--border-thin);
+  --y-padding: 0;
+}
+.categories-navigation li {
+  margin-left: 0;
 }
 
-.site-footer{
+.site-footer {
   padding-top: var(--space-l);
   padding-bottom: var(--space-l);
 }
-
 
 /*=============================================
 =            Story card            =
 =============================================*/
 
-.story-card{
+.story-card {
+  overflow: hidden;
   padding: var(--space-xs) var(--space-xs);
   border-radius: var(--border-radius);
   position: relative;
   background-color: var(--gray-50);
-  box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.2);
-
+  border: var(--border-thin) solid var(--gray-200);
+  box-shadow: var(--shadow-elevation-low);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: var(--bezier-snappy);
 }
 .story-card:hover,
-.story-card:focus-within{
-  box-shadow: 0px 0px 0px var(--border-thick) var(--color-dark);
+.story-card:focus-within {
+  box-shadow: var(--shadow-elevation-medium);
+  transform: translateY(calc(-1 * var(--space-2xs)));
 }
-/* .story-card__cover{
-
-} */
-.story-card__title:focus{
+.story-card__cover {
+  height: 150px;
+  color: var(--gray-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.story-card__ribbon {
+   right: -64px;
+   position: absolute;
+   top: 32px;
+   height: 24px;
+   width: 206px;
+   transform: rotate(45deg);
+   background-color: var(--gray-300);
+   text-align: center;
+}
+.story-card__title:focus {
   outline: 0px;
 }
-.story-card__title::before{
+.story-card__title::before {
   position: absolute;
   content: "";
   top: 0;
@@ -231,52 +249,42 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   height: 100%;
 }
 
-
-
 /*=============================================
 =            STory Cards            =
 =============================================*/
 
-
-
-
-.story-cards[data-layout~="grid"]{
+.story-cards[data-layout~="grid"] {
   --grid-min-item-size: 30rem;
 }
 
-.story-pagination-navigation__next-button{
+.story-pagination-navigation__next-button {
   margin-left: auto;
 }
 
-
-.contribute-story-sidebar{
+.contribute-story-sidebar {
   --side-width: 600px;
 }
 .contribute-story-form input,
 .contribute-story-form textarea,
-.contribute-story-form select{
+.contribute-story-form select {
   --space: var(--space-2xs);
 }
-.contribute-story-form select{
+.contribute-story-form select {
   max-width: 20ch;
 }
-.contribute-story-form label{
+.contribute-story-form label {
   font-weight: bold;
 }
-.contribute-story-form small{
+.contribute-story-form small {
   --space: var(--space-2xs);
 }
 .contribute-story-form input,
-.contribute-story-form textarea{
+.contribute-story-form textarea {
   max-width: 50ch;
-
 }
-.contribute-story-form textarea{
+.contribute-story-form textarea {
   resize: none;
 }
-
-
-
 
 [data-accordion] summary {
   padding: var(--space-s);
@@ -297,13 +305,13 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 }
 [data-accordion] details[open] > summary::before {
   transform: rotate(90deg);
-
 }
 [data-accordion] summary ~ *:not(summary) {
   padding-left: var(--space-l);
   padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
   color: var(--gray-700);
-  font-size: var(--step--1);
+  /* font-size: var(--step--1); */
 }
 details > summary::-webkit-details-marker,
 details > summary::marker {
@@ -317,11 +325,13 @@ summary {
   cursor: pointer;
 }
 
-input, select, textarea{
+input,
+select,
+textarea {
   min-height: 46px;
   padding-left: var(--space-2xs);
   padding-right: var(--space-2xs);
   border: var(--border-thin) solid;
-  border-color:  var(--gray-600);
+  border-color: var(--gray-600);
   width: 100%;
 }

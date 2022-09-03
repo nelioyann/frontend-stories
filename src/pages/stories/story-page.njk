@@ -20,16 +20,20 @@ eleventyComputed:
 
 {% extends "layouts/story-layout.njk" %}
 {% block aside %}
-    {# <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time> #}
-    <p>{{ story.description | emojiReadTime }}</p>
+    <p>
+        <span data-font="emoji">📅</span>
+        <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
+    </p>
+    <p>
+        <span data-font="emoji">⏱</span>
+        {{ story.description | emojiReadTime }}
+    </p>
     {# <figure>
-                            {{ meta.site_url| qrcode | safe }}
-                            <figcaption class="visually-hidden">Share link</figcaption>
-                        </figure> #}
+                        {{ meta.site_url| qrcode | safe }}
+                        <figcaption class="visually-hidden">Share link</figcaption>
+                    </figure> #}
 {% endblock %}
 {% block main %}
-    {# {% set nextStory = collections.stories | getNextCollectionItem(page) %}
-    {% set previousStory = collections.stories | getPreviousCollectionItem(page) %} #}
     <section
         aria-labelledby="story-name" id="cover">
         {# {% if emojicon %}
@@ -39,7 +43,6 @@ eleventyComputed:
             <h1 id="story-name" data-heading="3" data-props="centered noBorder">
                 {{ story.name }}
             </h1>
-            <hr/>
         </div>
     </section>
     <section aria-labelledby="summary">
@@ -78,32 +81,32 @@ eleventyComputed:
             </p>
         </div>
     </section>
-    {# <img src="{{ "https://google.com" | qrcode  }}" alt="QR code for this URL."> #}
-    <span class="visually-hidden" data-heading="6" id="pagination-nav">Navigate to other stories</span>
-    <nav
-        class="story-pagination-navigation"
-        aria-labelledby="pagination-nav"
-        data-layout="switcher"
-        data-props="x:between y:stretch">
-        {% if pagination.href.previous %}
-            <a data-button data-layout="stack" data-props="space:0" href="{{ pagination.href.previous }}">
-                <span>
-                    <span aria-hidden="true" data-font="emoji">◀️</span>
-                    Previous item</span>
-                <span>{{ pagination.page.previous.name | truncate(40) }}</span>
-            </a>
-        {% endif %}
-        {% if pagination.href.next %}
-            <a data-layout="stack" data-button data-props="space:0 y:end" href="{{ pagination.href.next }}">
-                <div>
+    <section>
+        <span class="visually-hidden" data-heading="6" id="pagination-nav">Navigate to other stories</span>
+        <nav
+            class="story-pagination-navigation"
+            aria-labelledby="pagination-nav"
+            data-layout="switcher"
+            data-props="x:between y:stretch">
+            {% if pagination.href.previous %}
+                <a data-button data-layout="stack" data-props="space:0" href="{{ pagination.href.previous }}">
                     <span>
-
-                    Next item
-                    </span>
-                    <span aria-hidden="true" data-font="emoji">▶️</span>
-                </div>
-                <p>{{ pagination.page.next.name | truncate(40) }}</p>
-            </a>
-        {% endif %}
-    </nav>
+                        <span aria-hidden="true" data-font="emoji">◀️</span>
+                        Previous item</span>
+                    <span>{{ pagination.page.previous.name | truncate(40) }}</span>
+                </a>
+            {% endif %}
+            {% if pagination.href.next %}
+                <a data-layout="stack" data-button data-props="space:0 y:end" href="{{ pagination.href.next }}">
+                    <div>
+                        <span>
+                            Next item
+                        </span>
+                        <span aria-hidden="true" data-font="emoji">▶️</span>
+                    </div>
+                    <p>{{ pagination.page.next.name | truncate(40) }}</p>
+                </a>
+            {% endif %}
+        </nav>
+    </section>
 {% endblock %}

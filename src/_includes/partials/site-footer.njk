@@ -2,7 +2,7 @@
     <div class="padded-container" data-layout="switcher" data-props="y:start">
         <div data-layout="stack" data-props="x:start">
             <h2 data-heading="5">About</h2>
-            <p>{{ about or meta.site_description }}</p>
+            <p>Frontend Stories 2022 ©</p>
         </div>
         <div data-layout="stack" data-props="x:start">
             <h2 data-heading="5">Categories</h2>
@@ -12,13 +12,13 @@
                 {% endfor -%}
             </div>
         </div>
-        <div data-layout="stack" data-props="x:start">
-            <h2 data-heading="5">Pages</h2>
+        <nav data-layout="stack" data-props="x:start">
+            <h2 data-heading="5">Links</h2>
             <div data-layout="stack" data-props="x:start">
                 {%- for page in collections.webpage %}
                     <a data-link href="{{ page.url }}">{{ page.data.title }}</a>
                 {% endfor -%}
             </div>
-        </div>
+        </nav>
     </div>
 </footer>

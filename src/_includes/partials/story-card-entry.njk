@@ -1,7 +1,12 @@
 <li class="story-card">
-    {% set color = entry.category.color%}
-    <div class="story-card__cover" data-font="emoji" data-color="{{color}}" aria-hidden="true">
-        <span data-heading="4">{{entry.icon if entry.icon else '📄'}}</span>
+    {% set color = entry.category.color %}
+    {% set type = entry.type.name %}
+    <span>{{ entry.category.name }}</span>
+    {% if type == "Insight" %}
+        <span class="story-card__ribbon">Insight</span>
+    {% endif %}
+    <div class="story-card__cover" data-font="emoji" data-color="{{ color }}" aria-hidden="true">
+        <span data-heading="3">{{ entry.icon if entry.icon else '📄' }}</span>
     </div>
     <a data-link="noHover" class="story-card__title" href="/{{ entry.slug }}">{{ entry.name }}</a>
 </li>

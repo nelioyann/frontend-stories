@@ -16,6 +16,14 @@ const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
   let categoriesNamesB = categoriesB.map((category) => category.name);
   return categoriesNamesA.filter((c) => categoriesNamesB.includes(c)).length;
 };
+
+const emojiReadTimeOptions = {
+  emoji: "📕",
+  showEmoji: false,
+  label: "minutes read",
+  wpm: 300,
+  bucketSize: 3,
+}
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css/style.css");
   eleventyConfig.addPassthroughCopy("./src/images");
@@ -26,7 +34,7 @@ module.exports = function (eleventyConfig) {
   // Create collection from _data/customData.js
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(emojiReadTime);
+  eleventyConfig.addPlugin(emojiReadTime, emojiReadTimeOptions);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addCollection("stories", (collection) => {
     const slug = eleventyConfig.getFilter("slugify");
