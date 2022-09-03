@@ -9,7 +9,7 @@ permalink: /{{story.slug}}/
 og_type: "article"
 eleventyComputed:
     title: "{{ story.name | truncate(150) }} "
-    thumbnail: "{{ story.cover }}?w=1200&h=628"
+    thumbnail: "{{meta.site_url}}/images/og-images/og-{{ story.slugs }}.jpeg"
     emojicon: "{{ story.icon }}"
     description: "{{story.excerpt}}"
     eleventyNavigation:
