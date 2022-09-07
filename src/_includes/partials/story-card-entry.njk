@@ -3,7 +3,7 @@
     {% set type = entry.type.name %}
     {# <span>{{ entry.category.name }}</span> #}
     {% if type == "Insight" %}
-        <span data-layout="center" data-props="intrinsic" class="story-card__ribbon">Insight</span>
+        <span data-layout="center" data-heading="6" data-props="intrinsic" class="story-card__ribbon">Insight</span>
     {% endif %}
     <div class="story-card__cover" data-font="emoji" data-color="{{ color }}" aria-hidden="true">
         <span data-heading="4">{{ entry.icon if entry.icon else '📄' }}</span>

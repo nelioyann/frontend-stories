@@ -21,3 +21,9 @@
 [data-font="emoji"]{
      font-family: var(--font-emoji);
 }
+[data-font="serif"]{
+     font-family: var(--font-serif);
+}
+[data-font="sans-serif"]{
+     font-family: var(--font-sans-serif);
+}

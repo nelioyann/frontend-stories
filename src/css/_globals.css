@@ -81,7 +81,7 @@ ol[role="list"] {
 
 :root {
   --page-top: var(--space-s-3xl, 12rem);
-  --header-height: var(--space-xl-2xl);
+  --header-height: var(--space-2xl-3xl);
   --responsive-padding: var(--space-s-6xl);
 }
 main,

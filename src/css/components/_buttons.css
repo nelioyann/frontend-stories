@@ -7,7 +7,7 @@
   padding: var(--y-padding) var(--x-padding);
   border-radius: var(--border-radius);
   min-height: var(--minimum-height);
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: var(--minimum-height);
   /* text-align: center; */
   text-decoration: none;
@@ -40,6 +40,11 @@
   --y-padding: var(--space-2xs);
   --x-padding: var(--space-2xs);
   font-weight: normal;
+}
+[data-button~="tag"]{
+  border-radius: var(--space-l);
+  padding: calc(var(--space-xs) * 0.2) var(--space-xs);
+  font-size: var(--step-0);
 
 }
 [data-button~="small"]{

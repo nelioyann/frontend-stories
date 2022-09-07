@@ -8,7 +8,7 @@
             <h2 data-heading="5">Categories</h2>
             <div data-layout="cluster">
                 {%- for category in collections.categories %}
-                    <a href="/categories/{{ category | slugify }}" data-tag>{{ category }}</a>
+                    <a href="/categories/{{ category | slugify }}" data-button="tag">{{ category }}</a>
                 {% endfor -%}
             </div>
         </div>

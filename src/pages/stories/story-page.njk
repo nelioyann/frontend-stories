@@ -23,34 +23,37 @@ eleventyComputed:
     <p>
         <span data-font="emoji">📅</span>
         <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
-        <meta itemprop="dateModified" datetime="{{ story.created }}" content="{{ story.created | readableDate }}"/>
+        <meta itemprop="dateModified" datetime="{{ story.edited }}" content="{{ story.edited }}"/>
     </p>
     <p>
         <span data-font="emoji">⏱</span>
         {{ story.description | emojiReadTime }}
     </p>
     <p itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span data-font="emoji">👤</span>
         <span itemprop="name">
             {{ meta.author.name }}
         </span>
-        <link itemprop="url" href="{{meta.author.url}}"/>
+        <link itemprop="url" href="{{ meta.author.url }}"/>
     </p>
     {# <figure>
-                            {{ meta.site_url| qrcode | safe }}
-                            <figcaption class="visually-hidden">Share link</figcaption>
-                        </figure> #}
+                                                {{ meta.site_url| qrcode | safe }}
+                                                <figcaption class="visually-hidden">Share link</figcaption>
+                                            </figure> #}
 {% endblock %}
 {% block main %}
     <header
         aria-labelledby="story-name" id="cover">
         {# {% if emojicon %}
-                            <span aria-hidden data-font="emoji">{{ emojicon }}</span>
-                        {% endif %} #}
+                                                                    <span aria-hidden data-font="emoji">{{ emojicon }}</span>
+                                                                {% endif %} #}
         <div data-props="x:start  noBorder">
+            <link itemprop="thumbnailUrl" href="{{ story.thumbnail }}"/>
             <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder">
                 {{ story.name }}
             </h1>
             <meta itemprop="description" content="{{ story.excerpt }}"/>
+            <meta itemprop="teaches" content="{{ story.category.name }}"/>
         </div>
     </header>
     <section aria-labelledby="summary">

@@ -1,7 +1,7 @@
 ---
 layout: layouts/home-layout.njk
 title: "Home"
-description: A collection of research findings, insights on frontend development.
+description: A collection of research findings, insights and quotes on frontend development.
 tags: 
     - webpage
 pagination: 
@@ -22,8 +22,8 @@ eleventyComputed:
             <h1 data-heading="2">{{ meta.site_name }}</h1>
             <p>{{ description or meta.site_description }}</p>
             {# <div>
-                            <a data-button href="/stories">Browse all stories</a>
-                        </div> #}
+                                                    <a data-button href="/stories">Browse all stories</a>
+                                                </div> #}
         </div>
     </div>
 </section>
@@ -32,23 +32,31 @@ eleventyComputed:
         <ul role="list" data-layout="reel" data-props="noPad noBorder overflowing:noBar">
             {%- for category in collections.categoriesAndAll %}
                 <li data-layout="stack" data-active="{{ 'true' if currentCategory == category else 'false' }}">
-                    <a data-props="x:center" data-button="{{ 'active' if currentCategory == category }}" href="/{{ '' if category == 'All' else category | slugify }}#stories">{{ 'Latest' if category == 'All' else category }}</a>
+                    <a data-props="x:center" data-button="{{ 'active' if currentCategory == category }} tag" href="/{{ '' if category == 'All' else category | slugify }}#stories">{{ 'Latest' if category == 'All' else category }}</a>
                 </li>
             {% endfor -%}
         </ul>
     </nav>
-    <div data-layout="cluster" data-props="x:between">
-        <h2 data-heading="5">
-            {{ currentCategory }}
-        </h2>
-        <a data-button href="/{{ 'stories' if currentCategory == 'All' else "categories/"+currentCategory | slugify}}">View all</a>
-    </div>
+    {# <div data-layout="cluster" data-props="x:between"> #}
+    <h2 data-heading="3">
+        {{ currentCategory }}
+    </h2>
+    {# <a data-button href="/{{ 'stories' if currentCategory == 'All' else "categories/"+currentCategory | slugify}}">View </a> #}
+    {# </div> #}
     <ul class="story-cards" data-layout="grid" data-props="noPad" role="list">
         {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(3) %}
         {%- for entry in entries %}
             {% include "partials/story-card-entry.njk" %}
         {% endfor -%}
     </ul>
+    <span>
+        <a data-button href="/{{ 'stories' if currentCategory == 'All' else "categories/"+currentCategory | slugify }}">
+            View more
+            <span data-font="emoji" aria-hidden="true">
+                ▶
+            </span>
+        </a>
+    </span>
 </section>
 {# <section>
     <button data-button="primary">Base</button>
