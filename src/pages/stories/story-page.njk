@@ -22,35 +22,41 @@ eleventyComputed:
 {% block aside %}
     <p>
         <span data-font="emoji">📅</span>
-        <time datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
+        <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
     </p>
     <p>
         <span data-font="emoji">⏱</span>
         {{ story.description | emojiReadTime }}
     </p>
+    <p itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
+            {{ story.author or meta.author.name }}
+        </span>
+    </p>
     {# <figure>
-                        {{ meta.site_url| qrcode | safe }}
-                        <figcaption class="visually-hidden">Share link</figcaption>
-                    </figure> #}
+                            {{ meta.site_url| qrcode | safe }}
+                            <figcaption class="visually-hidden">Share link</figcaption>
+                        </figure> #}
 {% endblock %}
 {% block main %}
-    <section
+    <header
         aria-labelledby="story-name" id="cover">
         {# {% if emojicon %}
-                    <span aria-hidden data-font="emoji">{{ emojicon }}</span>
-                {% endif %} #}
+                            <span aria-hidden data-font="emoji">{{ emojicon }}</span>
+                        {% endif %} #}
         <div data-props="x:start  noBorder">
-            <h1 id="story-name" data-heading="3" data-props="centered noBorder">
+            <h1 itemprop="name" id="story-name" data-heading="1" data-props="centered noBorder">
                 {{ story.name }}
             </h1>
+            <meta itemprop="description" content="{{ story.excerpt }}"/>
         </div>
-    </section>
+    </header>
     <section aria-labelledby="summary">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="summary" data-heading="4 anchor">
+            <h2 id="summary" data-heading="2 anchor">
                 <a href="#summary">Summary</a>
             </h2>
-            <div data-layout="stack" data-markdown>
+            <div itemprop="articleBody" data-layout="stack" data-markdown>
                 {% renderTemplate "md, liquid", story %}
                 {{ description }}
                 {% endrenderTemplate %}
@@ -59,7 +65,7 @@ eleventyComputed:
     </section>
     <section aria-labelledby="references">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="references" data-heading="4 anchor">
+            <h2 id="references" data-heading="anchor">
                 <a href="#references">References</a>
             </h2>
             <ul data-layout="stack" data-props="noPad x:stretch space:xs">
@@ -71,7 +77,7 @@ eleventyComputed:
     </section>
     <section aria-labelledby="contribute">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="contribute" data-heading="4 anchor">
+            <h2 id="contribute" data-heading="anchor">
                 <a href="#contribute">Contribute and give feedback</a>
             </h2>
             <p>If you would like to provide feedback or contribute content on this resource, please fill out the
