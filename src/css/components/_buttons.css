@@ -1,6 +1,7 @@
 [data-button] {
   --minimum-height: 36px;
   /* --border-radius: 0; */
+  font-family: var(--font-sans-serif);
   --y-padding: var(--space-2xs);
   --x-padding: var(--space-s);
   padding: var(--y-padding) var(--x-padding);
@@ -18,7 +19,7 @@
   justify-content: var(--horizontal-alignment, flex-start);
   align-items: var(--vertical-alignment, center);
   border-style: solid;
-  border-width: var(--border-thick, 1px);
+  border-width: var(--border-thin, 1px);
   border-color: var(--color-dark);
 }
 

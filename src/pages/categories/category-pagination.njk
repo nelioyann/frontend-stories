@@ -8,6 +8,10 @@ pagination:
 permalink: "/categories/{{ category | slugify }}/index.html"
 eleventyComputed:
   title: "Category: {{ category }}"
+  eleventyNavigation:
+    key: "{{category}}"
+    title: "{{category}}"
+    parent: Stories
 ---
 
 

@@ -8,6 +8,7 @@
   border-color: var(--color-dark);
   border-radius: 3px;
   text-decoration: none;
+  font-family: var(--font-sans-serif);
 }
 
 

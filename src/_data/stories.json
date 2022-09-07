@@ -1,16 +1,17 @@
 [
     {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
+        "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
         "notion_url": "https://www.notion.so/Do-not-use-radio-buttons-and-checkboxes-interchangeably-cffcf98342c54f3e986e5af360b4c946",
-        "icon": "☑️",
+        "icon": "📻",
         "type": {
             "id": "OL?t",
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-09-02T07:01:00.000Z",
+        "edited": "2022-09-06T09:44:00.000Z",
         "created": "2022-08-29T12:03:00.000Z",
-        "description": "Checkboxes are used when a list of more than one choice is needed. HTML `< input >` tags are\noften used to construct them, but the form type attribute is set to checkbox.\n\nRadio buttons are used when out of many options, just one option is required to be selected. They are also created using HTML tag but type attribute is set to radio.\n\nInteractive things have perceived affordances; the way they look tells us what they do and how to use them. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull.",
+        "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options.\n### Documentation\n",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -20,22 +21,30 @@
             {
                 "id": "dce4a37d-737e-4cfb-8f67-df204c5b1a01",
                 "notion_url": "https://www.notion.so/Checkboxes-Are-Never-Round-Daniel-De-Laney-dce4a37d737e4cfb8f67df204c5b1a01",
-                "citation": "",
+                "citation": "Daniel De Laney, 2015",
                 "url": "http://danieldelaney.net/checkboxes/",
                 "summary": "",
-                "cite": "",
-                "type": null,
+                "cite": "Daniel De Laney, 2015",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
                 "name": "Checkboxes Are Never Round—Daniel De Laney",
                 "tags": []
             },
             {
                 "id": "6adc6101-0962-47fa-8696-7b7e90e74842",
                 "notion_url": "https://www.notion.so/Jakob-s-Law-Laws-of-UX-6adc6101096247fa86967b7e90e74842",
-                "citation": "",
+                "citation": "Laws of UX",
                 "url": "https://lawsofux.com/en/jakobs-law/",
                 "summary": "",
-                "cite": "",
-                "type": null,
+                "cite": "Laws of UX",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
                 "name": "Jakob’s Law | Laws of UX",
                 "tags": []
             }
@@ -59,7 +68,7 @@
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-08-31T21:10:00.000Z",
+        "edited": "2022-09-07T13:33:00.000Z",
         "created": "2022-08-28T08:23:00.000Z",
         "description": "If you include hint text inside your form’s text boxes, many users—quite likely, the majority—will interpret the hint text as a default.",
         "status": {
@@ -71,7 +80,7 @@
             {
                 "id": "be6b2c5e-c3d1-4bfe-9908-663889bec366",
                 "notion_url": "https://www.notion.so/Don-t-Put-Hints-Inside-Text-Boxes-in-Web-Forms-UXmatters-be6b2c5ec3d14bfe9908663889bec366",
-                "citation": "",
+                "citation": "UXmatters, 2010",
                 "url": "https://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php",
                 "summary": "",
                 "cite": "UXmatters, 2010",
@@ -86,7 +95,7 @@
             {
                 "id": "8f20e222-a869-4974-b6be-0e829570b3bd",
                 "notion_url": "https://www.notion.so/input-The-Input-Form-Input-element-HTML-HyperText-Markup-Language-MDN-8f20e222a8694974b6be0e829570b3bd",
-                "citation": "",
+                "citation": "Mozilla, MDN Docs",
                 "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder",
                 "summary": "The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content.",
                 "cite": "MDN Docs",
@@ -118,9 +127,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-25T19:26:00.000Z",
+        "edited": "2022-09-07T14:06:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
-        "description": "Page load time is the time it takes to display all the content of a web page in a user's browser after they click on the site. Depending on various factors, loading times can be significantly long. So how long are users willing to wait for a web page to load?\n\n\nIt is proven that web pages that load faster are perceived as more interesting than those that are slower. (Ramsay, Barbesi and Preece (1998). However, many processes involving a request to a server often take a long time, and exceed the tolerable waiting time of 2 seconds highlighted by (Nah, 2004). The average page loading speed for a web page is 10.3 seconds on desktop and 27.3 seconds on mobile.In such cases, reducing page load time seems to be technically challenging. \n\nFortunately, there is also evidence to suggest that the availability of feedback extends the tolerable waiting time of Web users. Consequently, it is advantageous for browsers or websites to provide users with feedback when there is an expected wait for a page to load. This information not only reduces uncertainty about the wait, but also fills in the wait time so that Web users are less aware of how long the wait is.",
+        "description": "Page load time is the time it takes to display all the content on a web page. Depending on many factors, these load times can be significantly longer. How long are users willing to wait for a web page to load?\n\n### Perception of load times\nResearch has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece (1998). In a study, Nah investigated the tolerable waiting time for a page to load and concluded that 2 seconds was the observed average (Nah, 2004). It also revealed that a page takes on average about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone.\n\n### Impact of load times on user experience\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback.\n\n### Solution to long load times\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time.\n\n### Key takeaways\n1. The tolerable waiting time for a page to load is about 2 seconds.\n2. When loading feedback is provided, this can be as long as 10 seconds.\n3. Faster pages are perceived as more interesting than slower pages.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -177,9 +186,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-31T21:05:00.000Z",
+        "edited": "2022-09-07T14:22:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
-        "description": "Interacting with a system is bound to generate some bugs. In such cases, the feedback you receive from computers may fall somewhere between a \"friendly apologetic message\" and a \"generic message. Would you be more sensitive to a computer saying sorry?\n\nResearch has found that users spent more time engaging with a system that provided emotional responses than with one providing generic feedback.\n\n### Takeaways\n1. Nass demonstrated that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997).\n2. Tzeng found that apologetic responses made users feel better about the overall interaction with the system (Tzeng, 2004).",
+        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n### Key takeaways\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -236,7 +245,7 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-01T14:45:00.000Z",
+        "edited": "2022-09-07T14:33:00.000Z",
         "created": "2022-07-21T22:52:00.000Z",
         "description": "Faces are fundamentally captivating to people, since most of the non-verbal information is built upon analysing and understanding others facial features. Be it in real life or through visual images, it holds true. So what happens on the Web? Would it be possible to make less attention-grabbing areas of a web page a little more interesting by including human faces?\n\n### Takeaways\n1. When banners including human faces with mutual gaze towards users, the focus of attention was localized more on the face region rather than on the text or product, weakening any memory benefits for the brand and advertising message.\n2. Whereas, banners of human faces with averted gaze increased attention to the banner overall as well as to the advertising text and product.\n### Conclusion\nInclusion of human faces with averted gaze in banner advertisements provides a promising means for marketers to increase the attention paid to such adverts, thereby enhancing memory for advertising information.",
         "status": {
