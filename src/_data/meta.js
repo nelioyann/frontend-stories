@@ -9,7 +9,8 @@ module.exports = {
     background_color: "#f4f4f5",
     author: {
         name: "Yannick Nana",
-        email: "contact@yannicknana.fr"
+        email: "contact@yannicknana.fr",
+        url: "https://yannicknana.fr"
     },
     site_author: "Yannick Nana",
     twitter_name: "@nelioyann",

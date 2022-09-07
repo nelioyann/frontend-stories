@@ -23,6 +23,7 @@ eleventyComputed:
     <p>
         <span data-font="emoji">📅</span>
         <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
+        <meta itemprop="dateModified" datetime="{{ story.created }}" content="{{ story.created | readableDate }}"/>
     </p>
     <p>
         <span data-font="emoji">⏱</span>
@@ -30,8 +31,9 @@ eleventyComputed:
     </p>
     <p itemprop="author" itemscope itemtype="http://schema.org/Person">
         <span itemprop="name">
-            {{ story.author or meta.author.name }}
+            {{ meta.author.name }}
         </span>
+        <link itemprop="url" href="{{meta.author.url}}"/>
     </p>
     {# <figure>
                             {{ meta.site_url| qrcode | safe }}
@@ -45,7 +47,7 @@ eleventyComputed:
                             <span aria-hidden data-font="emoji">{{ emojicon }}</span>
                         {% endif %} #}
         <div data-props="x:start  noBorder">
-            <h1 itemprop="name" id="story-name" data-heading="1" data-props="centered noBorder">
+            <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder">
                 {{ story.name }}
             </h1>
             <meta itemprop="description" content="{{ story.excerpt }}"/>
