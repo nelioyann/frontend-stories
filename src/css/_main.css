@@ -39,11 +39,9 @@ main {
   --side-width: calc(var(--space-l-xl, 2rem) * 4);
   --content-min: 80%;
 }
-/* .story-with-sidebar,
-.story-with-sidebar article [data-layout~="cover"],
-.story-with-sidebar article .toc-navigation {
-  width: 100%;
-} */
+.story-with-sidebar aside {
+  margin-bottom: var(--space);
+}
 
 /* .story-with-sidebar figure svg {
   width: calc(var(--space-2xl) * 2);
@@ -357,5 +355,9 @@ textarea {
 
 .reference-item{
   --measure: 100ch;
-  list-style-type: circle;
+  list-style-type: none;
+}
+.reference-item a::before{
+  content: "🔗";
+  font-family: var(--font-emoji);
 }

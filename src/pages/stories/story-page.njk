@@ -19,6 +19,9 @@ eleventyComputed:
 ---
 
 {% extends "layouts/story-layout.njk" %}
+{% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
+{# {{ contribute.tally_url }}?slugs={{ story.slugs }}&title={{ story.name }}&category={{ story.category.name }}&description={{ story.description }} #}
+{{ story_contribution_url |log }}
 {% block aside %}
     <p>
         <span data-font="emoji">📅</span>
@@ -37,28 +40,35 @@ eleventyComputed:
         <link itemprop="url" href="{{ meta.author.url }}"/>
     </p>
     {# <figure>
-                                                {{ meta.site_url| qrcode | safe }}
-                                                <figcaption class="visually-hidden">Share link</figcaption>
-                                            </figure> #}
+                                                                    {{ meta.site_url| qrcode | safe }}
+                                                                    <figcaption class="visually-hidden">Share link</figcaption>
+                                                                </figure> #}
 {% endblock %}
 {% block main %}
     <header
-        aria-labelledby="story-name" id="cover">
+        aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:s">
         {# {% if emojicon %}
-                                                                    <span aria-hidden data-font="emoji">{{ emojicon }}</span>
-                                                                {% endif %} #}
-        <div data-props="x:start  noBorder">
-            <link itemprop="thumbnailUrl" href="{{ story.thumbnail }}"/>
-            <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder">
-                {{ story.name }}
-            </h1>
-            <meta itemprop="description" content="{{ story.excerpt }}"/>
-            <meta itemprop="teaches" content="{{ story.category.name }}"/>
-        </div>
+                                                                                                            <span aria-hidden data-font="emoji">{{ emojicon }}</span>
+                                                                                                        {% endif %} #}
+        <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder noMeasure">
+            <b>{{ story.name }}</b>
+        </h1>
+        <link itemprop="thumbnailUrl" href="{{ story.thumbnail }}"/> {% set type = story.type.name %}
+        {% if type == "Insight" %}
+            <p data-layout="box" data-heading="6" data-props="invert noMeasure noBorder">
+                <span aria-hidden="true" data-font="emoji">ℹ</span>
+                This entry is flagged as
+                <code>Insight</code>
+                which means that it lacks research data. You can help improve this page by
+                <a href="{{ story_contribution_url }}">providing feedback</a>
+            </p>
+        {% endif %}
+        <meta itemprop="description" content="{{ story.excerpt }}"/>
+        <meta itemprop="teaches" content="{{ story.category.name }}"/>
     </header>
     <section aria-labelledby="summary">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="summary" data-heading="2 anchor">
+            <h2 class="visually-hidden" id="summary" data-heading="2 anchor">
                 <a href="#summary">Summary</a>
             </h2>
             <div itemprop="articleBody" data-layout="stack" data-markdown>
@@ -73,7 +83,7 @@ eleventyComputed:
             <h2 id="references" data-heading="anchor">
                 <a href="#references">References</a>
             </h2>
-            <ul data-layout="stack" data-props="noPad x:stretch space:xs">
+            <ul role="list" data-layout="stack" data-props="noPad x:stretch space:xs">
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
@@ -85,15 +95,19 @@ eleventyComputed:
             <h2 id="contribute" data-heading="anchor">
                 <a href="#contribute">Contribute and give feedback</a>
             </h2>
-            <p>If you would like to provide feedback or contribute content on this resource, please fill out the
-                <b>
-                    <a data-link href="{{ contribute.tally_url }}?slugs={{ story.slugs }}&title={{ story.name }}&category={{ story.category.name }}&description={{ story.description }}" target="_blank">this form</a>
-                </b>.
+            <p>
+                This entry is flagged as Insight, indicating that it lacks research references. Please know that you can help improve
+                this page by
+                {# <b> #}
+                    <a data-link href="{{ story_contribution_url }}" target="_blank">providing feedback</a>
+                {# </b> #}
             </p>
         </div>
     </section>
-    <section>
-        <span class="visually-hidden" data-heading="6" id="pagination-nav">Navigate to other stories</span>
+    <section aria-label="Navigate" data-layout="stack">
+        <hr data-props="space:0"/>   
+
+        <h2 data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other stories</h2>
         <nav
             class="story-pagination-navigation"
             aria-labelledby="pagination-nav"

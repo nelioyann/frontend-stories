@@ -1,7 +1,7 @@
 ---
 layout: layouts/nested-page-layout.njk
 title: All Stories
-description: Stories grouped by category.
+description: Find all stories grouped by category.
 tags: 
     - webpage
 permalink: /stories/index.html
@@ -16,7 +16,7 @@ eleventyNavigation:
 <p>
     {{ description }}
 </p>
-<ul role="list" data-accordion data-props="noMeasure space:l">
+<ul data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {# <h2 data-heading="5">{{ category }}</h2> #}
         {% set entries = collections.stories | filterByCategory(category) %}

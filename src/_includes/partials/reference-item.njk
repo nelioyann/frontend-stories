@@ -8,9 +8,9 @@
     {# <a  target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
         {{ reference.name }}
     </a> #}
-        {{ reference.cite if reference.cite }} {{ reference.name }}
        <a data-button="link"  target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
-        View source <span data-font="emoji">↪</span>
+      {# <span aria-hidden data-font="emoji">🔗</span> #}
+        {{ reference.cite if reference.cite }} {{ reference.name }}
        </a>
     {# {% if reference.summary %}
                                                                                     <p style="text-align: justify;">{{ reference.summary | truncate(230) }}</p>

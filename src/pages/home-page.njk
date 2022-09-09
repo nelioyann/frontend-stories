@@ -39,7 +39,7 @@ eleventyComputed:
     </nav>
     {# <div data-layout="cluster" data-props="x:between"> #}
     <h2 data-heading="3">
-        {{ currentCategory }}
+        {{ "Most recent" if currentCategory == 'All' else currentCategory }}
     </h2>
     {# <a data-button href="/{{ 'stories' if currentCategory == 'All' else "categories/"+currentCategory | slugify}}">View </a> #}
     {# </div> #}
@@ -51,7 +51,7 @@ eleventyComputed:
     </ul>
     <span>
         <a data-button="small" href="/{{ 'stories' if currentCategory == 'All' else "categories/"+currentCategory | slugify }}">
-            View more
+            View all
             <span data-font="emoji" aria-hidden="true">
                 ▶
             </span>
