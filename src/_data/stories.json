@@ -9,9 +9,9 @@
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-09-06T09:44:00.000Z",
+        "edited": "2022-09-09T23:18:00.000Z",
         "created": "2022-08-29T12:03:00.000Z",
-        "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options.\n### Documentation\n",
+        "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options.\n\n### Documentation\n#### Checkboxes\nCheckboxes are a type of HTML `input` element used to select multiple.\n\n#### Radio Buttons\nRadio buttons on the other hand are used when just on option is required out of many options. \n\n### Ethymology\n#### Checkboxes\nCheckboxes are quite litteraly boxes for checking the presented options. A common usage of checkboxes can be found in\n- Todo List \n- Checklists (used for outline a complex goal into simple steps to complete)\n\n#### Radio Buttons\nRadio Buttons are named after the *physical buttons used on older radios to select preset stations*. Whenever one button was pressed the previously selected one automatically pop out, leaving only a single pressed button.\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
