@@ -30,6 +30,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/sw.js");
   // Watch css files for changes
   eleventyConfig.addWatchTarget("./src/css/**/*.css");
   // Create collection from _data/customData.js
