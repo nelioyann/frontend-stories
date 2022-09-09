@@ -48,7 +48,7 @@
 
 }
 [data-button~="small"]{
-  --minimum-height: 32px;
+  --minimum-height: 20px;
   --y-padding: var(--space-2xs);
   --x-padding: var(--space-2xs);
   font-size: var(--step--1);
@@ -74,6 +74,7 @@
   background-color: var(--gray-200);
   box-shadow: 0 0 0 8px var(--gray-200);
 } */
+
 
 
 [data-link="button"] {

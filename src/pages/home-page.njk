@@ -50,7 +50,7 @@ eleventyComputed:
         {% endfor -%}
     </ul>
     <span>
-        <a data-button href="/{{ 'stories' if currentCategory == 'All' else "categories/"+currentCategory | slugify }}">
+        <a data-button="small" href="/{{ 'stories' if currentCategory == 'All' else "categories/"+currentCategory | slugify }}">
             View more
             <span data-font="emoji" aria-hidden="true">
                 ▶

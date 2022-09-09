@@ -100,7 +100,7 @@ eleventyComputed:
             data-layout="switcher"
             data-props="x:between y:stretch">
             {% if pagination.href.previous %}
-                <a data-button data-layout="stack" data-props="space:0" href="{{ pagination.href.previous }}">
+                <a data-button data-layout="stack" class="previous-button" data-props="space:0" href="{{ pagination.href.previous }}">
                     <span>
                         <span aria-hidden="true" data-font="emoji">◀️</span>
                         Previous item</span>
@@ -108,7 +108,7 @@ eleventyComputed:
                 </a>
             {% endif %}
             {% if pagination.href.next %}
-                <a data-layout="stack" data-button data-props="space:0 y:end" href="{{ pagination.href.next }}">
+                <a data-layout="stack" class="next-button" data-button data-props="space:0 y:end" href="{{ pagination.href.next }}">
                     <div>
                         <span>
                             Next item
