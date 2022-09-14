@@ -35,5 +35,8 @@
     <link rel="shortcut icon" href="/images/icons/icon-32.png" type="image/x-icon" sizes="32x32" />
     <link rel="shortcut icon" href="/images/icons/icon-16.png" type="image/x-icon" sizes="16x16" />
     <meta name="author" content="{{meta.site_author}}">
-    <script>navigator.serviceWorker.register("sw.js")</script> 
+    {# {%if page.url == "/"%}
+	    <script>navigator.serviceWorker.register("sw.js")</script>
+    {% endif %} #}
+
 </head>
