@@ -22,14 +22,18 @@ main {
   padding-top: var(--page-top);
   padding-bottom: var(--page-top);
   color: var(--gray-900);
-  font-size: var(--step-1);
 }
 
 .header {
   width: 100%;
   min-height: var(--header-height);
-  box-shadow: var(--shadow-elevation-low);
-  background-color: var(--gray-50);
+}
+.header a{
+  text-transform: uppercase ;
+}
+section[aria-labelledby="summary"]{
+  font-size: var(--step-1);
+
 }
 
 /*=============================================
@@ -43,56 +47,50 @@ main {
   margin-bottom: var(--space);
 }
 
-/* .story-with-sidebar figure svg {
-  width: calc(var(--space-2xl) * 2);
-  height: calc(var(--space-2xl) * 2);
+.story-with-sidebar figure svg {
+  width: calc(var(--space-2xl) * 3);
+  height: calc(var(--space-2xl) * 3);
   padding: var(--space-s);
   border-radius: var(--space-m);
-} */
-/* .story-with-sidebar #cover svg > path {
-  fill: var(--gray-100);
-} */
+}
 
 /*=====  End of Story  ======*/
 
 /*=============================================
 =            Anchor Heading            =
-source: https://codepen.io/thierry/pen/qBqYmgw
+inspiration: https://codepen.io/thierry/pen/qBqYmgw
 =============================================*/
 
 [data-heading~="anchor"] a:hover {
   text-decoration: underline;
 }
-@media (hover: hover) {
+/* @media (hover: hover) { */
   [data-heading~="anchor"] {
-    margin-left: -1em;
-    padding-left: 1em;
     scroll-margin-top: var(--header-height);
   }
   [data-heading~="anchor"] a {
     text-decoration: none;
     pointer-events: none;
-    color: var(--gray-900);
   }
-  [data-heading~="anchor"] a::before {
-    content: "#";
+  [data-heading~="anchor"] a::after {
+    content: "#️⃣";
     font-weight: normal;
-    float: left;
+    color: var(--gray-400);
     padding: 0 0.15em; /* to make the "#" a bigger target */
-    margin-left: -1em;
     pointer-events: auto;
-    display: none;
   }
-  [data-heading~="anchor"]:hover a::before {
-    display: block;
-  }
-}
+
 
 [data-markdown] {
   /* Remove width constraints from generated markdown */
   --measure: 80ch;
   --space: 1em;
-  /* font-size: var(--step-1); */
+}
+[data-markdown] h3{
+  font-size: var(--step-2);
+}
+[data-markdown] h4{
+  font-size: var(--step-1);
 }
 [data-markdown] p{
   color: var(--gray-600);
@@ -200,7 +198,7 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   padding-bottom: var(--space-l);
 }
 .site-footer h2{
-  color: var(--gray-500);
+  color: var(--gray-400);
 }
 
 /*=============================================
@@ -210,7 +208,7 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 .story-card {
   overflow: hidden;
   padding: var(--space-l) var(--space-s);
-  border-radius: var(--border-radius);
+  /* border-radius: var(--border-radius); */
   position: relative;
   background-color: var(--gray-50);
   border: var(--border-thin) solid var(--gray-300);
@@ -221,7 +219,7 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 }
 .story-card:hover,
 .story-card:focus-within {
-  box-shadow: var(--shadow-elevation-medium);
+  box-shadow: var(--shadow-elevation-low);
   /* transform: translateY(calc(-1 * var(--space-2xs))); */
 }
 /* .story-card__cover { */
@@ -238,16 +236,17 @@ source: https://codepen.io/thierry/pen/qBqYmgw
    top: 32px;
    width: 206px;
    transform: rotate(45deg);
-   background-color: var(--gray-300);
+   background-color: var(--gray-800);
+   color: var(--gray-100);
    text-align: center;
-}
-.story-card__title{
-  font-family: var(--font-sans-serif);
+  }
+  .story-card__title{
+    font-family: var(--font-sans-serif);
   /* font-weight: bolder; */
 }
-.story-card__title:focus {
+/* .story-card__title:focus {
   outline: 0px;
-}
+} */
 .story-card__title::before {
   position: absolute;
   content: "";
@@ -267,7 +266,7 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 
 .story-pagination-navigation a:only-child{
   flex-grow: 0;
-  flex-basis: min(100%, 45ch);
+  flex-basis: min(100%, 60ch);
 }
 
 .story-pagination-navigation a.next-button {
@@ -293,7 +292,7 @@ source: https://codepen.io/thierry/pen/qBqYmgw
   font-weight: bold;
 }
 .contribute-story-form small {
-  --space: var(--space-2xs);
+  --space: 0;
 }
 .contribute-story-form input,
 .contribute-story-form textarea {
@@ -326,9 +325,10 @@ source: https://codepen.io/thierry/pen/qBqYmgw
 [data-accordion] summary ~ *:not(summary) {
   padding-left: var(--space-s);
   padding-top: var(--space-xs);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-s);
   padding-bottom: var(--space-xs);
   color: var(--gray-700);
-  /* font-size: var(--step--1); */
 }
 details > summary::-webkit-details-marker,
 details > summary::marker {
@@ -354,10 +354,10 @@ textarea {
 }
 
 .reference-item{
-  --measure: 100ch;
+  --measure: 120ch;
   list-style-type: none;
 }
 .reference-item a::before{
-  content: "🔗";
+  content: "🔹";
   font-family: var(--font-emoji);
 }

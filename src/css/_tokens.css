@@ -67,7 +67,8 @@
 }
 /*----------  TOKENS Utilities  ----------*/
 [data-props~="noPad"] {
-  --padding: 0;
+  /* --padding: 0; */
+  padding: 0 !important;
 }
 
 [data-props~="x:center"] {
@@ -138,6 +139,13 @@
 }
 [data-props~="noMeasure"] {
   --measure: initial;
+}
+
+[data-props~="width:full"] {
+  width: 100%;
+}
+[data-props~="width:content"] {
+  width: max-content;
 }
 
 /*=====  End of LAYOUT UTILITIES  ======*/

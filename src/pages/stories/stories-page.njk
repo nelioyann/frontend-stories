@@ -10,19 +10,18 @@ eleventyNavigation:
   parent: Home
 ---
 
-<h1 data-heading="3">
+<h1 >
     {{ title }}
 </h1>
 <p>
     {{ description }}
 </p>
-<ul data-accordion data-props="noMeasure space:l">
+<ul role="list" data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
-        {# <h2 data-heading="5">{{ category }}</h2> #}
         {% set entries = collections.stories | filterByCategory(category) %}
         <details>
-            <summary>
-                <span>
+            <summary >
+                <span data-font="sans-serif">
                     {{ category }}
                 </span>
                 <span>

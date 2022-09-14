@@ -20,56 +20,73 @@ eleventyComputed:
 
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
-{# {{ contribute.tally_url }}?slugs={{ story.slugs }}&title={{ story.name }}&category={{ story.category.name }}&description={{ story.description }} #}
-{{ story_contribution_url |log }}
 {% block aside %}
-    <p>
-        <span data-font="emoji">📅</span>
-        <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
-        <meta itemprop="dateModified" datetime="{{ story.edited }}" content="{{ story.edited }}"/>
-    </p>
-    <p>
-        <span data-font="emoji">⏱</span>
-        {{ story.description | emojiReadTime }}
-    </p>
     <p itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span data-font="emoji">👤</span>
+        <span aria-hidden="true" data-font="emoji">👤</span>
+        Written by
         <span itemprop="name">
             {{ meta.author.name }}
         </span>
         <link itemprop="url" href="{{ meta.author.url }}"/>
     </p>
+    <span>
+        <span data-font="emoji">⏱</span>
+        {{ story.description | emojiReadTime }}
+    </span>
     {# <figure>
-                                                                    {{ meta.site_url| qrcode | safe }}
-                                                                    <figcaption class="visually-hidden">Share link</figcaption>
-                                                                </figure> #}
+                {{ meta.site_url| qrcode | safe }}
+                <figcaption class="visually-hidden">Share link</figcaption>
+            </figure> #}
 {% endblock %}
 {% block main %}
-    <header
-        aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:s">
-        {# {% if emojicon %}
-                                                                                                            <span aria-hidden data-font="emoji">{{ emojicon }}</span>
-                                                                                                        {% endif %} #}
+    <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:m">
+        {% if emojicon %}
+            <span data-layout="" data-heading="3" data-props="width:full andText" aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
+        {% endif %}
         <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder noMeasure">
             <b>{{ story.name }}</b>
         </h1>
-        <link itemprop="thumbnailUrl" href="{{ story.thumbnail }}"/> {% set type = story.type.name %}
+        <div data-layout="cluster">
+            <span>
+                <span data-font="emoji">📅</span>
+                Created on
+                <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
+            </span>
+            <span>
+                <span data-font="emoji">🔁</span>
+                Last update on
+                <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
+            </span>
+            <span>
+                <span data-font="emoji">🔰</span>
+                Categorized under
+                <a href="/categories/{{ story.category.name | slugify }}" data-button="link small">{{ story.category.name }}</a>
+            </span>
+            <link itemprop="thumbnailUrl" href="{{ story.thumbnail }}"/> {% set type = story.type.name %}
+        </div>
         {% if type == "Insight" %}
-            <p data-layout="box" data-heading="6" data-props="invert noMeasure noBorder">
-                <span aria-hidden="true" data-font="emoji">ℹ</span>
-                This entry is flagged as
-                <code>Insight</code>
-                which means that it lacks research data. You can help improve this page by
-                <a href="{{ story_contribution_url }}">providing feedback</a>
-            </p>
+            <div data-layout="box" data-props="noPad">
+                <header data-layout="box" data-props="noBorder invert">
+                    <span data-font="sans-serif" data-heading="6">
+                        <span data-font="emoji" aria-hidden="true">🔭</span>
+                        Entry  marked as Insight
+                    </span>
+                </header>
+                <div data-layout="box" data-props="noBorder">
+                    <p>
+                        This entry does not have research based references. You can help improve this entry in the
+                        <a href="#contribute">contribution section</a>
+                    </p>
+                </div>
+            </div>
         {% endif %}
         <meta itemprop="description" content="{{ story.excerpt }}"/>
         <meta itemprop="teaches" content="{{ story.category.name }}"/>
     </header>
     <section aria-labelledby="summary">
         <div data-layout="stack" data-props="space:xs">
-            <h2 class="visually-hidden" id="summary" data-heading="2 anchor">
-                <a href="#summary">Summary</a>
+            <h2 id="summary" data-heading="2 anchor">
+                <a href="#summary">Overview</a>
             </h2>
             <div itemprop="articleBody" data-layout="stack" data-markdown>
                 {% renderTemplate "md, liquid", story %}
@@ -83,7 +100,7 @@ eleventyComputed:
             <h2 id="references" data-heading="anchor">
                 <a href="#references">References</a>
             </h2>
-            <ul role="list" data-layout="stack" data-props="noPad x:stretch space:xs">
+            <ul role="list" data-props="noPad">
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
@@ -93,20 +110,26 @@ eleventyComputed:
     <section aria-labelledby="contribute">
         <div data-layout="stack" data-props="space:xs">
             <h2 id="contribute" data-heading="anchor">
-                <a href="#contribute">Contribute and give feedback</a>
+                <a href="#contribute">Contribution</a>
             </h2>
-            <p>
-                This entry is flagged as Insight, indicating that it lacks research references. Please know that you can help improve
-                this page by
-                {# <b> #}
-                    <a data-link href="{{ story_contribution_url }}" target="_blank">providing feedback</a>
-                {# </b> #}
-            </p>
+            <div data-layout="box" data-props="noPad">
+                <header data-layout="box" data-props="noBorder invert">
+                    <h3 data-heading="5">
+                        <span data-font="emoji" aria-hidden="true">🗨</span>
+                        Help improve this page
+                    </h3>
+                </header>
+                <div data-layout="box" data-props="noBorder">
+                    <p>
+                        Please share ideas, suggestions, or comments via direct submission, twitter or Email
+                    </p>
+                    <div data-layout="switcher"></div>
+                </div>
+            </div>
         </div>
     </section>
     <section aria-label="Navigate" data-layout="stack">
-        <hr data-props="space:0"/>   
-
+        <hr data-props="space:0"/>
         <h2 data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other stories</h2>
         <nav
             class="story-pagination-navigation"
@@ -118,7 +141,7 @@ eleventyComputed:
                     <span>
                         <span aria-hidden="true" data-font="emoji">◀️</span>
                         Previous item</span>
-                    <span>{{ pagination.page.previous.name | truncate(40) }}</span>
+                    <b>{{ pagination.page.previous.name }}</b>
                 </a>
             {% endif %}
             {% if pagination.href.next %}
@@ -129,7 +152,7 @@ eleventyComputed:
                         </span>
                         <span aria-hidden="true" data-font="emoji">▶️</span>
                     </div>
-                    <p>{{ pagination.page.next.name | truncate(40) }}</p>
+                    <b>{{ pagination.page.next.name }}</b>
                 </a>
             {% endif %}
         </nav>
