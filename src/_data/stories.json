@@ -2,16 +2,16 @@
     {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
         "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
-        "notion_url": "https://www.notion.so/Do-not-use-radio-buttons-and-checkboxes-interchangeably-cffcf98342c54f3e986e5af360b4c946",
+        "notion_url": "https://www.notion.so/Radio-buttons-and-checkboxes-serve-different-roles-cffcf98342c54f3e986e5af360b4c946",
         "icon": "📻",
         "type": {
             "id": "OL?t",
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-09-09T23:18:00.000Z",
+        "edited": "2022-09-14T22:34:00.000Z",
         "created": "2022-08-29T12:03:00.000Z",
-        "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options.\n\n### Documentation\n#### Checkboxes\nCheckboxes are a type of HTML `input` element used to select multiple.\n\n#### Radio Buttons\nRadio buttons on the other hand are used when just on option is required out of many options. \n\n### Ethymology\n#### Checkboxes\nCheckboxes are quite litteraly boxes for checking the presented options. A common usage of checkboxes can be found in\n- Todo List \n- Checklists (used for outline a complex goal into simple steps to complete)\n\n#### Radio Buttons\nRadio Buttons are named after the *physical buttons used on older radios to select preset stations*. Whenever one button was pressed the previously selected one automatically pop out, leaving only a single pressed button.\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull.",
+        "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options. These controls are often used in online forms where their actual role can be blurry.   \n\n### Checking the boxes\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.  \n\n### Popping radios buttons\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time. \n\n### Using the power of familiarity\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” -- Jeremy Keith (Resilient Web Design)\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -56,19 +56,19 @@
         },
         "topics": [],
         "slugs": "checkboxes-or-radio-buttons",
-        "name": "Do not use radio buttons and checkboxes interchangeably"
+        "name": "Radio buttons and checkboxes serve different roles"
     },
     {
         "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
         "cover": "https://images.unsplash.com/photo-1532630571098-79a3d222b00d",
-        "notion_url": "https://www.notion.so/Do-not-use-input-placeholders-for-storing-labels-or-hints-c0e2023f93954f2e84dab5b709767163",
+        "notion_url": "https://www.notion.so/Placeholders-are-not-reliable-for-storing-labels-or-hints-c0e2023f93954f2e84dab5b709767163",
         "icon": "🔤",
         "type": {
             "id": "OL?t",
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-09-07T13:33:00.000Z",
+        "edited": "2022-09-14T13:35:00.000Z",
         "created": "2022-08-28T08:23:00.000Z",
         "description": "If you include hint text inside your form’s text boxes, many users—quite likely, the majority—will interpret the hint text as a default.",
         "status": {
@@ -115,7 +115,7 @@
         },
         "topics": [],
         "slugs": "placeholders-for-hint-text",
-        "name": "Do not use input placeholders for storing labels or hints"
+        "name": "Placeholders are not reliable for storing labels or hints"
     },
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
@@ -127,9 +127,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-07T14:06:00.000Z",
+        "edited": "2022-09-14T15:46:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
-        "description": "Page load time is the time it takes to display all the content on a web page. Depending on many factors, these load times can be significantly longer. How long are users willing to wait for a web page to load?\n\n### Perception of load times\nResearch has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece (1998). In a study, Nah investigated the tolerable waiting time for a page to load and concluded that 2 seconds was the observed average (Nah, 2004). It also revealed that a page takes on average about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone.\n\n### Impact of load times on user experience\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback.\n\n### Solution to long load times\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time.\n\n### Key takeaways\n1. The tolerable waiting time for a page to load is about 2 seconds.\n2. When loading feedback is provided, this can be as long as 10 seconds.\n3. Faster pages are perceived as more interesting than slower pages.",
+        "description": "Page load time is the time it takes to display all the content on a web page. Depending on many factors, these load times can be significantly longer. How long are users willing to wait for a web page to load?\n\n### Websites, speed and subjective appreciation \n\nResearch has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece (1998). In a study, Nah investigated the tolerable waiting time for a page to load and concluded that 2 seconds was the observed average (Nah, 2004). It also revealed that a page takes on average about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone.\n\n\n### How does page load times impact user experience?\n\n\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback. \n\n\n### How to improve user experience during long page load ?\n\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time.\n\n### Key takeaways\n1. Tolerable waiting time for a page to load is about 2 seconds.\n2. When loading feedback is provided, this can be as long as 10 seconds.\n3. Faster pages are perceived as more interesting than slower pages. ",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -186,9 +186,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-07T14:22:00.000Z",
+        "edited": "2022-09-14T22:35:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
-        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n### Key takeaways\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
+        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n### Building an emotional interaction\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n### Are users more tolerant of a computer that apologizes ?\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -245,9 +245,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-07T14:33:00.000Z",
+        "edited": "2022-09-14T22:36:00.000Z",
         "created": "2022-07-21T22:52:00.000Z",
-        "description": "Faces are fundamentally captivating to people, since most of the non-verbal information is built upon analysing and understanding others facial features. Be it in real life or through visual images, it holds true. So what happens on the Web? Would it be possible to make less attention-grabbing areas of a web page a little more interesting by including human faces?\n\n### Takeaways\n1. When banners including human faces with mutual gaze towards users, the focus of attention was localized more on the face region rather than on the text or product, weakening any memory benefits for the brand and advertising message.\n2. Whereas, banners of human faces with averted gaze increased attention to the banner overall as well as to the advertising text and product.\n### Conclusion\nInclusion of human faces with averted gaze in banner advertisements provides a promising means for marketers to increase the attention paid to such adverts, thereby enhancing memory for advertising information.",
+        "description": "Faces can inherently attract people's attention. Indeed, most non-verbal communication relies on analysing and understanding the facial features of others. Whether in real life or through visual images, this phenomenon persists. But what about on the web? Would it be possible to make the less interesting areas a little more interesting by integrating images of human faces?\n\n### To remember\nWhen banners include human faces with a mutual gaze towards the users, the focus of attention is more on the face area rather than the text or product. Which in turn weakens any memorial benefit for the brand and the advertising message (Sajjacholapunt, 2014).\nWhereas the human face banners with averted gaze increased attention to the banner as a whole as well as to the ad text and product.\n\n### How to enhance users' engagement advertising messages ?\nThe inclusion of human faces with averted gaze in banner ads is a promising way for marketers to increase attention to these ads, thereby improving recall of advertising information.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -422,9 +422,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-25T19:25:00.000Z",
+        "edited": "2022-09-14T12:18:00.000Z",
         "created": "2022-07-21T21:49:00.000Z",
-        "description": "A sitemap is a file where you provide information about the pages, videos, and their files on your site, and the relationships between them. How might a constantly visible site map affect the behavior of users seeking an information ?\n\nMostly used for improving websites ranking in search results it can also be used to explore the architecture of a website.\n\nIt has been shown that users with such context dig deeper into the site structure, make less use of the browser's Back button, and frequently make navigational movements of great hierarchical distances.\n",
+        "description": "A sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n### Sitemap and search engines\n\nSearch engines such as Google understand the structure of websites from the sitemap. \n\n### How might a visible site map affect the behavior of users seeking any information ?  \n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure. \n- make less use of the browser's Back button\n- make navigational movements of great hierarchical distances",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",

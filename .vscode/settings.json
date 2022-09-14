@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "PWA",
-        "SEO"
+        "SEO",
+        "Notion"
     ]
 }
