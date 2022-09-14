@@ -5,7 +5,7 @@
   --y-padding: var(--space-2xs);
   --x-padding: var(--space-s);
   padding: var(--y-padding) var(--x-padding);
-  /* border-radius: var(--border-radius); */
+  border-radius: var(--border-radius);
   min-height: var(--minimum-height);
   /* font-weight: bold; */
   line-height: var(--minimum-height);

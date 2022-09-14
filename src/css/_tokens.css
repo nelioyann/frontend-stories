@@ -147,5 +147,8 @@
 [data-props~="width:content"] {
   width: max-content;
 }
+[data-props~="text:center"] {
+text-align: center;
+}
 
 /*=====  End of LAYOUT UTILITIES  ======*/

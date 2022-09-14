@@ -116,14 +116,18 @@ eleventyComputed:
                 <header data-layout="box" data-props="noBorder invert">
                     <h3 data-heading="5">
                         <span data-font="emoji" aria-hidden="true">🗨</span>
-                        Help improve this page
+                        Help improve this entry
                     </h3>
                 </header>
-                <div data-layout="box" data-props="noBorder">
+                <div data-layout="box stack" data-props="noBorder">
                     <p>
                         Please share ideas, suggestions, or comments via direct submission, twitter or Email
                     </p>
-                    <div data-layout="switcher"></div>
+                    <div data-layout="switcher">
+                        <a data-button="primary" data-props="x:center" href="{{story_contribution_url}}" target="_blank"><span aria-hidden="true" data-font="emoji">🖋</span> Edit entry</a>
+                        <a data-button="primary" data-props="x:center" href="https://twitter.com/intent/tweet?text={{story.name}}&url={{meta.site_url}}{{page.url}}" target="_blank"><span aria-hidden="true" data-font="emoji">🐤</span>Mention on Twitter</a>
+                        <a data-button="primary" data-props="x:center" href="mailto:{{meta.author.email}}?subject=[FS Contribution] {{story.name}}" target="_blank"><span aria-hidden="true" data-font="emoji">✉</span>Send direct email</a>
+                    </div>
                 </div>
             </div>
         </div>
