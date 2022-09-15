@@ -9,7 +9,7 @@
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-09-14T22:34:00.000Z",
+        "edited": "2022-09-15T11:02:00.000Z",
         "created": "2022-08-29T12:03:00.000Z",
         "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options. These controls are often used in online forms where their actual role can be blurry.   \n\n### Checking the boxes\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.  \n\n### Popping radios buttons\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time. \n\n### Using the power of familiarity\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” -- Jeremy Keith (Resilient Web Design)\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".",
         "status": {
@@ -50,9 +50,9 @@
             }
         ],
         "category": {
-            "id": "594cddf0-5776-437e-a875-24cca3db4061",
-            "name": "Interaction",
-            "color": "purple"
+            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
+            "name": "Accessibility",
+            "color": "pink"
         },
         "topics": [],
         "slugs": "checkboxes-or-radio-buttons",
@@ -234,80 +234,6 @@
         "topics": [],
         "slugs": "when-computers-apologize",
         "name": "Friendly error messages can positively influence users"
-    },
-    {
-        "id": "7b28aeb1-ecc4-43a4-8d3a-e229554bfe18",
-        "cover": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a",
-        "notion_url": "https://www.notion.so/Pictures-of-faces-on-a-website-attract-attention-7b28aeb1ecc443a48d3ae229554bfe18",
-        "icon": "😄",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-09-14T22:36:00.000Z",
-        "created": "2022-07-21T22:52:00.000Z",
-        "description": "Faces can inherently attract people's attention. Indeed, most non-verbal communication relies on analysing and understanding the facial features of others. Whether in real life or through visual images, this phenomenon persists. But what about on the web? Would it be possible to make the less interesting areas a little more interesting by integrating images of human faces?\n\n### To remember\nWhen banners include human faces with a mutual gaze towards the users, the focus of attention is more on the face area rather than the text or product. Which in turn weakens any memorial benefit for the brand and the advertising message (Sajjacholapunt, 2014).\nWhereas the human face banners with averted gaze increased attention to the banner as a whole as well as to the ad text and product.\n\n### How to enhance users' engagement advertising messages ?\nThe inclusion of human faces with averted gaze in banner ads is a promising way for marketers to increase attention to these ads, thereby improving recall of advertising information.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "7622615f-e739-432b-ae3a-89637f3968f4",
-                "notion_url": "https://www.notion.so/Eye-Catcher-or-Blind-Spot-The-Effect-of-Photographs-of-Faces-on-E-Commerce-Sites-7622615fe739432bae3a89637f3968f4",
-                "citation": "Users' eyes are drawn to pictures of human faces the first time they see a page. (Riegelsberger, Sasse & McCarthy, 2002)",
-                "url": "https://www.researchgate.net/publication/220895891_Eye-Catcher_or_Blind_Spot_The_Effect_of_Photographs_of_Faces_on_E-Commerce_Sites",
-                "summary": "E-commerce still suffers from consumers' lack of trust. Most e-commerce researchers focus on building trust through cues that appeal to rational decision-making. These cues are usually implemented as text (e.g. privacy policies). In print advertising, affective attitudes and trust are commonly built by using photographs of people. On the web, however, users as well as interface design experts believe that photos impair task performance by attracting visual attention. In this study we compared online-shoppers' gaze patterns on pages with a photo of a person to pages with a text box of the same size. Our data does not support the claim that photographs decrease task performance. In fact, users spend more time looking at the text box. We found that the photograph attracts more attention than the text box on a first time view of a particular page. However, participants quickly learn the structure of a page and ignore the photo on subsequent pages. We outline further research, incorporating physiological measurements to infer user cost and affective responses",
-                "cite": "Riegelsberger, Sasse & McCarthy, 2002",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Eye-Catcher or Blind Spot? The Effect of Photographs of Faces on E-Commerce Sites",
-                "tags": []
-            },
-            {
-                "id": "676a5ff7-8b65-4dd1-99fc-819c551ef786",
-                "notion_url": "https://www.notion.so/Faces-and-Viewing-Behavior-An-Exploratory-Investigation-676a5ff78b654dd199fc819c551ef786",
-                "citation": "Djamasbi, S., Siegel, M., & Tullis, T. S. (2012). Faces and Viewing Behavior: An Exploratory Investigation. ",
-                "url": "https://aisel.aisnet.org/thci/vol4/iss3/2/",
-                "summary": "User experience is becoming increasingly important in gaining a competitive advantage in the marketplace. One way to improve user experience is by including images of faces. People are drawn to faces because paying attention to faces has played a significant role in human evolution. Hence, areas on a web page that typically receive less attention from users, such as the right side or below the fold, may benefit from the inclusion of images of faces. Although faces may be useful in attracting attention to particular places on a web page, they may also distract attention from key information. To test this possibility, we conducted two eye tracking studies in which images of faces were placed on areas of a web page that are shown to receive less attention. The results indicated that faces did not increase the number of people who viewed the areas where the faces were located, but that faces affected fixation patterns on these areas. Our results also showed that faces located above the fold of the web page negatively affected the performance of those who were completing tasks.",
-                "cite": "Djamasbi, 2012",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Faces and Viewing Behavior: An Exploratory Investigation",
-                "tags": []
-            },
-            {
-                "id": "fad21578-d4cc-4e07-92b4-0636f3d1b141",
-                "notion_url": "https://www.notion.so/The-influence-of-banner-advertisements-on-attention-and-memory-human-faces-with-averted-gaze-can-en-fad21578d4cc4e0792b40636f3d1b141",
-                "citation": "Sajjacholapunt, P., & Ball, L. J. (2014). The influence of banner advertisements on attention and memory: human faces with averted gaze can enhance advertising effectiveness. ",
-                "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00166/full",
-                "summary": "Research suggests that banner advertisements used in online marketing are often overlooked, especially when positioned horizontally on webpages. Such inattention invariably gives rise to an inability to remember advertising brands and messages, undermining the effectiveness of this marketing method. Recent interest has focused on whether human faces within banner advertisements can increase attention to the information they contain, since the gaze cues conveyed by faces can influence where observers look. We report an experiment that investigated the efficacy of faces located in banner advertisements to enhance the attentional processing and memorability of banner contents. We tracked participants' eye movements when they examined webpages containing either bottom-right vertical banners or bottom-center horizontal banners. We also manipulated facial information such that banners either contained no face, a face with mutual gaze or a face with averted gaze. We additionally assessed people's memories for brands and advertising messages. Results indicated that relative to other conditions, the condition involving faces with averted gaze increased attention to the banner overall, as well as to the advertising text and product. Memorability of the brand and advertising message was also enhanced. Conversely, in the condition involving faces with mutual gaze, the focus of attention was localized more on the face region rather than on the text or product, weakening any memory benefits for the brand and advertising message. This detrimental impact of mutual gaze on attention to advertised products was especially marked for vertical banners. These results demonstrate that the inclusion of human faces with averted gaze in banner advertisements provides a promising means for marketers to increase the attention paid to such adverts, thereby enhancing memory for advertising information.",
-                "cite": "Sajjacholapunt, 2014",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "The influence of banner advertisements on attention and memory: human faces with averted gaze can enhance advertising effectiveness",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "dab3ba03-db92-44f0-98d9-0938c4c774c7",
-            "name": "Multimedia",
-            "color": "brown"
-        },
-        "topics": [],
-        "slugs": "human-faces-attract-attention",
-        "name": "Pictures of faces on a website attract attention"
     },
     {
         "id": "d5d1d384-e160-46d6-b7d5-580694ca8e66",
