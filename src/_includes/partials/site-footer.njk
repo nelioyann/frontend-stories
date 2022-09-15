@@ -8,7 +8,7 @@
         </div>
         <nav data-layout="stack" data-props="x:start">
             <h2 data-heading="6">Links</h2>
-            <div data-layout="cluster" data-props="x:start">
+            <div data-layout="stack" data-props="x:start">
                 {%- for page in collections.webpage %}
                     <a data-link data-font="sans-serif" href="{{ page.url }}">{{ page.data.title }}</a>
                 {% endfor -%}

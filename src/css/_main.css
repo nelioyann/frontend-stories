@@ -40,11 +40,12 @@ section[aria-labelledby="summary"]{
 =            Story   styles TODO: extract         =
 =============================================*/
 .story-with-sidebar {
-  --side-width: calc(var(--space-l-xl, 2rem) * 4);
-  --content-min: 80%;
+  --side-width: calc(var(--space-l-xl, 2rem) * 5);
+  --content-min: 75%;
 }
 .story-with-sidebar aside {
   margin-bottom: var(--space);
+  margin-top: var(--space-3xl);
 }
 
 .story-with-sidebar figure svg {
@@ -74,6 +75,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   }
   [data-heading~="anchor"] a::after {
     content: "#️⃣";
+    font-family: var(--font-emoji);
     font-weight: normal;
     color: var(--gray-400);
     padding: 0 0.15em; /* to make the "#" a bigger target */
