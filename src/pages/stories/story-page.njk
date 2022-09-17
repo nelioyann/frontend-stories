@@ -37,7 +37,7 @@ eleventyComputed:
     </span> #}
 
         <h2 id="readMore" data-heading="5">Read More</h2>
-        <p>Have a look at related posts including:</p>
+        <p>Have a look at related findings</p>
         {% set entries = stories | similarStories(story.id, story.category.name) | limitTo(1) %}
         {% if entries.length == 0 %}
         {% set entries = stories | limitTo(1) %}
@@ -47,10 +47,7 @@ eleventyComputed:
                 data-props="space:2xs">
                 {%- for entry in entries %}
                     <li itemscope itemtype="http://schema.org/Article">
-                        {% set color = entry.category.color %}
-                        {% set type = entry.type.name %}
-                        {# <span>{{ entry.category.name }}</span> #}
-                        <a itemprop="url" href="/{{ entry.slug }}">{{ entry.name }}</a>
+                        <a itemprop="url" href="/stories/{{ entry.slugs }}">{{ entry.name }}</a>
                         <meta itemprop="headline" content="{{ entry.name }}"/>
                     </li>
                 {% endfor -%}
@@ -67,7 +64,7 @@ eleventyComputed:
             <span data-layout="" data-heading="3" data-props="width:full andText" aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
         {% endif %}
         <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder noMeasure">
-            <b>{{ story.name }}</b>
+            {{ story.name }}
         </h1>
         <div data-layout="cluster">
             <span>
@@ -83,7 +80,7 @@ eleventyComputed:
             <span>
                 <span data-font="emoji">🔰</span>
                 Categorized under
-                <a href="/categories/{{ story.category.name | slugify }}" data-button="link small">{{ story.category.name }}</a>
+                <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small">{{ story.category.name }}</a>
             </span>
             <link itemprop="thumbnailUrl" href="{{ story.thumbnail }}"/> {% set type = story.type.name %}
         </div>
@@ -92,12 +89,12 @@ eleventyComputed:
                 <header data-layout="box" data-props="noBorder invert">
                     <span data-font="sans-serif" data-heading="6">
                         <span data-font="emoji" aria-hidden="true">🔭</span>
-                        Entry  marked as Insight
+                        Finding  marked as Insight
                     </span>
                 </header>
-                <div data-layout="box" data-props="noBorder">
+                <div data-layout="box" data-props="noBorder noMeasure">
                     <p>
-                        This entry does not have research based references. You can help improve this entry in the
+                    Currently this finding does not include enough research based references. You can help improve its reliability in the
                         <a href="#contribute">contribution section</a>
                     </p>
                 </div>
@@ -169,7 +166,7 @@ eleventyComputed:
     </section>
     <section aria-label="Navigate" data-layout="stack">
         <hr data-props="space:0"/>
-        <h2 data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other stories</h2>
+        <h2 data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other findings</h2>
         <nav
             class="story-pagination-navigation"
             aria-labelledby="pagination-nav"

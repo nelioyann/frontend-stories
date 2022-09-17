@@ -2,9 +2,13 @@
     <div class="padded-container" data-layout="switcher" data-props="y:start">
         <div data-layout="stack" data-props="x:start space:2xs">
             <h2 data-heading="6">{{meta.site_name}}</h2>
-            <a data-link="noHover" href="#main-content" data-heading="4" data-font="emoji">{{meta.site_emoji}}
+            <p>Built with Eleventy and Notion by 
+                <a href="https://twitter.com/nelioyann">{{meta.twitter_name}}</a>
+            </p>
+            {# <a data-link="noHover" href="#main-content" data-heading="4" >
+                <span data-font="emoji" aria-hidden="true">{{meta.site_emoji}}</span>
                 <span class="visually-hidden">Back to main content</span>
-            </a>
+            </a> #}
         </div>
         <nav data-layout="stack" data-props="x:start">
             <h2 data-heading="6">Links</h2>
