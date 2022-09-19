@@ -86,11 +86,21 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
     pointer-events: auto;
   }
 
+blockquote{
+  border-left: var(--border-thick) solid var(--color-dark);
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+  width: 100%;
+}
 
 [data-markdown] {
   /* Remove width constraints from generated markdown */
   --measure: 90ch;
   --space: 1em;
+}
+
+[data-markdown] :not(h3, h4, h5){
+  color: var(--text-color-secondary);
 }
 [data-markdown] h3{
   font-size: var(--step-2);
@@ -99,9 +109,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   font-size: var(--step-1);
 }
 [data-markdown] p{
-  color: var(--gray-600);
   --space: 0.5em;
-
 }
 
 [data-markdown] > ol {
@@ -118,13 +126,16 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 }
 
 [data-markdown] code {
-  border: 1px solid var(--gray-400);
+  font-family: var(--font-monospace);
+  font-size: var(--step-0);
   background-color: var(--gray-200);
+  color: #EB5757;
+  padding: calc(var(--space-2xs) * 0.5) var(--space-2xs);
+  border-radius: var(--border-radius);
 }
 [data-markdown] > ol > li {
   flex-grow: 1;
   flex-basis: calc((var(--threshold) - 100%) * 999);
-  /* ---- */
   position: relative;
 }
 [data-markdown] > ol > li::before {
@@ -159,7 +170,6 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   display: inline-flex;
   overflow-x: auto;
   overflow-y: visible;
-  /* flex-wrap: wrap; */
 }
 .breadcrumbs-navigation li a {
   --outline-offset: 0px;
@@ -215,8 +225,9 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   overflow: hidden;
   padding: var(--space-m) var(--space-s);
   position: relative;
-  background-color: var(--gray-50);
-  border: var(--border-thin) solid var(--gray-300);
+  /* background-color: var(--gray-50); */
+  border-radius: var(--border-radius);
+  /* border: var(--border-thin) solid var(--gray-300); */
   box-shadow: var(--shadow-elevation-low);
   transition-property: box-shadow, transform;
   transition-duration: 0.3s;
@@ -261,11 +272,12 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 }
 
 /*=============================================
-=            STory Cards            =
+=            Story Cards            =
 =============================================*/
 
 .story-cards[data-layout~="grid"] {
-  --grid-min-item-size: 30rem;
+  --grid-min-item-size: 40rem;
+  --grid-placement: auto-fill;
 }
 
 .story-pagination-navigation a:only-child{
@@ -308,7 +320,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 
 [data-accordion] summary {
   padding: var(--space-s);
-  border-bottom: var(--border-thin) solid var(--gray-400);
+  border-bottom: var(--border-thin) solid var(--gray-200);
   position: relative;
   transition: background-color 0.3s ease-in-out;
 }
@@ -328,12 +340,24 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 }
 [data-accordion] summary ~ *:not(summary) {
   padding-left: var(--space-s);
+  padding-right: var(--space-s);
   padding-top: var(--space-xs);
   margin-top: var(--space-xs);
   margin-bottom: var(--space-s);
   padding-bottom: var(--space-xs);
   color: var(--gray-700);
 }
+
+details[data-sticky]{
+  position: relative;
+}
+details[data-sticky] > summary{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--color-light);
+}
+
 details > summary::-webkit-details-marker,
 details > summary::marker {
   content: "";
@@ -358,10 +382,12 @@ textarea {
 }
 
 .reference-item{
-  --measure: 120ch;
-  /* list-style-type: none; */
+  font-size: var(--step-1);
 }
-/* .reference-item a::before{
-  content: "🔹";
-  font-family: var(--font-emoji);
-} */
+
+.home-cover-section{
+  --min-height: calc(70vh - var(--header-height, 0px));
+}
+.home-cover-section p{
+  font-size: var(--step-1);
+}

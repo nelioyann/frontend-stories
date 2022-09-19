@@ -9,7 +9,7 @@ permalink: /{{story.slug}}/
 og_type: "article"
 eleventyComputed:
     title: "{{ story.name | truncate(150) }} "
-    thumbnail: "{{meta.site_url}}/images/og-images/og-{{ story.slugs }}.jpeg"
+    thumbnail: "{{meta.site_url}}/images/og-images/og-{{ story.slugs }}.png"
     emojicon: "{{ story.icon }}"
     description: "{{story.excerpt}}"
     eleventyNavigation:
@@ -43,11 +43,10 @@ eleventyComputed:
         {% set entries = stories | limitTo(1) %}
         {% endif %}
             <ul
-                
                 data-props="space:2xs">
                 {%- for entry in entries %}
                     <li itemscope itemtype="http://schema.org/Article">
-                        <a itemprop="url" href="/stories/{{ entry.slugs }}">{{ entry.name }}</a>
+                        <a data-link itemprop="url" href="/findings/{{ entry.slugs }}">{{ entry.name }}</a>
                         <meta itemprop="headline" content="{{ entry.name }}"/>
                     </li>
                 {% endfor -%}
@@ -61,7 +60,7 @@ eleventyComputed:
 {% block main %}
     <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:m">
         {% if emojicon %}
-            <span data-layout="" data-heading="3" data-props="width:full andText" aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
+            <span data-heading="3" aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
         {% endif %}
         <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder noMeasure">
             {{ story.name }}
@@ -118,7 +117,7 @@ eleventyComputed:
     <section aria-labelledby="references">
         <div data-layout="stack" data-props="space:xs">
             <h2 id="references" data-heading="anchor">
-                <a href="#references">References</a>
+                <a href="#references">References and Further Reading</a>
             </h2>
             <ul role="list" data-props="noPad">
                 {%- for reference in story.references %}
@@ -156,8 +155,7 @@ eleventyComputed:
                         <a
                             data-button="primary"
                             data-props="x:center"
-                            href="mailto:{{ meta.author.email }}?subject=[FS Contribution] {{ story.name }}"
-                            target="_blank">
+                            href="mailto:{{ meta.author.email }}?subject=[FS Contribution] {{ story.name }}">
                             <span aria-hidden="true" data-font="emoji">✉</span>Send direct email</a>
                     </div>
                 </div>
@@ -173,7 +171,7 @@ eleventyComputed:
             data-layout="switcher"
             data-props="x:between y:stretch">
             {% if pagination.href.previous %}
-                <a data-button data-layout="stack" class="previous-button" data-props="space:0" href="{{ pagination.href.previous }}">
+                <a data-button data-layout="stack" class="previous-button" data-props="space:0 x:start y:start" href="{{ pagination.href.previous }}">
                     <span>
                         <span aria-hidden="true" data-font="emoji">◀️</span>
                         Previous item</span>
@@ -181,13 +179,11 @@ eleventyComputed:
                 </a>
             {% endif %}
             {% if pagination.href.next %}
-                <a data-layout="stack" class="next-button" data-button data-props="space:0 y:end" href="{{ pagination.href.next }}">
-                    <div>
+                <a data-layout="stack" class="next-button" data-button data-props="space:0 x:start y:end" href="{{ pagination.href.next }}">
                         <span>
                             Next item
-                        </span>
                         <span aria-hidden="true" data-font="emoji">▶️</span>
-                    </div>
+                        </span>
                     <b>{{ pagination.page.next.name }}</b>
                 </a>
             {% endif %}

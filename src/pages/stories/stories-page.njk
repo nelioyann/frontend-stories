@@ -2,9 +2,9 @@
 layout: layouts/nested-page-layout.njk
 title: All Findings
 description: Findings grouped by category.
-permalink: /stories/index.html
+permalink: /findings/index.html
 eleventyNavigation:
-  key: Stories
+  key: Findings
   parent: Home
 ---
 
@@ -17,16 +17,16 @@ eleventyNavigation:
 <ul role="list" data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {% set entries = collections.stories | filterByCategory(category) %}
-        <details>
-            <summary >
-                <span data-font="sans-serif">
+        <details data-sticky open>
+            <summary data-font="sans-serif">
+                <span >
                     {{ category }}
                 </span>
                 <span>
                     ({{ entries.length }})
                 </span>
             </summary>
-            <ul class="story-cards" data-props="noPad space:m" role="list" data-layout="grid">
+            <ul class="story-cards" data-props=" space:m" role="list" data-layout="grid">
                 {% for entry in collections.stories | filterByCategory(category) %}
                     {% include "partials/story-card-entry.njk" %}
                 {% endfor %}

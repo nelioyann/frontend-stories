@@ -13,56 +13,41 @@ eleventyComputed:
         title: Home
 ---
 
-{# <article data-layout="stack" data-props="space:2xl"> #}
-<section data-layout="cover" data-props="noPad" style=" --min-height: calc(70vh - var(--header-height, 0px));">
-    <div
-        data-layout="with-sidebar "
-        data-props="centered side:right space:m "
-        style="--side-width: calc(var(--space-3xl) * 6); --space: var(--space-xl); flex-wrap: wrap-reverse; font-size: var(--step-1)">
-        <div data-layout="stack" data-props="y:center">
+<section class="home-cover-section" data-layout="cover" data-props="noPad">
+        <div data-layout="stack" data-props="y:center centered">
             <h1 data-heading="1">{{ meta.site_name }}</h1>
             <p>{{ description or meta.site_description }}</p>
-            <div>
-                <a data-button="primary" href="/stories">Browse all findings</a>
-            </div>
         </div>
-        {# <small data-layout="center box" data-props="noBorder x:end intrinsic" style="--measure: var(--side-width)">
-            {% include "svg/hero.svg" %}
-            <i data-font="sans-serif">
-                Illustration from <a rel="noopener nofollow noreferrer"  target="_blank" href="https://absurd.design">absurd.design</a>
-            </i>
-        </small> #}
-    </div>
 </section>
-<section id="stories" data-layout="stack" data-props="space:xs">
+<section id="findings" data-layout="stack" data-props="space:xs">
     <h2 data-heading="3">Browse by categories</h2>
     <nav class="categories-navigation">
         <ul role="list" data-layout="reel" data-props="noPad noBorder overflowing:noBar">
             {%- for category in collections.categoriesAndAll %}
+            {% set category_url = '' if category == 'All' else category | slugify %}
                 <li data-layout="stack" data-active="{{ 'true' if currentCategory == category else 'false' }}">
-                    <a data-props="x:center" data-button="small {{ 'active' if currentCategory == category }} tag" href="/{{ '' if category == 'All' else category | slugify }}#stories">{{ 'Latest' if category == 'All' else category }}</a>
+                    <a data-props="x:center" data-button="small {{ 'active' if currentCategory == category }} tag" href="/{{ category_url }}#findings">{{ 'Latest' if category == 'All' else category }}</a>
                 </li>
             {% endfor -%}
         </ul>
     </nav>
-    {# <div data-layout="cluster" data-props="x:between"> #}
-    <h3 data-heading="5">
+    <h3 data-heading="5" class="visually-hidden">
         {{ "Newest" if currentCategory == 'All' else currentCategory }}
     </h3>
-    {# <a data-button href="/{{ 'stories' if currentCategory == 'All' else "categories/"+currentCategory | slugify}}">View </a> #}
-    {# </div> #}
+
     <ul class="story-cards" data-layout="grid" data-props="noPad" role="list">
-        {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(3) %}
+        {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(4) %}
         {%- for entry in entries %}
             {% include "partials/story-card-entry.njk" %}
         {% endfor -%}
     </ul>
     <span>
-        {% set view_all_url = "stories" if currentCategory == "All" else "categories/"+currentCategory | slugify%}
+        {% set view_all_url = "findings" if currentCategory == "All" else "categories/"+currentCategory | slugify%}
+
         <a
-            data-button="link"
+            data-button="primary"
             href="/{{view_all_url}}">
-             View all
+             Explore {{"all" if currentCategory == "All" else "related"}} findings
         </a>
     </span>
 </section>

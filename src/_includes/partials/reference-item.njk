@@ -1,11 +1,11 @@
-<li class="reference-item" id="fn{{ loop.index0 }}">
+<li class="reference-item" data-props="noMeasure" >
     <a
-        data-button="text" rel="noopener" target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
-        <span>
+        data-link rel="noopener" target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
+        <span data-font="serif">
+            <b>{{ reference.cite if reference.cite }}</b>.
             <span>
                 {{ reference.name }}
             </span>
-            <i>({{ reference.cite if reference.cite }})</i>
         </span>
     </a>
 </li>

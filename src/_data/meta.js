@@ -11,9 +11,10 @@ module.exports = {
     author: {
         name: "Yannick Nana",
         email: "contact@yannicknana.fr",
-        url: "https://yannicknana.fr"
+        url: "https://yannicknana.fr",
+        twitter_name: "@nelioyann"
     },
     site_author: "Yannick Nana",
-    twitter_name: "@nelioyann",
+    twitter_name: "@FrontendStories",
     lang: "en"
 }

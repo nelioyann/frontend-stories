@@ -3,16 +3,12 @@
         <div data-layout="stack" data-props="x:start space:2xs">
             <h2 data-heading="6">{{meta.site_name}}</h2>
             <p>Built with Eleventy and Notion by 
-                <a href="https://twitter.com/nelioyann">{{meta.twitter_name}}</a>
+                <a href="https://twitter.com/nelioyann">{{meta.author.twitter_name}}</a>
             </p>
-            {# <a data-link="noHover" href="#main-content" data-heading="4" >
-                <span data-font="emoji" aria-hidden="true">{{meta.site_emoji}}</span>
-                <span class="visually-hidden">Back to main content</span>
-            </a> #}
         </div>
         <nav data-layout="stack" data-props="x:start">
             <h2 data-heading="6">Links</h2>
-            <div data-layout="stack" data-props="x:start">
+            <div data-layout="grid">
                 {%- for page in collections.webpage %}
                     <a data-link data-font="sans-serif" href="{{ page.url }}">{{ page.data.title }}</a>
                 {% endfor -%}

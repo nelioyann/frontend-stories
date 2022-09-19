@@ -15,6 +15,7 @@
 :root{
      --font-sans-serif: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
      --font-serif: "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times","Source Serif Pro", serif;
+     --font-monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
      --font-emoji: 'Noto Emoji', system-ui, sans-serif;
 }
 
