@@ -81,7 +81,7 @@ eleventyComputed:
                 Categorized under
                 <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small">{{ story.category.name }}</a>
             </span>
-            <link itemprop="thumbnailUrl" href="{{ story.thumbnail }}"/> {% set type = story.type.name %}
+            <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %}
         </div>
         {% if type == "Insight" %}
             <div data-layout="box" data-props="noPad">
