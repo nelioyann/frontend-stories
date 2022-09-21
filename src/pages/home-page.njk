@@ -1,6 +1,5 @@
 ---
 layout: layouts/home-layout.njk
-title: "Home | Frontend Stories"
 hero_description: A collection of findings and insights for building better user interfaces.
 pagination: 
     data: collections.categoriesAndAll
@@ -8,7 +7,7 @@ pagination:
     alias: currentCategory
 permalink: "{% if currentCategory == 'All'%}/{% else %}/{{currentCategory | slugify}}/index.html{% endif %}"
 eleventyComputed:
-    title: "{% if currentCategory == 'All'%}Home | Frontend Stories{% else %}Home - {{currentCategory}} | Frontend Stories{% endif %}"
+    title: "Home {{currentCategory}} | Frontend Stories"
     eleventyNavigation:
         key: Home
         title: Home
