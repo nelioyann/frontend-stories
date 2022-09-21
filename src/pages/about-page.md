@@ -1,5 +1,5 @@
 ---
-title: About
+title: About | Frontend Stories
 tags: 
     - webpage
 layout: layouts/nested-page-layout.njk

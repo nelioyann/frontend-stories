@@ -1,7 +1,7 @@
 ---
 layout: layouts/home-layout.njk
 title: "Home"
-description: A collection of findings and insights for building better user interfaces.
+hero_description: A collection of findings and insights for building better user interfaces.
 pagination: 
     data: collections.categoriesAndAll
     size: 1
@@ -16,7 +16,7 @@ eleventyComputed:
 <section class="home-cover-section" data-layout="cover" data-props="noPad">
         <div data-layout="stack" data-props="y:center centered">
             <h1 data-heading="1">{{ meta.site_name }}</h1>
-            <p>{{ description or meta.site_description }}</p>
+            <p>{{ hero_description or meta.site_description }}</p>
         </div>
 </section>
 <section id="findings" data-layout="stack" data-props="space:xs">

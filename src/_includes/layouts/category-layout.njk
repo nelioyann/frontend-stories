@@ -2,6 +2,6 @@
 {% block content %}
     {% include "partials/site-breadcrumbs.njk" %}
     <article data-layout="stack" data-props="space:l">
-        {{ content | safe }}
+        {% block article %}{% endblock %}
     </article>
 {% endblock %}

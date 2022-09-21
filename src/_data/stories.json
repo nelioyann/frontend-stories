@@ -105,14 +105,14 @@
     {
         "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
         "cover": "https://images.unsplash.com/photo-1532630571098-79a3d222b00d",
-        "notion_url": "https://www.notion.so/Placeholders-in-Form-Fields-are-Harmful-c0e2023f93954f2e84dab5b709767163",
+        "notion_url": "https://www.notion.so/Placeholders-in-form-fields-are-Harmful-c0e2023f93954f2e84dab5b709767163",
         "icon": "🔤",
         "type": {
             "id": "OL?t",
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-09-20T18:32:00.000Z",
+        "edited": "2022-09-20T21:54:00.000Z",
         "created": "2022-08-28T08:23:00.000Z",
         "description": "Placeholder text can cause users to forget what they need to type in, or to think that a certain field is not required. Additionally, the text is often low contrast and difficult to read.",
         "status": {
@@ -159,7 +159,7 @@
         },
         "topics": [],
         "slugs": "placeholders-for-hint-text",
-        "name": "Placeholders in form fields are Harmful"
+        "name": "Placeholders in form fields are harmful"
     },
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
@@ -341,14 +341,14 @@
     {
         "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
         "cover": "https://images.unsplash.com/photo-1591117752671-541f3495dc93",
-        "notion_url": "https://www.notion.so/Providing-a-visible-sitemap-facilitates-exploration-of-a-site-7edbc73cbef944248cccfa87b8722d64",
+        "notion_url": "https://www.notion.so/Visible-sitemaps-facilitate-website-exploration-7edbc73cbef944248cccfa87b8722d64",
         "icon": "🗺️",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-14T12:18:00.000Z",
+        "edited": "2022-09-21T00:06:00.000Z",
         "created": "2022-07-21T21:49:00.000Z",
         "description": "A sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n### Sitemap and search engines\n\nSearch engines such as Google understand the structure of websites from the sitemap. \n\n### How might a visible site map affect the behavior of users seeking any information ?  \n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure. \n- make less use of the browser's Back button\n- make navigational movements of great hierarchical distances",
         "status": {
@@ -380,6 +380,6 @@
         },
         "topics": [],
         "slugs": "sitemap-facilitates-navigation",
-        "name": "Providing a visible sitemap facilitates exploration of a site"
+        "name": "Visible sitemaps facilitate website exploration"
     }
 ]
