@@ -8,6 +8,7 @@ pagination:
     alias: currentCategory
 permalink: "{% if currentCategory == 'All'%}/{% else %}/{{currentCategory | slugify}}/index.html{% endif %}"
 eleventyComputed:
+    title: "{% if currentCategory == 'All'%}Home | Frontend Stories{% else %}Home - {{currentCategory}} | Frontend Stories{% endif %}"
     eleventyNavigation:
         key: Home
         title: Home
@@ -15,7 +16,9 @@ eleventyComputed:
 
 <section class="home-cover-section" data-layout="cover" data-props="noPad">
         <div data-layout="stack" data-props="y:center centered">
-            <h1 data-heading="1">{{ meta.site_name }}</h1>
+            <h1 data-heading="1">{{ meta.site_name }}
+                <span class="visually-hidden" >| {{currentCategory}}</span>
+            </h1>
             <p>{{ hero_description or meta.site_description }}</p>
         </div>
 </section>
