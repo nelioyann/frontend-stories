@@ -7,7 +7,8 @@ pagination:
     alias: currentCategory
 permalink: "{% if currentCategory == 'All'%}/{% else %}/{{currentCategory | slugify}}/index.html{% endif %}"
 eleventyComputed:
-    title: "Home {{currentCategory}} | Frontend Stories"
+    title: "Home - {{currentCategory}} | Frontend Stories"
+    description: "Home - {{currentCategory}} {{meta.site_description}}"
     eleventyNavigation:
         key: Home
         title: Home
