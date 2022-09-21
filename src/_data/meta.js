@@ -1,6 +1,7 @@
 module.exports = {
     name: "Frontend Stories",
     site_name: "Frontend Stories",
+    site_emoji: "🎓",
     site_description: "Frontend Stories is intended for developers and aims to facilitate access to research data, as well as facts, quotes and articles on which they can build their own web development guidelines.",
     site_url: "https://frontendstories.com",
     site_thumbnail: "https://frontendstories.com/images/thumbnail.png",
@@ -9,9 +10,11 @@ module.exports = {
     background_color: "#f4f4f5",
     author: {
         name: "Yannick Nana",
-        email: "contact@yannicknana.fr"
+        email: "contact@yannicknana.fr",
+        url: "https://yannicknana.fr",
+        twitter_name: "@nelioyann"
     },
     site_author: "Yannick Nana",
-    twitter_name: "@nelioyann",
+    twitter_name: "@FrontendStories",
     lang: "en"
 }

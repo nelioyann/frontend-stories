@@ -1,16 +1,61 @@
 [
     {
+        "id": "d5d1d384-e160-46d6-b7d5-580694ca8e66",
+        "cover": "https://images.unsplash.com/photo-1581239125393-67d48d3dd429",
+        "notion_url": "https://www.notion.so/Eye-movements-provide-insights-for-designing-better-layouts-d5d1d384e16046d6b7d5580694ca8e66",
+        "icon": "👀",
+        "type": {
+            "id": "@bzz",
+            "name": "Finding",
+            "color": "pink"
+        },
+        "edited": "2022-09-20T18:19:00.000Z",
+        "created": "2022-09-20T18:18:00.000Z",
+        "description": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.\n\n### Design recommendation\n\n- Make labels prominent and easy to navigate\n- Position form items in a vertical rather than horizontal list\n- Organize visual layouts with white space\n- Provide cohesive layouts, since users will build a mental model of your entire page to anticipate the placement of elements before they appear.\n- Provide response times of under 100ms; waiting longer than 100ms holds the perception of the user hostage while they wait for something to happen.",
+        "status": {
+            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
+            "name": "Published",
+            "color": "green"
+        },
+        "references": [
+            {
+                "id": "e9cbebc7-1535-4e70-b6da-456f8bec80d6",
+                "notion_url": "https://www.notion.so/Cognitive-Strategies-and-Eye-Movements-for-Searching-Hierarchical-Computer-Displays-e9cbebc715354e70b6da456f8bec80d6",
+                "citation": "Hornoff, A.J. and Halverson T., (2003), Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays, Proceedings of the ACM Computer Human Interaction Conference. Ft. Lauderdale, FL.",
+                "url": "https://www.researchgate.net/publication/221515762_Cognitive_strategies_and_eye_movements_for_searching_hierarchical_computer_displays",
+                "summary": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.People use a hierarchy. When a useful hierarchy is present, people can focus their attention on one level of the hierarchy at a time. They adopt a more systematic search strategy which requires fewer revisits and fewer fixations overall.\nDesign recommendation:\nSupport a multitiered search. Do not make users infer the label by studying a few items in the group. Make labels salient. Make it easy to move from label to label with a single eye movement.People can examine multiple items with a single fixation.\nDesign recommendation:\nFacilitate foveal coverage of more than one item at a time. Position relevant options next to each other, in vertical lists instead of horizontal lists. Left- justify keywords.People can navigate white space with single eye movements. Users keep their eyes on relevant screen items, and jump over stretches of white space—in this case, up to 8° of visual angle between columns—with single cascades.\nDesign recommendation:\nFollow the advice of graphic designers and organize visual layouts with whitespace. This study shows how the human visual system interacts with this design element.People anticipate visual locations. People can move their eyes well into an anticipated layout and start “searching”before the layout had even appeared.\nDesign recommendation:\nProvide consistent screen layouts that accommodate anticipatory eye movements to known locations. Consistency is critical even at the level of visual-perceptual and oculomotor processing.People prime for visual onset. When anticipating the appearance of a layout, it appears as if the perceptual-oculomotor system is primed and ready, waiting for the onset.\nDesign recommendation:\nDesign guidelines already recommend providing response times under 100 ms.Perhaps computer responses over 100 ms are annoying not only because they delay task completion and break the illusion of control, but because they effectively hold the perceptual-oculomotor system hostage",
+                "cite": "Hornoff, 2003",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays",
+                "tags": []
+            }
+        ],
+        "category": {
+            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+            "name": "Navigation",
+            "color": "yellow"
+        },
+        "topics": [],
+        "slugs": "better-ui-from-eye-movements",
+        "name": "Eye movements provide insights for designing better layouts"
+    },
+    {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
-        "notion_url": "https://www.notion.so/Do-not-use-radio-buttons-and-checkboxes-interchangeably-cffcf98342c54f3e986e5af360b4c946",
-        "icon": "☑️",
+        "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
+        "notion_url": "https://www.notion.so/Radio-buttons-and-checkboxes-serve-different-roles-cffcf98342c54f3e986e5af360b4c946",
+        "icon": "📻",
         "type": {
             "id": "OL?t",
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-09-02T07:01:00.000Z",
+        "edited": "2022-09-20T18:16:00.000Z",
         "created": "2022-08-29T12:03:00.000Z",
-        "description": "Checkboxes are used when a list of more than one choice is needed. HTML `< input >` tags are\noften used to construct them, but the form type attribute is set to checkbox.\n\nRadio buttons are used when out of many options, just one option is required to be selected. They are also created using HTML tag but type attribute is set to radio.\n\nInteractive things have perceived affordances; the way they look tells us what they do and how to use them. That’s why checkboxes are square and radio buttons are round. Their appearance isn’t just for show—it signals what to expect from them. Making a checkbox round is like labeling the Push side of a door Pull.",
+        "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options. These controls are often used in online forms where their actual role can be blurry.   \n\n### Checking the boxes\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.  \n\n### Popping radios buttons\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time. \n\n### Using the power of familiarity\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” -- Jeremy Keith (Resilient Web Design)\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -20,48 +65,56 @@
             {
                 "id": "dce4a37d-737e-4cfb-8f67-df204c5b1a01",
                 "notion_url": "https://www.notion.so/Checkboxes-Are-Never-Round-Daniel-De-Laney-dce4a37d737e4cfb8f67df204c5b1a01",
-                "citation": "",
+                "citation": "Daniel De Laney, 2015",
                 "url": "http://danieldelaney.net/checkboxes/",
                 "summary": "",
-                "cite": "",
-                "type": null,
+                "cite": "Daniel De Laney, 2015",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
                 "name": "Checkboxes Are Never Round—Daniel De Laney",
                 "tags": []
             },
             {
                 "id": "6adc6101-0962-47fa-8696-7b7e90e74842",
                 "notion_url": "https://www.notion.so/Jakob-s-Law-Laws-of-UX-6adc6101096247fa86967b7e90e74842",
-                "citation": "",
+                "citation": "Laws of UX",
                 "url": "https://lawsofux.com/en/jakobs-law/",
                 "summary": "",
-                "cite": "",
-                "type": null,
+                "cite": "Laws of UX",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
                 "name": "Jakob’s Law | Laws of UX",
                 "tags": []
             }
         ],
         "category": {
-            "id": "594cddf0-5776-437e-a875-24cca3db4061",
-            "name": "Interaction",
-            "color": "purple"
+            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
+            "name": "Accessibility",
+            "color": "pink"
         },
         "topics": [],
         "slugs": "checkboxes-or-radio-buttons",
-        "name": "Do not use radio buttons and checkboxes interchangeably"
+        "name": "Radio buttons and checkboxes serve different roles"
     },
     {
         "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
         "cover": "https://images.unsplash.com/photo-1532630571098-79a3d222b00d",
-        "notion_url": "https://www.notion.so/Do-not-use-input-placeholders-for-storing-labels-or-hints-c0e2023f93954f2e84dab5b709767163",
+        "notion_url": "https://www.notion.so/Placeholders-in-form-fields-are-Harmful-c0e2023f93954f2e84dab5b709767163",
         "icon": "🔤",
         "type": {
             "id": "OL?t",
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-08-31T21:10:00.000Z",
+        "edited": "2022-09-20T21:54:00.000Z",
         "created": "2022-08-28T08:23:00.000Z",
-        "description": "If you include hint text inside your form’s text boxes, many users—quite likely, the majority—will interpret the hint text as a default.",
+        "description": "Placeholder text can cause users to forget what they need to type in, or to think that a certain field is not required. Additionally, the text is often low contrast and difficult to read.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -71,7 +124,7 @@
             {
                 "id": "be6b2c5e-c3d1-4bfe-9908-663889bec366",
                 "notion_url": "https://www.notion.so/Don-t-Put-Hints-Inside-Text-Boxes-in-Web-Forms-UXmatters-be6b2c5ec3d14bfe9908663889bec366",
-                "citation": "",
+                "citation": "UXmatters, 2010",
                 "url": "https://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php",
                 "summary": "",
                 "cite": "UXmatters, 2010",
@@ -86,7 +139,7 @@
             {
                 "id": "8f20e222-a869-4974-b6be-0e829570b3bd",
                 "notion_url": "https://www.notion.so/input-The-Input-Form-Input-element-HTML-HyperText-Markup-Language-MDN-8f20e222a8694974b6be0e829570b3bd",
-                "citation": "",
+                "citation": "Mozilla, MDN Docs",
                 "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder",
                 "summary": "The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content.",
                 "cite": "MDN Docs",
@@ -106,7 +159,7 @@
         },
         "topics": [],
         "slugs": "placeholders-for-hint-text",
-        "name": "Do not use input placeholders for storing labels or hints"
+        "name": "Placeholders in form fields are harmful"
     },
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
@@ -118,9 +171,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-25T19:26:00.000Z",
+        "edited": "2022-09-20T19:14:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
-        "description": "Page load time is the time it takes to display all the content of a web page in a user's browser after they click on the site. Depending on various factors, loading times can be significantly long. So how long are users willing to wait for a web page to load?\n\n\nIt is proven that web pages that load faster are perceived as more interesting than those that are slower. (Ramsay, Barbesi and Preece (1998). However, many processes involving a request to a server often take a long time, and exceed the tolerable waiting time of 2 seconds highlighted by (Nah, 2004). The average page loading speed for a web page is 10.3 seconds on desktop and 27.3 seconds on mobile.In such cases, reducing page load time seems to be technically challenging. \n\nFortunately, there is also evidence to suggest that the availability of feedback extends the tolerable waiting time of Web users. Consequently, it is advantageous for browsers or websites to provide users with feedback when there is an expected wait for a page to load. This information not only reduces uncertainty about the wait, but also fills in the wait time so that Web users are less aware of how long the wait is.",
+        "description": "Page load time is the time it takes to display all the content on a web page. Depending on many factors, these load times can be significantly longer. How long are users willing to wait for a web page to load?\n\n### Websites, speed and subjective appreciation \n\nResearch has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece (1998). In a study, Nah investigated the tolerable waiting time for a page to load and concluded that it was around 2 seconds (Nah, 2004). The study also revealed that in average a page takes  about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone.\n\n\n### How does page load times impact user experience?\n\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback. \n\n\n### How to improve user experience during long page load ?\n\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time.\n\n### Key takeaways\n1. Tolerable waiting time for a page to load is about 2 seconds.\n2. When loading feedback is provided, this can be as long as 10 seconds.\n3. Faster pages are perceived as more interesting than slower pages. ",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -177,9 +230,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-31T21:05:00.000Z",
+        "edited": "2022-09-20T18:20:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
-        "description": "Interacting with a system is bound to generate some bugs. In such cases, the feedback you receive from computers may fall somewhere between a \"friendly apologetic message\" and a \"generic message. Would you be more sensitive to a computer saying sorry?\n\nResearch has found that users spent more time engaging with a system that provided emotional responses than with one providing generic feedback.\n\n### Takeaways\n1. Nass demonstrated that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997).\n2. Tzeng found that apologetic responses made users feel better about the overall interaction with the system (Tzeng, 2004).",
+        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n### Building an emotional interaction\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n### Are users more tolerant of a computer that apologizes ?\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -227,124 +280,6 @@
         "name": "Friendly error messages can positively influence users"
     },
     {
-        "id": "7b28aeb1-ecc4-43a4-8d3a-e229554bfe18",
-        "cover": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a",
-        "notion_url": "https://www.notion.so/Pictures-of-faces-on-a-website-attract-attention-7b28aeb1ecc443a48d3ae229554bfe18",
-        "icon": "😄",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-09-01T14:45:00.000Z",
-        "created": "2022-07-21T22:52:00.000Z",
-        "description": "Faces are fundamentally captivating to people, since most of the non-verbal information is built upon analysing and understanding others facial features. Be it in real life or through visual images, it holds true. So what happens on the Web? Would it be possible to make less attention-grabbing areas of a web page a little more interesting by including human faces?\n\n### Takeaways\n1. When banners including human faces with mutual gaze towards users, the focus of attention was localized more on the face region rather than on the text or product, weakening any memory benefits for the brand and advertising message.\n2. Whereas, banners of human faces with averted gaze increased attention to the banner overall as well as to the advertising text and product.\n### Conclusion\nInclusion of human faces with averted gaze in banner advertisements provides a promising means for marketers to increase the attention paid to such adverts, thereby enhancing memory for advertising information.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "7622615f-e739-432b-ae3a-89637f3968f4",
-                "notion_url": "https://www.notion.so/Eye-Catcher-or-Blind-Spot-The-Effect-of-Photographs-of-Faces-on-E-Commerce-Sites-7622615fe739432bae3a89637f3968f4",
-                "citation": "Users' eyes are drawn to pictures of human faces the first time they see a page. (Riegelsberger, Sasse & McCarthy, 2002)",
-                "url": "https://www.researchgate.net/publication/220895891_Eye-Catcher_or_Blind_Spot_The_Effect_of_Photographs_of_Faces_on_E-Commerce_Sites",
-                "summary": "E-commerce still suffers from consumers' lack of trust. Most e-commerce researchers focus on building trust through cues that appeal to rational decision-making. These cues are usually implemented as text (e.g. privacy policies). In print advertising, affective attitudes and trust are commonly built by using photographs of people. On the web, however, users as well as interface design experts believe that photos impair task performance by attracting visual attention. In this study we compared online-shoppers' gaze patterns on pages with a photo of a person to pages with a text box of the same size. Our data does not support the claim that photographs decrease task performance. In fact, users spend more time looking at the text box. We found that the photograph attracts more attention than the text box on a first time view of a particular page. However, participants quickly learn the structure of a page and ignore the photo on subsequent pages. We outline further research, incorporating physiological measurements to infer user cost and affective responses",
-                "cite": "Riegelsberger, Sasse & McCarthy, 2002",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Eye-Catcher or Blind Spot? The Effect of Photographs of Faces on E-Commerce Sites",
-                "tags": []
-            },
-            {
-                "id": "676a5ff7-8b65-4dd1-99fc-819c551ef786",
-                "notion_url": "https://www.notion.so/Faces-and-Viewing-Behavior-An-Exploratory-Investigation-676a5ff78b654dd199fc819c551ef786",
-                "citation": "Djamasbi, S., Siegel, M., & Tullis, T. S. (2012). Faces and Viewing Behavior: An Exploratory Investigation. ",
-                "url": "https://aisel.aisnet.org/thci/vol4/iss3/2/",
-                "summary": "User experience is becoming increasingly important in gaining a competitive advantage in the marketplace. One way to improve user experience is by including images of faces. People are drawn to faces because paying attention to faces has played a significant role in human evolution. Hence, areas on a web page that typically receive less attention from users, such as the right side or below the fold, may benefit from the inclusion of images of faces. Although faces may be useful in attracting attention to particular places on a web page, they may also distract attention from key information. To test this possibility, we conducted two eye tracking studies in which images of faces were placed on areas of a web page that are shown to receive less attention. The results indicated that faces did not increase the number of people who viewed the areas where the faces were located, but that faces affected fixation patterns on these areas. Our results also showed that faces located above the fold of the web page negatively affected the performance of those who were completing tasks.",
-                "cite": "Djamasbi, 2012",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Faces and Viewing Behavior: An Exploratory Investigation",
-                "tags": []
-            },
-            {
-                "id": "fad21578-d4cc-4e07-92b4-0636f3d1b141",
-                "notion_url": "https://www.notion.so/The-influence-of-banner-advertisements-on-attention-and-memory-human-faces-with-averted-gaze-can-en-fad21578d4cc4e0792b40636f3d1b141",
-                "citation": "Sajjacholapunt, P., & Ball, L. J. (2014). The influence of banner advertisements on attention and memory: human faces with averted gaze can enhance advertising effectiveness. ",
-                "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00166/full",
-                "summary": "Research suggests that banner advertisements used in online marketing are often overlooked, especially when positioned horizontally on webpages. Such inattention invariably gives rise to an inability to remember advertising brands and messages, undermining the effectiveness of this marketing method. Recent interest has focused on whether human faces within banner advertisements can increase attention to the information they contain, since the gaze cues conveyed by faces can influence where observers look. We report an experiment that investigated the efficacy of faces located in banner advertisements to enhance the attentional processing and memorability of banner contents. We tracked participants' eye movements when they examined webpages containing either bottom-right vertical banners or bottom-center horizontal banners. We also manipulated facial information such that banners either contained no face, a face with mutual gaze or a face with averted gaze. We additionally assessed people's memories for brands and advertising messages. Results indicated that relative to other conditions, the condition involving faces with averted gaze increased attention to the banner overall, as well as to the advertising text and product. Memorability of the brand and advertising message was also enhanced. Conversely, in the condition involving faces with mutual gaze, the focus of attention was localized more on the face region rather than on the text or product, weakening any memory benefits for the brand and advertising message. This detrimental impact of mutual gaze on attention to advertised products was especially marked for vertical banners. These results demonstrate that the inclusion of human faces with averted gaze in banner advertisements provides a promising means for marketers to increase the attention paid to such adverts, thereby enhancing memory for advertising information.",
-                "cite": "Sajjacholapunt, 2014",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "The influence of banner advertisements on attention and memory: human faces with averted gaze can enhance advertising effectiveness",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "dab3ba03-db92-44f0-98d9-0938c4c774c7",
-            "name": "Multimedia",
-            "color": "brown"
-        },
-        "topics": [],
-        "slugs": "human-faces-attract-attention",
-        "name": "Pictures of faces on a website attract attention"
-    },
-    {
-        "id": "d5d1d384-e160-46d6-b7d5-580694ca8e66",
-        "cover": "https://images.unsplash.com/photo-1581239125393-67d48d3dd429",
-        "notion_url": "https://www.notion.so/Users-eye-movements-provide-insights-for-designing-better-layouts-d5d1d384e16046d6b7d5580694ca8e66",
-        "icon": "👀",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-09-02T06:56:00.000Z",
-        "created": "2022-07-21T21:54:00.000Z",
-        "description": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.\n\n### Design recommendation\n\n- Make labels prominent and easy to navigate\n- Position form items in a vertical rather than horizontal list\n- Organize visual layouts with white space\n- Provide cohesive layouts, since users will build a mental model of your entire page to anticipate the placement of elements before they appear.\n- Provide response times of under 100ms; waiting longer than 100ms holds the perception of the user hostage while they wait for something to happen.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "e9cbebc7-1535-4e70-b6da-456f8bec80d6",
-                "notion_url": "https://www.notion.so/Cognitive-Strategies-and-Eye-Movements-for-Searching-Hierarchical-Computer-Displays-e9cbebc715354e70b6da456f8bec80d6",
-                "citation": "Hornoff, A.J. and Halverson T., (2003), Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays, Proceedings of the ACM Computer Human Interaction Conference. Ft. Lauderdale, FL.",
-                "url": "https://www.researchgate.net/publication/221515762_Cognitive_strategies_and_eye_movements_for_searching_hierarchical_computer_displays",
-                "summary": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.People use a hierarchy. When a useful hierarchy is present, people can focus their attention on one level of the hierarchy at a time. They adopt a more systematic search strategy which requires fewer revisits and fewer fixations overall.\nDesign recommendation:\nSupport a multitiered search. Do not make users infer the label by studying a few items in the group. Make labels salient. Make it easy to move from label to label with a single eye movement.People can examine multiple items with a single fixation.\nDesign recommendation:\nFacilitate foveal coverage of more than one item at a time. Position relevant options next to each other, in vertical lists instead of horizontal lists. Left- justify keywords.People can navigate white space with single eye movements. Users keep their eyes on relevant screen items, and jump over stretches of white space—in this case, up to 8° of visual angle between columns—with single cascades.\nDesign recommendation:\nFollow the advice of graphic designers and organize visual layouts with whitespace. This study shows how the human visual system interacts with this design element.People anticipate visual locations. People can move their eyes well into an anticipated layout and start “searching”before the layout had even appeared.\nDesign recommendation:\nProvide consistent screen layouts that accommodate anticipatory eye movements to known locations. Consistency is critical even at the level of visual-perceptual and oculomotor processing.People prime for visual onset. When anticipating the appearance of a layout, it appears as if the perceptual-oculomotor system is primed and ready, waiting for the onset.\nDesign recommendation:\nDesign guidelines already recommend providing response times under 100 ms.Perhaps computer responses over 100 ms are annoying not only because they delay task completion and break the illusion of control, but because they effectively hold the perceptual-oculomotor system hostage",
-                "cite": "Hornoff, 2003",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
-            "name": "Navigation",
-            "color": "yellow"
-        },
-        "topics": [],
-        "slugs": "better-ui-from-eye-movements",
-        "name": "Users eye movements provide insights for designing better layouts"
-    },
-    {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
         "notion_url": "https://www.notion.so/Less-than-half-of-users-take-advantage-of-breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
@@ -354,9 +289,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-31T21:00:00.000Z",
+        "edited": "2022-09-20T18:22:00.000Z",
         "created": "2022-07-21T21:53:00.000Z",
-        "description": "Breadcrumbs are textual representations of a user's location in the structure of a site. Present on blogs, it allows users to understand the location of the page in the structure of a website. Do breadcrumbs trails serve as a navigation shortcut?\n\nExample, `Home > Furniture > Chairs > Leather Chairs`.\n\n### Usage\nIn general, they are used to achieve the following goals:\n- They provide information to the user about where they are in the site\n- They provide shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n### Takeaways\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage, as well as faster completion times, fewer page views and minimal use of the back button.",
+        "description": "Breadcrumbs are textual representations of a user's location in the structure of a site. Present on blogs, it allows users to understand the location of the page in the structure of a website. Do breadcrumbs trails serve as a navigation shortcut?\n\nExample\n`Home > Furniture > Chairs > Leather Chairs`.\n\n### Usage\nIn general, they are used to achieve the following goals:\n- They provide information to the user about where they are in the site\n- They provide shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n### Takeaways\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -406,16 +341,16 @@
     {
         "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
         "cover": "https://images.unsplash.com/photo-1591117752671-541f3495dc93",
-        "notion_url": "https://www.notion.so/Providing-a-visible-sitemap-facilitates-exploration-of-a-site-7edbc73cbef944248cccfa87b8722d64",
+        "notion_url": "https://www.notion.so/Visible-sitemaps-facilitate-website-exploration-7edbc73cbef944248cccfa87b8722d64",
         "icon": "🗺️",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-08-25T19:25:00.000Z",
+        "edited": "2022-09-21T00:06:00.000Z",
         "created": "2022-07-21T21:49:00.000Z",
-        "description": "A sitemap is a file where you provide information about the pages, videos, and their files on your site, and the relationships between them. How might a constantly visible site map affect the behavior of users seeking an information ?\n\nMostly used for improving websites ranking in search results it can also be used to explore the architecture of a website.\n\nIt has been shown that users with such context dig deeper into the site structure, make less use of the browser's Back button, and frequently make navigational movements of great hierarchical distances.\n",
+        "description": "A sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n### Sitemap and search engines\n\nSearch engines such as Google understand the structure of websites from the sitemap. \n\n### How might a visible site map affect the behavior of users seeking any information ?  \n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure. \n- make less use of the browser's Back button\n- make navigational movements of great hierarchical distances",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -445,6 +380,6 @@
         },
         "topics": [],
         "slugs": "sitemap-facilitates-navigation",
-        "name": "Providing a visible sitemap facilitates exploration of a site"
+        "name": "Visible sitemaps facilitate website exploration"
     }
 ]

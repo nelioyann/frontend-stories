@@ -30,6 +30,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  // eleventyConfig.addPassthroughCopy("./src/sw.js");
   // Watch css files for changes
   eleventyConfig.addWatchTarget("./src/css/**/*.css");
   // Create collection from _data/customData.js
@@ -44,7 +45,7 @@ module.exports = function (eleventyConfig) {
       let date = new Date(story.edited).toLocaleDateString("fr-FR").split("/").reverse().join("-");
       return {
         ...story,
-        slug: `stories/${slug(story.slugs)}`,
+        slug: `findings/${slug(story.slugs)}`,
         excerpt,
         date
       };
@@ -173,7 +174,7 @@ module.exports = function (eleventyConfig) {
           if (filename.endsWith(".svg")) {
             let imageUrl = socialPreviewImagesDir + filename;
             Image(imageUrl, {
-              formats: ["jpeg"],
+              formats: ["png"],
               outputDir: "./" + socialPreviewImagesDir,
               filenameFormat: function (id, src, width, format, options) {
                 let outputFilename = filename.substring(0, filename.length - 4);

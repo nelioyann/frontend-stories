@@ -1,12 +1,13 @@
 [data-button] {
   --minimum-height: 36px;
   /* --border-radius: 0; */
+  font-family: var(--font-sans-serif);
   --y-padding: var(--space-2xs);
   --x-padding: var(--space-s);
   padding: var(--y-padding) var(--x-padding);
   border-radius: var(--border-radius);
   min-height: var(--minimum-height);
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: var(--minimum-height);
   /* text-align: center; */
   text-decoration: none;
@@ -18,7 +19,7 @@
   justify-content: var(--horizontal-alignment, flex-start);
   align-items: var(--vertical-alignment, center);
   border-style: solid;
-  border-width: var(--border-thick, 1px);
+  border-width: var(--border-thin, 1px);
   border-color: var(--color-dark);
 }
 
@@ -39,10 +40,15 @@
   --y-padding: var(--space-2xs);
   --x-padding: var(--space-2xs);
   font-weight: normal;
+}
+[data-button~="tag"]{
+  border-radius: var(--space-l);
+  padding: calc(var(--space-xs) * 0.2) var(--space-xs);
+  font-size: var(--step-0);
 
 }
 [data-button~="small"]{
-  --minimum-height: 32px;
+  --minimum-height: 20px;
   --y-padding: var(--space-2xs);
   --x-padding: var(--space-2xs);
   font-size: var(--step--1);
@@ -70,6 +76,7 @@
 } */
 
 
+
 [data-link="button"] {
   --minimum-height: 36px;
   --border-radius: 2px;
@@ -87,8 +94,9 @@
   cursor: pointer;
   display: inline-flex;
   gap: var(--space, 0);
-  justify-content: var(--horizontal-alignment, flex-start);
-  align-items: var(--vertical-alignment, center);
+
+  justify-content: var(--vertical-alignment, flex-start);
+  align-items: var(--horizontal-alignment, center);
   border-style: solid;
   border-width: var(--border-thin, 1px);
   border-color: var(--color-dark);

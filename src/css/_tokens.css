@@ -51,23 +51,17 @@
 
 
   --shadow-color: 240deg 2% 66%;
-  --shadow-elevation-low:
-    0px 0.6px 0.7px hsl(var(--shadow-color) / 0.41),
-    0px 2.1px 2.4px -2.5px hsl(var(--shadow-color) / 0.41);
-  --shadow-elevation-medium:
-    0px 0.6px 0.7px hsl(var(--shadow-color) / 0.39),
-    0px 2.8px 3.1px -1.2px hsl(var(--shadow-color) / 0.39),
-    0px 10.7px 12px -2.5px hsl(var(--shadow-color) / 0.39);
-  --shadow-elevation-high:
-    0px 0.6px 0.7px hsl(var(--shadow-color) / 0.43),
-    0px 4.7px 5.3px -0.6px hsl(var(--shadow-color) / 0.43),
-    0px 11px 12.4px -1.2px hsl(var(--shadow-color) / 0.43),
-    -0.1px 23.9px 26.9px -1.9px hsl(var(--shadow-color) / 0.43),
-    -0.2px 48px 54px -2.5px hsl(var(--shadow-color) / 0.43);
+  --shadow-elevation-low: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  --shadow-elevation-medium: 0 8px 30px rgb(0,0,0,0.12);
+
+  --text-color: var(--gray-900);
+  --text-color-secondary: var(--gray-600);
+
 }
 /*----------  TOKENS Utilities  ----------*/
 [data-props~="noPad"] {
-  --padding: 0;
+  /* --padding: 0; */
+  padding: 0 !important;
 }
 
 [data-props~="x:center"] {
@@ -138,6 +132,16 @@
 }
 [data-props~="noMeasure"] {
   --measure: initial;
+}
+
+[data-props~="width:full"] {
+  width: 100%;
+}
+[data-props~="width:content"] {
+  width: max-content;
+}
+[data-props~="text:center"] {
+text-align: center;
 }
 
 /*=====  End of LAYOUT UTILITIES  ======*/

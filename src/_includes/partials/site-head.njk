@@ -1,5 +1,5 @@
 <head>
-    {% set meta_title = meta.site_name if page.url === "/" else meta.site_name + " - " + title or " " %}
+    {% set meta_title = meta.site_name if page.url === "/" else title   %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,18 +15,18 @@
     <link rel="canonical" href="{{meta.site_url}}{{page.url}}">
     <meta property="og:image" content="{{ thumbnail or meta.site_thumbnail }}">
     <meta property="og:image:width" content="1200">
-    <meta property="og:image:width" content="628">
+    <meta property="og:image:height" content="628">
     <meta property="og:site_name" content="{{meta.site_name}}">
     <meta property="og:type" content="{{og_type or "website"}}">
     <meta property="og:url" content="{{meta.site_url}}{{page.url}}">
     <meta property="og:title" content="{{meta_title}}">
     <meta property="og:description" content="{{description or meta.site_description}}">
     <!-- Open graph - Twitter -->
-    <meta name="twitter:image" content="{{meta.site_thumbnail or thumbnail }}">
+    <meta name="twitter:image" content="{{thumbnail or meta.site_thumbnail }}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="{{meta.twitter_name}}">
+    <meta name="twitter:creator" content="{{meta.author.twitter_name}}">
     <meta name="twitter:site" content="{{meta.twitter_name}}">
-    <meta name="twitter:text:title" content="{{meta.site_name if page.url === "/" else meta.site_name + " - " + title or " "}}">
+    <meta name="twitter:text:title" content="{{meta_title}}">
     <link rel="manifest" href="/manifest.json" />
     {% if emojicon %}
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{emojicon}}</text></svg>">
@@ -35,4 +35,8 @@
     <link rel="shortcut icon" href="/images/icons/icon-32.png" type="image/x-icon" sizes="32x32" />
     <link rel="shortcut icon" href="/images/icons/icon-16.png" type="image/x-icon" sizes="16x16" />
     <meta name="author" content="{{meta.site_author}}">
+    {# {%if page.url == "/"%}
+	    <script>navigator.serviceWorker.register("sw.js")</script>
+    {% endif %} #}
+
 </head>

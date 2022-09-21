@@ -2,10 +2,10 @@
 [data-layout~="box"] {
   --padding: var(--space-s);
   display: block;
-  padding-top: var(--padding);
-  padding-left: var(--padding);
-  padding-right: var(--padding);
-  padding-bottom: var(--padding);
+  padding-top: var(--padding, var(--space-s));
+  padding-left: var(--padding, var(--space-s));
+  padding-right: var(--padding, var(--space-s));
+  padding-bottom: var(--padding, var(--space-s));
   color: var(--color-dark);
   background-color: var(--color-light);
   border: var(--border-width) solid;
@@ -139,7 +139,7 @@
   --threshold: 30rem;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space);
+  gap: var(--space, var(--space-s));
   justify-content: var(--horizontal-alignment, flex-start);
   align-items: var(--vertical-alignment, center);
 }

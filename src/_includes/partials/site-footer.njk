@@ -1,24 +1,26 @@
 <footer class="site-footer" data-layout="switcher" data-props="invert">
     <div class="padded-container" data-layout="switcher" data-props="y:start">
-        <div data-layout="stack" data-props="x:start">
-            <h2 data-heading="5">About</h2>
-            <p>Frontend Stories 2022 ©</p>
-        </div>
-        <div data-layout="stack" data-props="x:start">
-            <h2 data-heading="5">Categories</h2>
-            <div data-layout="cluster">
-                {%- for category in collections.categories %}
-                    <a href="/categories/{{ category | slugify }}" data-tag>{{ category }}</a>
-                {% endfor -%}
-            </div>
+        <div data-layout="stack" data-props="x:start space:2xs">
+            <h2 data-heading="6">{{meta.site_name}}</h2>
+            <p>Built with Eleventy and Notion by 
+                <a href="https://twitter.com/nelioyann">{{meta.author.twitter_name}}</a>
+            </p>
         </div>
         <nav data-layout="stack" data-props="x:start">
-            <h2 data-heading="5">Links</h2>
-            <div data-layout="stack" data-props="x:start">
+            <h2 data-heading="6">Links</h2>
+            <div data-layout="grid">
                 {%- for page in collections.webpage %}
-                    <a data-link href="{{ page.url }}">{{ page.data.title }}</a>
+                    <a data-link data-font="sans-serif" href="{{ page.url }}">{{ page.data.title }}</a>
                 {% endfor -%}
             </div>
         </nav>
+        <div data-layout="stack" data-props="x:start">
+            <h2 data-heading="6">Categories</h2>
+            <div data-layout="cluster">
+                {%- for category in collections.categories %}
+                    <a href="/categories/{{ category | slugify }}" data-button="tag small">{{ category }}</a>
+                {% endfor -%}
+            </div>
+        </div>
     </div>
 </footer>

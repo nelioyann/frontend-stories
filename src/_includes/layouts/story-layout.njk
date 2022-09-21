@@ -1,11 +1,11 @@
 {% block content %}
     {% include "partials/site-breadcrumbs.njk" %}
-    <div class="story-with-sidebar" data-layout="with-sidebar" data-props="side:left">
-        <aside>
-            {% block aside %}{% endblock %}
-        </aside>
-        <article data-layout="stack" style="--space: calc(var(--space-xl) * 2);">
+    <div class="story-page-sidebar" data-layout="with-sidebar" data-props="side:right space:l">
+        <article itemscope itemtype="http://schema.org/Article" itemref="story-details" data-layout="stack" style="--space: calc(var(--space-xl) * 2);">
             {% block main %}{% endblock %}
         </article>
+        <aside id="story-details">
+            {% block aside %}{% endblock %}
+        </aside>
     </div>
 {% endblock %}
