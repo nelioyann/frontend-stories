@@ -4,9 +4,11 @@ tags:
     - webpage
 layout: layouts/nested-page-layout.njk
 permalink: /about.html
-eleventyNavigation:
-  key: About
-  parent: Home
+eleventyComputed:
+  description: "About Frontend Stories. {{meta.site_description}}"
+  eleventyNavigation:
+    key: About
+    parent: Home
 ---
 
 # About

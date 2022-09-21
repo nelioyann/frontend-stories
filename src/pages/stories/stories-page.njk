@@ -1,11 +1,13 @@
 ---
 layout: layouts/nested-page-layout.njk
-title: All Findings
+title: All findings 
 description: Findings grouped by category.
 permalink: /findings/index.html
-eleventyNavigation:
-  key: Findings
-  parent: Home
+eleventyComputed:
+    description: "Explore findings from Frontend Stories. {{meta.site_description}}"
+    eleventyNavigation:
+    key: Findings
+    parent: Home
 ---
 
 <h1 >

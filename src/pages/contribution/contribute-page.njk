@@ -4,9 +4,11 @@ tags:
     - webpage
 layout: layouts/nested-page-layout.njk
 permalink: /contribute.html
-eleventyNavigation:
-  key: Contribute
-  parent: Home
+eleventyComputed:
+    description: "Contribute to Frontend Stories. {{meta.site_description}}"
+    eleventyNavigation:
+    key: Contribute
+    parent: Home
 ---
 
 <header>
