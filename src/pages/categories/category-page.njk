@@ -1,5 +1,5 @@
 ---
-layout: layouts/category-layout.njk
+layout: layouts/base-layout.njk
 pagination:
   data: collections.categories
   size: 1
@@ -14,7 +14,7 @@ eleventyComputed:
     title: "{{category}}"
     parent: Stories
 ---
-
+{% extends "layouts/category-layout.njk" %}
 {% block article %}
   <h1 data-heading="3">
     {{ category }}
