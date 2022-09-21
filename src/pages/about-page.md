@@ -3,7 +3,7 @@ title: About | Frontend Stories
 tags: 
     - webpage
 layout: layouts/nested-page-layout.njk
-permalink: /about.html
+permalink: /about
 eleventyComputed:
   description: "About Frontend Stories. {{meta.site_description}}"
   eleventyNavigation:
