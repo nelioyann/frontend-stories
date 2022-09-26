@@ -30,12 +30,6 @@ eleventyComputed:
             <label for="description">Description</label>
             <textarea rows="4" maxlength="500" type="text" id="description" name="description" required="true"></textarea>
             <small>Short description under 500 characters</small>
-            <label for="category">Category</label>
-            <select name="category" id="category">
-                {%- for category in collections.categories %}
-                    <option value="{{ category }}">{{ category }}</option>
-                {% endfor %}
-            </select>
             <button data-button="primary">Submit</button>
         </form>
     </div>

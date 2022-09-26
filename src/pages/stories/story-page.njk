@@ -67,17 +67,17 @@ eleventyComputed:
         </h1>
         <div data-layout="cluster">
             <span>
-                <span data-font="emoji">📅</span>
+                <span aria-hidden="true" data-font="emoji">📅</span>
                 Created on
                 <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
             </span>
             <span>
-                <span data-font="emoji">🔁</span>
+                <span aria-hidden="true" data-font="emoji">🔁</span>
                 Last update on
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </span>
             <span>
-                <span data-font="emoji">🔰</span>
+                <span aria-hidden="true" data-font="emoji">🔰</span>
                 Categorized under
                 <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small">{{ story.category.name }}</a>
             </span>
