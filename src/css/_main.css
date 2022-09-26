@@ -28,9 +28,9 @@ main {
   width: 100%;
   min-height: var(--header-height);
 }
-.header a{
+/* .header a{
   text-transform: uppercase ;
-}
+} */
 section[aria-labelledby="summary"]{
   font-size: var(--step-1);
 
@@ -95,12 +95,14 @@ blockquote{
 
 [data-markdown] {
   /* Remove width constraints from generated markdown */
-  --measure: 90ch;
   --space: 1em;
 }
 
 [data-markdown] :not(h3, h4, h5){
   color: var(--text-color-secondary);
+}
+[data-markdown] h3,[data-markdown] h4{
+  --measure: 60ch;
 }
 [data-markdown] h3{
   font-size: var(--step-2);
@@ -110,6 +112,7 @@ blockquote{
 }
 [data-markdown] p{
   --space: 0.5em;
+  
 }
 
 [data-markdown] > ol {

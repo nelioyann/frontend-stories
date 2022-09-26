@@ -1,49 +1,5 @@
 [
     {
-        "id": "d5d1d384-e160-46d6-b7d5-580694ca8e66",
-        "cover": "https://images.unsplash.com/photo-1581239125393-67d48d3dd429",
-        "notion_url": "https://www.notion.so/Eye-movements-provide-insights-for-designing-better-layouts-d5d1d384e16046d6b7d5580694ca8e66",
-        "icon": "👀",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-09-20T18:19:00.000Z",
-        "created": "2022-09-20T18:18:00.000Z",
-        "description": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.\n\n### Design recommendation\n\n- Make labels prominent and easy to navigate\n- Position form items in a vertical rather than horizontal list\n- Organize visual layouts with white space\n- Provide cohesive layouts, since users will build a mental model of your entire page to anticipate the placement of elements before they appear.\n- Provide response times of under 100ms; waiting longer than 100ms holds the perception of the user hostage while they wait for something to happen.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "e9cbebc7-1535-4e70-b6da-456f8bec80d6",
-                "notion_url": "https://www.notion.so/Cognitive-Strategies-and-Eye-Movements-for-Searching-Hierarchical-Computer-Displays-e9cbebc715354e70b6da456f8bec80d6",
-                "citation": "Hornoff, A.J. and Halverson T., (2003), Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays, Proceedings of the ACM Computer Human Interaction Conference. Ft. Lauderdale, FL.",
-                "url": "https://www.researchgate.net/publication/221515762_Cognitive_strategies_and_eye_movements_for_searching_hierarchical_computer_displays",
-                "summary": "The eye tracking data reveal a number interesting patterns of visual search behavior which lend themselves to a number of specific design recommendations.People use a hierarchy. When a useful hierarchy is present, people can focus their attention on one level of the hierarchy at a time. They adopt a more systematic search strategy which requires fewer revisits and fewer fixations overall.\nDesign recommendation:\nSupport a multitiered search. Do not make users infer the label by studying a few items in the group. Make labels salient. Make it easy to move from label to label with a single eye movement.People can examine multiple items with a single fixation.\nDesign recommendation:\nFacilitate foveal coverage of more than one item at a time. Position relevant options next to each other, in vertical lists instead of horizontal lists. Left- justify keywords.People can navigate white space with single eye movements. Users keep their eyes on relevant screen items, and jump over stretches of white space—in this case, up to 8° of visual angle between columns—with single cascades.\nDesign recommendation:\nFollow the advice of graphic designers and organize visual layouts with whitespace. This study shows how the human visual system interacts with this design element.People anticipate visual locations. People can move their eyes well into an anticipated layout and start “searching”before the layout had even appeared.\nDesign recommendation:\nProvide consistent screen layouts that accommodate anticipatory eye movements to known locations. Consistency is critical even at the level of visual-perceptual and oculomotor processing.People prime for visual onset. When anticipating the appearance of a layout, it appears as if the perceptual-oculomotor system is primed and ready, waiting for the onset.\nDesign recommendation:\nDesign guidelines already recommend providing response times under 100 ms.Perhaps computer responses over 100 ms are annoying not only because they delay task completion and break the illusion of control, but because they effectively hold the perceptual-oculomotor system hostage",
-                "cite": "Hornoff, 2003",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Cognitive Strategies and Eye Movements for Searching Hierarchical Computer Displays",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
-            "name": "Navigation",
-            "color": "yellow"
-        },
-        "topics": [],
-        "slugs": "better-ui-from-eye-movements",
-        "name": "Eye movements provide insights for designing better layouts"
-    },
-    {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
         "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
         "notion_url": "https://www.notion.so/Radio-buttons-and-checkboxes-serve-different-roles-cffcf98342c54f3e986e5af360b4c946",
@@ -103,65 +59,6 @@
         "name": "Radio buttons and checkboxes serve different roles"
     },
     {
-        "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
-        "cover": "https://images.unsplash.com/photo-1532630571098-79a3d222b00d",
-        "notion_url": "https://www.notion.so/Placeholders-in-form-fields-are-Harmful-c0e2023f93954f2e84dab5b709767163",
-        "icon": "🔤",
-        "type": {
-            "id": "OL?t",
-            "name": "Insight",
-            "color": "green"
-        },
-        "edited": "2022-09-20T21:54:00.000Z",
-        "created": "2022-08-28T08:23:00.000Z",
-        "description": "Placeholder text can cause users to forget what they need to type in, or to think that a certain field is not required. Additionally, the text is often low contrast and difficult to read.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "be6b2c5e-c3d1-4bfe-9908-663889bec366",
-                "notion_url": "https://www.notion.so/Don-t-Put-Hints-Inside-Text-Boxes-in-Web-Forms-UXmatters-be6b2c5ec3d14bfe9908663889bec366",
-                "citation": "UXmatters, 2010",
-                "url": "https://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php",
-                "summary": "",
-                "cite": "UXmatters, 2010",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "Don’t Put Hints Inside Text Boxes in Web Forms :: UXmatters",
-                "tags": []
-            },
-            {
-                "id": "8f20e222-a869-4974-b6be-0e829570b3bd",
-                "notion_url": "https://www.notion.so/input-The-Input-Form-Input-element-HTML-HyperText-Markup-Language-MDN-8f20e222a8694974b6be0e829570b3bd",
-                "citation": "Mozilla, MDN Docs",
-                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder",
-                "summary": "The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content.",
-                "cite": "MDN Docs",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "<input>: The Input (Form Input) element - HTML: HyperText Markup Language | MDN",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
-            "name": "Accessibility",
-            "color": "pink"
-        },
-        "topics": [],
-        "slugs": "placeholders-for-hint-text",
-        "name": "Placeholders in form fields are harmful"
-    },
-    {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d",
         "notion_url": "https://www.notion.so/Users-can-tolerate-about-2-seconds-for-a-page-to-load-728073c284d043d58a4403c7f479d72a",
@@ -171,9 +68,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-20T19:14:00.000Z",
+        "edited": "2022-09-26T10:12:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
-        "description": "Page load time is the time it takes to display all the content on a web page. Depending on many factors, these load times can be significantly longer. How long are users willing to wait for a web page to load?\n\n### Websites, speed and subjective appreciation \n\nResearch has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece (1998). In a study, Nah investigated the tolerable waiting time for a page to load and concluded that it was around 2 seconds (Nah, 2004). The study also revealed that in average a page takes  about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone.\n\n\n### How does page load times impact user experience?\n\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback. \n\n\n### How to improve user experience during long page load ?\n\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time.\n\n### Key takeaways\n1. Tolerable waiting time for a page to load is about 2 seconds.\n2. When loading feedback is provided, this can be as long as 10 seconds.\n3. Faster pages are perceived as more interesting than slower pages. ",
+        "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user. Studies have shown that are users are willing to wait between 2 to 10 seconds for a page to load.\n\n\n### Speed impacts how interesting websites are perceived\n\n#### Faster websites are more apprecied\n\nWebsites that are slow often induce frustration, especially when there is only a blank screen to stare at. In fact, research has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece, 1998). \n\nIn a study, Nah found that the tolerable waiting time for a page to load was 2 seconds (Nah, 2004). At the time it also found that a page took on average about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone. Thus concluding that your average website take more time to load than what we supposedly tolerate.\n\n\n#### Slow load times\n\n\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback. \n\n\n### Solving long page load\n\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time. \nWhen presented with an estimation of an ongoing process, users are able to alleviate this wait time by engaging in other activities. Without a feedback users are left to guess at what point a process will conclude.\n\n### Key takeaways\n1. Faster pages are perceived as more interesting than slower pages. \n2. When loading feedback is provided,it reaches 10 seconds.\n3. Tolerable waiting time for a page to load is about 2 seconds.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -223,14 +120,14 @@
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1",
-        "notion_url": "https://www.notion.so/Friendly-error-messages-can-positively-influence-users-af855c922a3b45ceb4ea0a8156daf7b9",
+        "notion_url": "https://www.notion.so/Friendly-error-messages-positively-influence-users-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-20T18:20:00.000Z",
+        "edited": "2022-09-26T11:34:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
         "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n### Building an emotional interaction\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n### Are users more tolerant of a computer that apologizes ?\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
         "status": {
@@ -277,7 +174,7 @@
         },
         "topics": [],
         "slugs": "when-computers-apologize",
-        "name": "Friendly error messages can positively influence users"
+        "name": "Friendly error messages positively influence users"
     },
     {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
