@@ -20,8 +20,6 @@
           url('../fonts/atkinson-hyperlegible-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
    }
 
-
-
 :root{
      --font-sans-serif: 'Atkinson Hyperlegible', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
      --font-serif: "Apple Garamond",  "Times New Roman", "Baskerville", "Droid Serif", "Times","Source Serif Pro", serif;

@@ -15,7 +15,7 @@ eleventyComputed:
     eleventyNavigation:
         key: "{{story.id}}"
         title: "{{story.name}}"
-        parent: Stories
+        parent: Findings
 ---
 
 {% extends "layouts/story-layout.njk" %}
@@ -84,9 +84,10 @@ eleventyComputed:
     <section aria-labelledby="references">
         <div data-layout="stack" data-props="space:xs">
             <h2 id="references" data-heading="anchor">
-                <a href="#references">References and Further Reading</a>
+                <a href="#references">References</a>
             </h2>
-            <ul role="list" data-props="noPad">
+            <p>Here you can find a list of references to dive deeper on the subject.</p>
+            <ul >
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}

@@ -122,3 +122,7 @@
     color: var(--color-light);
   }
 /* } */
+
+[data-button~="tag"] {
+  border-radius: var(--space-l);
+}
