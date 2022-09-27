@@ -2,14 +2,14 @@
     <div class="padded-container" data-layout="switcher" data-props="y:start">
         <div data-layout="stack" data-props="x:start">
             <h2 data-heading="6">{{meta.site_name}}</h2>
-            <p data-font="sans-serif">Built using Eleventy and Notion, hosted on Netlify.
+            <p>Built using Eleventy and Notion, hosted on Netlify.
             </p>
         </div>
         <nav data-layout="stack" data-props="x:start">
             <h2 data-heading="6">Links</h2>
             <div data-layout="grid">
                 {%- for page in collections.webpage %}
-                    <a data-link data-font="sans-serif" href="{{ page.url }}">{{ page.data.title }}</a>
+                    <a data-link href="{{ page.url }}">{{ page.data.title }}</a>
                 {% endfor -%}
             </div>
         </nav>
