@@ -12,7 +12,7 @@ eleventyComputed:
 ---
 
 # About Frontend Stories
-### Goal
+## Goal
 
 The aim of Frontend Stories is to facilitate access to research data, as well as facts, quotes and articles on which developers can build their own development guidelines.
 
@@ -20,19 +20,19 @@ It offers insights to address common concerns related to subjects such as how to
 
 It does not aim to provide definitive answers such as “always do this or never do that” but instead provide various references (mostly scientific) for the reader to find his own solution while taking into account context and needs.
 
-### The project
-#### Stack
+## Development
+### Stack
 This project was built using a [JAMSTACK](https://jamstack.wtf/#what-is-jamstack) architecture.
 - [Notion](https://notion.so/) - Headless CMS
 - [Eleventy](https://www.11ty.dev/) - Static Site Generator
 - [Netlify](https://www.netlify.com/) - Hosting
 
-#### Overview
-- Content resides in a Notion database and is made available via the Notion API.
-- Eleventy, *a simpler static site generator* generates our static assets (HTML + CSS + Images).
-- Hosting is done via Netlify, with a Github integration.
-- New contribution are made in a Tally form, and automatically added to the Notion database.
-- Entries with a tag of `Published` will then be included here 
+Here is an overview of how entries are added
+1. Content resides in a Notion database and is made available via the Notion API.
+2. Eleventy, a simpler static site generator, generates our static assets (HTML + CSS + Images).
+3. Hosting is done via Netlify, with a Github integration.
+4. New contribution are made in a Tally form, and automatically added to the Notion database.
+5. Entries with a tag of `Published` will then be included here 
 
 <!-- ---
 

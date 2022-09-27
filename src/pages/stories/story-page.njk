@@ -20,44 +20,11 @@ eleventyComputed:
 
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
-{% block aside %}
-    <div data-layout="stack" data-props="space:s">
-
-    {# <p itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span aria-hidden="true" data-font="emoji">👤</span>
-        Written by
-        <span itemprop="name">
-            {{ meta.author.name }}
-        </span>
-        <link itemprop="url" href="{{ meta.author.url }}"/>
-    </p> #}
-    {# <span data-props="space:0">
-        <span data-font="emoji">⏱</span>
-        {{ story.description | emojiReadTime }}
-    </span> #}
-
-        <h2 id="readMore" data-heading="5">Read More</h2>
-        <p>Have a look at related findings</p>
-        {% set entries = stories | similarStories(story.id, story.category.name) | limitTo(1) %}
-        {% if entries.length == 0 %}
-        {% set entries = stories | limitTo(1) %}
-        {% endif %}
-            <ul
-                data-props="space:2xs">
-                {%- for entry in entries %}
-                    <li itemscope itemtype="http://schema.org/Article">
-                        <a data-link itemprop="url" href="/findings/{{ entry.slugs }}">{{ entry.name }}</a>
-                        <meta itemprop="headline" content="{{ entry.name }}"/>
-                    </li>
-                {% endfor -%}
-            </ul>
-    </div>
-    {# <figure>
+{# <figure>
                         {{ meta.site_url| qrcode | safe }}
                         <figcaption class="visually-hidden">Share link</figcaption>
                     </figure> #}
-{% endblock %}
-{% block main %}
+{% block article %}
     <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:m">
         {% if emojicon %}
             <span data-heading="3" aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
@@ -67,17 +34,17 @@ eleventyComputed:
         </h1>
         <div data-layout="cluster">
             <span>
-                <span data-font="emoji">📅</span>
+                <span aria-hidden="true" data-font="emoji">📅</span>
                 Created on
                 <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
             </span>
             <span>
-                <span data-font="emoji">🔁</span>
+                <span aria-hidden="true" data-font="emoji">🔁</span>
                 Last update on
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </span>
             <span>
-                <span data-font="emoji">🔰</span>
+                <span aria-hidden="true" data-font="emoji">🔰</span>
                 Categorized under
                 <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small">{{ story.category.name }}</a>
             </span>
@@ -86,7 +53,7 @@ eleventyComputed:
         {% if type == "Insight" %}
             <div data-layout="box" data-props="noPad">
                 <header data-layout="box" data-props="noBorder invert">
-                    <span data-font="sans-serif" data-heading="6">
+                    <span data-heading="6">
                         <span data-font="emoji" aria-hidden="true">🔭</span>
                         Finding  marked as Insight
                     </span>
@@ -144,19 +111,18 @@ eleventyComputed:
                     </p>
                     <div data-layout="switcher" style="--threshold: 78ch;">
                         <a data-button="primary" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
-                            <span aria-hidden="true" data-font="emoji">🖋</span>
-                            Edit entry</a>
+                            Submit an idea</a>
                         <a
                             data-button="primary"
                             data-props="x:center"
                             href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
                             target="_blank">
-                            <span aria-hidden="true" data-font="emoji">🐤</span>Mention on Twitter</a>
+                            Mention on Twitter</a>
                         <a
                             data-button="primary"
                             data-props="x:center"
                             href="mailto:{{ meta.author.email }}?subject=[FS Contribution] {{ story.name }}">
-                            <span aria-hidden="true" data-font="emoji">✉</span>Send direct email</a>
+                            Email me</a>
                     </div>
                 </div>
             </div>
