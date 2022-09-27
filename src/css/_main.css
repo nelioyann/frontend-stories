@@ -27,39 +27,23 @@ main {
 .header {
   width: 100%;
   min-height: var(--header-height);
+  border-bottom: var(--border-thin) solid var(--gray-200);
+  background-color: var(--color-light);
 }
-/* .header a{
-  text-transform: uppercase ;
-} */
+
 section[aria-labelledby="summary"]{
   font-size: var(--step-1);
 
 }
 
-/*=============================================
-=            Story   styles TODO: extract         =
-=============================================*/
-.story-page-sidebar {
-  --side-width: calc(var(--space-l-xl, 2rem) * 6);
-  --content-min: 70%;
-}
-.story-page-sidebar h1,
-.story-page-sidebar h2{
-  font-weight: 500;
-}
-.story-page-sidebar aside {
-  margin-bottom: var(--space);
-  margin-top: var(--space-3xl);
-}
 
-.story-page-sidebar figure svg {
+/* figure svg {
   width: calc(var(--space-2xl) * 3);
   height: calc(var(--space-2xl) * 3);
   padding: var(--space-s);
   border-radius: var(--space-m);
-}
+} */
 
-/*=====  End of Story  ======*/
 
 /*=============================================
 =            Anchor Heading            =
@@ -78,7 +62,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
     pointer-events: none;
   }
   [data-heading~="anchor"] a::after {
-    content: "#️⃣";
+    content: "#";
     font-family: var(--font-emoji);
     font-weight: normal;
     color: var(--gray-400);
@@ -97,10 +81,10 @@ blockquote{
   /* Remove width constraints from generated markdown */
   --space: 1em;
 }
-
+/* 
 [data-markdown] :not(h3, h4, h5){
   color: var(--text-color-secondary);
-}
+} */
 [data-markdown] h3,[data-markdown] h4{
   --measure: 60ch;
 }
@@ -228,9 +212,7 @@ blockquote{
   overflow: hidden;
   padding: var(--space-m) var(--space-s);
   position: relative;
-  /* background-color: var(--gray-50); */
   border-radius: var(--border-radius);
-  /* border: var(--border-thin) solid var(--gray-300); */
   box-shadow: var(--shadow-elevation-low);
   transition-property: box-shadow, transform;
   transition-duration: 0.3s;
@@ -325,20 +307,23 @@ blockquote{
   padding: var(--space-s);
   border-bottom: var(--border-thin) solid var(--gray-200);
   position: relative;
+  display: flex;
+  align-items: center;
   transition: background-color 0.3s ease-in-out;
 }
 [data-accordion] summary:hover {
   background-color: var(--gray-200);
 }
-[data-accordion] summary::before {
+[data-accordion] summary::after {
   content: "▶";
-  font-family: var(--font-emoji);
+  filter: grayscale(1);
+  margin-left: auto;
   display: inline-block;
   font-size: var(--step-1);
   transform-origin: center;
   transition: transform 0.3s ease-in-out;
 }
-[data-accordion] details[open] > summary::before {
+[data-accordion] details[open] > summary::after {
   transform: rotate(90deg);
 }
 [data-accordion] summary ~ *:not(summary) {
