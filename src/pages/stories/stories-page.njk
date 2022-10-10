@@ -14,19 +14,16 @@ eleventyComputed:
     {{ title }}
 </h1>
 <p>
-    {{ page_description }}
+    {{ collections.stories.length }} referenced articles on front-end development covering case studies, resarch papers, guidelines and best practices, focused on {{collections.categories | join(", ")}} and more.
 </p>
 <ul role="list"  data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {% set entries = collections.stories | filterByCategory(category) %}
-        <details data-sticky open>
+        <details data-sticky {%if loop.index <= 5 %}open{%endif%}>
             <summary>
                 <span>
                     {{ category }}
                 </span>
-                {# <span>
-                    ({{ entries.length }})
-                </span> #}
             </summary>
             <ul class="story-cards" data-props="space:s" role="list" data-layout="grid">
                 {% for entry in collections.stories | filterByCategory(category) %}

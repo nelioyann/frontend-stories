@@ -25,7 +25,7 @@ eleventyComputed:
                         <figcaption class="visually-hidden">Share link</figcaption>
                     </figure> #}
 {% block article %}
-    <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:m">
+    <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:m x:start">
         {% if emojicon %}
             <span data-heading="3" aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
         {% endif %}
@@ -58,7 +58,7 @@ eleventyComputed:
                         Finding  marked as Insight
                     </span>
                 </header>
-                <div data-layout="box" data-props="noBorder noMeasure">
+                <div data-layout="box" data-props="noBorder">
                     <p>
                     Currently this finding does not include enough research based references. You can help improve its reliability in the
                         <a href="#contribute">contribution section</a>
@@ -87,7 +87,7 @@ eleventyComputed:
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul >
+            <ul>
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
@@ -111,19 +111,19 @@ eleventyComputed:
                         Please share ideas, suggestions, or comments via direct submission, twitter or Email
                     </p>
                     <div data-layout="switcher" style="--threshold: 78ch;">
-                        <a data-button="primary" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
+                        <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
                             Submit an idea</a>
                         <a
-                            data-button="primary"
+                            data-button="outline"
                             data-props="x:center"
                             href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
                             target="_blank">
                             Mention on Twitter</a>
-                        <a
-                            data-button="primary"
+                        {# <a
+                            data-button="outline"
                             data-props="x:center"
                             href="mailto:{{ meta.author.email }}?subject=[FS Contribution] {{ story.name }}">
-                            Email me</a>
+                            Email me</a> #}
                     </div>
                 </div>
             </div>

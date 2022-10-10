@@ -1,9 +1,11 @@
-<li itemscope itemtype="http://schema.org/Article" class="story-card" data-props="noMeasure">
-    {% set color = entry.category.color %}
-    {% set type = entry.type.name %}
-    <span class="story-card__cover" data-color="{{ color }}" aria-hidden="true">
-        <span data-font="emoji" aria-hidden="true">{{ entry.icon if entry.icon else '📄' }}</span>
-    </span>
-    <a itemprop="url" data-link="noHover" class="story-card__title" href="/{{ entry.slug }}">{{ entry.name }}</a>
-    <meta itemprop="headline" content="{{ entry.name }}"/>
+<li>
+    <article itemscope itemtype="http://schema.org/Article" class="story-card" data-props="noMeasure">
+        <header>
+            <h3 data-heading="5">
+                <a itemprop="url" data-link class="story-card__title" href="/{{ entry.slug }}">{{ entry.name }}</a>
+            </h3>
+        </header>
+        <p>{{ entry.excerpt }}</p>
+        <meta itemprop="headline" content="{{ entry.name }}"/>
+    </article>
 </li>
