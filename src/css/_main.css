@@ -1,9 +1,8 @@
-/* TODO: Adapt accross website */
 input,
 button,
 a {
   transition-duration: var(--transition-duration, 300ms);
-  transition-timing-function: var(--bezier-swift);
+  transition-timing-function: var(--bezier-snappy);
   transition-property: background-color, color, border-color, box-shadow,
     transform, outline-offset;
 }
@@ -33,6 +32,15 @@ body > footer {
   padding: var(--space-s);
   border-radius: var(--space-m);
 } */
+
+hr{
+  height: 1em;
+  border: none;
+  background-image: var(--horizontal-line);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: center;
+}
 
 /*=============================================
 =            Anchor Heading            =
@@ -180,7 +188,10 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 .story-cards[data-layout~="grid"] {
   --grid-min-item-size: 40rem;
   --grid-placement: auto-fill;
-  --space: var(--space-l);
+}
+.story-card p{
+  /* Just like in research papers */
+  text-align: justify;
 }
 
 .story-pagination-navigation a:only-child {
@@ -274,4 +285,23 @@ summary {
 
 .home-cover-section {
   --min-height: calc(80vh - var(--header-height, 0px));
+  --transition-duration: 1s;
+  animation: slideDown var(--transition-duration) var(--bezier-swift) forwards;
+}
+
+@keyframes slideDown {
+  from{
+    transform: translateY(-3rem);
+    opacity: 0;
+  } 
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input, textarea{
+  background-color: var(--color-light);
+  border-color: var(--color-dark);
+  border-width: var(--border-thin);
 }

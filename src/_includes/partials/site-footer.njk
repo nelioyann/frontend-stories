@@ -1,25 +1,25 @@
 <footer data-layout="switcher">
     <div class="padded-container" data-layout="switcher" data-props="y:start">
         <div data-layout="stack" data-props="x:start">
-            <h2 data-heading="6">{{meta.site_name}}</h2>
-            <p>Built using Eleventy and Notion, hosted on Netlify.
-            </p>
+            <h2 class="visually-hidden" data-heading="6">{{meta.site_name}}</h2>
+            <small>Built by combining Eleventy and Notion.
+            </small>
         </div>
         <nav data-layout="stack" data-props="x:start">
-            <h2 data-heading="6">Links</h2>
-            <div data-layout="grid">
+            <h2 data-heading="6">Other links</h2>
+            <div data-layout="stack">
                 {%- for page in collections.webpage %}
-                    <a data-link href="{{ page.url }}">{{ page.data.title }}</a>
+                    <a data-button="link" href="{{ page.url }}">{{ page.data.title }}</a>
                 {% endfor -%}
             </div>
         </nav>
-        <div data-layout="stack" data-props="x:start">
+        {# <div data-layout="stack" data-props="x:start">
             <h2 data-heading="6">Categories</h2>
             <div data-layout="cluster">
                 {%- for category in collections.categories %}
                     <a href="/categories/{{ category | slugify }}" data-button="tag small">{{ category }}</a>
                 {% endfor -%}
             </div>
-        </div>
+        </div> #}
     </div>
 </footer>

@@ -38,8 +38,8 @@
 
 /* Slice credits: https://www.sarasoueidan.com/ */
 [data-layout~="slice"] {
-  padding-top: var(--space-l-3xl);
-  padding-bottom: var(--space-l-3xl);
+  padding-top: var(--space-s-3xl, 1rem);
+  padding-bottom: var(--space-s-3xl, 1rem);
 }
 
 /* 

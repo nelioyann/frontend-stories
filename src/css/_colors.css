@@ -7,15 +7,18 @@
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);
 
-  --border-radius: 0.5rem;
+  --border-radius: 0.25rem;
 
   --bezier-snappy: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --bezier-swift: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  --horizontal-line: var(--horizontal-line-dark);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-light: black;
+    --horizontal-line: var(--horizontal-line-light);
+    --color-light: var(--gray-1000);
     --color-light-accent: var(--gray-700);
 
     --color-dark: var(--gray-0);

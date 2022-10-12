@@ -33,21 +33,21 @@ eleventyComputed:
             {{ story.name }}
         </h1>
         <div data-layout="cluster">
-            <span>
+            <p>
                 <span aria-hidden="true" data-font="emoji">📅</span>
                 Created on
                 <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
-            </span>
-            <span>
+            </p>
+            <p>
                 <span aria-hidden="true" data-font="emoji">🔁</span>
                 Last update on
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
-            </span>
-            <span>
+            </p>
+            <p>
                 <span aria-hidden="true" data-font="emoji">🔰</span>
                 Categorized under
                 <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small">{{ story.category.name }}</a>
-            </span>
+            </p>
             <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %}
         </div>
         {% if type == "Insight" %}
@@ -87,7 +87,7 @@ eleventyComputed:
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul>
+            <ul data-layout="stack">
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
@@ -95,7 +95,7 @@ eleventyComputed:
         </div>
     </section>
     <section aria-labelledby="contribute">
-        <div data-layout="stack" data-props="space:xs">
+        <div data-layout="stack" data-props="x:start space:xs">
             <h2 id="contribute" data-heading="anchor">
                 <a href="#contribute">Contribution</a>
             </h2>
@@ -108,9 +108,9 @@ eleventyComputed:
                 </header>
                 <div data-layout="box stack" data-props="noBorder">
                     <p>
-                        Please share ideas, suggestions, or comments via direct submission, twitter or Email
+                        Please share ideas, suggestions, or comments here 
                     </p>
-                    <div data-layout="switcher" style="--threshold: 78ch;">
+                    <div data-layout="switcher" data-props="x:stretch" style="--threshold: var(--measure);">
                         <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
                             Submit an idea</a>
                         <a
@@ -119,18 +119,18 @@ eleventyComputed:
                             href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
                             target="_blank">
                             Mention on Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
                         {# <a
                             data-button="outline"
                             data-props="x:center"
                             href="mailto:{{ meta.author.email }}?subject=[FS Contribution] {{ story.name }}">
                             Email me</a> #}
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
+        <hr  />
     <section aria-label="Navigate" data-layout="stack">
-        <hr data-props="space:0"/>
         <h2 data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other findings</h2>
         <nav
             class="story-pagination-navigation"
