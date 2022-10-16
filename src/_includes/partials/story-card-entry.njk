@@ -1,11 +1,7 @@
-<li>
-    <article itemscope itemtype="http://schema.org/Article" class="story-card" data-props="noMeasure">
-        <header>
-            <h3 data-heading="5">
-                <a itemprop="url" data-button="link" class="story-card__title" href="/{{ entry.slug }}">{{ entry.name }}</a>
-            </h3>
-        </header>
-        <p>{{ entry.excerpt }}</p>
+<li data-props="noMeasure">
+    <article itemscope="itemscope" itemtype="http://schema.org/Article" data-layout="cluster" data-props="space:xs x:between" style="flex-wrap: wrap-reverse;">
+        <a itemprop="url" data-button="link"  href="/{{ entry.slug }}">{{ entry.name }}</a>
+        <time itemprop="dateModified" datetime="{{ story.edited }}">{{entry.edited | readableDate}}</time>
         <meta itemprop="headline" content="{{ entry.name }}"/>
     </article>
 </li>

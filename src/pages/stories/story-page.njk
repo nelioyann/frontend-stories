@@ -39,14 +39,14 @@ eleventyComputed:
                 <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
             </p>
             <p>
-                <span aria-hidden="true" data-font="emoji">🔁</span>
+                <span aria-hidden="true" data-font="emoji">✒</span>
                 Last update on
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </p>
             <p>
-                <span aria-hidden="true" data-font="emoji">🔰</span>
-                Categorized under
-                <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small">{{ story.category.name }}</a>
+                <span aria-hidden="true" data-font="emoji">📁</span>
+                Filed under
+                <a href="/categories/{{ story.category.name | slugify }}" data-button="link small"># {{ story.category.name }}</a>
             </p>
             <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %}
         </div>
@@ -95,11 +95,11 @@ eleventyComputed:
         </div>
     </section>
     <section aria-labelledby="contribute">
-        <div data-layout="stack" data-props="x:start space:xs">
+        <div data-layout="stack" data-props="x:stretch space:xs">
             <h2 id="contribute" data-heading="anchor">
                 <a href="#contribute">Contribution</a>
             </h2>
-            <div data-layout="box" data-props="noPad">
+            <div data-layout="box with-sidebar" data-props="noPad">
                 <header data-layout="box" data-props="noBorder invert">
                     <h3 data-heading="5">
                         <span data-font="emoji" aria-hidden="true">🗨</span>
@@ -110,7 +110,7 @@ eleventyComputed:
                     <p>
                         Please share ideas, suggestions, or comments here 
                     </p>
-                    <div data-layout="switcher" data-props="x:stretch" style="--threshold: var(--measure);">
+                    <div data-layout="cluster" data-props="x:stretch" style="--threshold: var(--measure);">
                         <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
                             Submit an idea</a>
                         <a
@@ -118,18 +118,13 @@ eleventyComputed:
                             data-props="x:center"
                             href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
                             target="_blank">
-                            Mention on Twitter</a>
+                            Share on Twitter</a>
                     </div>
                 </div>
             </div>
         </div>
-                        {# <a
-                            data-button="outline"
-                            data-props="x:center"
-                            href="mailto:{{ meta.author.email }}?subject=[FS Contribution] {{ story.name }}">
-                            Email me</a> #}
+
     </section>
-        <hr  />
     <section aria-label="Navigate" data-layout="stack">
         <h2 data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other findings</h2>
         <nav
@@ -138,22 +133,16 @@ eleventyComputed:
             data-layout="switcher"
             data-props="x:between y:stretch">
             {% if pagination.href.previous %}
-                <a data-button data-layout="stack" class="previous-button" data-props="space:0 x:start y:start" href="{{ pagination.href.previous }}">
-                    <span>
-                        <span aria-hidden="true" data-font="emoji">◀️</span>
-                        Previous item</span>
-                    <b>{{ pagination.page.previous.name }}</b>
+                <a data-button="primary" data-props="x:start y:center" class="previous-button" href="{{ pagination.href.previous }}">
+                    {{ pagination.page.previous.name }}
                 </a>
             {% endif %}
             {% if pagination.href.next %}
-                <a data-layout="stack" class="next-button" data-button data-props="space:0 x:start y:end" href="{{ pagination.href.next }}">
-                        <span>
-                            Next item
-                        <span aria-hidden="true" data-font="emoji">▶️</span>
-                        </span>
-                    <b>{{ pagination.page.next.name }}</b>
+                <a class="next-button" data-button="primary" data-props="x:end y:center" href="{{ pagination.href.next }}">
+                    {{ pagination.page.next.name }}
                 </a>
             {% endif %}
         </nav>
+
     </section>
 {% endblock %}

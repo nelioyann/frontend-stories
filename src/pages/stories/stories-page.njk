@@ -1,10 +1,12 @@
 ---
 layout: layouts/nested-page-layout.njk
-title: All findings 
+title: Findings 
+tags: 
+    - webpage
 page_description: Findings grouped by category.
 permalink: /findings/
 eleventyComputed:
-    description: "Explore findings from Frontend Stories. {{meta.site_description}}"
+    description: "Explore documented findings about frontend development, grouped by categories."
     eleventyNavigation:
         key: Findings
         parent: Home
@@ -19,13 +21,14 @@ eleventyComputed:
 <ul role="list"  data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {% set entries = collections.stories | filterByCategory(category) %}
-        <details data-sticky {%if loop.index <= 5 %}open{%endif%}>
+        <details data-sticky >
+            {# {%if loop.index <= 5 %}open{%endif%} #}
             <summary>
                 <span>
                     {{ category }}
                 </span>
             </summary>
-            <ul class="story-cards" data-props="space:s" role="list" data-layout="grid">
+            <ul data-props="space:s" role="list" data-layout="stack">
                 {% for entry in collections.stories | filterByCategory(category) %}
                     {% include "partials/story-card-entry.njk" %}
                 {% endfor %}

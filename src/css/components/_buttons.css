@@ -1,7 +1,7 @@
 [data-button] {
-  --minimum-height: 36px;
+  --minimum-height: var(--controls-minimum-height);
   font-family: var(--font-sans-serif);
-  padding: var(--button-padding-y, var(--space-2xs)) var(--button-padding-x, var(--space-s));
+  padding: var(--button-padding-y, 0) var(--button-padding-x, var(--space-s));
   border-radius: var(--button-border-radius, var(--border-radius));
   min-height: var(--minimum-height);
   line-height: var(--button-line-height, --minimum-height);
@@ -24,6 +24,7 @@
 
 
 [data-button~="primary"]{
+  --vertical-alignment: center;
   --button-color: var(--color-light);
   --button-background-color: var(--color-dark);
   --button-hover-background-color: var(--color-light);
@@ -31,6 +32,7 @@
   --button-hover-color: var(--color-dark-accent);
 }
 [data-button~="outline"], [data-button~="tag"]{
+  --vertical-alignment: center;
   --button-hover-background-color: var(--color-dark);
   --button-hover-border-color: var(--color-dark);
   --button-hover-color: var(--color-light);

@@ -109,7 +109,7 @@ main,
 input,
 select,
 textarea {
-  min-height: 46px;
+  min-height: var(--controls-minimum-height);
   padding-left: var(--space-2xs);
   padding-right: var(--space-2xs);
   border: var(--border-thin) solid;

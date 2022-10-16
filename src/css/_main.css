@@ -13,7 +13,6 @@ a {
   }
 }
 
-
 body > header {
   min-height: var(--header-height);
 }
@@ -33,8 +32,9 @@ body > footer {
   border-radius: var(--space-m);
 } */
 
-hr{
+hr {
   height: 1em;
+  width: 100%;
   border: none;
   background-image: var(--horizontal-line);
   background-repeat: no-repeat;
@@ -50,7 +50,6 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 [data-heading~="anchor"] a:hover {
   text-decoration: underline;
 }
-/* @media (hover: hover) { */
 [data-heading~="anchor"] {
   scroll-margin-top: var(--header-height);
 }
@@ -60,9 +59,11 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 }
 [data-heading~="anchor"] a::after {
   content: "#";
+  font-size: var(--step-2);
   font-weight: normal;
   opacity: 0.8;
-  padding: 0 0.15em; /* to make the "#" a bigger target */
+  padding-left: var(--space-2xs); /* to make the "#" a bigger target */
+  padding-right: var(--space-2xs);
   pointer-events: auto;
 }
 
@@ -106,7 +107,8 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 
 [data-markdown] code {
   font-family: var(--font-monospace);
-  background-color: var(--color-light-accent);
+  /* background-color: var(--color-toggle-accent); */
+  border: var(--border-thin) solid var(--color-dark-accent);
   padding: calc(var(--space-2xs) * 0.5) var(--space-2xs);
   border-radius: 0;
 }
@@ -167,9 +169,8 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 }
 
 /* HOME PAGE CATEGORIES CHIPS FILTER */
-.categories-navigation {
-  --reel-item-width: 10ch;
-  --reel-item-margin: var(--space-xs);
+.categories-navigation ul {
+  --space: var(--space-s);
 }
 .categories-navigation a {
   flex-grow: 1;
@@ -185,26 +186,32 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 =            Story Cards            =
 =============================================*/
 
-.story-cards[data-layout~="grid"] {
-  --grid-min-item-size: 40rem;
-  --grid-placement: auto-fill;
-}
-.story-card p{
-  /* Just like in research papers */
-  text-align: justify;
-}
-
 .story-pagination-navigation a:only-child {
   flex-grow: 0;
   flex-basis: min(100%, 60ch);
 }
 
+.story-pagination-navigation a[data-button] {
+  --space: var(--space-2xs);
+  --vertical-alignment: center;
+}
 .story-pagination-navigation a.next-button {
+  --horizontal-alignment: end;
   margin-left: auto;
 }
-
 .story-pagination-navigation a.previous-button {
+  --horizontal-alignment: start;
   margin-right: auto;
+}
+
+.story-pagination-navigation a.next-button::after {
+  content: "→";
+  font-size: var(--step-1);
+
+}
+.story-pagination-navigation a.previous-button::before {
+  content: "←";
+  font-size: var(--step-1);
 }
 
 .contribute-story-sidebar {
@@ -245,7 +252,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 }
 [data-accordion] summary::after {
   content: "›";
-  margin-left: auto;
+  margin-left: var(--space-2xs);
   display: inline-block;
   transform-origin: center;
   transition: transform var(--transition-duration, 300ms) var(--bezier-snappy);
@@ -290,18 +297,23 @@ summary {
 }
 
 @keyframes slideDown {
-  from{
+  from {
     transform: translateY(-3rem);
     opacity: 0;
-  } 
-  to{
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-input, textarea{
+input,
+textarea {
   background-color: var(--color-light);
   border-color: var(--color-dark);
   border-width: var(--border-thin);
+}
+
+.padded-container.measured-container {
+  box-sizing: content-box;
 }

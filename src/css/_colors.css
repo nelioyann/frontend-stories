@@ -1,11 +1,19 @@
 :root {
   --color-primary: hsl(225, 73%, 59%);
   --color-light: var(--gray-0);
-  --color-light-accent: var(--gray-200);
   --color-dark: var(--gray-900);
-  --color-dark-accent: var(--gray-700);
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);
+
+  --color-light-accent: var(--gray-200);
+  --color-dark-accent: var(--gray-700);
+
+  --shadow-color: 240deg 2% 66%;
+  --shadow-elevation-low: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  --shadow-elevation-medium: 0 8px 30px rgb(0, 0, 0, 0.12);
+
+  --text-color: var(--color-dark);
 
   --border-radius: 0.25rem;
 
@@ -17,15 +25,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --horizontal-line: var(--horizontal-line-light);
     --color-light: var(--gray-1000);
     --color-light-accent: var(--gray-700);
-
     --color-dark: var(--gray-0);
     --color-dark-accent: var(--gray-200);
   }
-  /* 
-    img[src*=".png"],img[src*="/artifacts/"],img[src*="/hire/"] {
-        filter: invert(1)
-    } */
+
+  hr {
+    filter: invert(1);
+  }
 }
