@@ -1,25 +1,25 @@
-<footer data-layout="switcher" data-props="invert">
-    <div class="padded-container" data-layout="switcher" data-props="y:start">
-        <div data-layout="stack" data-props="x:start">
-            <h2 data-heading="6">{{meta.site_name}}</h2>
-            <p>Built using Eleventy and Notion, hosted on Netlify.
-            </p>
-        </div>
-        <nav data-layout="stack" data-props="x:start">
-            <h2 data-heading="6">Links</h2>
-            <div data-layout="grid">
+<footer class="padded-container" data-props="x:stretch space:l">
+    <div data-layout="stack slice">
+        <hr/>
+        <nav>
+            <h2 class="visually-hidden" data-heading="6">Other links</h2>
+            <div data-layout="cluster">
                 {%- for page in collections.webpage %}
-                    <a data-link href="{{ page.url }}">{{ page.data.title }}</a>
+                    <a data-button="link" href="{{ page.url }}">{{ page.data.title }}</a>
                 {% endfor -%}
             </div>
         </nav>
-        <div data-layout="stack" data-props="x:start">
-            <h2 data-heading="6">Categories</h2>
-            <div data-layout="cluster">
-                {%- for category in collections.categories %}
-                    <a href="/categories/{{ category | slugify }}" data-button="tag small">{{ category }}</a>
-                {% endfor -%}
-            </div>
+        {% include "partials/site-search.njk" %}
+        <div>
+            <h2 data-heading="5">Subscribe</h2>
+            <p>
+                You can subscribe to the RSS feeds for
+                <a data-button="link" href="/feed.xml">all findings</a>.
+            </p>
         </div>
+        <small>Made with HTML, CSS and zero line of Javascript. Generated from a Notion database using Eleventy.
+            <a data-button="link" rel="noopener nofollow noreferrer" target="_blank" href="https://twitter.com/nelioyann">Follow on
+                Twitter</a>
+            for the latest updates.</small>
     </div>
 </footer>

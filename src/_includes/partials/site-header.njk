@@ -1,16 +1,17 @@
 <header class="padded-container" data-layout="cluster" data-props="y:center x:between">
-    {# <div class="padded-container header" data-layout="cluster" data-props="y:center x:between"> #}
-        <a data-heading="5" data-link="noHover" href="/">
-            <span aria-hidden="true" data-heading="4" data-font="emoji">🎓</span>
-            <span class="visually-hidden">Home</span>
-        </a>
-        <div data-layout="cluster" data-props="space:s">
-            <a data-link="data-link" href="/findings">
-                Findings
-            </a>
-            <a data-link="data-link" href="/about">
-                About
-            </a>
-        </div>
-    {# </div> #}
+
+    <a data-link="noHover" href="/">
+        {{ meta.site_name }}
+    </a>
+    {# <nav>
+        <ul role="list" data-layout="cluster" data-props="space:s">
+            {% for item in nav.items %}
+                <li>
+                    <a {% if item.url === page.url %} aria-current="page" {% endif %} data-link="data-link" href="{{ item.url }}">
+                        {{ item.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav> #}
 </header>

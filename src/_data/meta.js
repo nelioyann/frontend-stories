@@ -6,6 +6,7 @@ module.exports = {
     site_url: "https://frontendstories.com",
     site_thumbnail: "https://frontendstories.com/images/thumbnail.png",
     theme_color: "#000",
+    logo_backgroud_color: "#fff",
     primary_color: "#000",
     background_color: "#f4f4f5",
     author: {

@@ -1,15 +1,74 @@
 [
     {
+        "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
+        "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
+        "notion_url": "https://www.notion.so/Less-than-half-of-users-take-advantage-of-breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
+        "icon": "🧭",
+        "type": {
+            "id": "@bzz",
+            "name": "Finding",
+            "color": "pink"
+        },
+        "edited": "2022-10-14T16:16:00.000Z",
+        "created": "2022-10-14T16:05:00.000Z",
+        "description": "Breadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n### Breadcrumbs\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n`Home > Furniture > Chairs > Leather Chairs`\n\nIt provides the following advantages:\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n### Key findings\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage",
+        "status": {
+            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
+            "name": "Published",
+            "color": "green"
+        },
+        "references": [
+            {
+                "id": "36f7fbe7-3101-44cc-9f78-87b8570eaac7",
+                "notion_url": "https://www.notion.so/Breadcrumb-Navigation-An-exploratory-study-of-usage-36f7fbe7310144cc9f7887b8570eaac7",
+                "citation": "Lida, B., Hull, K., and Pilcher, K., (2003), Breadcrumb Navigation: An exploratory study of usage, Usability News 5.1.",
+                "url": "https://www.semanticscholar.org/paper/Breadcrumb-Navigation%3A-An-Exploratory-Study-of-Chaparro-Lida/88aadc6e6fd42c91bb5aa011c06ee651d8ee8ab5",
+                "summary": "Just as Hansel and Gretel created a breadcrumb trail to find their path back home, today's internet user often finds a need to get back to a website's previously visited locations; hence, the cyber \"breadcrumb trail\" was created. This textual representation of where and how information is located within the website allows the user to link to major categories of information along a continuum of sequential order. For example, the breadcrumb path for a leather chair on the Office Max website would be: Home > Furniture > Chairs > Leather Chairs. The location of the navigational path is often prominently placed in the upper left quarter of the website page.",
+                "cite": "Lida, 2002",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Breadcrumb Navigation: An exploratory study of usage",
+                "tags": []
+            },
+            {
+                "id": "307ea6e6-534b-4d6c-9dcc-f05098f2e601",
+                "notion_url": "https://www.notion.so/Influence-of-Training-and-Exposure-on-the-Usage-of-Breadcrumb-Navigation-307ea6e6534b4d6c9dccf05098f2e601",
+                "citation": "Hull, S. S. (2004). \"Influence of Training and Exposure on the Usage of Breadcrumb Navigation.\" Usability News, 6(1).",
+                "url": "https://www.researchgate.net/publication/254409807_The_Influence_of_Mere_Exposure_on_Web_Based_Breadcrumb_Navigation",
+                "summary": "Research has reported that breadcrumb navigation improves site efficiency [1, 2]. However, when given a choice, users choose the Back button or navigation bar to navigate rather than the breadcrumb trail [3]. Lida-Rogers & Chaparro (2003) found that participants who used the breadcrumb trail used the Back button less often than users who did not use it; however, no differences were found in other efficiency measures such as total pages visited or total time. Participants may not understand the function of the breadcrumb trail as a navigational tool and understanding its’ purpose or minimal training might impact usage and/or efficiency [4]. Mere exposure was considered as a means of introducing participants to breadcrumb trails. According to Zajonc (1968), if the function of orienting behavior is eventually to change a novel stimulus into a familiar one, it is also its consequence to render the stimulus object eventually more attractive [5]. Zajonc (1968) states that the mere repeated exposure of the individual to a stimulus object enhances his attitude toward it [5]. Thus, it was hypothesized that mere exposure of the breadcrumb trail would influence participants’ use of breadcrumb trail navigation during a search task procedure.",
+                "cite": "Hull, 2004",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "Influence of Training and Exposure on the Usage of Breadcrumb Navigation",
+                "tags": []
+            }
+        ],
+        "category": {
+            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
+            "name": "Navigation",
+            "color": "yellow"
+        },
+        "topics": [],
+        "slugs": "do-users-use-breadcrumbs",
+        "name": "Less than half of users take advantage of breadcrumbs"
+    },
+    {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
         "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
-        "notion_url": "https://www.notion.so/Radio-buttons-and-checkboxes-serve-different-roles-cffcf98342c54f3e986e5af360b4c946",
+        "notion_url": "https://www.notion.so/Radio-and-checkbox-inputs-are-perceived-differently-cffcf98342c54f3e986e5af360b4c946",
         "icon": "📻",
         "type": {
             "id": "OL?t",
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-09-20T18:16:00.000Z",
+        "edited": "2022-10-14T16:27:00.000Z",
         "created": "2022-08-29T12:03:00.000Z",
         "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options. These controls are often used in online forms where their actual role can be blurry.   \n\n### Checking the boxes\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.  \n\n### Popping radios buttons\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time. \n\n### Using the power of familiarity\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” -- Jeremy Keith (Resilient Web Design)\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".",
         "status": {
@@ -47,6 +106,36 @@
                 },
                 "name": "Jakob’s Law | Laws of UX",
                 "tags": []
+            },
+            {
+                "id": "4ec37688-39e5-4566-93b6-7bdbcf76c9ea",
+                "notion_url": "https://www.notion.so/Resilient-Web-Design-4ec3768839e5456693b67bdbcf76c9ea",
+                "citation": "Jeremy Keith",
+                "url": "https://resilientwebdesign.com/",
+                "summary": "",
+                "cite": "Jeremy Keith",
+                "type": {
+                    "id": "6d7dbec3-14fe-4915-bbe1-8f23091adf6a",
+                    "name": "Book",
+                    "color": "yellow"
+                },
+                "name": "Resilient Web Design",
+                "tags": []
+            },
+            {
+                "id": "3fd20eea-afee-4152-907e-30ee995d16dd",
+                "notion_url": "https://www.notion.so/Yes-or-No-One-Checkbox-vs-Two-Radio-Buttons-3fd20eeaafee4152907e30ee995d16dd",
+                "citation": "Sara Soueidan, 2020",
+                "url": "https://www.sarasoueidan.com/blog/one-checkbox-or-two-radio-buttons/#first%2C-some-backstory%3A",
+                "summary": "We use radio buttons when the label is a question, and we use a checkbox when the label is a statement. Also, radio buttons are preferred when default option can’t be inferred and both options should have equal preference.",
+                "cite": "Sara Soueidan, 2020",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
+                "name": "\"Yes or No?\" — One Checkbox vs Two Radio Buttons.",
+                "tags": []
             }
         ],
         "category": {
@@ -56,7 +145,7 @@
         },
         "topics": [],
         "slugs": "checkboxes-or-radio-buttons",
-        "name": "Radio buttons and checkboxes serve different roles"
+        "name": "Radio and checkbox inputs are perceived differently"
     },
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
@@ -175,65 +264,6 @@
         "topics": [],
         "slugs": "when-computers-apologize",
         "name": "Friendly error messages positively influence users"
-    },
-    {
-        "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
-        "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
-        "notion_url": "https://www.notion.so/Less-than-half-of-users-take-advantage-of-breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
-        "icon": "🧭",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-09-20T18:22:00.000Z",
-        "created": "2022-07-21T21:53:00.000Z",
-        "description": "Breadcrumbs are textual representations of a user's location in the structure of a site. Present on blogs, it allows users to understand the location of the page in the structure of a website. Do breadcrumbs trails serve as a navigation shortcut?\n\nExample\n`Home > Furniture > Chairs > Leather Chairs`.\n\n### Usage\nIn general, they are used to achieve the following goals:\n- They provide information to the user about where they are in the site\n- They provide shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n### Takeaways\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "36f7fbe7-3101-44cc-9f78-87b8570eaac7",
-                "notion_url": "https://www.notion.so/Breadcrumb-Navigation-An-exploratory-study-of-usage-36f7fbe7310144cc9f7887b8570eaac7",
-                "citation": "Lida, B., Hull, K., and Pilcher, K., (2003), Breadcrumb Navigation: An exploratory study of usage, Usability News 5.1.",
-                "url": "https://www.semanticscholar.org/paper/Breadcrumb-Navigation%3A-An-Exploratory-Study-of-Chaparro-Lida/88aadc6e6fd42c91bb5aa011c06ee651d8ee8ab5",
-                "summary": "Just as Hansel and Gretel created a breadcrumb trail to find their path back home, today's internet user often finds a need to get back to a website's previously visited locations; hence, the cyber \"breadcrumb trail\" was created. This textual representation of where and how information is located within the website allows the user to link to major categories of information along a continuum of sequential order. For example, the breadcrumb path for a leather chair on the Office Max website would be: Home > Furniture > Chairs > Leather Chairs. The location of the navigational path is often prominently placed in the upper left quarter of the website page.",
-                "cite": "Lida, 2002",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Breadcrumb Navigation: An exploratory study of usage",
-                "tags": []
-            },
-            {
-                "id": "307ea6e6-534b-4d6c-9dcc-f05098f2e601",
-                "notion_url": "https://www.notion.so/Influence-of-Training-and-Exposure-on-the-Usage-of-Breadcrumb-Navigation-307ea6e6534b4d6c9dccf05098f2e601",
-                "citation": "Hull, S. S. (2004). \"Influence of Training and Exposure on the Usage of Breadcrumb Navigation.\" Usability News, 6(1).",
-                "url": "https://www.researchgate.net/publication/254409807_The_Influence_of_Mere_Exposure_on_Web_Based_Breadcrumb_Navigation",
-                "summary": "Research has reported that breadcrumb navigation improves site efficiency [1, 2]. However, when given a choice, users choose the Back button or navigation bar to navigate rather than the breadcrumb trail [3]. Lida-Rogers & Chaparro (2003) found that participants who used the breadcrumb trail used the Back button less often than users who did not use it; however, no differences were found in other efficiency measures such as total pages visited or total time. Participants may not understand the function of the breadcrumb trail as a navigational tool and understanding its’ purpose or minimal training might impact usage and/or efficiency [4]. Mere exposure was considered as a means of introducing participants to breadcrumb trails. According to Zajonc (1968), if the function of orienting behavior is eventually to change a novel stimulus into a familiar one, it is also its consequence to render the stimulus object eventually more attractive [5]. Zajonc (1968) states that the mere repeated exposure of the individual to a stimulus object enhances his attitude toward it [5]. Thus, it was hypothesized that mere exposure of the breadcrumb trail would influence participants’ use of breadcrumb trail navigation during a search task procedure.",
-                "cite": "Hull, 2004",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Influence of Training and Exposure on the Usage of Breadcrumb Navigation",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
-            "name": "Navigation",
-            "color": "yellow"
-        },
-        "topics": [],
-        "slugs": "do-users-use-breadcrumbs",
-        "name": "Less than half of users take advantage of breadcrumbs"
     },
     {
         "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",

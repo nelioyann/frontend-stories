@@ -28,7 +28,7 @@
 }
 
 [data-font="emoji"]{
-     filter: grayscale(1);
+     filter: grayscale(0);
 }
 [data-font="serif"]{
      font-family: var(--font-serif);

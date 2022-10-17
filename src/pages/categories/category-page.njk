@@ -12,7 +12,7 @@ eleventyComputed:
   eleventyNavigation:
     key: "{{category}}"
     title: "{{category}}"
-    parent: Stories
+    parent: Findings
 ---
 {% extends "layouts/category-layout.njk" %}
 {% block article %}
@@ -21,7 +21,7 @@ eleventyComputed:
   </h1>
   <p>
     Here are some findings related to the subject of {{ category }}.
-    <ul class="story-cards" data-layout="grid" data-props="noPad space:s" role="list">
+    <ul data-layout="stack" data-props="noPad space:s" role="list">
       {% set entries = collections.stories | filterByCategory(category) %}
       {%- for entry in entries %}
         {% include "partials/story-card-entry.njk" %}
