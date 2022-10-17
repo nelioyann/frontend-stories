@@ -57,11 +57,10 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   text-decoration: none;
   pointer-events: none;
 }
-[data-heading~="anchor"] a::after {
+[data-heading~="anchor"] a::before {
   content: "#";
-  font-size: var(--step-2);
-  font-weight: normal;
-  opacity: 0.8;
+  /* font-size: var(--step-2); */
+  font-weight: lighter;
   padding-left: var(--space-2xs); /* to make the "#" a bigger target */
   padding-right: var(--space-2xs);
   pointer-events: auto;
@@ -92,7 +91,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   --space: 0.5em;
 }
 
-[data-markdown] > ol {
+[data-markdown] ol {
   --space: var(--space-s);
   --threshold: 30rem;
   display: flex;
@@ -105,19 +104,12 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   padding-left: 0;
 }
 
-[data-markdown] code {
-  font-family: var(--font-monospace);
-  /* background-color: var(--color-toggle-accent); */
-  border: var(--border-thin) solid var(--color-dark-accent);
-  padding: calc(var(--space-2xs) * 0.5) var(--space-2xs);
-  border-radius: 0;
-}
-[data-markdown] > ol > li {
+[data-markdown] ol > li {
   flex-grow: 1;
   flex-basis: calc((var(--threshold) - 100%) * 999);
   position: relative;
 }
-[data-markdown] > ol > li::before {
+[data-markdown] ol > li::before {
   counter-increment: items;
   content: counter(items);
   display: block;
@@ -125,8 +117,8 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   padding-bottom: var(--space-2xs);
   margin-bottom: var(--space-2xs);
 }
-[data-markdown] > ol > li:nth-child(n + 4),
-[data-markdown] > ol > li:nth-child(n + 4) ~ * {
+[data-markdown] ol > li:nth-child(n + 4),
+[data-markdown] ol > li:nth-child(n + 4) ~ * {
   /* Switch to a vertical configuration if there are more than 4 child elements */
   flex-basis: 100%;
 }
@@ -194,6 +186,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 .story-pagination-navigation a[data-button] {
   --space: var(--space-2xs);
   --vertical-alignment: center;
+  --button-display: inline-flex;
 }
 .story-pagination-navigation a.next-button {
   --horizontal-alignment: end;

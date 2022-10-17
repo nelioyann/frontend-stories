@@ -99,16 +99,8 @@ eleventyComputed:
             <h2 id="contribute" data-heading="anchor">
                 <a href="#contribute">Contribution</a>
             </h2>
-            <div data-layout="box with-sidebar" data-props="noPad">
-                <header data-layout="box" data-props="noBorder invert">
-                    <h3 data-heading="5">
-                        <span data-font="emoji" aria-hidden="true">🗨</span>
-                        Help improve this entry
-                    </h3>
-                </header>
-                <div data-layout="box stack" data-props="noBorder">
                     <p>
-                        Please share ideas, suggestions, or comments here 
+                        Share ideas, suggestions, or comments here 
                     </p>
                     <div data-layout="cluster" data-props="x:stretch" style="--threshold: var(--measure);">
                         <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
@@ -120,8 +112,6 @@ eleventyComputed:
                             target="_blank">
                             Share on Twitter</a>
                     </div>
-                </div>
-            </div>
         </div>
 
     </section>
@@ -131,14 +121,14 @@ eleventyComputed:
             class="story-pagination-navigation"
             aria-labelledby="pagination-nav"
             data-layout="switcher"
-            data-props="x:between y:stretch">
+            data-props="x:between y:stretch space:xs">
             {% if pagination.href.previous %}
-                <a data-button="primary" data-props="x:start y:center" class="previous-button" href="{{ pagination.href.previous }}">
+                <a data-button="link" class="previous-button" href="{{ pagination.href.previous }}">
                     {{ pagination.page.previous.name }}
                 </a>
             {% endif %}
             {% if pagination.href.next %}
-                <a class="next-button" data-button="primary" data-props="x:end y:center" href="{{ pagination.href.next }}">
+                <a class="next-button" data-button="link" href="{{ pagination.href.next }}">
                     {{ pagination.page.next.name }}
                 </a>
             {% endif %}

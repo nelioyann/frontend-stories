@@ -61,6 +61,20 @@
 }
 
 
+
+/**
+ *
+ * Sizes
+ *
+ */
+
+ [data-button~="small"]{
+  --controls-minimum-height: 24px;
+  --button-padding-x: var(--space-2xs);
+  font-size: calc(var(--step-0) * 0.75);
+}
+
+
 /* [data-button] svg{
   flex-shrink: 0;
 }
