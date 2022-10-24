@@ -50,12 +50,12 @@
   --button-line-height: 1.5;
 }
 [data-button~="link"] {
-  --button-text-decoration: none;
+  --button-text-decoration: underline;
+
   /* --button-background-color: var(--color-dark-accent); */
   /* --button-color: var(--color-primary); */
   --button-padding-x: var(--space-2xs);
   --button-border-radius: var(--border-radius);
-
 }
 [data-button~="tag"] {
   --button-border-radius: var(--space-l);
@@ -150,13 +150,11 @@
 @media (hover: hover) {
   /* On desktop and hover capable screens */
   [data-button~="link"] {
+    --button-text-decoration: none;
     --button-background-color: var(--color-light);
-  --button-shadow-width: var(--border-thin);
-  --button-padding-x: 0;
-  --button-border-radius: 0;
-
-
-
+    --button-shadow-width: var(--border-thin);
+    --button-padding-x: 0;
+    --button-border-radius: 0;
   }
   [data-button]:not([data-button~="noHover"]):hover {
     background-color: var(
