@@ -1,5 +1,5 @@
 :root {
-  --color-primary: hsl(225, 73%, 59%);
+  --color-primary: hsl(195, 100%, 30%);
   --color-light: var(--gray-0);
   --color-dark: var(--gray-900);
   --color-focus: var(--color-dark);
@@ -14,6 +14,7 @@
   --shadow-elevation-medium: 0 8px 30px rgb(0, 0, 0, 0.12);
 
   --text-color: var(--color-dark);
+  --color-hover: var(--color-light-accent);
 
   --border-radius: 0.25rem;
 
@@ -23,8 +24,9 @@
   --horizontal-line: var(--horizontal-line-dark);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
+    --color-primary: hsl(195, 80%, 60%);
     --color-light: var(--gray-1000);
     --color-light-accent: var(--gray-700);
     --color-dark: var(--gray-0);
@@ -34,4 +36,4 @@
   hr {
     filter: invert(1);
   }
-}
+} */

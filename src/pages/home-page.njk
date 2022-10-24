@@ -1,6 +1,6 @@
 ---
 layout: layouts/home-layout.njk
-hero_description: A collection of findings and insights for building better user interfaces.
+hero_description: Collection of research findings and insights for building better user interfaces.
 pagination: 
     data: collections.categoriesAndAll
     size: 1
@@ -29,9 +29,10 @@ eleventyComputed:
             {%- for category in collections.categoriesAndAll %}
                 {% set category_url = '' if category == 'All' else category | slugify %}
                 <li data-layout="stack" data-active="{{ 'true' if currentCategory == category else 'false' }}">
+                    {% set isActive = 'active' if currentCategory == category%}
                     <a
                         data-props="x:center"
-                        data-button="small {{ 'active' if currentCategory == category }} tag"
+                        data-button="{{ isActive }} tag"
                         href="/{{ category_url }}#findings">{{ 'Latest' if category == 'All' else category }}</a>
                 </li>
             {% endfor -%}

@@ -1,8 +1,11 @@
-<form action="https://www.google.com/search" method="get">
+<form class="site-search" action="https://www.google.com/search" method="get">
   <input type="hidden" name="q" id="q" value="site:{{meta.site_url}}">
-  <label for="search-str">Search this site</label>
+  <label  data-props="space:0" for="search-str">
+    <span>Search this site</span>
+    <small>(powered by Google)</small>
+  </label>
   <div data-layout="with-sidebar" data-props="side:right space:0 noCurve">
   <input type="search" name="q" id="search-str" spellcheck="true" maxlength="255" required>
-  <button data-button="primary" data-props="x:center y:center" type="submit" class="submit">Search with Google</button>
+  <button data-button="primary" data-props="x:center y:center" type="submit" class="submit">Search</button>
   </div>
 </form>

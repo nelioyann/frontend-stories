@@ -11,12 +11,9 @@ eleventyComputed:
     parent: Home
 ---
 
-
-
 <div class="measured-container" data-markdown data-layout="slice stack" data-props="space:xs">
 
 Below is a minimal style guide for this site, inspired by <a data-button="link" target="_blank" rel="noopener nofollow noreferrer" href="https://danabyerly.com/style-guide/">Dana Byerly's Style Guide</a>.
-
 
 **Table of Contents**
 
@@ -24,7 +21,6 @@ Below is a minimal style guide for this site, inspired by <a data-button="link" 
 - [Block elements](#block-elements)
 - [Code](#code)
 - [Lists](#lists)
-
 
 <section data-layout="box" data-props="noPad">
   <header data-layout="box" data-props="invert noBorder">
@@ -54,7 +50,9 @@ Here's some example text with `h3`.
 
 Here's some example text with `h4`.
 
-For example:
+---
+
+Font sizes can be controlled through the use of the `data-heading` attribute. For example:
 
 ```HTML
 <h1 data-heading='4'>Top Level sized like a fourth level heading</h1>
@@ -71,13 +69,11 @@ For example:
 </h2>
   </header>
 
-
 <div data-layout="box stack" data-props="noBorder">
-
 
 ### Blockquote
 
-> Here's an example of a blockquote. &mdash; Dana Byerly
+> A little learning is a dangerous thing. &mdash; Japanese Proverb
 
 ### Paragraph text
 
@@ -86,7 +82,6 @@ Here's an example of paragraph text that is long enough to show line-height. Her
 </div>
 </section>
 
-
 <section data-layout="box" data-props="noPad">
   <header data-layout="box" data-props="invert noBorder">
 <h2 id="code" data-heading="anchor">
@@ -94,11 +89,7 @@ Here's an example of paragraph text that is long enough to show line-height. Her
 </h2>
   </header>
 
-
-
-
 <div data-layout="box stack" data-props="noBorder">
-
 
 ### Code within text
 
@@ -130,12 +121,8 @@ config.addFilter("sortByNewest", (arr) => {
 });
 ```
 
-
-
 </div>
 </section>
-
-
 
 <section data-layout="box" data-props="noPad">
   <header data-layout="box" data-props="invert noBorder">
@@ -146,10 +133,9 @@ config.addFilter("sortByNewest", (arr) => {
 
 <div data-layout="box stack" data-props="noBorder">
 
-
 ### Ordered list standalone
 
-Ordered list will be displayed horizontally until the number of items exceed 3 (in which case they are rendered as a normal list).
+Ordered list will be displayed horizontally until the number of items exceed 3 (in which case the rest collapses in a column).
 
 1. Cats
 2. Dogs
@@ -167,12 +153,8 @@ Ordered list will be displayed horizontally until the number of items exceed 3 (
 - In my opinion this nuance is often overlooked, resulting in the same amount of space between lines in a single bullet and between the bullets, making it harder to read.
 - Both ordered and unordered list using this spacing.
 
-
-
 </div>
 </section>
-
-
 
 <section data-layout="box" data-props="noPad">
   <header data-layout="box" data-props="invert noBorder">
@@ -180,9 +162,6 @@ Ordered list will be displayed horizontally until the number of items exceed 3 (
       <a href="#buttons">Buttons</a>
     </h2>
   </header>
-
-
-
 
 <div data-layout="grid box" data-props="x:start noBorder">
   <div data-layout="cluster box" data-props="y:end space:2xs">
@@ -199,15 +178,19 @@ Ordered list will be displayed horizontally until the number of items exceed 3 (
     <button data-button="tag">Tag</button>
     <button data-button="tag small">Tag Smol</button>
   </div>
+  <div data-layout="cluster box" data-props="y:end space:2xs">
+    <button data-button="link">Link</button>
+    <button data-button="link small">Link Smol</button>
+  </div>
 </div>
 
 </section>
 
-<section data-layout="box" >
+<section data-layout="box">
+The horizontal separator is customized to look like a rugged line. 
+<hr>
 
----
-
-- Horizontal line look like rugged line. This is made possible by using an svg as the background of the `<hr>` element. The color is inverted when dark mode is turned on.
+This is made possible by using an `svg` as the background of the `<hr>` element.
 </section>
 
 </div>

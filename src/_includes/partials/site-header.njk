@@ -1,17 +1,22 @@
 <header class="padded-container" data-layout="cluster" data-props="y:center x:between">
-
-    <a data-link="noHover" href="/">
-        {{ meta.site_name }}
+    <a data-button="text" href="/">
+        <span class="visually-hidden">
+            {{ meta.site_name }}
+        </span>
+        <abbr aria-hidden="true" data-layout="cluster" data-props="space:0" title="{{meta.site_name}}">
+            <span data-layout="box icon stack" data-props="y:center x:center">F</span>
+            <span data-layout="box icon stack" data-props="invert y:center x:center">S</span>
+        </abbr>
     </a>
     {# <nav>
-        <ul role="list" data-layout="cluster" data-props="space:s">
-            {% for item in nav.items %}
-                <li>
-                    <a {% if item.url === page.url %} aria-current="page" {% endif %} data-link="data-link" href="{{ item.url }}">
-                        {{ item.name }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav> #}
+                <ul role="list" data-layout="cluster" data-props="space:s">
+                    {% for item in nav.items %}
+                        <li>
+                            <a {% if item.url === page.url %} aria-current="page" {% endif %} data-link="data-link" href="{{ item.url }}">
+                                {{ item.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav> #}
 </header>
