@@ -68,9 +68,12 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 
 [data-markdown] blockquote {
   border-left: var(--border-thick) solid var(--color-dark);
+  background-color: var(--color-light-accent);
   padding-left: var(--space-s);
   padding-right: var(--space-s);
-  width: 100%;
+  padding-top: var(--space-2xs);
+  padding-bottom: var(--space-2xs);
+  /* width: 100%; */
 }
 
 [data-markdown] {
@@ -180,7 +183,8 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 
 .story-pagination-navigation a:only-child {
   flex-grow: 0;
-  flex-basis: min(100%, 60ch);
+  flex-basis: 100%;
+  /* flex-basis: min(100%, 60ch); */
 }
 
 .story-pagination-navigation a[data-button] {
@@ -241,7 +245,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   transition: background-color var(--transition-duration, 300ms) ease-in-out;
 }
 [data-accordion] summary:hover {
-  background-color: var(--color-light-accent);
+  background-color: var(--color-hover);
 }
 [data-accordion] summary::after {
   content: "›";
@@ -309,4 +313,8 @@ textarea {
 
 .padded-container.measured-container {
   box-sizing: content-box;
+}
+
+.site-search{
+  width: clamp(20ch, 100%, var(--mesure));
 }

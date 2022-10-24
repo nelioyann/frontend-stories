@@ -2,14 +2,14 @@
     {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
-        "notion_url": "https://www.notion.so/Less-than-half-of-users-take-advantage-of-breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
+        "notion_url": "https://www.notion.so/Less-than-half-users-take-advantage-of-breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
         "icon": "🧭",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-10-14T16:16:00.000Z",
+        "edited": "2022-10-24T21:38:00.000Z",
         "created": "2022-10-14T16:05:00.000Z",
         "description": "Breadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n### Breadcrumbs\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n`Home > Furniture > Chairs > Leather Chairs`\n\nIt provides the following advantages:\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n### Key findings\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage",
         "status": {
@@ -56,7 +56,7 @@
         },
         "topics": [],
         "slugs": "do-users-use-breadcrumbs",
-        "name": "Less than half of users take advantage of breadcrumbs"
+        "name": "Less than half users take advantage of breadcrumbs"
     },
     {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
@@ -216,9 +216,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-26T11:34:00.000Z",
+        "edited": "2022-10-18T07:43:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
-        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n### Building an emotional interaction\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n### Are users more tolerant of a computer that apologizes ?\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
+        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n### Building an emotional interaction\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n## How to write better error messages\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n### Are users more tolerant of a computer that apologizes ?\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -253,6 +253,17 @@
                     "color": "blue"
                 },
                 "name": "Silicon sycophants: the effects of computers that flatter",
+                "tags": []
+            },
+            {
+                "id": "e7f598f6-a27d-418e-86d5-a664a867bc2d",
+                "notion_url": "https://www.notion.so/When-life-gives-you-lemons-write-better-error-messages-e7f598f6a27d418e86d5a664a867bc2d",
+                "citation": "Jenni Nadler, Wix, 2022",
+                "url": "https://wix-ux.com/when-life-gives-you-lemons-write-better-error-messages-46c5223e1a2f",
+                "summary": "",
+                "cite": "Nadler @Wix, 2022",
+                "type": null,
+                "name": "When life gives you lemons, write better error messages",
                 "tags": []
             }
         ],

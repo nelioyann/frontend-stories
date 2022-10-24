@@ -23,7 +23,6 @@ It does not aim to provide definitive answers such as “always do this or never
 
 ## Development
 
-### Stack
 
 This project was built using a [JAMSTACK](https://jamstack.wtf/#what-is-jamstack) architecture.
 

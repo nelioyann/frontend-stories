@@ -123,7 +123,7 @@ textarea {
 
 pre {
   color: var(--gray-25);
-  background-color: var(--gray-700);
+  background-color: var(--color-light-accent);
   padding: var(--space-2xs);
   margin: var(--space-2xs) 0 var(--space-s);
   border-radius: var(--border-radius);
@@ -133,17 +133,18 @@ pre {
 
 code {
   font-family: var(--font-monospace);
-  border: var(--border-thin) solid var(--color-dark-accent);
-  padding: calc(var(--space-2xs) * 0.5) var(--space-2xs);
-  border-radius: 0;
+  /* border: var(--border-thin) solid var(--color-dark-accent); */
+  font-size: var(--step--1);
+  padding: calc(var(--space-2xs) * 0.75) var(--space-2xs);
+  border-radius: 5px;
+  background-color: var(--color-light-accent);
+
 
 }
 
 pre code {
-  font-size: var(--step--1);
   padding: 0;
   border: none;
-  color: var(--gray-25);
-  background-color: var(--gray-700);
+  background-color: var(--color-light-accent);
 
 }

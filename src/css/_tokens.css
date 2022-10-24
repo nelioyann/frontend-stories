@@ -1,15 +1,15 @@
 :root {
-  /*----------  UTOPIA FLUID SCALE  ----------*/
 
-  /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1200,20,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
-  --step--1: clamp(0.89rem, calc(0.87rem + 0.09vw), 0.94rem);
-  --step-0: clamp(1rem, calc(0.91rem + 0.45vw), 1.25rem);
-  --step-1: clamp(1.13rem, calc(0.93rem + 0.98vw), 1.67rem);
-  --step-2: clamp(1.27rem, calc(0.92rem + 1.74vw), 2.22rem);
-  --step-3: clamp(1.42rem, calc(0.86rem + 2.79vw), 2.96rem);
-  --step-4: clamp(1.6rem, calc(0.75rem + 4.26vw), 3.95rem);
-  --step-5: clamp(1.8rem, calc(0.54rem + 6.29vw), 5.26rem);
-  --step-6: clamp(2.03rem, calc(0.21rem + 9.06vw), 7.01rem);
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1200,24,1.2,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+  --step--1: clamp(0.89rem, calc(0.76rem + 0.66vw), 1.25rem);
+  --step-0: clamp(1.00rem, calc(0.82rem + 0.91vw), 1.50rem);
+  --step-1: clamp(1.13rem, calc(0.88rem + 1.23vw), 1.80rem);
+  --step-2: clamp(1.27rem, calc(0.94rem + 1.63vw), 2.16rem);
+  --step-3: clamp(1.42rem, calc(1.00rem + 2.12vw), 2.59rem);
+  --step-4: clamp(1.60rem, calc(1.05rem + 2.74vw), 3.11rem);
+  --step-5: clamp(1.80rem, calc(1.10rem + 3.51vw), 3.73rem);
+  --step-6: clamp(2.03rem, calc(1.14rem + 4.46vw), 4.48rem);
 
   /* @link https://utopia.fyi/space/calculator/?c=320,16,1.125,1200,20,1.333,6,1,&s=0.75,1.5%7C2%7C3%7C4%7C5,m-2xl%7Cs-3xl */
   --space-2xs: clamp(0.5rem, calc(0.45rem + 0.23vw), 0.63rem);
@@ -50,7 +50,7 @@
   --gray-700: rgb(63, 63, 70);
   --gray-800: rgb(39, 39, 42);
   --gray-900: rgb(24, 24, 27); */
-  --gray-1000: hsl(225, 93%, 1%);
+  /* --gray-1000: hsl(225, 93%, 1%);
   --gray-900: hsl(200 7.0% 8.8%);
     --gray-800: hsl(195 7.1% 11.0%);
     --gray-700: hsl(197 6.8% 13.6%);
@@ -62,8 +62,20 @@
     --gray-100: hsl(206 6.0% 43.9%);
     --gray-50: hsl(206 5.2% 49.5%);
     --gray-25: hsl(206 6.0% 63.0%);
-    --gray-0: hsl(210 6.0% 93.0%);
+    --gray-0: hsl(210 6.0% 93.0%); */
 
+    /* Prime FLex */
+    --gray-0:#ffffff;
+    --gray-50:#FAFAFA;
+    --gray-100:#F5F5F5;
+    --gray-200:#EEEEEE;
+    --gray-300:#E0E0E0;
+    --gray-400:#BDBDBD;
+    --gray-500:#9E9E9E;
+    --gray-600:#757575;
+    --gray-700:#616161;
+    --gray-800:#424242;
+    --gray-900:#212121;
 
   
 
