@@ -8,7 +8,7 @@ pagination:
 permalink: "{% if currentCategory == 'All'%}/{% else %}/{{currentCategory | slugify}}/index.html{% endif %}"
 eleventyComputed:
     title: "Home - {{currentCategory}} | Frontend Stories"
-    description: "Home - {{currentCategory}} {{meta.site_description}}"
+    description: "{{meta.site_description}} Home - {{currentCategory}}"
     eleventyNavigation:
         key: Home
         title: Home
@@ -23,7 +23,7 @@ eleventyComputed:
     </div>
 </section>
 <section id="findings" data-layout="stack slice" data-props="space:l">
-    <h2 class="visually-hidden" data-heading="5">Browse by categories</h2>
+    <h2  data-heading="3">Topics</h2>
     <nav class="categories-navigation">
         <ul role="list" data-layout="cluster" data-props="noPad">
             {%- for category in collections.categoriesAndAll %}
@@ -55,19 +55,3 @@ eleventyComputed:
         </a>
     </span>
 </section>
-{# <hr/> #}
-{# <section>
-                <button data-button="primary">Primary</button>
-                <button data-button="outline">Outline</button>
-                <button data-button="text">Text</button>
-                <button data-button="link">Link</button>
-                <button data-button="tag">Tag</button>
-                <br/>
-
-                <form action="{{ contribute.tally_url }}" target="_blank" method="get" name="contribution">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title" required="true"/>
-                    <button data-button="primary">Submit</button>
-                </form>
-            </section> #}
-{# </article> #}
