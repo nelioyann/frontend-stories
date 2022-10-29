@@ -58,14 +58,12 @@ li {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 15px;
   border: var(--border-thin, 1px) solid var(--color-light-accent);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--color-dark-accent);
-  border-radius: 15px;
 }
 
 /* Handle on hover */
@@ -82,7 +80,7 @@ ol[role="list"] {
 :root {
   --page-top: var(--space-s-3xl, 12rem);
   --header-height: var(--space-3xl);
-  --responsive-padding: var(--space-s-6xl);
+  --responsive-padding: var(--space-s-3xl);
 }
 main,
 .footer,

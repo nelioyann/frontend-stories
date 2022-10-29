@@ -14,6 +14,7 @@ eleventyComputed:
     title: "{{category}}"
     parent: Findings
 ---
+
 {% extends "layouts/category-layout.njk" %}
 {% block article %}
   <h1 data-heading="3">
@@ -21,11 +22,11 @@ eleventyComputed:
   </h1>
   <p>
     Here are some findings related to the subject of {{ category }}.
-    <ul data-layout="stack" data-props="noPad space:s" role="list">
-      {% set entries = collections.stories | filterByCategory(category) %}
-      {%- for entry in entries %}
-        {% include "partials/story-card-entry.njk" %}
-      {% endfor -%}
-    </ul>
   </p>
+  <ul data-layout="stack" data-props="noPad space:s" role="list">
+    {% set entries = collections.stories | filterByCategory(category) %}
+    {%- for entry in entries %}
+      {% include "partials/story-card-entry.njk" %}
+    {% endfor -%}
+  </ul>
 {% endblock %}

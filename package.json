@@ -28,6 +28,7 @@
     "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
     "@notionhq/client": "^2.0.0",
     "dotenv": "^16.0.1",
+    "evaluatory": "^2.3.1",
     "qrcode": "^1.5.1"
   }
 }

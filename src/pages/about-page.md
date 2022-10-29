@@ -13,7 +13,6 @@ eleventyComputed:
 
 # About Frontend Stories
 
-## Goal
 
 The aim of Frontend Stories is to facilitate access to research data, as well as facts, quotes and articles on which developers can build their own development guidelines.
 

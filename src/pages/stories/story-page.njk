@@ -45,7 +45,7 @@ eleventyComputed:
             </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">📁</span>
-                Filed under
+                Part of
                 <a href="/categories/{{ story.category.name | slugify }}" data-button="link"># {{ story.category.name }}</a>
             </p>
             <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %}
@@ -55,7 +55,7 @@ eleventyComputed:
     </header>
     <section aria-labelledby="summary">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="summary" data-heading="2 anchor">
+            <h2 class="visually-hidden" id="summary" data-heading="2 anchor">
                 <a href="#summary">Overview</a>
             </h2>
             <div itemprop="articleBody" data-layout="stack" data-markdown>
@@ -66,7 +66,7 @@ eleventyComputed:
         </div>
     </section>
     <section aria-labelledby="references">
-        <div data-layout="stack" data-props="x:start space:xs">
+        <div data-layout="stack" data-props="x:start space:s">
             <h2 id="references" data-heading="anchor">
                 <a href="#references">References</a>
             </h2>
@@ -76,46 +76,10 @@ eleventyComputed:
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
             </ul>
-            {% if type == "Insight" %}
-                <div data-layout="box" data-props="noPad">
-                    <header data-layout="box" data-props="noBorder">
-                        <b data-heading="6">
-                            <span data-font="emoji" aria-hidden="true">◬</span>
-                            Finding  marked as Insight
-                        </b>
-                    </header>
-                    <div data-layout="box" data-props="noBorder">
-                        <p>
-                            Currently this finding does not include enough research based evidence. You can help support or refute its premises in the
-                            <a href="#contribute">contribution section</a> down below.
-                        </p>
-                    </div>
-                </div>
-            {% endif %}
-        </div>
-    </section>
-    <section aria-labelledby="contribute">
-        <div data-layout="stack" data-props="x:stretch space:xs">
-            <h2 id="contribute" data-heading="anchor">
-                <a href="#contribute">Contribution</a>
-            </h2>
-            <p>
-                Share ideas, suggestions, or comments here
-            </p>
-            <div data-layout="cluster" data-props="x:stretch" style="--threshold: var(--measure);">
-                <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
-                    Add a remark</a>
-                <a
-                    data-button="outline"
-                    data-props="x:center"
-                    href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
-                    target="_blank">
-                    Mention on Twitter</a>
-            </div>
         </div>
     </section>
     <section aria-label="Navigate" data-layout="stack">
-        <h2 data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other findings</h2>
+        <h2 class="visually-hidden" data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other findings</h2>
         <nav
             class="story-pagination-navigation"
             aria-labelledby="pagination-nav"
@@ -132,5 +96,31 @@ eleventyComputed:
                 </a>
             {% endif %}
         </nav>
+    </section>
+    <section aria-labelledby="contribute">
+        <div data-layout="stack" data-props="x:stretch space:xs">
+            <h2 id="contribute" data-heading="anchor">
+                <a href="#contribute">Contribute</a>
+            </h2>
+            <p>
+                Share ideas, suggestions, or comments here
+            </p>
+            
+            {% if type == "Insight" %}
+                <p>
+                    This finding does not include enough research based evidence. You can help support or refute its premises.
+                </p>
+            {% endif %}
+            <div data-layout="cluster" data-props="x:stretch" style="--threshold: var(--measure);">
+                <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
+                    Add a remark</a>
+                <a
+                    data-button="outline"
+                    data-props="x:center"
+                    href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
+                    target="_blank">
+                    Mention on Twitter</a>
+            </div>
+        </div>
     </section>
 {% endblock %}
