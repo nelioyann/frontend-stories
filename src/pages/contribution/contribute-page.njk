@@ -25,12 +25,12 @@ eleventyComputed:
     <div>
         <form class="contribute-story-form" data-layout="stack" data-props="y:start x:start" action="{{ contribute.tally_url }}" target="_blank" method="get" name="contribution">
             <label for="title">Title</label>
-            <input type="text" id="title" name="title" required="true"/>
+            <input type="text" id="title" name="title" required/>
             <small>The core message in a sentence</small>
             <label for="description">Description</label>
-            <textarea rows="4" maxlength="500" type="text" id="description" name="description" required="true"></textarea>
+            <textarea rows="4" maxlength="500" type="text" id="description" name="description" required></textarea>
             <small>Short description under 500 characters</small>
-            <button data-button="outline">Submit</button>
+            <button type="submit" data-button="outline">Submit</button>
         </form>
     </div>
 </section>
