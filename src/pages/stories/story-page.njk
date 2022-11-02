@@ -21,9 +21,9 @@ eleventyComputed:
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
 {# <figure>
-                        {{ meta.site_url| qrcode | safe }}
-                        <figcaption class="visually-hidden">Share link</figcaption>
-                    </figure> #}
+            {{ meta.site_url| qrcode | safe }}
+            <figcaption class="visually-hidden">Share link</figcaption>
+        </figure> #}
 {% block article %}
     <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:l x:start">
         {% if emojicon %}
@@ -71,7 +71,7 @@ eleventyComputed:
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul data-layout="stack">
+            <ul data-layout="stack" role="list">
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
@@ -86,26 +86,25 @@ eleventyComputed:
             data-layout="switcher"
             data-props="x:between y:stretch space:xs">
             {% if pagination.href.previous %}
-                <a data-button="link" class="previous-button" href="{{ pagination.href.previous }}">
+                <a data-button="outline" class="previous-button" href="{{ pagination.href.previous }}">
                     {{ pagination.page.previous.name }}
                 </a>
             {% endif %}
             {% if pagination.href.next %}
-                <a class="next-button" data-button="link" href="{{ pagination.href.next }}">
+                <a class="next-button" data-button="outline" href="{{ pagination.href.next }}">
                     {{ pagination.page.next.name }}
                 </a>
             {% endif %}
         </nav>
     </section>
     <section aria-labelledby="contribute">
-        <div data-layout="stack" data-props="x:stretch space:xs">
+        <div data-layout="stack" data-props="x:start space:xs">
             <h2 id="contribute" data-heading="anchor">
                 <a href="#contribute">Contribute</a>
             </h2>
             <p>
                 Share ideas, suggestions, or comments here
             </p>
-            
             {% if type == "Insight" %}
                 <p>
                     This finding does not include enough research based evidence. You can help support or refute its premises.

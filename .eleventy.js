@@ -106,7 +106,7 @@ module.exports = function (eleventyConfig) {
 
       let lastOne = prev[prev.length - 1];
 
-      if (lastOne.length + current.length > 19) {
+      if (lastOne.length + current.length > 25) {
         return [...prev, current];
       }
 
@@ -120,7 +120,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncFilter(
     "qrcode",
     async function (value, callback) {
-      let result = await qrCode.toString(value, { type: "svg", margin: 4 });
+      var opts = {
+        color: {
+          dark:"#212121",
+          light:"#FAFAFA"
+        }
+      }
+      // let result = await qrCode.toString(value, { type: "svg", margin: 4 });
+      let result = await qrCode.toDataURL(value, opts) ;
       callback(null, result);
     }
   );
