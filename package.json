@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "evaluate": "evaluatory --sitemap https://www.frontendstories.com/sitemap.xml"
   },
   "repository": {
     "type": "git",
