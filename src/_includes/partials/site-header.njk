@@ -3,20 +3,20 @@
         <span class="visually-hidden">
             {{ meta.site_name }}
         </span>
-        <abbr aria-hidden="true" data-layout="cluster" data-props="space:0" title="{{meta.site_name}}">
-            <span data-layout="box icon stack" data-props="y:center x:center">F</span>
-            <span data-layout="box icon stack" data-props="invert y:center x:center">S</span>
+        <abbr aria-hidden="true" title="{{ meta.site_name }}" data-layout="" data-props="">
+            F
+            <sup>S</sup>
         </abbr>
     </a>
-    {# <nav>
-                <ul role="list" data-layout="cluster" data-props="space:s">
-                    {% for item in nav.items %}
-                        <li>
-                            <a {% if item.url === page.url %} aria-current="page" {% endif %} data-link="data-link" href="{{ item.url }}">
-                                {{ item.name }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </nav> #}
+    <nav>
+        <ul role="list" data-layout="cluster" data-props="space:s">
+            {% for item in nav.items %}
+                <li>
+                    <a data-button="outline" {% if item.url === page.url %} aria-current="page" {% endif %} data-link="data-link" href="{{ item.url }}">
+                        {{ item.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
 </header>
