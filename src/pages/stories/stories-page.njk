@@ -18,7 +18,7 @@ eleventyComputed:
 <p>
     {{ collections.stories.length }} referenced articles on front-end development covering case studies, resarch papers, guidelines and best practices, focused on {{collections.categories | join(", ")}} and more.
 </p>
-<ul role="list"  data-accordion data-props="noMeasure space:l">
+<section data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {% set entries = collections.stories | filterByCategory(category) %}
         <details data-sticky >
@@ -35,4 +35,4 @@ eleventyComputed:
             </ul>
         </details>
     {% endfor -%}
-</ul>
+</section>

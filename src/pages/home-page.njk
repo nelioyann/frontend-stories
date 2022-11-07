@@ -23,8 +23,8 @@ eleventyComputed:
     </div>
 </section>
 <section id="findings" data-layout="stack slice" data-props="space:l">
-    <h2  data-heading="3">Topics</h2>
-    <nav class="categories-navigation">
+    <h2 id="categories-title" data-heading="3">Topics</h2>
+    <nav class="categories-navigation" aria-labelledby="categories-title">
         <ul role="list" data-layout="cluster" data-props="noPad">
             {%- for category in collections.categoriesAndAll %}
                 {% set category_url = '' if category == 'All' else category | slugify %}

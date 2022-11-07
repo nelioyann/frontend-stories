@@ -46,7 +46,7 @@ eleventyComputed:
             <p>
                 <span aria-hidden="true" data-font="emoji">📁</span>
                 Part of
-                <a href="/categories/{{ story.category.name | slugify }}" data-button="link"># {{ story.category.name }}</a>
+                <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small"># {{ story.category.name }}</a>
             </p>
             <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %}
         </div>

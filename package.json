@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "evaluate": "evaluatory --sitemap https://www.frontendstories.com/sitemap.xml"
+    "eleventy:dev": "set ELEVENTY_ENV=development & eleventy --serve & evaluatory --sitemap http://localhost:8080/sitemap.xml",
+    "evaluate:dev": "evaluatory --sitemap http://localhost:8080/sitemap.xml"
   },
   "repository": {
     "type": "git",
