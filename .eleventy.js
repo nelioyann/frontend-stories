@@ -194,7 +194,7 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // DEfault return
+  // Default return
   return {
     dir: {
       input: "src",

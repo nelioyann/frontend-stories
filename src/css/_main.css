@@ -97,7 +97,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   padding-right: var(--space-s);
   padding-top: var(--space-2xs);
   padding-bottom: var(--space-2xs);
-  width: max-content;
+  width: 100%;
 }
 
 [data-markdown] {
