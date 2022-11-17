@@ -21,12 +21,12 @@ eleventyComputed:
 <section data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {% set entries = collections.stories | filterByCategory(category) %}
-        <details data-sticky >
+        <details data-sticky open>
             {# {%if loop.index <= 5 %}open{%endif%} #}
             <summary>
-                <span>
+                <b>
                     {{ category }}
-                </span>
+                </b>
             </summary>
             <ul data-props="space:s" role="list" data-layout="stack">
                 {% for entry in collections.stories | filterByCategory(category) %}

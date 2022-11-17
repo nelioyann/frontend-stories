@@ -32,7 +32,7 @@ eleventyComputed:
                     {% set isActive = 'active' if currentCategory == category%}
                     <a
                         data-props="x:center"
-                        data-button="{{ isActive }} tag"
+                        data-button="{{ isActive }} tag small"
                         href="/{{ category_url }}#findings">{{ 'Latest' if category == 'All' else category }}</a>
                 </li>
             {% endfor -%}
@@ -41,8 +41,8 @@ eleventyComputed:
     <h3 data-heading="5" class="visually-hidden">
         {{ "Newest" if currentCategory == 'All' else currentCategory }}
     </h3>
-    <ul data-layout="stack" data-props="noPad" role="list">
-        {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(4) %}
+    <ul data-layout="stack" data-props="space:2xs" >
+        {% set entries = collections.stories | filterByCategory(currentCategory) | limitTo(5) %}
         {%- for entry in entries %}
             {% include "partials/story-card-entry.njk" %}
         {% endfor -%}

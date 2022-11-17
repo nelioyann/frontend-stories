@@ -67,11 +67,11 @@ eleventyComputed:
     </section>
     <section aria-labelledby="references">
         <div data-layout="stack" data-props="x:start space:s">
-            <h2 id="references" data-heading="anchor">
+            <h2 class="visually-hidden" id="references" data-heading="anchor">
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul data-layout="stack" role="list">
+            <ul>
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
