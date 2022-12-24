@@ -21,7 +21,7 @@ eleventyComputed:
 <section data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {% set entries = collections.stories | filterByCategory(category) %}
-        <details data-sticky open>
+        <details>
             {# {%if loop.index <= 5 %}open{%endif%} #}
             <summary>
                 <b>

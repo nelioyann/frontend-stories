@@ -2,11 +2,10 @@
      --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
      --font-serif: "Apple Garamond",  "Times New Roman", "Baskerville", "Droid Serif", "Times","Source Serif Pro", serif;
      --font-monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-     /* --font-emoji: 'Noto Emoji', system-ui, sans-serif; */
 }
 
 [data-font="emoji"]{
-     filter: grayscale(0);
+     filter: grayscale(1);
 }
 [data-font="serif"]{
      font-family: var(--font-serif);

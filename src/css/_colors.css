@@ -1,5 +1,13 @@
 :root {
-  --color-primary: hsl(195, 100%, 30%);
+  --primary-hue: 170;
+  --primary-saturation: 100%;
+  --primary-lightness: 21%;
+  --primary-hs: var(--primary-hue), var(--primary-saturation);
+  --color-primary: hsl(
+    var(--primary-hue),
+    var(--primary-saturation),
+    var(--primary-lightness)
+  );
   --color-light: var(--gray-0);
   --color-dark: var(--gray-900);
   --color-focus: var(--color-dark);

@@ -27,31 +27,10 @@ body > footer {
 
 body > header abbr {
   text-decoration: none;
-  display: block;
   font-size: var(--step-1);
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 0 var(--space-s);
-  border-radius: var(--border-radius);
   letter-spacing: -1px;
 }
 
-body > header abbr sup {
-  text-transform: lowercase;
-}
-body > header abbr sup:before {
-  content: "[";
-}
-body > header abbr sup:after {
-  content: "]";
-}
-/* transition: transform var(--transition-duration, 300ms) var(--bezier-snappy); */
-/* body > header abbr span:nth-child(2) {
-  transform: translateX(-10%);
-}
-body > header abbr:hover span:nth-child(2) {
-  transform: translateX(0%);
-} */
 
 hr {
   height: 1em;
@@ -97,7 +76,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   padding-right: var(--space-s);
   padding-top: var(--space-2xs);
   padding-bottom: var(--space-2xs);
-  width: 100%;
+  width: fit-content;
 }
 
 [data-markdown] {
@@ -125,7 +104,6 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   flex-wrap: wrap;
   gap: var(--space);
   justify-content: var(--horizontal-alignment, flex-start);
-  /* align-items: var(--vertical-alignment, center); */
   list-style-type: none;
   counter-reset: items;
   padding-left: 0;
@@ -135,6 +113,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   flex-grow: 1;
   flex-basis: calc((var(--threshold) - 100%) * 999);
   position: relative;
+  font-size: var(--step--1);
 }
 [data-markdown] ol > li::before {
   counter-increment: items;
@@ -151,22 +130,24 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 }
 
 /* PAGE LEVEL BREADCRUMBS */
-.breadcrumbs-navigation {
+.breadcrumbs-navigation ul{
   --measure: initial;
-}
-.breadcrumbs-navigation li {
-  margin-right: var(--space-xs);
-}
-.breadcrumbs-navigation li,
-.breadcrumbs-navigation li a {
-  display: inline-flex;
-  align-items: center;
-}
-.breadcrumbs-navigation ul {
+  --offset: var(--space-s-m);
+  list-style-type: none;
   padding-left: 0;
-  display: inline-flex;
-  overflow-x: auto;
-  overflow-y: visible;
+}
+.breadcrumbs-navigation li:not(:first-child):before{
+  content:'┗ ';
+}
+.breadcrumbs-navigation li:last-child::after{
+  content: " (📍)" ;
+}
+
+.breadcrumbs-navigation li:nth-child(2){
+  margin-left: calc(var(--offset) * 1);
+}
+.breadcrumbs-navigation li:nth-child(3){
+  margin-left: calc(var(--offset) * 2);
 }
 .breadcrumbs-navigation li a {
   --outline-offset: 0px;
@@ -174,17 +155,6 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   border-bottom-width: var(--border-thin);
   border-bottom-style: solid;
   border-bottom-color: transparent;
-}
-.breadcrumbs-navigation li a:hover {
-  border-bottom-color: var(--color-dark);
-}
-.breadcrumbs-navigation li:not(:last-child)::after {
-  content: " /   ";
-  margin-left: var(--space-s, 5px);
-}
-.breadcrumbs-navigation li:last-child {
-  flex-grow: 0;
-  flex-shrink: 0;
 }
 
 /* HOME PAGE CATEGORIES CHIPS FILTER */
@@ -206,7 +176,6 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 .story-pagination-navigation a:only-child {
   flex-grow: 0;
   flex-basis: 100%;
-  /* flex-basis: min(100%, 60ch); */
 }
 
 .story-pagination-navigation a[data-button] {
@@ -326,22 +295,6 @@ summary {
   cursor: pointer;
 }
 
-.home-cover-section {
-  --min-height: calc(80vh - var(--header-height, 0px));
-  --transition-duration: 1s;
-  animation: slideDown var(--transition-duration) var(--bezier-swift) forwards;
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-3rem);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 input,
 textarea {
