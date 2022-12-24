@@ -35,8 +35,15 @@
     <link rel="shortcut icon" href="/images/icons/icon-32.png" type="image/x-icon" sizes="32x32" />
     <link rel="shortcut icon" href="/images/icons/icon-16.png" type="image/x-icon" sizes="16x16" />
     <meta name="author" content="{{meta.site_author}}">
-    {# {%if page.url == "/"%}
-	    <script>navigator.serviceWorker.register("sw.js")</script>
-    {% endif %} #}
+    {# Prefetch  main pages #}
+    {%- for category in collections.categoriesAndAll %}
+        {%- set category_url = '' if category == 'All' else category | slugify -%}
+        <link rel="prefetch" href="/{{ category_url }}/" as="document">
+    {%endfor%}
+
+    {# {%- for story in collections.stories | limit(30) %}
+        <link rel="prefetch" href="/{{story.slug}}/" as="document">
+    {% endfor%} #}
+    
 
 </head>

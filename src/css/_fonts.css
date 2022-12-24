@@ -1,34 +1,11 @@
-/* atkinson-hyperlegible-regular - latin */
-@font-face {
-     font-family: 'Atkinson Hyperlegible';
-     font-style: normal;
-     font-weight: 400;
-     font-display: swap;
-     src: local(''),
-          url('../fonts/atkinson-hyperlegible-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-          url('../fonts/atkinson-hyperlegible-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-   }
-
-   /* atkinson-hyperlegible-700 - latin */
-   @font-face {
-     font-family: 'Atkinson Hyperlegible';
-     font-style: normal;
-     font-weight: 700;
-     font-display: swap;
-     src: local(''),
-          url('../fonts/atkinson-hyperlegible-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-          url('../fonts/atkinson-hyperlegible-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-   }
-
 :root{
-     --font-sans-serif: 'Atkinson Hyperlegible', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+     --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
      --font-serif: "Apple Garamond",  "Times New Roman", "Baskerville", "Droid Serif", "Times","Source Serif Pro", serif;
      --font-monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-     /* --font-emoji: 'Noto Emoji', system-ui, sans-serif; */
 }
 
 [data-font="emoji"]{
-     filter: grayscale(0);
+     filter: grayscale(1);
 }
 [data-font="serif"]{
      font-family: var(--font-serif);

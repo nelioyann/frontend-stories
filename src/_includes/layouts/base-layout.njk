@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     {% include "partials/site-head.njk" %}
-    <body data-layout="cover" data-props="noPad space:xl" style="--min-height: 100vh;">
+    <body  style="--min-height: 100vh;">
         {% include "partials/site-header.njk" %}
-        <main id="main-content" data-layout="stack" data-props="centered x:stretch space:l">
+        <main id="main-content" class="measured-container" data-layout="stack" data-props="x:stretch space:l">
             {% block content %}
                 {{ content | safe }}
             {% endblock %}

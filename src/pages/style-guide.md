@@ -13,7 +13,7 @@ eleventyComputed:
 
 <div class="measured-container" data-markdown data-layout="slice stack" data-props="space:xs">
 
-Below is a minimal style guide for this site, inspired by <a data-button="link" target="_blank" rel="noopener nofollow noreferrer" href="https://danabyerly.com/style-guide/">Dana Byerly's Style Guide</a>.
+Below is a minimal style guide for this site, inspired by <a target="_blank" rel="noopener nofollow noreferrer" href="https://danabyerly.com/style-guide/">Dana Byerly's Style Guide</a>.
 
 **Table of Contents**
 

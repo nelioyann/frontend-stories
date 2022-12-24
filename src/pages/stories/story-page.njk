@@ -27,7 +27,7 @@ eleventyComputed:
 {% block article %}
     <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:l x:start">
         {% if emojicon %}
-            <span data-heading="1" aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
+            <span data-heading="1" aria-hidden="true">{{ emojicon }}</span>
         {% endif %}
         <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder noMeasure space:2xs">
             {{ story.name }}
@@ -55,7 +55,7 @@ eleventyComputed:
     </header>
     <section aria-labelledby="summary">
         <div data-layout="stack" data-props="space:xs">
-            <h2 class="visually-hidden" id="summary" data-heading="2 anchor">
+            <h2 id="summary" data-heading="4 anchor">
                 <a href="#summary">Overview</a>
             </h2>
             <div itemprop="articleBody" data-layout="stack" data-markdown>
@@ -67,11 +67,11 @@ eleventyComputed:
     </section>
     <section aria-labelledby="references">
         <div data-layout="stack" data-props="x:start space:s">
-            <h2 id="references" data-heading="anchor">
+            <h2 id="references" data-heading="4 anchor">
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul data-layout="stack" role="list">
+            <ul data-layout="stack">
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
@@ -97,29 +97,29 @@ eleventyComputed:
             {% endif %}
         </nav>
     </section>
-    <section aria-labelledby="contribute">
-        <div data-layout="stack" data-props="x:start space:xs">
-            <h2 id="contribute" data-heading="anchor">
+    <section aria-labelledby="contribute" data-layout="stack">
+        {# <div data-layout="stack" data-props="x:start space:xs"> #}
+            <h2 id="contribute" data-heading="4 anchor">
                 <a href="#contribute">Contribute</a>
             </h2>
-            <p>
+            <p data-props="space:s">
                 Share ideas, suggestions, or comments here
             </p>
             {% if type == "Insight" %}
-                <p>
+                <p data-props="space:s">
                     This finding does not include enough research based evidence. You can help support or refute its premises.
                 </p>
             {% endif %}
-            <div data-layout="cluster" data-props="x:stretch" style="--threshold: var(--measure);">
-                <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
-                    Add a remark</a>
+            {# <div data-layout="cluster" data-props="x:stretch" style="--threshold: var(--measure);"> #}
+                {# <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
+                    Add a remark</a> #}
                 <a
                     data-button="outline"
-                    data-props="x:center"
+                    data-props="x:center space:s"
                     href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
                     target="_blank">
                     Mention on Twitter</a>
-            </div>
-        </div>
+            {# </div> #}
+        {# </div> #}
     </section>
 {% endblock %}

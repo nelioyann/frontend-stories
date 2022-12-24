@@ -1,7 +1,14 @@
-{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key , {allowMissing: true, includeSelf: false}) %}
+{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key , {allowMissing: true, includeSelf: true}) %}
 {% if navPages.length > 0 %}
+
     <nav aria-label="Breadcrumbs" class="breadcrumbs-navigation">
         <span class="visually-hidden">You are here</span>
         {{ navPages | eleventyNavigationToHtml | safe }}
     </nav>
+    {# {%- for entry in navPages %}
+        <li {% if entry.url == page.url %} class="my-active-class"{% endif %}>
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+        </li>
+{%- endfor %} #}
+    <hr/>
 {% endif %}
