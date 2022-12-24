@@ -1,16 +1,3 @@
 <header class="padded-container measured-container" data-layout="cluster" data-props="y:center x:between">
-    <a data-button="text" href="/">
-    <span data-font="emoji" aria-hidden="true">🏠</span>
-    {{ meta.site_name }}</a>
-        {# <nav aria-label="main-navigation">
-            <ul role="list" data-layout="cluster" data-props="space:s">
-                {% for item in nav.items %}
-                    <li>
-                        <a data-button="link" {% if item.url === page.url %} aria-current="page" {% endif %} data-link="data-link" href="{{ item.url }}">
-                            {{ item.name }}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav> #}
+    <a data-heading="5" data-props="y:center" data-button="text" href="/">{{ meta.site_name }}</a>
 </header>
