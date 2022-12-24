@@ -1,5 +1,93 @@
 [
     {
+        "id": "6fdacd63-da3a-40c0-a6b6-50d3599a4c20",
+        "notion_url": "https://www.notion.so/Avoid-marking-required-fields-with-an-asterisk-6fdacd63da3a40c0a6b650d3599a4c20",
+        "icon": "✳️",
+        "type": {
+            "id": "@bzz",
+            "name": "Finding",
+            "color": "pink"
+        },
+        "edited": "2022-12-23T15:06:00.000Z",
+        "created": "2022-11-28T15:04:00.000Z",
+        "description": "Assuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.”",
+        "status": {
+            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
+            "name": "Published",
+            "color": "green"
+        },
+        "references": [
+            {
+                "id": "e2b76fda-261a-4617-801c-6392ade6ba78",
+                "notion_url": "https://www.notion.so/Marking-Required-vs-Optional-form-fields-e2b76fda261a4617801c6392ade6ba78",
+                "citation": "",
+                "url": "https://www.lukew.com/ff/entry.asp?725",
+                "summary": "",
+                "cite": "Luke Wroblewski",
+                "created time": "2022-11-28T15:03:00.000Z",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
+                "name": "Marking Required vs. Optional form fields",
+                "tags": []
+            },
+            {
+                "id": "f2c1345e-d4e1-4d75-854d-8b285a0f23ef",
+                "notion_url": "https://www.notion.so/The-Privacy-Economics-of-Voluntary-Over-disclosure-in-Web-Forms-Semantic-Scholar-f2c1345ed4e14d75854d8b285a0f23ef",
+                "citation": "",
+                "url": "https://www.semanticscholar.org/paper/The-Privacy-Economics-of-Voluntary-Over-disclosure-Preibusch-Krol/3f9426bf2c0b1808db4b5ce940ed36f476bc6d61",
+                "summary": "",
+                "cite": "Preibush, 2012",
+                "created time": "2022-12-01T21:48:00.000Z",
+                "type": {
+                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
+                    "name": "Research Paper",
+                    "color": "blue"
+                },
+                "name": "The Privacy Economics of Voluntary Over-disclosure in Web Forms | Semantic Scholar",
+                "tags": []
+            },
+            {
+                "id": "ea80e445-df27-4a94-9c2b-57984df977fc",
+                "notion_url": "https://www.notion.so/Form-Design-Patterns-ea80e445df274a949c2b57984df977fc",
+                "citation": "Adam Silver, 2018",
+                "url": "https://www.smashingmagazine.com/printed-books/form-design-patterns/",
+                "summary": "",
+                "cite": "Silver, 2018",
+                "created time": "2022-11-28T15:07:00.000Z",
+                "type": {
+                    "id": "6d7dbec3-14fe-4915-bbe1-8f23091adf6a",
+                    "name": "Book",
+                    "color": "yellow"
+                },
+                "name": "Form Design Patterns",
+                "tags": []
+            },
+            {
+                "id": "45264514-8a3f-446b-89f7-e666baae6900",
+                "notion_url": "https://www.notion.so/Indicating-form-controls-as-required-using-asterisks-ADG-452645148a3f446b89f7e666baae6900",
+                "citation": "",
+                "url": "https://www.accessibility-developer-guide.com/examples/forms/required/",
+                "summary": "",
+                "cite": "",
+                "created time": "2022-12-02T20:32:00.000Z",
+                "type": null,
+                "name": "Indicating form controls as required using asterisks (*) - ADG",
+                "tags": []
+            }
+        ],
+        "category": {
+            "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
+            "name": "Design",
+            "color": "red"
+        },
+        "topics": [],
+        "slugs": "required-fields-asterisk",
+        "name": "Avoid marking required fields with an asterisk"
+    },
+    {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
         "notion_url": "https://www.notion.so/Less-than-half-users-take-advantage-of-breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
@@ -59,6 +147,142 @@
         "topics": [],
         "slugs": "do-users-use-breadcrumbs",
         "name": "Less than half users take advantage of breadcrumbs"
+    },
+    {
+        "id": "592c4c91-84c5-4273-9a24-eb155e53e43a",
+        "notion_url": "https://www.notion.so/Provide-text-alternatives-for-any-non-text-content-592c4c9184c542739a24eb155e53e43a",
+        "icon": "🔤",
+        "type": {
+            "id": "@bzz",
+            "name": "Finding",
+            "color": "pink"
+        },
+        "edited": "2022-12-23T15:06:00.000Z",
+        "created": "2022-09-07T15:06:00.000Z",
+        "description": "Only use an icon if its message is a 100% clear to everyone. Adding a text labels alongside icons can increase clarity.\n",
+        "status": {
+            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
+            "name": "Published",
+            "color": "green"
+        },
+        "references": [
+            {
+                "id": "be99d931-3755-4c23-8a42-81085b6ad067",
+                "notion_url": "https://www.notion.so/The-best-icon-is-a-text-label-Thomas-Byttebier-be99d93137554c238a4281085b6ad067",
+                "citation": "Thomas Byttebier, 2015",
+                "url": "https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label",
+                "summary": "",
+                "cite": "Thomas Byttebier, 2015",
+                "created time": "2022-09-07T15:08:00.000Z",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
+                "name": "The best icon is a text label — Thomas Byttebier",
+                "tags": []
+            },
+            {
+                "id": "9cb61c4b-a08d-4a56-a386-a0bd48e8787c",
+                "notion_url": "https://www.notion.so/Web-Content-Accessibility-Guidelines-WCAG-2-0-9cb61c4ba08d4a56a386a0bd48e8787c",
+                "citation": "W3C, Web Content Accessibility Guidelines 2.0",
+                "url": "https://www.w3.org/TR/WCAG20/#text-equiv",
+                "summary": "",
+                "cite": "WCAG 2.0",
+                "created time": "2022-09-07T15:10:00.000Z",
+                "type": {
+                    "id": "339e3d89-9836-4738-b918-cc2c74cc82cc",
+                    "name": "Specification",
+                    "color": "gray"
+                },
+                "name": "Web Content Accessibility Guidelines (WCAG) 2.0",
+                "tags": []
+            },
+            {
+                "id": "5ad8cc7b-486a-4a00-a6c2-986a62723b6e",
+                "notion_url": "https://www.notion.so/Misused-mobile-UX-patterns-If-you-are-an-experienced-designer-you-by-Zoltan-Kollin-Medium-5ad8cc7b486a4a00a6c2986a62723b6e",
+                "citation": "Zoltan Kollin, Medium, 2015",
+                "url": "https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570",
+                "summary": "",
+                "cite": "Medium, 2015",
+                "created time": "2022-09-07T15:14:00.000Z",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
+                "name": "Misused mobile UX patterns. If you are an experienced designer, you… | by Zoltan Kollin | Medium",
+                "tags": []
+            },
+            {
+                "id": "81c0696c-ed90-491d-adb8-24db92c2e847",
+                "notion_url": "https://www.notion.so/UX-Best-Practices-Include-Labels-with-Icons-Voice-Code-81c0696ced90491dadb824db92c2e847",
+                "citation": "Voice+Code, 2019",
+                "url": "https://www.voiceandcode.com/our-insights/2019/6/7/ux-best-practices-include-labels-with-icons",
+                "summary": "",
+                "cite": "Voice+Code, 2019",
+                "created time": "2022-09-14T08:07:00.000Z",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
+                "name": "UX Best Practices: Include Labels with Icons — Voice+Code",
+                "tags": []
+            }
+        ],
+        "category": {
+            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
+            "name": "Accessibility",
+            "color": "pink"
+        },
+        "topics": [],
+        "slugs": "provide-alt-text",
+        "name": "Provide text alternatives for any non text content"
+    },
+    {
+        "id": "322c97d2-723e-4741-99ef-8b4086ea38ab",
+        "notion_url": "https://www.notion.so/Avoid-Unicode-characters-on-online-posts-322c97d2723e474199ef8b4086ea38ab",
+        "icon": "🔣",
+        "type": {
+            "id": "OL?t",
+            "name": "Insight",
+            "color": "green"
+        },
+        "edited": "2022-12-23T15:03:00.000Z",
+        "created": "2022-09-07T14:36:00.000Z",
+        "description": "By avoiding special characters from Unicode, you can ensure that your content is easy to read for all users, regardless of the device they are using. Additionally, screen readers may have difficulty recognizing special characters, making them inaccessible to those using assistive technology. ",
+        "status": {
+            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
+            "name": "Published",
+            "color": "green"
+        },
+        "references": [
+            {
+                "id": "1ce2f69f-7a5c-4cee-bdd0-07ff5c6076fc",
+                "notion_url": "https://www.notion.so/Kent-C-Dodds-on-unicode-characters-1ce2f69f7a5c4ceebdd007ff5c6076fc",
+                "citation": "Twitter, @kentcdodds, 2019",
+                "url": "https://twitter.com/kentcdodds/status/1083073242330361856",
+                "summary": "",
+                "cite": "Twitter, 2019",
+                "created time": "2022-09-07T14:39:00.000Z",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
+                "name": "Kent C. Dodds on unicode characters",
+                "tags": []
+            }
+        ],
+        "category": {
+            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
+            "name": "Accessibility",
+            "color": "pink"
+        },
+        "topics": [],
+        "slugs": "avoid-unicode-characters",
+        "name": "Avoid Unicode characters on online posts"
     },
     {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
@@ -378,7 +602,11 @@
                 "summary": "",
                 "cite": "Nadler @Wix, 2022",
                 "created time": "2022-10-18T07:33:00.000Z",
-                "type": null,
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
                 "name": "When life gives you lemons, write better error messages",
                 "tags": []
             }
