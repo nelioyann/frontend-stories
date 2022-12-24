@@ -13,7 +13,7 @@
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);
 
-  --color-light-accent: var(--gray-200);
+  --color-light-accent: var(--gray-100);
   --color-dark-accent: var(--gray-700);
 
   --shadow-color: 240deg 2% 66%;
