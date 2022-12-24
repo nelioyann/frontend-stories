@@ -8,8 +8,8 @@
     var(--primary-saturation),
     var(--primary-lightness)
   );
-  --color-light: var(--gray-0);
-  --color-dark: var(--gray-900);
+  --color-light: var(--gray-50);
+  --color-dark: var(--gray-800);
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);
 
@@ -31,17 +31,3 @@
 
   --horizontal-line: var(--horizontal-line-dark);
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: hsl(195, 80%, 60%);
-    --color-light: var(--gray-1000);
-    --color-light-accent: var(--gray-700);
-    --color-dark: var(--gray-0);
-    --color-dark-accent: var(--gray-200);
-  }
-
-  hr {
-    filter: invert(1);
-  }
-} */
