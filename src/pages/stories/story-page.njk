@@ -20,10 +20,7 @@ eleventyComputed:
 
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
-{# <figure>
-            {{ meta.site_url| qrcode | safe }}
-            <figcaption class="visually-hidden">Share link</figcaption>
-        </figure> #}
+
 {% block article %}
     <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:l x:start">
         {% if emojicon %}
@@ -55,7 +52,7 @@ eleventyComputed:
     </header>
     <section aria-labelledby="summary">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="summary" data-heading="4 anchor">
+            <h2 id="summary" data-heading="6 anchor">
                 <a href="#summary">Overview</a>
             </h2>
             <div itemprop="articleBody" data-layout="stack" data-markdown>
@@ -67,7 +64,7 @@ eleventyComputed:
     </section>
     <section aria-labelledby="references">
         <div data-layout="stack" data-props="x:start space:s">
-            <h2 id="references" data-heading="4 anchor">
+            <h2 id="references" data-heading="6 anchor">
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
@@ -118,7 +115,7 @@ eleventyComputed:
                     data-props="x:center space:s"
                     href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
                     target="_blank">
-                    Mention on Twitter</a>
+                    Share on Twitter</a>
             {# </div> #}
         {# </div> #}
     </section>

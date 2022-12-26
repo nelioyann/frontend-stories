@@ -12,7 +12,11 @@ a {
     --transition-duration: 0ms;
   }
 }
-
+body{
+  padding-left: var(--responsive-padding);
+  padding-right: var(--responsive-padding);
+  min-height: 100vh;
+}
 body > header {
   min-height: var(--header-height);
 }
@@ -309,10 +313,6 @@ textarea {
   background-color: var(--color-light);
   border-color: var(--color-dark);
   border-width: var(--border-thin);
-}
-
-.padded-container.measured-container {
-  box-sizing: content-box;
 }
 
 .site-search {

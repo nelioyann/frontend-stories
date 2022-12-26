@@ -9,12 +9,13 @@
     var(--primary-lightness)
   );
   --color-light: var(--gray-50);
+  --color-light-accent: var(--gray-100);
+  --color-dark-accent: var(--gray-700);
   --color-dark: var(--gray-800);
+  
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);
 
-  --color-light-accent: var(--gray-100);
-  --color-dark-accent: var(--gray-700);
 
   --shadow-color: 240deg 2% 66%;
   --shadow-elevation-low: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
