@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", readableDate);
   eleventyConfig.addFilter("buildRFC822Date", buildRFC822Date);
 
-  eleventyConfig.on("afterBuild", generateSocialPreviewImages);
+  eleventyConfig.on("eleventy.after", generateSocialPreviewImages);
 
   // Default return
   return {

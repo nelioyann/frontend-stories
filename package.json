@@ -6,7 +6,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "start:dev": "set ELEVENTY_ENV=development & eleventy --serve",
-    "a11ty": "evaluatory --sitemap http://localhost:8080/sitemap.xml"
+    "a11y": "evaluatory --sitemap http://localhost:8080/sitemap.xml"
   },
   "repository": {
     "type": "git",
