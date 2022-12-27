@@ -144,15 +144,18 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 /* PAGE LEVEL BREADCRUMBS */
 .breadcrumbs-navigation ul{
   --measure: initial;
-  --offset: var(--space-s-m);
+  --offset: var(--space-xs);
   list-style-type: none;
   padding-left: 0;
 }
 .breadcrumbs-navigation li:not(:first-child):before{
-  content:'┗ ';
+  content:'↳ ';
+  position: relative;
+  top: -5px;
 }
 .breadcrumbs-navigation li:last-child::after{
-  content: " (📍)" ;
+  content: "  (📍you are here)" ;
+  font-size: var(--step--1);
 }
 
 .breadcrumbs-navigation li:nth-child(2){
@@ -161,13 +164,13 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 .breadcrumbs-navigation li:nth-child(3){
   margin-left: calc(var(--offset) * 2);
 }
-.breadcrumbs-navigation li a {
-  --outline-offset: 0px;
-  text-decoration: none;
-  border-bottom-width: var(--border-thin);
-  border-bottom-style: solid;
-  border-bottom-color: transparent;
-}
+/* .breadcrumbs-navigation li a { */
+  /* --outline-offset: 0px; */
+  /* text-decoration: none; */
+  /* border-bottom-width: var(--border-thin); */
+  /* border-bottom-style: solid; */
+  /* border-bottom-color: transparent; */
+/* } */
 
 /* HOME PAGE CATEGORIES CHIPS FILTER */
 .categories-navigation ul {

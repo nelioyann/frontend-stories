@@ -89,7 +89,7 @@ ol[role="list"] {
 }
 
 .measured-container {
-  max-width: calc(var(--measure, 80ch) * 1.5);
+  max-width: var(--measure, 80ch);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
