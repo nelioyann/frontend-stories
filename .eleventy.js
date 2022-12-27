@@ -2,197 +2,52 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const emojiReadTime = require("@11tyrocks/eleventy-plugin-emoji-readtime");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const qrCode = require("qrcode");
-const fs = require("fs");
-const Image = require("@11ty/eleventy-img");
 
-// add a leading 0 to a number if it is only one digit
-function addLeadingZero(num) {
-  num = num.toString();
-  while (num.length < 2) num = "0" + num;
-  return num;
-}
-const getSimilarCategoriesCount = function (categoriesA, categoriesB) {
-  let categoriesNamesA = categoriesA.map((category) => category.name);
-  let categoriesNamesB = categoriesB.map((category) => category.name);
-  return categoriesNamesA.filter((c) => categoriesNamesB.includes(c)).length;
-};
 
-const emojiReadTimeOptions = {
-  emoji: "📕",
-  showEmoji: false,
-  label: "minutes read",
-  wpm: 300,
-  bucketSize: 3,
-};
+// FILTERS
+const limit = require("./src/_11ty/filters/limit.js");
+const readableDate = require("./src/_11ty/filters/readableDate.js");
+const buildRFC822Date = require("./src/_11ty/filters/buildRFC822Date.js");
+const qrcode = require("./src/_11ty/filters/qrcode.js");
+const similarStories = require("./src/_11ty/filters/similarStories.js");
+const splitLines = require("./src/_11ty/filters/splitLines.js");
+const filterByCategory = require("./src/_11ty/filters/filterByCategory.js");
+// COLLECTIONS
+const categories = require("./src/_11ty/collections/categories.js");
+const stories = require("./src/_11ty/collections/stories.js");
+const categoriesAndAll = require("./src/_11ty/collections/categoriesAndAll.js");
+const generateSocialPreviewImages = require("./src/_11ty/utils/generateSocialPreviewImages.js");
+
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./src/css/style.css");
-  eleventyConfig.addPassthroughCopy("./src/images");
-  eleventyConfig.addPassthroughCopy("./src/fonts");
+  // Passthrough Copy
+  eleventyConfig.addPassthroughCopy("./src/assets/styles/style.css");
+  eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
-  // eleventyConfig.addPassthroughCopy("./src/sw.js");
-  // Watch css files for changes
-  eleventyConfig.addWatchTarget("./src/css/**/*.css");
-  // Create collection from _data/customData.js
+
+  // Watch Targets
+  eleventyConfig.addWatchTarget("./src/assets/styles/**/*.css");
+
+  // PLUGINS
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(emojiReadTime, emojiReadTimeOptions);
+  eleventyConfig.addPlugin(emojiReadTime);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addCollection("stories", (collection) => {
-    const slug = eleventyConfig.getFilter("slugify");
-    return collection.getAll()[0].data.stories.map((story) => {
-      let excerpt = story.description.split("\n\n")[0];
-      let date = new Date(story.edited).toLocaleDateString("fr-FR").split("/").reverse().join("-");
-      return {
-        ...story,
-        slug: `findings/${slug(story.slugs)}`,
-        excerpt,
-        date
-      };
-    });
-  });
-  eleventyConfig.addCollection("categories", function (collectionApi) {
-    let categories_set = new Set();
-    let stories = collectionApi.getAll()[0].data.stories;
-    stories.forEach((story) => {
-      categories_set.add(story.category.name);
-    });
-    return Array.from(categories_set);
-  });
-  eleventyConfig.addCollection("categoriesAndAll", function (collectionApi) {
-    let categories_set = new Set();
-    categories_set.add("All");
-    let stories = collectionApi.getAll()[0].data.stories;
-    stories.forEach((story) => {
-      categories_set.add(story.category.name);
-    });
-    return Array.from(categories_set);
-  });
-  eleventyConfig.addFilter(
-    "similarStories",
-    function (stories, currentStoryId, category) {
-      return stories.filter((story) => {
-        return story.category.name === category && story.id !== currentStoryId;
-      });
-    }
-  );
-  eleventyConfig.addFilter("filterByCategory", function (stories, category) {
-    /*
-    case matters, so let's lowercase the desired category, cat
-    and we will lowercase our posts categories
-    */
-    category = category.toLowerCase();
-    if (category === "all") {
-      return stories;
-    }
-    let result = stories.filter((story) => {
-      let story_category = story.category.name.toLowerCase();
-      return story_category === category;
-    });
-    return result;
-  });
 
-  // Filter for limiting the number of items in array
-  // https://gist.github.com/jbmoelker/9693778
-  eleventyConfig.addFilter("limitTo", function (array, limit) {
-    return array.slice(0, limit);
-  });
-  eleventyConfig.addFilter("splitlines", function (input) {
-    const parts = input.split(" ");
-    const lines = parts.reduce(function (prev, current) {
-      if (!prev.length) {
-        return [current];
-      }
+  // COLLECTIONS
+  eleventyConfig.addCollection("stories", stories);
+  eleventyConfig.addCollection("categories", categories);
+  eleventyConfig.addCollection("categoriesAndAll", categoriesAndAll);
 
-      let lastOne = prev[prev.length - 1];
+  // FILTERS
+  eleventyConfig.addFilter("similarStories", similarStories);
+  eleventyConfig.addFilter("filterByCategory", filterByCategory);
+  eleventyConfig.addFilter("limit", limit);
+  eleventyConfig.addFilter("splitlines", splitLines);
+  eleventyConfig.addNunjucksAsyncFilter("qrcode", qrcode);
+  eleventyConfig.addFilter("readableDate", readableDate);
+  eleventyConfig.addFilter("buildRFC822Date", buildRFC822Date);
 
-      if (lastOne.length + current.length > 25) {
-        return [...prev, current];
-      }
-
-      prev[prev.length - 1] = lastOne + " " + current;
-
-      return prev;
-    }, []);
-
-    return lines;
-  });
-  eleventyConfig.addNunjucksAsyncFilter(
-    "qrcode",
-    async function (value, callback) {
-      var opts = {
-        color: {
-          dark:"#212121",
-          light:"#FAFAFA"
-        }
-      }
-      // let result = await qrCode.toString(value, { type: "svg", margin: 4 });
-      let result = await qrCode.toDataURL(value, opts) ;
-      callback(null, result);
-    }
-  );
-  // Convert ISO date to readable date of day month and year
-  eleventyConfig.addFilter("readableDate", function (date) {
-    return new Date(date).toLocaleDateString("en-US", {
-      month: "long",
-      year: "numeric",
-      day: "numeric",
-    });
-  });
-  eleventyConfig.addFilter("buildRFC822Date", function (dateString) {
-    const dayStrings = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    const monthStrings = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-
-    const timeStamp = Date.parse(dateString);
-    const date = new Date(timeStamp);
-
-    const day = dayStrings[date.getDay()];
-    const dayNumber = addLeadingZero(date.getDate());
-    const month = monthStrings[date.getMonth()];
-    const year = date.getFullYear();
-    const time = `${addLeadingZero(date.getHours())}:${addLeadingZero(
-      date.getMinutes()
-    )}:00`;
-    // const timezone = date.getTimezoneOffset() === 0 ? "GMT" : "BST";
-    const timezone = "GMT";
-
-    //Wed, 02 Oct 2002 13:00:00 GMT
-    return `${day}, ${dayNumber} ${month} ${year} ${time} ${timezone}`;
-  });
-
-  eleventyConfig.on("afterBuild", () => {
-    const socialPreviewImagesDir = "_site/images/og-images/";
-    fs.readdir(socialPreviewImagesDir, function (err, files) {
-      if (files.length > 0) {
-        files.forEach(function (filename) {
-          if (filename.endsWith(".svg")) {
-            let imageUrl = socialPreviewImagesDir + filename;
-            Image(imageUrl, {
-              formats: ["png"],
-              outputDir: "./" + socialPreviewImagesDir,
-              filenameFormat: function (id, src, width, format, options) {
-                let outputFilename = filename.substring(0, filename.length - 4);
-                return `${outputFilename}.${format}`;
-              },
-            });
-          }
-        });
-      }
-    });
-  });
+  eleventyConfig.on("afterBuild", generateSocialPreviewImages);
 
   // Default return
   return {
