@@ -2,7 +2,7 @@ const fs = require("fs");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function() {
-    const socialPreviewImagesDir = "_site/images/og-images/";
+    const socialPreviewImagesDir = "_site/assets/images/og-images/";
     fs.readdir(socialPreviewImagesDir, function (err, files) {
       if (files.length > 0) {
         files.forEach(function (filename) {

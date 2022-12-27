@@ -20,9 +20,9 @@ const generateSocialPreviewImages = require("./src/_11ty/utils/generateSocialPre
 
 module.exports = function (eleventyConfig) {
   // Passthrough Copy
-  eleventyConfig.addPassthroughCopy("./src/assets/styles/style.css");
-  eleventyConfig.addPassthroughCopy("./src/assets/images");
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  // eleventyConfig.addPassthroughCopy("./src/assets/styles/style.css");
+  eleventyConfig.addPassthroughCopy("./src/assets/images/");
+  eleventyConfig.addPassthroughCopy({"./src/static/":"/"});
 
   // Watch Targets
   eleventyConfig.addWatchTarget("./src/assets/styles/**/*.css");

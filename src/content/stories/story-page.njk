@@ -9,7 +9,7 @@ permalink: /{{story.slug}}/
 og_type: "article"
 eleventyComputed:
     title: "{{ story.name | truncate(150) }} "
-    thumbnail: "{{meta.site_url}}/images/og-images/og-{{ story.slugs }}.png"
+    thumbnail: "{{meta.site_url}}/assets/images/og-images/og-{{ story.slugs }}.png"
     emojicon: "{{ story.icon }}"
     description: "{{story.excerpt}}"
     eleventyNavigation:
@@ -29,7 +29,7 @@ eleventyComputed:
         <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder noMeasure space:2xs">
             {{ story.name }}
         </h1>
-        <div data-layout="cluster">
+        <div data-layout="cluster" data-props="space:s">
             <p>
                 <span aria-hidden="true" data-font="emoji">📅</span>
                 Created on
@@ -37,13 +37,13 @@ eleventyComputed:
             </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">✒</span>
-                Last update on
+                Edited on
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">📁</span>
                 Part of
-                <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small"># {{ story.category.name }}</a>
+                <a href="/categories/{{ story.category.name | slugify }}" data-button="link">{{ story.category.name }}</a>
             </p>
             <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %}
         </div>
@@ -68,7 +68,7 @@ eleventyComputed:
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul data-layout="stack">
+            <ul data-layout="stack" role="list">
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
