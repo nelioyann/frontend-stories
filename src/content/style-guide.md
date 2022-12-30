@@ -54,9 +54,7 @@ Here's some example text with `h4`.
 
 Font sizes can be controlled through the use of the `data-heading` attribute. For example:
 
-```HTML
-<h1 data-heading='4'>Top Level sized like a fourth level heading</h1>
-```
+`<h1 data-heading='4'>Top Level sized like a fourth level heading</h1>`
 
 </div>
 
@@ -97,29 +95,12 @@ Here's an example of mentioning code, like `<figure>` or `display: flex` within 
 
 ### Code snippets
 
-```css
-/* CSS */
+<pre><code tabindex="0" class="language-css">/* CSS */
 .wrapper-content {
   max-width: 45rem;
   margin: 0 auto;
 }
-```
-
-```html
-<!-- HTML -->
-{% raw %}
-<h2 class="promo-article-title">
-  <a href="{{ item.url }}">{{ item.data.title }}</a>{% endraw %}
-</h2>
-```
-
-```js
-// JavaScript
-config.addFilter("sortByNewest", (arr) => {
-  arr.sort((b, a) => (a.date > b.date ? 1 : -1));
-  return arr;
-});
-```
+</code></pre>
 
 </div>
 </section>
@@ -191,6 +172,7 @@ The horizontal separator is customized to look like a rugged line.
 <hr>
 
 This is made possible by using an `svg` as the background of the `<hr>` element.
+
 </section>
 
 </div>

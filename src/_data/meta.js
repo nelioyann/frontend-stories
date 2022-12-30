@@ -4,7 +4,7 @@ module.exports = {
     site_emoji: "🎓",
     site_description: "Frontend Stories is intended for developers and aims to facilitate access to research data, as well as facts, quotes and articles on which they can build their own web development guidelines.",
     site_url: (process.env.ELEVENTY_ENV || "").trim() === 'development' ? 'http://localhost:8080' : 'https://frontendstories.com',
-    site_thumbnail: "https://frontendstories.com/images/thumbnail.png",
+    site_thumbnail: "https://frontendstories.com/assets/images/thumbnail.png",
     theme_color: "#fbfcfe",
     logo_backgroud_color: "#fbfcfe",
     primary_color: "#132b51",

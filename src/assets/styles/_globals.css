@@ -20,7 +20,6 @@ h5,
 h6 {
   line-height: 1.2;
   --measure: 40ch;
-  max-width: var(--measure);
   font-weight: bold;
 }
 h1,
@@ -47,6 +46,12 @@ h6,
 [data-heading~="6"] {
   font-size: var(--step-0);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p,
 li {
   max-width: var(--measure);
@@ -78,18 +83,13 @@ ol[role="list"] {
 }
 
 :root {
-  --page-top: var(--space-s-3xl, 12rem);
+  --page-top: var(--space-m, 12rem);
   --header-height: var(--space-3xl);
   --responsive-padding: var(--space-s-3xl);
 }
-main,
-.footer,
-.padded-container {
-  padding-left: var(--responsive-padding);
-  padding-right: var(--responsive-padding);
-}
+
 .measured-container {
-  max-width: calc(var(--measure, 80ch) * 1.5);
+  max-width: var(--measure, 80ch);
   width: 100%;
   margin-left: auto;
   margin-right: auto;

@@ -8,9 +8,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-12-23T15:06:00.000Z",
+        "edited": "2022-12-26T23:07:00.000Z",
         "created": "2022-11-28T15:04:00.000Z",
-        "description": "Assuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.”",
+        "description": "Assuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.”",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -67,14 +67,18 @@
             },
             {
                 "id": "45264514-8a3f-446b-89f7-e666baae6900",
-                "notion_url": "https://www.notion.so/Indicating-form-controls-as-required-using-asterisks-ADG-452645148a3f446b89f7e666baae6900",
-                "citation": "",
+                "notion_url": "https://www.notion.so/Indicating-form-controls-as-required-using-asterisks-452645148a3f446b89f7e666baae6900",
+                "citation": "Accessibility Developer Guide, 2018",
                 "url": "https://www.accessibility-developer-guide.com/examples/forms/required/",
                 "summary": "",
-                "cite": "",
+                "cite": "ADG, 2018",
                 "created time": "2022-12-02T20:32:00.000Z",
-                "type": null,
-                "name": "Indicating form controls as required using asterisks (*) - ADG",
+                "type": {
+                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
+                    "name": "Web",
+                    "color": "orange"
+                },
+                "name": "Indicating form controls as required using asterisks (*)",
                 "tags": []
             }
         ],
@@ -97,7 +101,7 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-10-24T21:38:00.000Z",
+        "edited": "2022-12-27T17:01:00.000Z",
         "created": "2022-10-14T16:05:00.000Z",
         "description": "Breadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n### Breadcrumbs\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n`Home > Furniture > Chairs > Leather Chairs`\n\nIt provides the following advantages:\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n### Key findings\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage",
         "status": {
@@ -216,7 +220,7 @@
             },
             {
                 "id": "81c0696c-ed90-491d-adb8-24db92c2e847",
-                "notion_url": "https://www.notion.so/UX-Best-Practices-Include-Labels-with-Icons-Voice-Code-81c0696ced90491dadb824db92c2e847",
+                "notion_url": "https://www.notion.so/UX-Best-Practices-Include-Labels-with-Icons-81c0696ced90491dadb824db92c2e847",
                 "citation": "Voice+Code, 2019",
                 "url": "https://www.voiceandcode.com/our-insights/2019/6/7/ux-best-practices-include-labels-with-icons",
                 "summary": "",
@@ -227,7 +231,7 @@
                     "name": "Web",
                     "color": "orange"
                 },
-                "name": "UX Best Practices: Include Labels with Icons — Voice+Code",
+                "name": "UX Best Practices: Include Labels with Icons",
                 "tags": []
             }
         ],
@@ -294,7 +298,7 @@
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-10-14T16:27:00.000Z",
+        "edited": "2022-12-27T17:01:00.000Z",
         "created": "2022-08-29T12:03:00.000Z",
         "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options. These controls are often used in online forms where their actual role can be blurry.   \n\n### Checking the boxes\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.  \n\n### Popping radios buttons\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time. \n\n### Using the power of familiarity\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” -- Jeremy Keith (Resilient Web Design)\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".",
         "status": {
@@ -387,9 +391,9 @@
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-10-28T12:01:00.000Z",
+        "edited": "2022-12-26T23:06:00.000Z",
         "created": "2022-08-28T08:23:00.000Z",
-        "description": "Placeholder text can cause users to forget what they need to type in, or to think that a certain field is not required. Additionally, the text is often low contrast making it difficult to read.",
+        "description": "Placeholder text can cause users to forget what they need to type in, or to think that a certain field is not required. Additionally, the text is often low contrast making it difficult to read.\n\n> The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. (MDN)",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -447,7 +451,7 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-10-28T12:39:00.000Z",
+        "edited": "2022-12-27T17:02:00.000Z",
         "created": "2022-08-24T05:13:00.000Z",
         "description": "The core findings of the study are that colors with a greater contrast ratio generally result in more readable text, that there is no significant difference in retention based on color combination, and that preferred colors (such as blues and chromatic colors) lead to a higher rating of aesthetic quality and intention to purchase.\n\n### Implications for designers\nThe article states that for educational sites, where retention and readability are a major concern, black on white or a closely related combination of text should be used. This is because black and white have a high contrast ratio and because white on black text is less common. The text also states that for commercial sites, where aesthetic and purchasing behavior factors are a major concern, chromatic (colored) text/background combinations should be used. Chromatic colors are more likely to lead the viewer to see a site as more visually pleasing and stimulating. Most importantly, these colors are more likely to lead a viewer to the intention to purchase products advertised on the site.",
         "status": {
@@ -630,9 +634,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-10-28T12:00:00.000Z",
+        "edited": "2022-12-27T17:03:00.000Z",
         "created": "2022-07-21T23:04:00.000Z",
-        "description": "According to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n### Why does it matter ?\n- On the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website.\n- On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n## Writing guidelines for web pages\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. They cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n### Recommendation for writting copy text\n- Conciseness can be achieved by removing small details.\n- Ease of reading can be achieved by adding tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Greater objectivity is possible by removing commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\n### Take home message\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information",
+        "description": "According to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n### Why does it matter ?\n- On the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website.\n- On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n### Writing guidelines for web pages\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. They cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n### Recommendation for writting copy text\n- Conciseness can be achieved by removing small details.\n- Ease of reading can be achieved by adding tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Greater objectivity is possible by removing commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\n### Take home message\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -768,9 +772,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-21T00:06:00.000Z",
+        "edited": "2022-12-27T17:04:00.000Z",
         "created": "2022-07-21T21:49:00.000Z",
-        "description": "A sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n### Sitemap and search engines\n\nSearch engines such as Google understand the structure of websites from the sitemap. \n\n### How might a visible site map affect the behavior of users seeking any information ?  \n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure. \n- make less use of the browser's Back button\n- make navigational movements of great hierarchical distances",
+        "description": "A sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n### Sitemap and search engines\n\nSearch engines such as Google understand the structure of websites from the sitemap. \n\n### Take home message\n\nHow might a visible site map affect the behavior of users seeking any information ?\n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure. \n- make less use of the browser's Back button\n- make navigational movements of great hierarchical distances",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",

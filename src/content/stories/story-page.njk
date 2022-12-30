@@ -9,7 +9,7 @@ permalink: /{{story.slug}}/
 og_type: "article"
 eleventyComputed:
     title: "{{ story.name | truncate(150) }} "
-    thumbnail: "{{meta.site_url}}/images/og-images/og-{{ story.slugs }}.png"
+    thumbnail: "{{meta.site_url}}/assets/images/og-images/og-{{ story.slugs }}.png"
     emojicon: "{{ story.icon }}"
     description: "{{story.excerpt}}"
     eleventyNavigation:
@@ -20,10 +20,6 @@ eleventyComputed:
 
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
-{# <figure>
-            {{ meta.site_url| qrcode | safe }}
-            <figcaption class="visually-hidden">Share link</figcaption>
-        </figure> #}
 {% block article %}
     <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:l x:start">
         {% if emojicon %}
@@ -32,7 +28,7 @@ eleventyComputed:
         <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder noMeasure space:2xs">
             {{ story.name }}
         </h1>
-        <div data-layout="cluster">
+        <div data-layout="cluster" data-props="space:s">
             <p>
                 <span aria-hidden="true" data-font="emoji">📅</span>
                 Created on
@@ -40,13 +36,13 @@ eleventyComputed:
             </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">✒</span>
-                Last update on
+                Edited on
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">📁</span>
                 Part of
-                <a href="/categories/{{ story.category.name | slugify }}" data-button="tag small"># {{ story.category.name }}</a>
+                <a href="/categories/{{ story.category.name | slugify }}" data-button="link">{{ story.category.name }}</a>
             </p>
             <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %}
         </div>
@@ -55,7 +51,7 @@ eleventyComputed:
     </header>
     <section aria-labelledby="summary">
         <div data-layout="stack" data-props="space:xs">
-            <h2 id="summary" data-heading="4 anchor">
+            <h2 id="summary">
                 <a href="#summary">Overview</a>
             </h2>
             <div itemprop="articleBody" data-layout="stack" data-markdown>
@@ -67,18 +63,18 @@ eleventyComputed:
     </section>
     <section aria-labelledby="references">
         <div data-layout="stack" data-props="x:start space:s">
-            <h2 id="references" data-heading="4 anchor">
+            <h2 id="references">
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul data-layout="stack">
+            <ul data-layout="stack" data-props="space:s">
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
             </ul>
         </div>
     </section>
-    <section aria-label="Navigate" data-layout="stack">
+    <section aria-labelledby="pagination-nav">
         <h2 class="visually-hidden" data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other findings</h2>
         <nav
             class="story-pagination-navigation"
@@ -98,28 +94,22 @@ eleventyComputed:
         </nav>
     </section>
     <section aria-labelledby="contribute" data-layout="stack">
-        {# <div data-layout="stack" data-props="x:start space:xs"> #}
-            <h2 id="contribute" data-heading="4 anchor">
-                <a href="#contribute">Contribute</a>
-            </h2>
+        <h2 id="contribute">
+            <a href="#contribute">Contribute</a>
+        </h2>
+        <p data-props="space:s">
+            Share ideas, suggestions, or comments here
+        </p>
+        {% if type == "Insight" %}
             <p data-props="space:s">
-                Share ideas, suggestions, or comments here
+                This finding does not include enough research based evidence. You can help support or refute its premises.
             </p>
-            {% if type == "Insight" %}
-                <p data-props="space:s">
-                    This finding does not include enough research based evidence. You can help support or refute its premises.
-                </p>
-            {% endif %}
-            {# <div data-layout="cluster" data-props="x:stretch" style="--threshold: var(--measure);"> #}
-                {# <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
-                    Add a remark</a> #}
-                <a
-                    data-button="outline"
-                    data-props="x:center space:s"
-                    href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
-                    target="_blank">
-                    Mention on Twitter</a>
-            {# </div> #}
-        {# </div> #}
+        {% endif %}
+        <a
+            data-button="outline"
+            data-props="x:center space:s"
+            href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
+            target="_blank">
+            Share on Twitter</a>
     </section>
 {% endblock %}

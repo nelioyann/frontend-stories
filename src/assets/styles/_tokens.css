@@ -115,10 +115,10 @@
   --space: var(--space-xl);
 }
 [data-props~="space:2xl"] {
-  --space: var(--space-xl);
+  --space: var(--space-2xl);
 }
 [data-props~="space:3xl"] {
-  --space: var(--space-xl);
+  --space: var(--space-3xl);
 }
 
 [data-props~="noBorder"] {

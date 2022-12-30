@@ -1,6 +1,6 @@
 {% block content %}
     {% include "partials/site-breadcrumbs.njk" %}
-        <article class="measured-container" itemscope itemtype="http://schema.org/Article" data-layout="stack" style="--space: calc(var(--space-xl) * 2);">
+        <article class="measured-container" itemscope itemtype="http://schema.org/Article" data-layout="stack" data-props="space:3xl" >
             {% block article %}{% endblock %}
         </article>
 {% endblock %}
