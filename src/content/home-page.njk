@@ -15,7 +15,7 @@ eleventyComputed:
 ---
 
 <section>
-    <hgroup data-layout="stack" data-props="y:center">
+    <hgroup data-layout="stack" data-props="space:xs">
         <h1 data-heading="1">
             <span class="visually-hidden">{{ meta.site_name }} | </span>
             <span> {{ "Home" if currentCategory == 'All' else currentCategory }}</span>
@@ -23,7 +23,7 @@ eleventyComputed:
         <p>{{ hero_description or meta.site_description }}</p>
     </hgroup>
 </section>
-<section id="findings" data-layout="stack slice" data-props="space:0">
+<section id="findings">
     <h2 class="visually-hidden" id="categories-title" data-heading="3">Topics</h2>
     <nav class="categories-navigation" aria-labelledby="categories-title">
         <ul role="list" data-layout="cluster" data-props="noPad">
@@ -42,7 +42,7 @@ eleventyComputed:
     <h3 data-heading="5" class="visually-hidden">
         {{ "All" if currentCategory == 'All' else currentCategory }}
     </h3>
-    <ul data-layout="stack" role="list" data-props="space:s" >
+    <ul data-layout="stack" data-props="space:s" >
         {%- set entries = collections.stories | filterByCategory(currentCategory) | limit(50) -%}
         {%- for entry in entries %}
             {% include "partials/story-card-entry.njk" %}

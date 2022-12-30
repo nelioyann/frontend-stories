@@ -20,7 +20,6 @@ eleventyComputed:
 
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
-
 {% block article %}
     <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:l x:start">
         {% if emojicon %}
@@ -68,14 +67,14 @@ eleventyComputed:
                 <a href="#references">References</a>
             </h2>
             <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul data-layout="stack" role="list">
+            <ul data-layout="stack" data-props="space:s">
                 {%- for reference in story.references %}
                     {% include "partials/reference-item.njk" %}
                 {% endfor -%}
             </ul>
         </div>
     </section>
-    <section aria-label="Navigate" data-layout="stack">
+    <section aria-labelledby="pagination-nav">
         <h2 class="visually-hidden" data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other findings</h2>
         <nav
             class="story-pagination-navigation"
@@ -95,28 +94,22 @@ eleventyComputed:
         </nav>
     </section>
     <section aria-labelledby="contribute" data-layout="stack">
-        {# <div data-layout="stack" data-props="x:start space:xs"> #}
-            <h2 id="contribute">
-                <a href="#contribute">Contribute</a>
-            </h2>
+        <h2 id="contribute">
+            <a href="#contribute">Contribute</a>
+        </h2>
+        <p data-props="space:s">
+            Share ideas, suggestions, or comments here
+        </p>
+        {% if type == "Insight" %}
             <p data-props="space:s">
-                Share ideas, suggestions, or comments here
+                This finding does not include enough research based evidence. You can help support or refute its premises.
             </p>
-            {% if type == "Insight" %}
-                <p data-props="space:s">
-                    This finding does not include enough research based evidence. You can help support or refute its premises.
-                </p>
-            {% endif %}
-            {# <div data-layout="cluster" data-props="x:stretch" style="--threshold: var(--measure);"> #}
-                {# <a data-button="outline" data-props="x:center" href="{{ story_contribution_url }}" target="_blank">
-                    Add a remark</a> #}
-                <a
-                    data-button="outline"
-                    data-props="x:center space:s"
-                    href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
-                    target="_blank">
-                    Share on Twitter</a>
-            {# </div> #}
-        {# </div> #}
+        {% endif %}
+        <a
+            data-button="outline"
+            data-props="x:center space:s"
+            href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
+            target="_blank">
+            Share on Twitter</a>
     </section>
 {% endblock %}

@@ -11,3 +11,8 @@ In a different terminal run this command
 ```shell
 npm run a11y
 ```
+
+## Features
+
+- Social preview images are automatically generated
+- Uses notion icons as favicons

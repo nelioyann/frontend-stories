@@ -1,20 +1,15 @@
 <footer class="measured-container" data-layout="stack" data-props="x:start space:m">
-        <hr/>
-        <nav>
-            <h2 class="visually-hidden" data-heading="6">Other links</h2>
-            <div data-layout="cluster">
-                {%- for page in collections.webpage %}
-                    <a data-button="link" href="{{ page.url }}">{{ page.data.title }}</a>
-                {% endfor -%}
-            </div>
-        </nav>
-        <div>
-            <h2 class="visually-hidden">Subscribe</h2>
-            <p>
-                You can subscribe to the
-                <a data-button="link" href="/feed.xml">RSS feed for all findings</a>.
-            </p>
+    <hr/>
+    <nav>
+        <h2 class="visually-hidden" data-heading="6">Other links</h2>
+        <div data-layout="cluster">
+            {%- for page in collections.webpage %}
+                <a data-button="link" href="{{ page.url }}">{{ page.data.title }}</a>
+            {% endfor -%}
+            <a data-button="link" href="/feed.xml">RSS feed</a>.
         </div>
-        <small>© 2022 Yannick Nana. Powered by Notion / Eleventy / GitHub / Netlify / Coffee
-        </small>
+    </nav>
+    <small>
+        © 2022 Yannick Nana. Powered by Notion / Eleventy / GitHub / Netlify / Coffee
+    </small>
 </footer>

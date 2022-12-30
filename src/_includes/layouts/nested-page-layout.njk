@@ -1,7 +1,5 @@
 {% extends "layouts/base-layout.njk" %}
 {% block content %}
     {% include "partials/site-breadcrumbs.njk" %}
-    <div class="measured-container" data-layout="stack" data-props="space:s">
         {{ content | safe }}
-    </div>
 {% endblock %}

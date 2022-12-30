@@ -83,7 +83,7 @@ ol[role="list"] {
 }
 
 :root {
-  --page-top: var(--space-xl, 12rem);
+  --page-top: var(--space-m, 12rem);
   --header-height: var(--space-3xl);
   --responsive-padding: var(--space-s-3xl);
 }
