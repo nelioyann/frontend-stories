@@ -17,6 +17,7 @@ const categories = require("./src/_11ty/collections/categories.js");
 const stories = require("./src/_11ty/collections/stories.js");
 const categoriesAndAll = require("./src/_11ty/collections/categoriesAndAll.js");
 const generateSocialPreviewImages = require("./src/_11ty/utils/generateSocialPreviewImages.js");
+const minifyHtml = require("./src/_11ty/utils/minifyHtml.js");
 
 module.exports = function (eleventyConfig) {
   // Passthrough Copy
@@ -47,6 +48,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", readableDate);
   eleventyConfig.addFilter("buildRFC822Date", buildRFC822Date);
 
+  eleventyConfig.addTransform("htmlmin", minifyHtml);
   eleventyConfig.on("eleventy.after", generateSocialPreviewImages);
 
   // Default return
