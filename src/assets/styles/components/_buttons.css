@@ -9,8 +9,7 @@
   color: var(--button-color, var(--color-dark));
   background-color: var(--button-background-color, var(--color-light));
   cursor: pointer;
-  text-underline-offset: 0.1em;
-
+  text-underline-offset: var(--button-underline-offset, 0.25em);
   display: var(--button-display, inline-flex);
   gap: var(--space, 0);
   justify-content: var(--horizontal-alignment, flex-start);
@@ -74,6 +73,11 @@
   font-size: calc(var(--step-0) * 0.75);
 }
 
+[data-button~="text"]{
+  --button-color: var(--color-dark-accent);
+}
+
+
 /* [data-button] svg{
   flex-shrink: 0;
 }
@@ -95,10 +99,7 @@
 @media (hover: hover) {
   /* On desktop and hover capable screens */
   [data-button~="link"] {
-    /* --button-text-decoration: none; */
     --button-background-color: var(--color-light);
-    text-decoration-thickness: var(--border-thin);
-
     --button-padding-x: 0;
     --button-border-radius: 0;
   }
@@ -111,10 +112,10 @@
     border-color: var(--button-hover-border-color, var(--button-border-color));
   }
   [data-button~="link"]:not([data-button~="noHover"]):hover {
-    /* --button-shadow-width: var(--border-thick); */
-    /* --button-text-decoration: none; */
     text-decoration-thickness: var(--border-thick);
-
+  }
+  [data-button~="text"]:not([data-button~="noHover"]):hover {
+    --button-text-decoration: underline;
   }
   /* [data-button~="noHover"]:hover {
     transition: none;

@@ -59,125 +59,51 @@ hr {
 inspiration: https://codepen.io/thierry/pen/qBqYmgw
 =============================================*/
 
-/* [data-heading~="anchor"] a::before {
-} */
 [data-heading~="anchor"] {
   scroll-margin-top: var(--header-height);
 }
 [data-heading~="anchor"]:target {
-  outline: var(--border-thin) solid var(--color-dark);
-  background-color: var(--color-light-accent);
+  outline: var(--border-thin) solid var(--color-dark-accent);
+  outline-offset: var(--space-2xs);
 }
 [data-heading~="anchor"] a {
   text-decoration: none;
   pointer-events: none;
 }
-[data-heading~="anchor"] a::before {
-  content: "#";
-  text-decoration: underline;
-  font-weight: lighter;
+[data-heading~="anchor"] a::after {
+  content: "⚓";
+  filter: sepia(1) saturate(2) hue-rotate(calc(var(--primary-hue) * 1deg));
+  font-size: 0.75em;
   padding-left: var(--space-2xs); /* to make the "#" a bigger target */
   padding-right: var(--space-2xs);
   pointer-events: auto;
 }
 
-[data-markdown] blockquote {
-  border-left: var(--border-thick) solid var(--color-dark);
-  background-color: var(--color-light-accent);
-  padding-left: var(--space-s);
-  padding-right: var(--space-s);
-  padding-top: var(--space-2xs);
-  padding-bottom: var(--space-2xs);
-  width: fit-content;
-}
-
-[data-markdown] {
-  --space: 1.5em;
-}
-
-[data-markdown] ul,
-[data-markdown] ol {
-  max-width: var(--measure);
-}
-[data-markdown] h3 {
-  font-size: var(--step-2);
-}
-[data-markdown] h4 {
-  font-size: var(--step-1);
-}
-[data-markdown] p {
-  --space: 0.5em;
-}
-
-[data-markdown] ol {
-  --space: var(--space-s);
-  --threshold: 30rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space);
-  justify-content: var(--horizontal-alignment, flex-start);
-  list-style-type: none;
-  counter-reset: items;
-  padding-left: 0;
-}
-
-[data-markdown] ol > li {
-  flex-grow: 1;
-  flex-basis: calc((var(--threshold) - 100%) * 999);
-  position: relative;
-  font-size: var(--step--1);
-}
-[data-markdown] ol > li::before {
-  counter-increment: items;
-  content: counter(items);
-  display: block;
-  border-bottom: var(--border-thin) solid var(--gray-400);
-  padding-bottom: var(--space-2xs);
-  margin-bottom: var(--space-2xs);
-}
-[data-markdown] ol > li:nth-child(n + 4),
-[data-markdown] ol > li:nth-child(n + 4) ~ * {
-  /* Switch to a vertical configuration if there are more than 4 child elements */
-  flex-basis: 100%;
-}
-
 /* PAGE LEVEL BREADCRUMBS */
 .breadcrumbs-navigation{
-  background-color: var(--color-light-accent);
-  border-left: var(--border-thick) solid var(--color-dark-accent);
-  padding: var(--space-s);
+  margin-bottom: var(--space-m);
+  --button-underline-offset: 0.3em;
 }
 .breadcrumbs-navigation ul{
-  --measure: initial;
-  --offset: var(--space-xs);
   list-style-type: none;
   padding-left: 0;
 }
-.breadcrumbs-navigation li:not(:first-child):before{
-  content:'↳ ';
+
+.breadcrumbs-navigation li:first-child a::before{
+  visibility: visible;
+  content: "🏠 ";
+  filter: var(--font-emoji-filter);
+
+}
+.breadcrumbs-navigation li:not(:first-child)::before{
+  content:'>';
+  font-family: var(--font-monospace);
+  padding-left: 1ch;
+  padding-right: 1ch;
   position: relative;
-  top: -5px;
 }
-
-
-.breadcrumbs-navigation li:nth-child(2){
-  margin-left: calc(var(--offset) * 1);
-}
-.breadcrumbs-navigation li:nth-child(3){
-  margin-left: calc(var(--offset) * 2);
-}
-/* .breadcrumbs-navigation li a { */
-  /* --outline-offset: 0px; */
-  /* text-decoration: none; */
-  /* border-bottom-width: var(--border-thin); */
-  /* border-bottom-style: solid; */
-  /* border-bottom-color: transparent; */
-/* } */
 
 /* HOME PAGE CATEGORIES CHIPS FILTER */
-.categories-navigation{
-  margin-bottom: var(--space-s);
-}
 .categories-navigation ul {
   --space: var(--space-2xs);
 }
@@ -202,7 +128,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   --space: var(--space-2xs);
   --vertical-alignment: center;
   --button-display: inline-flex;
-  --button-padding-y: var(--space-l);
+  --button-padding-y: var(--space-m);
   --button-border-width: var(--border-thick);
   font-size: var(--step-1);
   position: relative;
@@ -216,7 +142,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   margin-right: auto;
 }
 
-a.next-button::after,
+a.next-button::before,
 a.previous-button::before {
   position: absolute;
   font-size: var(--step-0);
@@ -228,15 +154,15 @@ a.previous-button::before {
   padding: 0 var(--space-2xs);
 }
 
-.story-pagination-navigation a.next-button::after {
-  content: "Next";
-  right: 0;
-  transform: translate(calc(var(--space-s) * -1), -50%);
-}
-.story-pagination-navigation a.previous-button::before {
-  content: "Previous";
+.story-pagination-navigation a.next-button::before {
+  content: "Older entry";
   left: 0;
   transform: translate(var(--space-s), -50%);
+}
+.story-pagination-navigation a.previous-button::before {
+  right: 0;
+  content: "Newer entry";
+  transform: translate(calc(var(--space-s) * -1), -50%);
 }
 
 .contribute-story-sidebar {

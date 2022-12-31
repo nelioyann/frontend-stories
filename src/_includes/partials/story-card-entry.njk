@@ -1,7 +1,10 @@
 <li data-props="noMeasure">
-    <article itemscope="itemscope" itemtype="http://schema.org/Article" data-layout="cluster" data-props="space:xs x:between" style="flex-wrap: wrap-reverse;">
-        <a itemprop="url" data-button="link"  href="/{{ entry.slug }}">{{ entry.name }}</a>
-        <time class="visually-hidden" itemprop="dateModified" datetime="{{ story.edited }}">{{entry.edited | readableDate}}</time>
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
+        <a data-heading="5" itemprop="url" data-button="text" href="/{{ entry.slug }}">
+        <b>{{ entry.name }}</b></a>
+        <p>
+            <time itemprop="dateModified" datetime="{{ story.edited }}">{{entry.edited | readableDate}}</time>
+        </p>
         <meta itemprop="headline" content="{{ entry.name }}"/>
     </article>
 </li>
