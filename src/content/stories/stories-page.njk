@@ -12,17 +12,20 @@ eleventyComputed:
         parent: Home
 ---
 
-<h1>
-    {{ title }}
-</h1>
-<p>
-    {{ collections.stories.length }} referenced articles on front-end development covering case studies, resarch papers, guidelines and best practices, focused on {{collections.categories | join(", ")}} and more.
-</p>
+<hgroup>
+    <h1>
+        {{ title }}
+    </h1>
+    <p>
+        {{ collections.stories.length }} referenced articles on front-end development covering case studies, resarch papers,
+        guidelines and best practices, focused on
+        {{ collections.categories | join(", ") }} and more.
+    </p>
+</hgroup>
 <section data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {% set entries = collections.stories | filterByCategory(category) %}
         <details>
-            {# {%if loop.index <= 5 %}open{%endif%} #}
             <summary>
                 <b>
                     {{ category }}

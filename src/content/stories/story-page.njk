@@ -15,101 +15,85 @@ eleventyComputed:
     eleventyNavigation:
         key: "{{story.id}}"
         title: "{{story.name}}"
-        parent: Findings
+        parent: "{{story.category.name}}"
 ---
 
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
 {% block article %}
-    <header aria-labelledby="story-name" data-layout="stack" id="cover" data-props="space:l x:start">
-        {% if emojicon %}
-            <span data-heading="1" aria-hidden="true">{{ emojicon }}</span>
-        {% endif %}
-        <h1 itemprop="headline" id="story-name" data-heading="1" data-props="centered noBorder noMeasure space:2xs">
+    <header aria-labelledby="headline">
+        
+        <h1 itemprop="headline" id="headline" data-props="centered noBorder noMeasure space:2xs">
+            {% if emojicon %}
+                <span aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
+            {% endif %}
             {{ story.name }}
         </h1>
-        <div data-layout="cluster" data-props="space:s">
+        <div data-layout="box">
+            <p>
+                <span aria-hidden="true" data-font="emoji">📁</span>
+                Filed under:
+                <a href="/categories/{{ story.category.name | slugify }}" data-button="link">{{ story.category.name }}</a>
+            </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">📅</span>
-                Created on
+                Created on:
                 <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
             </p>
             <p>
-                <span aria-hidden="true" data-font="emoji">✒</span>
-                Edited on
+                <span aria-hidden="true" data-font="emoji">✍</span>
+                Last updated:
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </p>
-            <p>
-                <span aria-hidden="true" data-font="emoji">📁</span>
-                Part of
-                <a href="/categories/{{ story.category.name | slugify }}" data-button="link">{{ story.category.name }}</a>
-            </p>
-            <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %}
         </div>
-        <meta itemprop="description" content="{{ story.excerpt }}"/>
+        <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %} <meta itemprop="description" content="{{ story.excerpt }}"/>
         <meta itemprop="teaches" content="{{ story.category.name }}"/>
     </header>
-    <section aria-labelledby="summary">
-        <div data-layout="stack" data-props="space:xs">
-            <h2 id="summary">
-                <a href="#summary">Overview</a>
-            </h2>
-            <div itemprop="articleBody" data-layout="stack" data-markdown>
-                {% renderTemplate "md, liquid", story %}
-                {{ description }}
-                {% endrenderTemplate %}
-            </div>
-        </div>
-    </section>
-    <section aria-labelledby="references">
-        <div data-layout="stack" data-props="x:start space:s">
-            <h2 id="references">
-                <a href="#references">References</a>
-            </h2>
-            <p>Here you can find a list of references to dive deeper on the subject.</p>
-            <ul data-layout="stack" data-props="space:s">
-                {%- for reference in story.references %}
-                    {% include "partials/reference-item.njk" %}
-                {% endfor -%}
-            </ul>
-        </div>
-    </section>
-    <section aria-labelledby="pagination-nav">
-        <h2 class="visually-hidden" data-heading="6" id="pagination-nav" data-props="space:s">Navigate to other findings</h2>
-        <nav
-            class="story-pagination-navigation"
-            aria-labelledby="pagination-nav"
-            data-layout="switcher"
-            data-props="x:between y:stretch space:xs">
-            {% if pagination.href.previous %}
-                <a data-button="outline" class="previous-button" href="{{ pagination.href.previous }}">
-                    {{ pagination.page.previous.name }}
-                </a>
-            {% endif %}
-            {% if pagination.href.next %}
-                <a class="next-button" data-button="outline" href="{{ pagination.href.next }}">
-                    {{ pagination.page.next.name }}
-                </a>
-            {% endif %}
-        </nav>
-    </section>
-    <section aria-labelledby="contribute" data-layout="stack">
-        <h2 id="contribute">
-            <a href="#contribute">Contribute</a>
-        </h2>
-        <p data-props="space:s">
-            Share ideas, suggestions, or comments here
-        </p>
-        {% if type == "Insight" %}
-            <p data-props="space:s">
-                This finding does not include enough research based evidence. You can help support or refute its premises.
-            </p>
+    <h2 id="summary">
+        <a href="#summary">Overview</a>
+    </h2>
+    {% renderTemplate "md, liquid", story %}
+    {{ description }}
+    {% endrenderTemplate %}
+    <h2 id="references">
+        <a href="#references">Evidence and further readings</a>
+    </h2>
+    <p>Here you can find a list of references to dive deeper on the subject.</p>
+    <ul>
+        {%- for reference in story.references %}
+            {% include "partials/reference-item.njk" %}
+        {% endfor -%}
+    </ul>
+    <h2 id="contribute">
+        <a href="#contribute">Mentions</a>
+    </h2>
+    <p>
+        Share ideas, suggestions, or comments on this entry:
+    </p>
+    <a
+        data-button="outline"
+        data-props="x:center space:s"
+        href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
+        target="_blank">
+        Share on Twitter</a>
+    <h2 id="pagination-nav">
+        <a href="#pagination-nav">Other findings</a>
+    </h2>
+    <p>Explore other entries by order of publication:</p>
+    <nav
+        class="story-pagination-navigation"
+        aria-labelledby="pagination-nav"
+        data-layout="switcher"
+        data-props="x:between y:stretch space:xs">
+        {% if pagination.href.next %}
+            <a class="next-button" data-button="outline" href="{{ pagination.href.next }}">
+                {{ pagination.page.next.name }}
+            </a>
         {% endif %}
-        <a
-            data-button="outline"
-            data-props="x:center space:s"
-            href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
-            target="_blank">
-            Share on Twitter</a>
-    </section>
+        {% if pagination.href.previous %}
+            <a data-button="outline" class="previous-button" href="{{ pagination.href.previous }}">
+                {{ pagination.page.previous.name }}
+            </a>
+        {% endif %}
+    </nav>
 {% endblock %}

@@ -35,7 +35,7 @@
             },
             {
                 "id": "f2c1345e-d4e1-4d75-854d-8b285a0f23ef",
-                "notion_url": "https://www.notion.so/The-Privacy-Economics-of-Voluntary-Over-disclosure-in-Web-Forms-Semantic-Scholar-f2c1345ed4e14d75854d8b285a0f23ef",
+                "notion_url": "https://www.notion.so/The-Privacy-Economics-of-Voluntary-Over-disclosure-in-Web-Forms-f2c1345ed4e14d75854d8b285a0f23ef",
                 "citation": "",
                 "url": "https://www.semanticscholar.org/paper/The-Privacy-Economics-of-Voluntary-Over-disclosure-Preibusch-Krol/3f9426bf2c0b1808db4b5ce940ed36f476bc6d61",
                 "summary": "",
@@ -46,7 +46,7 @@
                     "name": "Research Paper",
                     "color": "blue"
                 },
-                "name": "The Privacy Economics of Voluntary Over-disclosure in Web Forms | Semantic Scholar",
+                "name": "The Privacy Economics of Voluntary Over-disclosure in Web Forms",
                 "tags": []
             },
             {
@@ -161,9 +161,9 @@
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-12-23T15:06:00.000Z",
+        "edited": "2022-12-31T10:03:00.000Z",
         "created": "2022-09-07T15:06:00.000Z",
-        "description": "Only use an icon if its message is a 100% clear to everyone. Adding a text labels alongside icons can increase clarity.\n",
+        "description": "Only use an icon if its message is a 100% clear to everyone. Adding a text labels alongside icons can increase clarity.\n\n> Icons should be simple, easy to understand, and consistent. Icons almost always require familiarity in order to be useful. Across cultures and languages, they can be misinterpreted. In many cases, adjacent text is helpful. (WebAim)",
         "status": {
             "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
             "name": "Published",
@@ -172,7 +172,7 @@
         "references": [
             {
                 "id": "be99d931-3755-4c23-8a42-81085b6ad067",
-                "notion_url": "https://www.notion.so/The-best-icon-is-a-text-label-Thomas-Byttebier-be99d93137554c238a4281085b6ad067",
+                "notion_url": "https://www.notion.so/The-best-icon-is-a-text-label-be99d93137554c238a4281085b6ad067",
                 "citation": "Thomas Byttebier, 2015",
                 "url": "https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label",
                 "summary": "",
@@ -183,7 +183,7 @@
                     "name": "Web",
                     "color": "orange"
                 },
-                "name": "The best icon is a text label — Thomas Byttebier",
+                "name": "The best icon is a text label",
                 "tags": []
             },
             {
@@ -204,7 +204,7 @@
             },
             {
                 "id": "5ad8cc7b-486a-4a00-a6c2-986a62723b6e",
-                "notion_url": "https://www.notion.so/Misused-mobile-UX-patterns-If-you-are-an-experienced-designer-you-by-Zoltan-Kollin-Medium-5ad8cc7b486a4a00a6c2986a62723b6e",
+                "notion_url": "https://www.notion.so/Misused-mobile-UX-patterns-If-you-are-an-experienced-designer-you-5ad8cc7b486a4a00a6c2986a62723b6e",
                 "citation": "Zoltan Kollin, Medium, 2015",
                 "url": "https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570",
                 "summary": "",
@@ -215,7 +215,7 @@
                     "name": "Web",
                     "color": "orange"
                 },
-                "name": "Misused mobile UX patterns. If you are an experienced designer, you… | by Zoltan Kollin | Medium",
+                "name": "Misused mobile UX patterns. If you are an experienced designer, you… ",
                 "tags": []
             },
             {
@@ -309,7 +309,7 @@
         "references": [
             {
                 "id": "dce4a37d-737e-4cfb-8f67-df204c5b1a01",
-                "notion_url": "https://www.notion.so/Checkboxes-Are-Never-Round-Daniel-De-Laney-dce4a37d737e4cfb8f67df204c5b1a01",
+                "notion_url": "https://www.notion.so/Checkboxes-Are-Never-Round-dce4a37d737e4cfb8f67df204c5b1a01",
                 "citation": "Daniel De Laney, 2015",
                 "url": "http://danieldelaney.net/checkboxes/",
                 "summary": "",
@@ -320,7 +320,7 @@
                     "name": "Web",
                     "color": "orange"
                 },
-                "name": "Checkboxes Are Never Round—Daniel De Laney",
+                "name": "Checkboxes Are Never Round",
                 "tags": []
             },
             {
@@ -402,7 +402,7 @@
         "references": [
             {
                 "id": "be6b2c5e-c3d1-4bfe-9908-663889bec366",
-                "notion_url": "https://www.notion.so/Don-t-Put-Hints-Inside-Text-Boxes-in-Web-Forms-UXmatters-be6b2c5ec3d14bfe9908663889bec366",
+                "notion_url": "https://www.notion.so/Don-t-Put-Hints-Inside-Text-Boxes-in-Web-Forms-be6b2c5ec3d14bfe9908663889bec366",
                 "citation": "UXmatters, 2010",
                 "url": "https://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php",
                 "summary": "",
@@ -413,12 +413,12 @@
                     "name": "Web",
                     "color": "orange"
                 },
-                "name": "Don’t Put Hints Inside Text Boxes in Web Forms :: UXmatters",
+                "name": "Don’t Put Hints Inside Text Boxes in Web Forms",
                 "tags": []
             },
             {
                 "id": "8f20e222-a869-4974-b6be-0e829570b3bd",
-                "notion_url": "https://www.notion.so/input-The-Input-Form-Input-element-HTML-HyperText-Markup-Language-MDN-8f20e222a8694974b6be0e829570b3bd",
+                "notion_url": "https://www.notion.so/input-The-Input-Form-Input-element-HTML-HyperText-Markup-Language-8f20e222a8694974b6be0e829570b3bd",
                 "citation": "Mozilla, MDN Docs",
                 "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder",
                 "summary": "The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content.",
@@ -429,7 +429,7 @@
                     "name": "Web",
                     "color": "orange"
                 },
-                "name": "<input>: The Input (Form Input) element - HTML: HyperText Markup Language | MDN",
+                "name": "<input>: The Input (Form Input) element - HTML: HyperText Markup Language",
                 "tags": []
             }
         ],
@@ -665,7 +665,7 @@
                 "citation": "",
                 "url": "https://www.nngroup.com/articles/how-little-do-users-read/",
                 "summary": "",
-                "cite": "",
+                "cite": "Jakob Nielsen, 2008",
                 "created time": "2022-09-03T08:05:00.000Z",
                 "type": {
                     "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",

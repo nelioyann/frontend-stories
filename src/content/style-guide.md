@@ -2,18 +2,18 @@
 title: Style Guide
 tags:
   - webpage
-layout: layouts/nested-page-layout.njk
+layout: layouts/nested-article-layout.njk
 permalink: /style-guide/
 eleventyComputed:
-  description: "Minimal style guide for this site"
+  description: "Style guide for Frontend Stories"
   eleventyNavigation:
     key: Style Guide
     parent: Home
 ---
 
-<div class="measured-container" data-markdown data-layout="slice stack" data-props="space:xs">
+# Style Guide
 
-Below is a minimal style guide for this site, inspired by <a target="_blank" rel="noopener nofollow noreferrer" href="https://danabyerly.com/style-guide/">Dana Byerly's Style Guide</a>.
+Below is a minimal style guide inspired by <a target="_blank" rel="noopener nofollow noreferrer" href="https://danabyerly.com/style-guide/">Dana Byerly's Style Guide</a>.
 
 **Table of Contents**
 
@@ -174,5 +174,3 @@ The horizontal separator is customized to look like a rugged line.
 This is made possible by using an `svg` as the background of the `<hr>` element.
 
 </section>
-
-</div>

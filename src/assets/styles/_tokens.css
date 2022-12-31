@@ -31,7 +31,7 @@
   --space-s-3xl: clamp(1rem, calc(-0.91rem + 9.55vw), 6.25rem);
   --space-s-6xl: clamp(1rem, calc(-2.27rem + 16.36vw), 10rem);
 
-  --measure: 70ch;
+  --measure: 80ch;
 
   --border-thin: 0.5px;
   --border-thick: 4px;
@@ -96,6 +96,9 @@
 [data-props~="space:0"] {
   --space: 0;
 }
+[data-props~="space:flow"] {
+  --space: 1em;
+}
 [data-props~="space:2xs"] {
   --space: var(--space-2xs);
 }
@@ -131,12 +134,3 @@
   --measure: initial;
 }
 
-[data-props~="width:full"] {
-  width: 100%;
-}
-[data-props~="width:content"] {
-  width: max-content;
-}
-[data-props~="text:center"] {
-  text-align: center;
-}

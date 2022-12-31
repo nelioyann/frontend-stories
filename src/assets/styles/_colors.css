@@ -1,7 +1,7 @@
 :root {
-  --primary-hue: 170;
-  --primary-saturation: 100%;
-  --primary-lightness: 21%;
+  --primary-hue: 217;
+  --primary-saturation: 63%;
+  --primary-lightness: 50%;
   --primary-hs: var(--primary-hue), var(--primary-saturation);
   --color-primary: hsl(
     var(--primary-hue),

@@ -12,28 +12,11 @@
   outline: var(--border-width) transparent;
   outline-offset: calc(var(--border-width) * -1);
 }
-/* [data-layout~="box"] *:not([data-layout~="box"]) {
-    color: inherit;
-  } */
-
-/*
-  [data-layout~="box"][data-props~="invert"] {
-    color: var(--color-light);
-    background-color: var(--color-dark);
-  }
-  */
 /* [data-layout~="box"] */
 [data-props~="invert"] {
-  /* --OFF: ;
-  --ON: initial;
-  --inverted: var(--ON); */
   color: var(--color-light);
   background-color: var(--color-dark);
 }
-/* [data-layout~="box"][data-props~="invert"] {
-    filter: invert(100%);
-  } */
-
 
 
 /* Slice credits: https://www.sarasoueidan.com/ */
@@ -79,31 +62,9 @@
 }
 [data-layout~="stack"][data-props~="recursive"] * + *,
 [data-layout~="stack"]:not([data-props~="recursive"]) > * + * {
-  margin-top: var(--space, 1em);
+  margin-top: var(--stack-space, 1.25em);
 }
 [data-layout~="stack"] > [data-props~="split"] {
-  margin-bottom: auto;
-}
-
-/*----------  Cover Layout FIXME: move noPad  ----------*/
-[data-layout~="cover"] {
-  display: flex;
-  flex-direction: column;
-  min-height: var(--min-height, 60vh);
-  padding: var(--padding, var(--space-s));
-}
-[data-layout~="cover"] > * {
-  margin-top: var(--space);
-  margin-bottom: var(--space);
-}
-[data-layout~="cover"] > :first-child:not([data-props~="centered"]) {
-  margin-top: 0;
-}
-[data-layout~="cover"] > :last-child:not([data-props~="centered"]) {
-  margin-bottom: 0;
-}
-[data-layout~="cover"] > [data-props~="centered"] {
-  margin-top: auto;
   margin-bottom: auto;
 }
 
@@ -238,3 +199,8 @@
   flex-grow: 1;
 }
 
+[data-layout~="switcher"] > *,
+[data-layout~="cluster"] > *,
+ol > li  {
+  --stack-space: 0;
+}
