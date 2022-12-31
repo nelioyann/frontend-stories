@@ -114,7 +114,7 @@ Here's an example of mentioning code, like `<figure>` or `display: flex` within 
 
 <div data-layout="box stack" data-props="noBorder">
 
-### Ordered list standalone
+### Ordered list
 
 Ordered list will be displayed horizontally until the number of items exceed 3 (in which case the rest collapses in a column).
 
@@ -122,7 +122,7 @@ Ordered list will be displayed horizontally until the number of items exceed 3 (
 2. Dogs
 3. Horses
 
-### Unordered list standalone
+### Unordered list
 
 - Cats
 - Dogs

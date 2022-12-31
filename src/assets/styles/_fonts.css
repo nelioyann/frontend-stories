@@ -1,6 +1,6 @@
 :root{
      --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-     --font-serif: "Apple Garamond",  "Times New Roman", "Baskerville", "Droid Serif", "Times","Source Serif Pro", serif;
+     --font-serif: "Georgia", "Apple Garamond",  "Times New Roman", "Baskerville", "Droid Serif", "Times","Source Serif Pro", serif;
      --font-monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
      --font-emoji-filter: sepia(1) saturate(2) grayscale(0.5) hue-rotate(calc(var(--primary-hue) * 1deg - 50deg ));
 }

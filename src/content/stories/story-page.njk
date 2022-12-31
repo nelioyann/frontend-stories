@@ -22,7 +22,6 @@ eleventyComputed:
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
 {% block article %}
     <header aria-labelledby="headline">
-        
         <h1 itemprop="headline" id="headline" data-props="centered noBorder noMeasure space:2xs">
             {% if emojicon %}
                 <span aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
