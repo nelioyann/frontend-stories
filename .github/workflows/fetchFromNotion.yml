@@ -1,11 +1,7 @@
 name: Automated Data Fetching
 
 on:
-  push:
-      branches:
-      - main
-      - develop
-
+  workflow_dispatch
 jobs:
   test_version:
     runs-on: ubuntu-latest
