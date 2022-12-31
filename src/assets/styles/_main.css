@@ -72,7 +72,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 }
 [data-heading~="anchor"] a::after {
   content: "⚓";
-  filter: sepia(1) saturate(2) hue-rotate(calc(var(--primary-hue) * 1deg));
+  filter: var(--font-emoji-filter);
   font-size: 0.75em;
   padding-left: var(--space-2xs); /* to make the "#" a bigger target */
   padding-right: var(--space-2xs);
