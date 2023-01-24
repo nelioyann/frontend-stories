@@ -1,14 +1,14 @@
 [
     {
         "id": "6fdacd63-da3a-40c0-a6b6-50d3599a4c20",
-        "notion_url": "https://www.notion.so/Avoid-marking-required-fields-with-an-asterisk-6fdacd63da3a40c0a6b650d3599a4c20",
+        "notion_url": "https://www.notion.so/Should-required-fields-be-marked-6fdacd63da3a40c0a6b650d3599a4c20",
         "icon": "✳️",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-12-26T23:07:00.000Z",
+        "edited": "2023-01-24T23:02:00.000Z",
         "created": "2022-11-28T15:04:00.000Z",
         "description": "Assuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.”",
         "status": {
@@ -83,315 +83,25 @@
             }
         ],
         "category": {
-            "id": "7931b97e-40c7-42a8-9527-ef84126b74aa",
-            "name": "Design",
-            "color": "red"
+            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
+            "name": "Accessibility",
+            "color": "pink"
         },
         "topics": [],
         "slugs": "required-fields-asterisk",
-        "name": "Avoid marking required fields with an asterisk"
-    },
-    {
-        "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
-        "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
-        "notion_url": "https://www.notion.so/Less-than-half-users-take-advantage-of-breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
-        "icon": "🧭",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-12-27T17:01:00.000Z",
-        "created": "2022-10-14T16:05:00.000Z",
-        "description": "Breadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n### Breadcrumbs\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n`Home > Furniture > Chairs > Leather Chairs`\n\nIt provides the following advantages:\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n### Key findings\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "36f7fbe7-3101-44cc-9f78-87b8570eaac7",
-                "notion_url": "https://www.notion.so/Breadcrumb-Navigation-An-exploratory-study-of-usage-36f7fbe7310144cc9f7887b8570eaac7",
-                "citation": "Lida, B., Hull, K., and Pilcher, K., (2003), Breadcrumb Navigation: An exploratory study of usage, Usability News 5.1.",
-                "url": "https://www.semanticscholar.org/paper/Breadcrumb-Navigation%3A-An-Exploratory-Study-of-Chaparro-Lida/88aadc6e6fd42c91bb5aa011c06ee651d8ee8ab5",
-                "summary": "Just as Hansel and Gretel created a breadcrumb trail to find their path back home, today's internet user often finds a need to get back to a website's previously visited locations; hence, the cyber \"breadcrumb trail\" was created. This textual representation of where and how information is located within the website allows the user to link to major categories of information along a continuum of sequential order. For example, the breadcrumb path for a leather chair on the Office Max website would be: Home > Furniture > Chairs > Leather Chairs. The location of the navigational path is often prominently placed in the upper left quarter of the website page.",
-                "cite": "Lida, 2002",
-                "created time": "2022-07-21T22:02:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Breadcrumb Navigation: An exploratory study of usage",
-                "tags": []
-            },
-            {
-                "id": "307ea6e6-534b-4d6c-9dcc-f05098f2e601",
-                "notion_url": "https://www.notion.so/Influence-of-Training-and-Exposure-on-the-Usage-of-Breadcrumb-Navigation-307ea6e6534b4d6c9dccf05098f2e601",
-                "citation": "Hull, S. S. (2004). \"Influence of Training and Exposure on the Usage of Breadcrumb Navigation.\" Usability News, 6(1).",
-                "url": "https://www.researchgate.net/publication/254409807_The_Influence_of_Mere_Exposure_on_Web_Based_Breadcrumb_Navigation",
-                "summary": "Research has reported that breadcrumb navigation improves site efficiency [1, 2]. However, when given a choice, users choose the Back button or navigation bar to navigate rather than the breadcrumb trail [3]. Lida-Rogers & Chaparro (2003) found that participants who used the breadcrumb trail used the Back button less often than users who did not use it; however, no differences were found in other efficiency measures such as total pages visited or total time. Participants may not understand the function of the breadcrumb trail as a navigational tool and understanding its’ purpose or minimal training might impact usage and/or efficiency [4]. Mere exposure was considered as a means of introducing participants to breadcrumb trails. According to Zajonc (1968), if the function of orienting behavior is eventually to change a novel stimulus into a familiar one, it is also its consequence to render the stimulus object eventually more attractive [5]. Zajonc (1968) states that the mere repeated exposure of the individual to a stimulus object enhances his attitude toward it [5]. Thus, it was hypothesized that mere exposure of the breadcrumb trail would influence participants’ use of breadcrumb trail navigation during a search task procedure.",
-                "cite": "Hull, 2004",
-                "created time": "2022-07-21T22:59:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Influence of Training and Exposure on the Usage of Breadcrumb Navigation",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
-            "name": "Navigation",
-            "color": "yellow"
-        },
-        "topics": [],
-        "slugs": "do-users-use-breadcrumbs",
-        "name": "Less than half users take advantage of breadcrumbs"
-    },
-    {
-        "id": "592c4c91-84c5-4273-9a24-eb155e53e43a",
-        "notion_url": "https://www.notion.so/Provide-text-alternatives-for-any-non-text-content-592c4c9184c542739a24eb155e53e43a",
-        "icon": "🔤",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-12-31T10:03:00.000Z",
-        "created": "2022-09-07T15:06:00.000Z",
-        "description": "Only use an icon if its message is a 100% clear to everyone. Adding a text labels alongside icons can increase clarity.\n\n> Icons should be simple, easy to understand, and consistent. Icons almost always require familiarity in order to be useful. Across cultures and languages, they can be misinterpreted. In many cases, adjacent text is helpful. (WebAim)",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "be99d931-3755-4c23-8a42-81085b6ad067",
-                "notion_url": "https://www.notion.so/The-best-icon-is-a-text-label-be99d93137554c238a4281085b6ad067",
-                "citation": "Thomas Byttebier, 2015",
-                "url": "https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label",
-                "summary": "",
-                "cite": "Thomas Byttebier, 2015",
-                "created time": "2022-09-07T15:08:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "The best icon is a text label",
-                "tags": []
-            },
-            {
-                "id": "9cb61c4b-a08d-4a56-a386-a0bd48e8787c",
-                "notion_url": "https://www.notion.so/Web-Content-Accessibility-Guidelines-WCAG-2-0-9cb61c4ba08d4a56a386a0bd48e8787c",
-                "citation": "W3C, Web Content Accessibility Guidelines 2.0",
-                "url": "https://www.w3.org/TR/WCAG20/#text-equiv",
-                "summary": "",
-                "cite": "WCAG 2.0",
-                "created time": "2022-09-07T15:10:00.000Z",
-                "type": {
-                    "id": "339e3d89-9836-4738-b918-cc2c74cc82cc",
-                    "name": "Specification",
-                    "color": "gray"
-                },
-                "name": "Web Content Accessibility Guidelines (WCAG) 2.0",
-                "tags": []
-            },
-            {
-                "id": "5ad8cc7b-486a-4a00-a6c2-986a62723b6e",
-                "notion_url": "https://www.notion.so/Misused-mobile-UX-patterns-If-you-are-an-experienced-designer-you-5ad8cc7b486a4a00a6c2986a62723b6e",
-                "citation": "Zoltan Kollin, Medium, 2015",
-                "url": "https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570",
-                "summary": "",
-                "cite": "Medium, 2015",
-                "created time": "2022-09-07T15:14:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "Misused mobile UX patterns. If you are an experienced designer, you… ",
-                "tags": []
-            },
-            {
-                "id": "81c0696c-ed90-491d-adb8-24db92c2e847",
-                "notion_url": "https://www.notion.so/UX-Best-Practices-Include-Labels-with-Icons-81c0696ced90491dadb824db92c2e847",
-                "citation": "Voice+Code, 2019",
-                "url": "https://www.voiceandcode.com/our-insights/2019/6/7/ux-best-practices-include-labels-with-icons",
-                "summary": "",
-                "cite": "Voice+Code, 2019",
-                "created time": "2022-09-14T08:07:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "UX Best Practices: Include Labels with Icons",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
-            "name": "Accessibility",
-            "color": "pink"
-        },
-        "topics": [],
-        "slugs": "provide-alt-text",
-        "name": "Provide text alternatives for any non text content"
-    },
-    {
-        "id": "322c97d2-723e-4741-99ef-8b4086ea38ab",
-        "notion_url": "https://www.notion.so/Avoid-Unicode-characters-on-online-posts-322c97d2723e474199ef8b4086ea38ab",
-        "icon": "🔣",
-        "type": {
-            "id": "OL?t",
-            "name": "Insight",
-            "color": "green"
-        },
-        "edited": "2022-12-23T15:03:00.000Z",
-        "created": "2022-09-07T14:36:00.000Z",
-        "description": "By avoiding special characters from Unicode, you can ensure that your content is easy to read for all users, regardless of the device they are using. Additionally, screen readers may have difficulty recognizing special characters, making them inaccessible to those using assistive technology. ",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "1ce2f69f-7a5c-4cee-bdd0-07ff5c6076fc",
-                "notion_url": "https://www.notion.so/Kent-C-Dodds-on-unicode-characters-1ce2f69f7a5c4ceebdd007ff5c6076fc",
-                "citation": "Twitter, @kentcdodds, 2019",
-                "url": "https://twitter.com/kentcdodds/status/1083073242330361856",
-                "summary": "",
-                "cite": "Twitter, 2019",
-                "created time": "2022-09-07T14:39:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "Kent C. Dodds on unicode characters",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
-            "name": "Accessibility",
-            "color": "pink"
-        },
-        "topics": [],
-        "slugs": "avoid-unicode-characters",
-        "name": "Avoid Unicode characters on online posts"
-    },
-    {
-        "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
-        "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
-        "notion_url": "https://www.notion.so/Radio-and-checkbox-inputs-are-perceived-differently-cffcf98342c54f3e986e5af360b4c946",
-        "icon": "📻",
-        "type": {
-            "id": "OL?t",
-            "name": "Insight",
-            "color": "green"
-        },
-        "edited": "2022-12-27T17:01:00.000Z",
-        "created": "2022-08-29T12:03:00.000Z",
-        "description": "Checkboxes and radio controls are a type of input elements used to make a choice out of various options. These controls are often used in online forms where their actual role can be blurry.   \n\n### Checking the boxes\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.  \n\n### Popping radios buttons\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time. \n\n### Using the power of familiarity\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” -- Jeremy Keith (Resilient Web Design)\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "dce4a37d-737e-4cfb-8f67-df204c5b1a01",
-                "notion_url": "https://www.notion.so/Checkboxes-Are-Never-Round-dce4a37d737e4cfb8f67df204c5b1a01",
-                "citation": "Daniel De Laney, 2015",
-                "url": "http://danieldelaney.net/checkboxes/",
-                "summary": "",
-                "cite": "Daniel De Laney, 2015",
-                "created time": "2022-08-29T12:04:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "Checkboxes Are Never Round",
-                "tags": []
-            },
-            {
-                "id": "6adc6101-0962-47fa-8696-7b7e90e74842",
-                "notion_url": "https://www.notion.so/Jakob-s-Law-Laws-of-UX-6adc6101096247fa86967b7e90e74842",
-                "citation": "Laws of UX",
-                "url": "https://lawsofux.com/jakobs-law/",
-                "summary": "",
-                "cite": "Laws of UX",
-                "created time": "2022-08-29T11:58:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "Jakob’s Law | Laws of UX",
-                "tags": []
-            },
-            {
-                "id": "4ec37688-39e5-4566-93b6-7bdbcf76c9ea",
-                "notion_url": "https://www.notion.so/Resilient-Web-Design-4ec3768839e5456693b67bdbcf76c9ea",
-                "citation": "Jeremy Keith",
-                "url": "https://resilientwebdesign.com/",
-                "summary": "",
-                "cite": "Jeremy Keith",
-                "created time": "2022-10-14T16:22:00.000Z",
-                "type": {
-                    "id": "6d7dbec3-14fe-4915-bbe1-8f23091adf6a",
-                    "name": "Book",
-                    "color": "yellow"
-                },
-                "name": "Resilient Web Design",
-                "tags": []
-            },
-            {
-                "id": "3fd20eea-afee-4152-907e-30ee995d16dd",
-                "notion_url": "https://www.notion.so/Yes-or-No-One-Checkbox-vs-Two-Radio-Buttons-3fd20eeaafee4152907e30ee995d16dd",
-                "citation": "Sara Soueidan, 2020",
-                "url": "https://www.sarasoueidan.com/blog/one-checkbox-or-two-radio-buttons/#first%2C-some-backstory%3A",
-                "summary": "We use radio buttons when the label is a question, and we use a checkbox when the label is a statement. Also, radio buttons are preferred when default option can’t be inferred and both options should have equal preference.",
-                "cite": "Sara Soueidan, 2020",
-                "created time": "2022-09-28T11:35:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "\"Yes or No?\" — One Checkbox vs Two Radio Buttons.",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
-            "name": "Accessibility",
-            "color": "pink"
-        },
-        "topics": [],
-        "slugs": "checkboxes-or-radio-buttons",
-        "name": "Radio and checkbox inputs are perceived differently"
+        "name": "Should required fields be marked?"
     },
     {
         "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
         "cover": "https://images.unsplash.com/photo-1532630571098-79a3d222b00d",
-        "notion_url": "https://www.notion.so/Placeholders-in-form-fields-are-harmful-c0e2023f93954f2e84dab5b709767163",
+        "notion_url": "https://www.notion.so/Why-are-placeholders-in-form-fields-considered-harmful-c0e2023f93954f2e84dab5b709767163",
         "icon": "🔤",
         "type": {
             "id": "OL?t",
             "name": "Insight",
             "color": "green"
         },
-        "edited": "2022-12-26T23:06:00.000Z",
+        "edited": "2023-01-24T23:02:00.000Z",
         "created": "2022-08-28T08:23:00.000Z",
         "description": "Placeholder text can cause users to forget what they need to type in, or to think that a certain field is not required. Additionally, the text is often low contrast making it difficult to read.\n\n> The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. (MDN)",
         "status": {
@@ -440,7 +150,7 @@
         },
         "topics": [],
         "slugs": "placeholders-for-hint-text",
-        "name": "Placeholders in form fields are harmful"
+        "name": "Why are placeholders in form fields considered harmful?"
     },
     {
         "id": "31f53350-2f61-41b2-b803-f5ceb2e99139",
@@ -484,19 +194,19 @@
         },
         "topics": [],
         "slugs": "contrasts-and-readability ",
-        "name": "Higher contrast lead to greater readability"
+        "name": "How does contrast affect readability?"
     },
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d",
-        "notion_url": "https://www.notion.so/Users-can-tolerate-about-2-seconds-for-a-page-to-load-728073c284d043d58a4403c7f479d72a",
+        "notion_url": "https://www.notion.so/How-long-can-users-wait-for-a-page-to-load-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-09-26T10:12:00.000Z",
+        "edited": "2023-01-24T23:03:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
         "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user. Studies have shown that are users are willing to wait between 2 to 10 seconds for a page to load.\n\n\n### Speed impacts how interesting websites are perceived\n\n#### Faster websites are more apprecied\n\nWebsites that are slow often induce frustration, especially when there is only a blank screen to stare at. In fact, research has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece, 1998). \n\nIn a study, Nah found that the tolerable waiting time for a page to load was 2 seconds (Nah, 2004). At the time it also found that a page took on average about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone. Thus concluding that your average website take more time to load than what we supposedly tolerate.\n\n\n#### Slow load times\n\n\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback. \n\n\n### Solving long page load\n\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time. \nWhen presented with an estimation of an ongoing process, users are able to alleviate this wait time by engaging in other activities. Without a feedback users are left to guess at what point a process will conclude.\n\n### Key takeaways\n1. Faster pages are perceived as more interesting than slower pages. \n2. When loading feedback is provided,it reaches 10 seconds.\n3. Tolerable waiting time for a page to load is about 2 seconds.",
         "status": {
@@ -545,19 +255,19 @@
         },
         "topics": [],
         "slugs": "how-long-users-can-wait",
-        "name": "Users can tolerate about 2 seconds for a page to load"
+        "name": "How long can users wait for a page to load?"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1",
-        "notion_url": "https://www.notion.so/Friendly-error-messages-positively-influence-users-af855c922a3b45ceb4ea0a8156daf7b9",
+        "notion_url": "https://www.notion.so/Why-are-more-user-friendly-error-messages-important-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-10-18T07:43:00.000Z",
+        "edited": "2023-01-24T23:07:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
         "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n### Building an emotional interaction\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n## How to write better error messages\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n### Are users more tolerant of a computer that apologizes ?\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
         "status": {
@@ -622,19 +332,19 @@
         },
         "topics": [],
         "slugs": "when-computers-apologize",
-        "name": "Friendly error messages positively influence users"
+        "name": "Why are more user-friendly error messages important?"
     },
     {
         "id": "a1043815-b340-41d4-888b-9271bf10e94b",
         "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
-        "notion_url": "https://www.notion.so/Well-written-copy-improves-performance-and-satisfaction-a1043815b34041d4888b9271bf10e94b",
+        "notion_url": "https://www.notion.so/Why-is-copywriting-important-for-a-website-a1043815b34041d4888b9271bf10e94b",
         "icon": "📝",
         "type": {
             "id": "@bzz",
             "name": "Finding",
             "color": "pink"
         },
-        "edited": "2022-12-27T17:03:00.000Z",
+        "edited": "2023-01-24T22:58:00.000Z",
         "created": "2022-07-21T23:04:00.000Z",
         "description": "According to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n### Why does it matter ?\n- On the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website.\n- On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n### Writing guidelines for web pages\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. They cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n### Recommendation for writting copy text\n- Conciseness can be achieved by removing small details.\n- Ease of reading can be achieved by adding tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Greater objectivity is possible by removing commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\n### Take home message\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information",
         "status": {
@@ -683,128 +393,6 @@
         },
         "topics": [],
         "slugs": "webpages-copy-writing-guidelines",
-        "name": "Well written copy improves performance and satisfaction"
-    },
-    {
-        "id": "7b28aeb1-ecc4-43a4-8d3a-e229554bfe18",
-        "cover": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a",
-        "notion_url": "https://www.notion.so/Pictures-of-faces-attract-attention-7b28aeb1ecc443a48d3ae229554bfe18",
-        "icon": "😄",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-10-28T12:24:00.000Z",
-        "created": "2022-07-21T22:52:00.000Z",
-        "description": "Faces can inherently attract people's attention. But what about on the web? Would it be possible to make the less interesting areas a little more interesting by integrating images of human faces?\n\n### Faces on E-commerce\nThis study is the first to look into the effect of photographs of people on visual attention on an on-line shopping site. The study found that photos do attract more visual attention than text on a first time view of a page. However, if a photo is used repeatedly on several pages of the shopping process, it will largely be ignored.\n\n### Faces and viewing behavior\nThe core findings of the paper are that faces may be useful in attracting attention to particular places on a web page, but they may also distract attention from key information. Additionally, the results showed that faces located above the fold of the web page negatively affected the performance of those who were completing tasks.\n\n### Faces and advertisements\nThe study found that having a human face in the banner, especially one with averted gaze, increased attention to the banner overall as well as to the advertising text and product. This in turn led to better memory for the brand and advertising message.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "7622615f-e739-432b-ae3a-89637f3968f4",
-                "notion_url": "https://www.notion.so/Eye-Catcher-or-Blind-Spot-The-Effect-of-Photographs-of-Faces-on-E-Commerce-Sites-7622615fe739432bae3a89637f3968f4",
-                "citation": "Users' eyes are drawn to pictures of human faces the first time they see a page. (Riegelsberger, Sasse & McCarthy, 2002)",
-                "url": "https://www.researchgate.net/publication/220895891_Eye-Catcher_or_Blind_Spot_The_Effect_of_Photographs_of_Faces_on_E-Commerce_Sites",
-                "summary": "E-commerce still suffers from consumers' lack of trust. Most e-commerce researchers focus on building trust through cues that appeal to rational decision-making. These cues are usually implemented as text (e.g. privacy policies). In print advertising, affective attitudes and trust are commonly built by using photographs of people. On the web, however, users as well as interface design experts believe that photos impair task performance by attracting visual attention. In this study we compared online-shoppers' gaze patterns on pages with a photo of a person to pages with a text box of the same size. Our data does not support the claim that photographs decrease task performance. In fact, users spend more time looking at the text box. We found that the photograph attracts more attention than the text box on a first time view of a particular page. However, participants quickly learn the structure of a page and ignore the photo on subsequent pages. We outline further research, incorporating physiological measurements to infer user cost and affective responses",
-                "cite": "Riegelsberger, Sasse & McCarthy, 2002",
-                "created time": "2022-07-21T22:54:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Eye-Catcher or Blind Spot? The Effect of Photographs of Faces on E-Commerce Sites",
-                "tags": []
-            },
-            {
-                "id": "676a5ff7-8b65-4dd1-99fc-819c551ef786",
-                "notion_url": "https://www.notion.so/Faces-and-Viewing-Behavior-An-Exploratory-Investigation-676a5ff78b654dd199fc819c551ef786",
-                "citation": "Djamasbi, S., Siegel, M., & Tullis, T. S. (2012). Faces and Viewing Behavior: An Exploratory Investigation. ",
-                "url": "https://aisel.aisnet.org/thci/vol4/iss3/2/",
-                "summary": "User experience is becoming increasingly important in gaining a competitive advantage in the marketplace. One way to improve user experience is by including images of faces. People are drawn to faces because paying attention to faces has played a significant role in human evolution. Hence, areas on a web page that typically receive less attention from users, such as the right side or below the fold, may benefit from the inclusion of images of faces. Although faces may be useful in attracting attention to particular places on a web page, they may also distract attention from key information. To test this possibility, we conducted two eye tracking studies in which images of faces were placed on areas of a web page that are shown to receive less attention. The results indicated that faces did not increase the number of people who viewed the areas where the faces were located, but that faces affected fixation patterns on these areas. Our results also showed that faces located above the fold of the web page negatively affected the performance of those who were completing tasks.",
-                "cite": "Djamasbi, 2012",
-                "created time": "2022-08-20T05:57:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Faces and Viewing Behavior: An Exploratory Investigation",
-                "tags": []
-            },
-            {
-                "id": "fad21578-d4cc-4e07-92b4-0636f3d1b141",
-                "notion_url": "https://www.notion.so/The-influence-of-banner-advertisements-on-attention-and-memory-human-faces-with-averted-gaze-can-en-fad21578d4cc4e0792b40636f3d1b141",
-                "citation": "Sajjacholapunt, P., & Ball, L. J. (2014). The influence of banner advertisements on attention and memory: human faces with averted gaze can enhance advertising effectiveness. ",
-                "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00166/full",
-                "summary": "Research suggests that banner advertisements used in online marketing are often overlooked, especially when positioned horizontally on webpages. Such inattention invariably gives rise to an inability to remember advertising brands and messages, undermining the effectiveness of this marketing method. Recent interest has focused on whether human faces within banner advertisements can increase attention to the information they contain, since the gaze cues conveyed by faces can influence where observers look. We report an experiment that investigated the efficacy of faces located in banner advertisements to enhance the attentional processing and memorability of banner contents. We tracked participants' eye movements when they examined webpages containing either bottom-right vertical banners or bottom-center horizontal banners. We also manipulated facial information such that banners either contained no face, a face with mutual gaze or a face with averted gaze. We additionally assessed people's memories for brands and advertising messages. Results indicated that relative to other conditions, the condition involving faces with averted gaze increased attention to the banner overall, as well as to the advertising text and product. Memorability of the brand and advertising message was also enhanced. Conversely, in the condition involving faces with mutual gaze, the focus of attention was localized more on the face region rather than on the text or product, weakening any memory benefits for the brand and advertising message. This detrimental impact of mutual gaze on attention to advertised products was especially marked for vertical banners. These results demonstrate that the inclusion of human faces with averted gaze in banner advertisements provides a promising means for marketers to increase the attention paid to such adverts, thereby enhancing memory for advertising information.",
-                "cite": "Sajjacholapunt, 2014",
-                "created time": "2022-08-20T06:07:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "The influence of banner advertisements on attention and memory: human faces with averted gaze can enhance advertising effectiveness",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "dab3ba03-db92-44f0-98d9-0938c4c774c7",
-            "name": "Multimedia",
-            "color": "brown"
-        },
-        "topics": [],
-        "slugs": "human-faces-attract-attention",
-        "name": "Pictures of faces attract attention"
-    },
-    {
-        "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
-        "cover": "https://images.unsplash.com/photo-1591117752671-541f3495dc93",
-        "notion_url": "https://www.notion.so/Visible-sitemaps-facilitate-website-exploration-7edbc73cbef944248cccfa87b8722d64",
-        "icon": "🗺️",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-12-27T17:04:00.000Z",
-        "created": "2022-07-21T21:49:00.000Z",
-        "description": "A sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n### Sitemap and search engines\n\nSearch engines such as Google understand the structure of websites from the sitemap. \n\n### Take home message\n\nHow might a visible site map affect the behavior of users seeking any information ?\n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure. \n- make less use of the browser's Back button\n- make navigational movements of great hierarchical distances",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "42c44b6e-0102-44ae-965f-1e2eb289b145",
-                "notion_url": "https://www.notion.so/Web-navigation-and-the-behavioral-effects-of-constantly-visible-site-maps-42c44b6e010244ae965f1e2eb289b145",
-                "citation": "Danielson, D., (2002), Web navigation and the behavioral effects of constantly visible site maps, Interacting with Computers 14 pp. 601-618.",
-                "url": "https://academic.oup.com/iwc/article-abstract/14/5/601/709718",
-                "summary": "Knowledge regarding how Web information-seekers behave with respect to the structures and cues they are provided with may shed light on general principles of navigation in electronic spaces, and assist designers in making more informed structural decisions. This study examines user movement through hierarchically structured Web sites and the behavioral effects of a constantly visible, textual contents list for relatively small sites or more extensive local views than are generally used on the Web today. The site overview resulted in users abandoning fewer information-seeking tasks. Users with such context dig deeper into the site structure, make less use of the browser's Back button, and frequently make navigational movements of great hierarchical distances. Navigational correlates of success and reported confidence for users with the overview differ from those without such context. Both with and without a constant overview, the relationship between the source and destination pages may help predict the amount of time spent at the destination. Experimental reports are preceded by a review of click-stream navigation behavior research.",
-                "cite": "Danielson, 2002",
-                "created time": "2022-07-21T22:02:00.000Z",
-                "type": {
-                    "id": "6d7dbec3-14fe-4915-bbe1-8f23091adf6a",
-                    "name": "Book",
-                    "color": "yellow"
-                },
-                "name": "Web navigation and the behavioral effects of constantly visible site maps",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "439eb010-c25e-43d9-8d6f-98a1208c51a9",
-            "name": "Navigation",
-            "color": "yellow"
-        },
-        "topics": [],
-        "slugs": "sitemap-facilitates-navigation",
-        "name": "Visible sitemaps facilitate website exploration"
+        "name": "Why is copywriting important for a website?"
     }
 ]

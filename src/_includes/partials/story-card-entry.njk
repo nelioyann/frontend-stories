@@ -2,9 +2,9 @@
     <article itemscope="itemscope" itemtype="http://schema.org/Article">
         <a data-heading="5" itemprop="url" data-button="text" href="/{{ entry.slug }}">
         <b>{{ entry.name }}</b></a>
-        <p>
+        {# <p>
             <time itemprop="dateModified" datetime="{{ story.edited }}">{{entry.edited | readableDate}}</time>
-        </p>
+        </p> #}
         <meta itemprop="headline" content="{{ entry.name }}"/>
     </article>
 </li>
