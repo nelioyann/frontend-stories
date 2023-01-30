@@ -6,6 +6,7 @@
   min-height: var(--minimum-height);
   line-height: var(--button-line-height, --minimum-height);
   text-decoration: var(--button-text-decoration);
+  text-decoration-color: var(--color-primary);
   color: var(--button-color, var(--color-dark));
   background-color: var(--button-background-color, var(--color-light));
   cursor: pointer;
