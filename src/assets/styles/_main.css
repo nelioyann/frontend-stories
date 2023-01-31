@@ -88,6 +88,10 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   list-style-type: none;
   padding-left: 0;
 }
+.breadcrumbs-navigation a{
+  --button-padding-y: calc(var(--space-2xs) * 0.5);
+    --button-padding-x: var(--space-xs);
+}
 
 .breadcrumbs-navigation li:first-child a::before{
   visibility: visible;
