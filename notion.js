@@ -1,36 +1,35 @@
 require("dotenv").config();
 const { Client } = require("@notionhq/client");
 const { NotionToMarkdown } = require("notion-to-md");
-
 const fs = require("fs");
 
+// Retrieve tokens necessary for linking with the notion DB
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const DATABASE_ID = process.env.DATABASE_ID;
 
-async function makeMeAJSON(input, path = "./pages.json") {
-  // convert JSON object to a string
-  const data = JSON.stringify(input, null, 4);
-
+async function createFile(data, path = "./pages.json") {
   // write file to disk
   fs.writeFile(path, data, "utf8", (err) => {
     if (err) {
-      console.log(`Error writing file: ${err}`);
+      throw Error(`Error writing file: ${err}`);
     } else {
       console.log(`File is written successfully! to ${path}`);
     }
   });
 }
 
-// Initializing a client
+// Initialize a notion client passing notion client to the option
 const notion = new Client({
   auth: NOTION_TOKEN,
 });
-// notion;
-// passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
+/**
+ * Query a notion database
+ * @param string database_id 
+ * @returns  A list of page ids 
+ */
 async function getDatabasePagesId(database_id) {
-  console.log("Reading database...");
   try {
     const response = await notion.databases.query({
       database_id,
@@ -43,7 +42,7 @@ async function getDatabasePagesId(database_id) {
     });
     return response.results.map((result) => result.id);
   } catch (error) {
-    console.log(error);
+    throw Error(`Unable to retrieve ids from database.\n db_id: ${database_id}`);
   }
 }
 
@@ -52,10 +51,9 @@ async function readPage(page_id) {
     const page = await notion.pages.retrieve({
       page_id,
     });
-    // console.log(page);
     return page;
   } catch (error) {
-    console.log(error);
+    throw Error(`Unable to retrieve notion page.\n page_id: ${page_id}`);
   }
 }
 
@@ -67,7 +65,7 @@ async function readProperty(page_id, property_id) {
     });
     return await sanitizeProperty(response, response.type);
   } catch (error) {
-    console.log(error);
+    throw Error(`Unable to read property property_id:${property_id}`);
   }
 }
 
@@ -108,7 +106,7 @@ async function sanitizePropertyItem(response, propertyItem_type) {
       // let properties_id = ["title"];
       let relation_pages = [];
       for (let pageId of relation_pageIds) {
-        let page = await readPageExtended(pageId, "MINIMIZE");
+        let page = await getPageProperties(pageId, "MINIMIZE");
         relation_pages.push(page);
       }
       return relation_pages;
@@ -117,51 +115,89 @@ async function sanitizePropertyItem(response, propertyItem_type) {
   }
 }
 
-async function readPageExtended(page_id, scope = "MAXIMIZE") {
+async function getPageProperties(page_id, scope = "MAXIMIZE") {
   try {
     let page = await readPage(page_id);
     let { properties, url, cover, icon } = page;
-    let extended_page = {};
+    let page_properties = {};
     let ignoreThese = ["Description", "Summary", "Type", "Tags", "Topics", "Cite", "Created time"];
 
     if (scope === "MAXIMIZE") {
-      extended_page = {
+      page_properties = {
         id: page_id,
         cover: cover?.external.url?.split("?")[0],
         notion_url: url,
         icon: icon?.emoji,
       };
-      ignoreThese = ["Description", "Topics"]
+      ignoreThese = ["Topics", "Status", "Type"]
     }
+    // console.log(properties)
+    // console.log(Object.keys(properties).filter(p => ignoreThese.includes(p)))
     for (let key in properties) {
       if (!ignoreThese.includes(key)) {
         let property = await readProperty(page_id, properties[key].id);
-        extended_page[key.toLowerCase()] = property;
+        page_properties[key.toLowerCase()] = property;
       }
     }
-    return extended_page;
+    // console.log("Properties", page_properties)
+    return page_properties;
   } catch (error) {
     console.log(error);
   }
 }
 
-async function fetchDatabase(database_id) {
+
+
+function propertiesToFrontmatter(properties){
+  // 1. Destructure all properties
+  const {id, cover, notion_url, icon, edited, created, slugs, name} = properties,
+  tags = "findings",
+  category = properties.category.name,
+  source_citations = properties.references.map(r => r.citation),
+  source_urls = properties.references.map(r => r.url),
+  source_names = properties.references.map(r => r.name),
+  simpleProps = {id, cover, notion_url, icon, edited, created, slugs, name, category, tags},
+  arrayProps = {source_citations, source_names, source_urls};
+  // 2. Turn properties into frontmatter properties
+  // -- spaces matter
+  const simplePropsMd = Object.keys(simpleProps).reduce(
+    (final, current) => final + `${current}: '${simpleProps[current]}' \n`,
+    ""
+  );
+  const arrayPropsMd = Object.keys(arrayProps).reduce(
+    (final, current) => final + arrayProps[current].reduce((f, c) => f + `- '${c}' \n`, `${current}:\n`),
+    ""
+  );
+  // 3. Return properties wrapped between frontmatter decorators
+  return(["---", simplePropsMd, arrayPropsMd, "---"].join("\n"));
+}
+
+async function main(database_id) {
   try {
-    let database_data = [];
-    let pagesId = await getDatabasePagesId(database_id);
-    for (let pageId of pagesId) {
-      let page_data = await readPageExtended(pageId);
-      // const mdblocks = await n2m.pageToMarkdown(pageId);
-      // const mdString = n2m.toMarkdownString(mdblocks);
-      console.log(page_data);
-      console.log("#############################");
-      // database_data.push(page_data);
+    let pages_Id = await getDatabasePagesId(database_id);
+    // console.log(pages_Id)
+    let pages = [];
+    for (let page_id of pages_Id) {
+      let page_properties = await getPageProperties(page_id);
+      // let page_data = await readPageExtended(pageId);
+      
+      // This folder must exist in your project.
+      // let parentDirectory = "./src/_data"; "./src/_data/stories.json"
+      const pageContentBlocks = await n2m.pageToMarkdown(page_id);
+      const pageContentMd = n2m.toMarkdownString(pageContentBlocks);
+      let page = {...page_properties, markdownContent: pageContentMd}
+      // console.log(page_id)
+      pages.push(page)
+      // const pagePropertiesMd = propertiesToFrontmatter(page_properties);
+      // const pageMd = [pagePropertiesMd, pageContentMd].join("\n");
     }
-    // makeMeAJSON(database_data, "./src/_data/stories.json");
-    // console.log(database_data.length, "pages generated.");
+    let filepath = "./src/_data/stories.json";
+    let pagesJSON = JSON.stringify(pages, null, 4);
+    createFile(pagesJSON, filepath);
+    // console.log(pagesJSON)
+
   } catch (error) {
     console.log(error);
   }
 }
-
-fetchDatabase(DATABASE_ID);
+main(DATABASE_ID);
