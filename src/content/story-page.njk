@@ -8,10 +8,11 @@ layout: layouts/base-layout.njk
 permalink: /{{story.slug}}/
 og_type: "article"
 eleventyComputed:
-    title: "{{ story.name | truncate(150) }} "
+    title: "{{ story.name | truncate(160) }} "
     thumbnail: "{{meta.site_url}}/assets/images/og-images/og-{{ story.slugs }}.png"
     emojicon: "{{ story.icon }}"
-    description: "{{story.excerpt}}"
+    description: "{{story.description}}"
+    markdownContent: "{{story.markdownContent}}"
     eleventyNavigation:
         key: "{{story.id}}"
         title: "{{story.name}}"
@@ -28,7 +29,7 @@ eleventyComputed:
             {% endif %}
             {{ story.name }}
         </h1>
-        <div data-layout="box">
+        <div data-layout="switcher box">
             <p>
                 <span aria-hidden="true" data-font="emoji">📁</span>
                 Filed under:
@@ -41,7 +42,7 @@ eleventyComputed:
             </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">✍</span>
-                Last updated:
+                Edited on:
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </p>
         </div>
@@ -52,7 +53,7 @@ eleventyComputed:
         <a href="#summary">Overview</a>
     </h2>
     {% renderTemplate "md, liquid", story %}
-    {{ description }}
+    {{ markdownContent }}
     {% endrenderTemplate %}
     <h2 id="references">
         <a href="#references">Evidence and further readings</a>
@@ -63,7 +64,7 @@ eleventyComputed:
             {% include "partials/reference-item.njk" %}
         {% endfor -%}
     </ul>
-    <h2 id="contribute">
+    {# <h2 id="contribute">
         <a href="#contribute">Mentions</a>
     </h2>
     <p>
@@ -74,8 +75,8 @@ eleventyComputed:
         data-props="x:center space:s"
         href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
         target="_blank">
-        Share on Twitter</a>
-    <h2 id="pagination-nav">
+        Share on Twitter</a> #}
+    {# <h2 id="pagination-nav">
         <a href="#pagination-nav">Other findings</a>
     </h2>
     <p>Explore other entries by order of publication:</p>
@@ -94,5 +95,5 @@ eleventyComputed:
                 {{ pagination.page.previous.name }}
             </a>
         {% endif %}
-    </nav>
+    </nav> #}
 {% endblock %}

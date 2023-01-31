@@ -15,12 +15,12 @@ eleventyComputed:
         title: Back to home
 ---
 
-<hgroup data-layout="slice">
+{# <hgroup class="visually-hidden" data-layout="slice">
     <h1>
         {{ hero_title }}
     </h1>
-    {# <p>{{ hero_description or meta.site_description }}</p> #}
-</hgroup>
+    <p>{{ hero_description or meta.site_description }}</p>
+</hgroup> #}
 <nav class="categories-navigation" aria-labelledby="Navigate by topics">
     <ul role="list" data-layout="cluster" data-props="noPad">
         {%- for category in collections.categoriesAndAll %}
