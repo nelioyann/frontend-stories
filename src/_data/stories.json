@@ -1,85 +1,32 @@
 [
     {
-        "id": "6fdacd63-da3a-40c0-a6b6-50d3599a4c20",
-        "notion_url": "https://www.notion.so/Should-required-fields-be-marked-6fdacd63da3a40c0a6b650d3599a4c20",
-        "icon": "✳️",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2023-01-24T23:02:00.000Z",
-        "created": "2022-11-28T15:04:00.000Z",
-        "description": "Assuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.”",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
+        "id": "592c4c91-84c5-4273-9a24-eb155e53e43a",
+        "cover": "https://images.unsplash.com/photo-1566416548759-caf7a5ef3c57",
+        "notion_url": "https://www.notion.so/What-are-the-benefits-of-providing-text-alternatives-for-non-text-content-592c4c9184c542739a24eb155e53e43a",
+        "icon": "🈂️",
+        "edited": "2023-01-31T21:04:00.000Z",
+        "created": "2023-01-31T13:14:00.000Z",
+        "description": "Everyone should have equal access to content online. Text alternatives help make this a reality by ensuring everyone can understand and interact with digital content, regardless of their ability.",
         "references": [
             {
-                "id": "e2b76fda-261a-4617-801c-6392ade6ba78",
-                "notion_url": "https://www.notion.so/Marking-Required-vs-Optional-form-fields-e2b76fda261a4617801c6392ade6ba78",
-                "citation": "",
-                "url": "https://www.lukew.com/ff/entry.asp?725",
-                "summary": "",
-                "cite": "Luke Wroblewski",
-                "created time": "2022-11-28T15:03:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "Marking Required vs. Optional form fields",
-                "tags": []
+                "citation": "Thomas Byttebier, 2015",
+                "url": "https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label",
+                "name": "The best icon is a text label"
             },
             {
-                "id": "f2c1345e-d4e1-4d75-854d-8b285a0f23ef",
-                "notion_url": "https://www.notion.so/The-Privacy-Economics-of-Voluntary-Over-disclosure-in-Web-Forms-f2c1345ed4e14d75854d8b285a0f23ef",
-                "citation": "",
-                "url": "https://www.semanticscholar.org/paper/The-Privacy-Economics-of-Voluntary-Over-disclosure-Preibusch-Krol/3f9426bf2c0b1808db4b5ce940ed36f476bc6d61",
-                "summary": "",
-                "cite": "Preibush, 2012",
-                "created time": "2022-12-01T21:48:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "The Privacy Economics of Voluntary Over-disclosure in Web Forms",
-                "tags": []
+                "citation": "W3C, Web Content Accessibility Guidelines 2.0",
+                "url": "https://www.w3.org/TR/WCAG20/#text-equiv",
+                "name": "Web Content Accessibility Guidelines (WCAG) 2.0"
             },
             {
-                "id": "ea80e445-df27-4a94-9c2b-57984df977fc",
-                "notion_url": "https://www.notion.so/Form-Design-Patterns-ea80e445df274a949c2b57984df977fc",
-                "citation": "Adam Silver, 2018",
-                "url": "https://www.smashingmagazine.com/printed-books/form-design-patterns/",
-                "summary": "",
-                "cite": "Silver, 2018",
-                "created time": "2022-11-28T15:07:00.000Z",
-                "type": {
-                    "id": "6d7dbec3-14fe-4915-bbe1-8f23091adf6a",
-                    "name": "Book",
-                    "color": "yellow"
-                },
-                "name": "Form Design Patterns",
-                "tags": []
+                "citation": "Zoltan Kollin, Medium, 2015",
+                "url": "https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570",
+                "name": "Misused mobile UX patterns. If you are an experienced designer, you… "
             },
             {
-                "id": "45264514-8a3f-446b-89f7-e666baae6900",
-                "notion_url": "https://www.notion.so/Indicating-form-controls-as-required-using-asterisks-452645148a3f446b89f7e666baae6900",
-                "citation": "Accessibility Developer Guide, 2018",
-                "url": "https://www.accessibility-developer-guide.com/examples/forms/required/",
-                "summary": "",
-                "cite": "ADG, 2018",
-                "created time": "2022-12-02T20:32:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "Indicating form controls as required using asterisks (*)",
-                "tags": []
+                "citation": "Voice+Code, 2019",
+                "url": "https://www.voiceandcode.com/our-insights/2019/6/7/ux-best-practices-include-labels-with-icons",
+                "name": "UX Best Practices: Include Labels with Icons"
             }
         ],
         "category": {
@@ -87,165 +34,28 @@
             "name": "Accessibility",
             "color": "pink"
         },
-        "topics": [],
-        "slugs": "required-fields-asterisk",
-        "name": "Should required fields be marked?"
-    },
-    {
-        "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
-        "cover": "https://images.unsplash.com/photo-1532630571098-79a3d222b00d",
-        "notion_url": "https://www.notion.so/Why-are-placeholders-in-form-fields-considered-harmful-c0e2023f93954f2e84dab5b709767163",
-        "icon": "🔤",
-        "type": {
-            "id": "OL?t",
-            "name": "Insight",
-            "color": "green"
-        },
-        "edited": "2023-01-24T23:02:00.000Z",
-        "created": "2022-08-28T08:23:00.000Z",
-        "description": "Placeholder text can cause users to forget what they need to type in, or to think that a certain field is not required. Additionally, the text is often low contrast making it difficult to read.\n\n> The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. (MDN)",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "be6b2c5e-c3d1-4bfe-9908-663889bec366",
-                "notion_url": "https://www.notion.so/Don-t-Put-Hints-Inside-Text-Boxes-in-Web-Forms-be6b2c5ec3d14bfe9908663889bec366",
-                "citation": "UXmatters, 2010",
-                "url": "https://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php",
-                "summary": "",
-                "cite": "UXmatters, 2010",
-                "created time": "2022-08-28T08:34:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "Don’t Put Hints Inside Text Boxes in Web Forms",
-                "tags": []
-            },
-            {
-                "id": "8f20e222-a869-4974-b6be-0e829570b3bd",
-                "notion_url": "https://www.notion.so/input-The-Input-Form-Input-element-HTML-HyperText-Markup-Language-8f20e222a8694974b6be0e829570b3bd",
-                "citation": "Mozilla, MDN Docs",
-                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#placeholder",
-                "summary": "The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content.",
-                "cite": "MDN Docs",
-                "created time": "2022-08-28T08:36:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "<input>: The Input (Form Input) element - HTML: HyperText Markup Language",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "f10c352a-57f6-4935-941f-c99dbfaee854",
-            "name": "Accessibility",
-            "color": "pink"
-        },
-        "topics": [],
-        "slugs": "placeholders-for-hint-text",
-        "name": "Why are placeholders in form fields considered harmful?"
-    },
-    {
-        "id": "31f53350-2f61-41b2-b803-f5ceb2e99139",
-        "notion_url": "https://www.notion.so/Higher-contrast-lead-to-greater-readability-31f533502f6141b2b803f5ceb2e99139",
-        "icon": "📖",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2022-12-27T17:02:00.000Z",
-        "created": "2022-08-24T05:13:00.000Z",
-        "description": "The core findings of the study are that colors with a greater contrast ratio generally result in more readable text, that there is no significant difference in retention based on color combination, and that preferred colors (such as blues and chromatic colors) lead to a higher rating of aesthetic quality and intention to purchase.\n\n### Implications for designers\nThe article states that for educational sites, where retention and readability are a major concern, black on white or a closely related combination of text should be used. This is because black and white have a high contrast ratio and because white on black text is less common. The text also states that for commercial sites, where aesthetic and purchasing behavior factors are a major concern, chromatic (colored) text/background combinations should be used. Chromatic colors are more likely to lead the viewer to see a site as more visually pleasing and stimulating. Most importantly, these colors are more likely to lead a viewer to the intention to purchase products advertised on the site.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "48ebbe38-1644-4649-aafd-cd993142b156",
-                "notion_url": "https://www.notion.so/The-impact-of-web-page-text-background-colour-combinations-on-readability-retention-aesthetics-and-48ebbe3816444649aafdcd993142b156",
-                "citation": "Richard H Hall & Patrick Hanna (2004) The impact of web page text-background colour combinations on readability, retention, aesthetics and behavioural intention, Behaviour & Information Technology, 23:3, 183-195",
-                "url": "https://www.tandfonline.com/doi/full/10.1080/01449290410001669932",
-                "summary": "The purpose of this experiment was to examine the effect of web page text/background colour combination on readability, retention, aesthetics, and behavioural intention. One hundred and thirty-six participants studied two Web pages, one with educational content and one with commercial content, in one of four colour-combination conditions. Major findings were: (a) Colours with greater contrast ratio generally lead to greater readability; (b) colour combination did not significantly affect retention; (c) preferred colours (i.e., blues and chromatic colours) led to higher ratings of aesthetic quality and intention to purchase; and (d) ratings of aesthetic quality were significantly related to intention to purchase.",
-                "cite": "Hall & Hanna, 2004",
-                "created time": "2022-08-08T01:50:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "The impact of web page text-background colour combinations on readability, retention, aesthetics and behavioural intention: Behaviour & Information Technology: Vol 23, No 3",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-            "name": "Content",
-            "color": "default"
-        },
-        "topics": [],
-        "slugs": "contrasts-and-readability ",
-        "name": "How does contrast affect readability?"
+        "slugs": "provide-alt-text",
+        "name": "What are the benefits of providing text alternatives for non-text content?",
+        "markdownContent": "\nIcons should only be used if their message is completely clear to everyone. Adding text labels can help to improve clarity.\n\n\n\n> ”Icons should be simple, easy to understand, and consistent. Icons almost always require familiarity in order to be useful. Across cultures and languages, they can be misinterpreted. In many cases, adjacent text is helpful. “(WebAim)\n\n"
     },
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d",
         "notion_url": "https://www.notion.so/How-long-can-users-wait-for-a-page-to-load-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2023-01-24T23:03:00.000Z",
+        "edited": "2023-01-31T11:54:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
-        "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user. Studies have shown that are users are willing to wait between 2 to 10 seconds for a page to load.\n\n\n### Speed impacts how interesting websites are perceived\n\n#### Faster websites are more apprecied\n\nWebsites that are slow often induce frustration, especially when there is only a blank screen to stare at. In fact, research has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece, 1998). \n\nIn a study, Nah found that the tolerable waiting time for a page to load was 2 seconds (Nah, 2004). At the time it also found that a page took on average about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone. Thus concluding that your average website take more time to load than what we supposedly tolerate.\n\n\n#### Slow load times\n\n\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback. \n\n\n### Solving long page load\n\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time. \nWhen presented with an estimation of an ongoing process, users are able to alleviate this wait time by engaging in other activities. Without a feedback users are left to guess at what point a process will conclude.\n\n### Key takeaways\n1. Faster pages are perceived as more interesting than slower pages. \n2. When loading feedback is provided,it reaches 10 seconds.\n3. Tolerable waiting time for a page to load is about 2 seconds.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
+        "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user. Studies have shown that are users are willing to wait between 2 to 10 seconds for a page to load.",
         "references": [
             {
-                "id": "e916b1b3-c109-4844-a63e-e7e1ab0755ca",
-                "notion_url": "https://www.notion.so/A-study-on-tolerable-waiting-time-how-long-are-Web-users-willing-to-wait-e916b1b3c1094844a63ee7e1ab0755ca",
                 "citation": "Nah, F. F. H. (2004). \"A study on tolerable waiting time: how long are Web users willing to wait?\" ",
                 "url": "https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f",
-                "summary": "Web users often face a long waiting time for downloading Web pages. Although various technologies and techniques have been implemented to alleviate the situation and to comfort the impatient users, little research has been done to assess what constitutes an acceptable and tolerable waiting time for Web users. This research reviews the literature on computer response time and users' waiting time for download of Web pages, and assesses Web users' tolerable waiting time in information retrieval. It addresses the following questions through an experimental study: What is the effect of feedback on users' tolerable waiting time? How long are users willing to wait for a Web page to be downloaded before abandoning it? The results from this study suggest that the presence of feedback prolongs Web users' tolerable waiting time and the tolerable waiting time for information retrieval is approximately 2 seconds.",
-                "cite": "Nah, 2004",
-                "created time": "2022-07-21T23:10:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "A study on tolerable waiting time: how long are Web users willing to wait?",
-                "tags": []
+                "name": "A study on tolerable waiting time: how long are Web users willing to wait?"
             },
             {
-                "id": "dcb6c13e-c044-467b-96c5-360ffa07f21a",
-                "notion_url": "https://www.notion.so/A-psychological-investigation-of-long-retrieval-times-on-the-World-Wide-Web-dcb6c13ec044467b96c5360ffa07f21a",
                 "citation": "Ramsay, J., Barbesi, A. and Preece, J., 1998, A psychological investigation of long retrieval times on the world wide web. Interacting with Computer",
                 "url": "https://academic.oup.com/iwc/article-abstract/10/1/77/913206",
-                "summary": "With the increasingly rapid uptake of the World Wide Web, even those pages classed as ‘the best of the web’ are not immune to large download latencies. This paper investigates whether the latency between requesting a page and receiving it influence user perceptions of the page. The paper describes a study in which users are presented with seven different web pages with delays ranging from 2 s to 2 min, and are then asked to rate the pages on a number of criteria. Predetermined delays were injected into the page loading process. Pages which were retrieved faster were judged significantly more interesting than their slower counterparts. The implications for web page design are discussed.",
-                "cite": "Ramsay, Barbesi and Preece (1998)",
-                "created time": "2022-08-10T06:41:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "A psychological investigation of long retrieval times on the World Wide Web",
-                "tags": []
+                "name": "A psychological investigation of long retrieval times on the World Wide Web"
             }
         ],
         "category": {
@@ -253,76 +63,33 @@
             "name": "Notifications",
             "color": "green"
         },
-        "topics": [],
         "slugs": "how-long-users-can-wait",
-        "name": "How long can users wait for a page to load?"
+        "name": "How long can users wait for a page to load?",
+        "markdownContent": "\nPage load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user. Studies have shown that are users are willing to wait between 2 to 10 seconds for a page to load.\n\n\n## Speed impacts how interesting websites are perceived\n\n\n### Faster websites are more appreciated\n\n\nWebsites that are slow often induce frustration, especially when there is only a blank screen to stare at. In fact, research has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece, 1998). \n\nIn a study, Nah found that the tolerable waiting time for a page to load was 2 seconds (Nah, 2004). At the time it also found that a page took on average about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone. Thus concluding that your average website take more time to load than what we supposedly tolerate.\n\n\n### Slow load times\n\n\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback. \n\n\n## Solving long page load\n\n\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time. \nWhen presented with an estimation of an ongoing process, users are able to alleviate this wait time by engaging in other activities. Without a feedback users are left to guess at what point a process will conclude.\n\n\n## Key takeaways\n\n1. Faster pages are perceived as more interesting than slower pages.\n2. When loading feedback is provided, it reaches 10 seconds.\n3. Tolerable waiting time for a page to load is about 2 seconds.\n"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1",
         "notion_url": "https://www.notion.so/Why-are-more-user-friendly-error-messages-important-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2023-01-24T23:07:00.000Z",
+        "edited": "2023-01-31T12:34:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
-        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n### Building an emotional interaction\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n## How to write better error messages\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n### Are users more tolerant of a computer that apologizes ?\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
+        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?",
         "references": [
             {
-                "id": "3b1f7313-53a0-4ac8-a7e8-02cde70c4440",
-                "notion_url": "https://www.notion.so/Toward-a-more-civilized-design-studying-the-effects-of-computers-that-apologize-3b1f731353a04ac8a7e802cde70c4440",
                 "citation": "Jeng-Yi Tzeng. 2004. Toward a more civilized design: studying the effects of computers that apologize. Int. J. Hum.-Comput. Stud. 61, 3 (September 2004), 319–345.",
                 "url": "https://doi.org/10.1016/j.ijhcs.2004.01.002",
-                "summary": "While it is difficult to create completely error-free interactions in software design, the issue of how to make users feel better when they encounter errors is critical to the concept of user-centered design. Neilsen argued for offering a slightly apologetic statement before an error message provided by web servers, but the notion of a computer apologizing to its users inevitably triggers a debate about the appropriateness of providing humanized messages to users. To understand how users react to computers' apologies (presented by textual or visual formats), a computer-guessing game was designed to test users' reactions. The game features three treatments (difficulty levels, feedback types, and emotional icons), each having two levels (difficult vs. easy, apologetic feedback vs. non-apologetic feedback, with emotional icons vs. without emotional icons). Two-hundred and sixty nine high school students participated in this study and were randomly assigned to one of eight groups. The results show that while the computers' actual performances still dominated the users' assessments of the program, the computer apologies help to create more desirable psychological experiences for the users, and emotional icons help to improve the aesthetic quality of the program.",
-                "cite": "Tzeng, 2004",
-                "created time": "2022-07-21T23:12:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Toward a more civilized design: studying the effects of computers that apologize",
-                "tags": []
+                "name": "Toward a more civilized design: studying the effects of computers that apologize"
             },
             {
-                "id": "f46ceac8-e9c7-4afd-bdc3-6d5c012f6d72",
-                "notion_url": "https://www.notion.so/Silicon-sycophants-the-effects-of-computers-that-flatter-f46ceac8e9c74afdbdc36d5c012f6d72",
                 "citation": "B.J. Fogg, and C. Nass. “Silicon Sycophans: The Effects of Computers That Flatter.”International Journal of Human-Computer Studies",
                 "url": "https://doi.org/10.1006/ijhc.1996.0104",
-                "summary": "A laboratory experiment examines the claims that (1) humans are susceptible to flattery from computers and (2) the effects of flattery from computers are the same as the effects of flattery from humans. In a cooperative task with a computer, subjects (N=41) received one of three types of feedback from a computer: “sincere praise”, “flattery” (insincere praise) or “generic feedback”. Compared to generic-feedback subjects, flattery subjects reported more positive affect, better performance, more positive evaluations of the interaction and more positive regard for the computer, even though subjects knew that the flattery from the computer was simply non contingent feedback. Subjects in the sincere praise condition responded similarly to those in the flattery condition. The study concludes that the effects of flattery from a computer can produce the same general effects as flattery from humans, as described in the psychology literature. These findings may suggest significant implications for the design of interactive technologies.",
-                "cite": "Fogg, 1997",
-                "created time": "2022-08-10T11:58:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Silicon sycophants: the effects of computers that flatter",
-                "tags": []
+                "name": "Silicon sycophants: the effects of computers that flatter"
             },
             {
-                "id": "e7f598f6-a27d-418e-86d5-a664a867bc2d",
-                "notion_url": "https://www.notion.so/When-life-gives-you-lemons-write-better-error-messages-e7f598f6a27d418e86d5a664a867bc2d",
                 "citation": "Jenni Nadler, Wix, 2022",
                 "url": "https://wix-ux.com/when-life-gives-you-lemons-write-better-error-messages-46c5223e1a2f",
-                "summary": "",
-                "cite": "Nadler @Wix, 2022",
-                "created time": "2022-10-18T07:33:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "When life gives you lemons, write better error messages",
-                "tags": []
+                "name": "When life gives you lemons, write better error messages"
             }
         ],
         "category": {
@@ -330,69 +97,8 @@
             "name": "Notifications",
             "color": "green"
         },
-        "topics": [],
         "slugs": "when-computers-apologize",
-        "name": "Why are more user-friendly error messages important?"
-    },
-    {
-        "id": "a1043815-b340-41d4-888b-9271bf10e94b",
-        "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
-        "notion_url": "https://www.notion.so/Why-is-copywriting-important-for-a-website-a1043815b34041d4888b9271bf10e94b",
-        "icon": "📝",
-        "type": {
-            "id": "@bzz",
-            "name": "Finding",
-            "color": "pink"
-        },
-        "edited": "2023-01-24T22:58:00.000Z",
-        "created": "2022-07-21T23:04:00.000Z",
-        "description": "According to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n### Why does it matter ?\n- On the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website.\n- On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n### Writing guidelines for web pages\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. They cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n### Recommendation for writting copy text\n- Conciseness can be achieved by removing small details.\n- Ease of reading can be achieved by adding tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Greater objectivity is possible by removing commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\n### Take home message\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information",
-        "status": {
-            "id": "a7333a5f-de1e-4880-91a2-1e44856edca3",
-            "name": "Published",
-            "color": "green"
-        },
-        "references": [
-            {
-                "id": "26cc1452-8f99-4ceb-b4a5-7740825a2cf8",
-                "notion_url": "https://www.notion.so/Applying-Writing-Guidelines-to-Web-Pages-26cc14528f994cebb4a57740825a2cf8",
-                "citation": "Morkes, J., and Nielsen, J. (1998). \"Applying Writing Guidelines to Web Pages.\" White Paper.",
-                "url": "https://dl.acm.org/doi/10.1145/286498.286792",
-                "summary": "Web users generally prefer writing that is concise, easy to scan, and objective (rather than promotional) in style. We incorporated these and other attributes into a redesign of Web content. Doing so required trade-offs and some hard decisions, but the results were positive. The rewritten website scored 159% higher than the original in measured usability. Compared with original-site users, users of the rewritten site reported higher subjective satisfaction and performed better in terms of task time, task errors, and memory. Implications for website writing and design are discussed.",
-                "cite": "Morkes and Nielsen, 1998",
-                "created time": "2022-07-21T23:05:00.000Z",
-                "type": {
-                    "id": "2de86dc2-381c-4ee9-b87c-be245fbc7ee1",
-                    "name": "Research Paper",
-                    "color": "blue"
-                },
-                "name": "Applying Writing Guidelines to Web Pages",
-                "tags": []
-            },
-            {
-                "id": "d434e6d5-5652-41bf-9ab6-a07350138b4b",
-                "notion_url": "https://www.notion.so/How-Little-Do-Users-Read-d434e6d5565241bf9ab6a07350138b4b",
-                "citation": "",
-                "url": "https://www.nngroup.com/articles/how-little-do-users-read/",
-                "summary": "",
-                "cite": "Jakob Nielsen, 2008",
-                "created time": "2022-09-03T08:05:00.000Z",
-                "type": {
-                    "id": "e79692be-ceb2-41ef-aa2a-9a3731d84a05",
-                    "name": "Web",
-                    "color": "orange"
-                },
-                "name": "How Little Do Users Read?",
-                "tags": []
-            }
-        ],
-        "category": {
-            "id": "875d12d3-4718-4665-ae34-f8a78f4c735c",
-            "name": "Content",
-            "color": "default"
-        },
-        "topics": [],
-        "slugs": "webpages-copy-writing-guidelines",
-        "name": "Why is copywriting important for a website?"
+        "name": "Why are more user-friendly error messages important?",
+        "markdownContent": "\nWhen a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n\n### Building an emotional interaction\n\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n\n## How to write better error messages\n\n\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n\n### Are users more tolerant of a computer that apologizes ?\n\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.\n"
     }
 ]
