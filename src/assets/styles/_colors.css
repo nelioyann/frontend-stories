@@ -15,7 +15,7 @@
   --color-light: #ECE1CB;
   --color-light-accent: hsl(32, 35%, 80%);
   --color-dark-accent: #735D43;
-  --color-dark: hsl(33, 32%, 20%);
+  --color-dark: #433523;
   
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);

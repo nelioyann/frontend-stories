@@ -1,12 +1,12 @@
 [data-button] {
   --minimum-height: var(--controls-minimum-height);
-  font-family: var(--font-sans-serif);
   padding: var(--button-padding-y, 0) var(--button-padding-x, var(--space-s));
   border-radius: var(--button-border-radius, var(--border-radius));
   min-height: var(--minimum-height);
   line-height: var(--button-line-height, --minimum-height);
   text-decoration: var(--button-text-decoration);
   text-decoration-color: var(--color-primary);
+  text-decoration-thickness: var(--border-thin);
   color: var(--button-color, var(--color-dark));
   background-color: var(--button-background-color, var(--color-light));
   cursor: pointer;
@@ -27,6 +27,8 @@
   --button-background-color: var(--color-dark);
   --button-hover-background-color: var(--color-light);
   --button-hover-color: var(--color-dark-accent);
+  font-family: var(--font-sans-serif);
+
 }
 [data-button~="outline"],
 [data-button~="tag"] {
@@ -34,6 +36,8 @@
   --button-hover-background-color: var(--color-dark);
   --button-hover-border-color: var(--color-dark);
   --button-hover-color: var(--color-light);
+  font-family: var(--font-sans-serif);
+
 }
 
 [data-button~="text"],
@@ -74,9 +78,9 @@
   font-size: calc(var(--step-0) * 0.75);
 }
 
-[data-button~="text"]{
+/* [data-button~="text"]{
   --button-color: var(--color-dark-accent);
-}
+} */
 
 
 /* [data-button] svg{

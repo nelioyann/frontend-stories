@@ -127,15 +127,15 @@ blockquote {
 
 :root {
   --page-top: var(--space-m, 6rem);
-  --header-height: var(--space-3xl);
-  --responsive-padding: var(--space-s-3xl);
+  --header-height: var(--space-xl);
+  --responsive-padding: var(--space-l-xl, 1rem);
 }
 
 .measured-container {
   max-width: var(--measure);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 :where(button, a):where(:not(:active)):focus-visible {
