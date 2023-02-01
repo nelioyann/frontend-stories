@@ -26,23 +26,35 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 
 /**
  * Query a notion database
- * @param string database_id 
- * @returns  A list of page ids 
+ * @param string database_id
+ * @returns  A list of page ids
  */
 async function getDatabasePagesId(database_id) {
   try {
     const response = await notion.databases.query({
       database_id,
       filter: {
-        property: "Status",
-        select: {
-          equals: "Published",
-        },
+        and: [
+          {
+            property: "Status",
+            select: {
+              equals: "Published",
+            },
+          },
+          {
+            property: "Slugs",
+            rich_text: {
+              is_not_empty: true,
+            },
+          },
+        ],
       },
     });
     return response.results.map((result) => result.id);
   } catch (error) {
-    throw Error(`Unable to retrieve ids from database.\n db_id: ${database_id}`);
+    throw Error(
+      `Unable to retrieve ids from database.\n db_id: ${database_id}`
+    );
   }
 }
 
@@ -120,7 +132,15 @@ async function getPageProperties(page_id, scope = "MAXIMIZE") {
     let page = await readPage(page_id);
     let { properties, url, cover, icon } = page;
     let page_properties = {};
-    let ignoreThese = ["Description", "Summary", "Type", "Tags", "Topics", "Cite", "Created time"];
+    let ignoreThese = [
+      "Description",
+      "Summary",
+      "Type",
+      "Tags",
+      "Topics",
+      "Cite",
+      "Created time",
+    ];
 
     if (scope === "MAXIMIZE") {
       page_properties = {
@@ -129,7 +149,7 @@ async function getPageProperties(page_id, scope = "MAXIMIZE") {
         notion_url: url,
         icon: icon?.emoji,
       };
-      ignoreThese = ["Topics", "Status", "Type"]
+      ignoreThese = ["Topics", "Status", "Type"];
     }
     // console.log(properties)
     // console.log(Object.keys(properties).filter(p => ignoreThese.includes(p)))
@@ -146,18 +166,28 @@ async function getPageProperties(page_id, scope = "MAXIMIZE") {
   }
 }
 
-
-
-function propertiesToFrontmatter(properties){
+function propertiesToFrontmatter(properties) {
   // 1. Destructure all properties
-  const {id, cover, notion_url, icon, edited, created, slugs, name} = properties,
-  tags = "findings",
-  category = properties.category.name,
-  source_citations = properties.references.map(r => r.citation),
-  source_urls = properties.references.map(r => r.url),
-  source_names = properties.references.map(r => r.name),
-  simpleProps = {id, cover, notion_url, icon, edited, created, slugs, name, category, tags},
-  arrayProps = {source_citations, source_names, source_urls};
+  const { id, cover, notion_url, icon, edited, created, slugs, name } =
+      properties,
+    tags = "findings",
+    category = properties.category.name,
+    source_citations = properties.references.map((r) => r.citation),
+    source_urls = properties.references.map((r) => r.url),
+    source_names = properties.references.map((r) => r.name),
+    simpleProps = {
+      id,
+      cover,
+      notion_url,
+      icon,
+      edited,
+      created,
+      slugs,
+      name,
+      category,
+      tags,
+    },
+    arrayProps = { source_citations, source_names, source_urls };
   // 2. Turn properties into frontmatter properties
   // -- spaces matter
   const simplePropsMd = Object.keys(simpleProps).reduce(
@@ -165,11 +195,13 @@ function propertiesToFrontmatter(properties){
     ""
   );
   const arrayPropsMd = Object.keys(arrayProps).reduce(
-    (final, current) => final + arrayProps[current].reduce((f, c) => f + `- '${c}' \n`, `${current}:\n`),
+    (final, current) =>
+      final +
+      arrayProps[current].reduce((f, c) => f + `- '${c}' \n`, `${current}:\n`),
     ""
   );
   // 3. Return properties wrapped between frontmatter decorators
-  return(["---", simplePropsMd, arrayPropsMd, "---"].join("\n"));
+  return ["---", simplePropsMd, arrayPropsMd, "---"].join("\n");
 }
 
 async function main(database_id) {
@@ -180,14 +212,14 @@ async function main(database_id) {
     for (let page_id of pages_Id) {
       let page_properties = await getPageProperties(page_id);
       // let page_data = await readPageExtended(pageId);
-      
+
       // This folder must exist in your project.
       // let parentDirectory = "./src/_data"; "./src/_data/stories.json"
       const pageContentBlocks = await n2m.pageToMarkdown(page_id);
       const pageContentMd = n2m.toMarkdownString(pageContentBlocks);
-      let page = {...page_properties, markdownContent: pageContentMd}
+      let page = { ...page_properties, markdownContent: pageContentMd };
       // console.log(page_id)
-      pages.push(page)
+      pages.push(page);
       // const pagePropertiesMd = propertiesToFrontmatter(page_properties);
       // const pageMd = [pagePropertiesMd, pageContentMd].join("\n");
     }
@@ -195,7 +227,6 @@ async function main(database_id) {
     let pagesJSON = JSON.stringify(pages, null, 4);
     createFile(pagesJSON, filepath);
     // console.log(pagesJSON)
-
   } catch (error) {
     console.log(error);
   }
