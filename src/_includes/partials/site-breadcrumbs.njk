@@ -1,4 +1,4 @@
-{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key , {allowMissing: true, includeSelf: false}) %}
+{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key , {allowMissing: true, includeSelf: true}) %}
 {% if navPages.length > 0 %}
     <nav aria-label="Breadcrumbs" class="breadcrumbs-navigation">
         <span class="visually-hidden">You are here</span>
