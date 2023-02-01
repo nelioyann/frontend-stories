@@ -35,7 +35,7 @@ eleventyComputed:
 <h2>
     {{ "Latest" if currentCategory == 'All' else currentCategory }}
 </h2>
-<ul data-layout="stack" role="list" data-props="space:s">
+<ul data-layout="stack" role="list" data-props="recursive">
     {%- set entries = collections.stories | filterByCategory(currentCategory) | limit(50) -%}
     {%- for entry in entries %}
         {% include "partials/story-card-entry.njk" %}

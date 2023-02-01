@@ -3,7 +3,7 @@
     {% include "partials/site-head.njk" %}
     <body>
         {% include "partials/site-header.njk" %}
-        <main id="main-content" class="measured-container" data-layout="stack" data-props="x:stretch space:l">
+        <main id="main-content" data-layout="stack" data-props="x:stretch space:l">
             {% block content %}
                 {{ content | safe }}
             {% endblock %}

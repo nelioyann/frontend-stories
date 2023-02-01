@@ -23,7 +23,7 @@ eleventyComputed:
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
 {% block article %}
     <header aria-labelledby="headline">
-        <h1 itemprop="headline" id="headline" data-props="centered noBorder noMeasure space:2xs">
+        <h1 itemprop="headline" id="headline" data-props="centered noBorder  space:2xs">
             {% if emojicon %}
                 <span aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
             {% endif %}
@@ -35,11 +35,11 @@ eleventyComputed:
                 Filed under:
                 <a href="/categories/{{ story.category.name | slugify }}" data-button="link">{{ story.category.name }}</a>
             </p>
-            <p>
+            {# <p>
                 <span aria-hidden="true" data-font="emoji">📅</span>
                 Created on:
                 <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
-            </p>
+            </p> #}
             <p>
                 <span aria-hidden="true" data-font="emoji">✍</span>
                 Edited on:
@@ -49,13 +49,13 @@ eleventyComputed:
         <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %} <meta itemprop="description" content="{{ story.excerpt }}"/>
         <meta itemprop="teaches" content="{{ story.category.name }}"/>
     </header>
-    <h2 id="summary">
+    <h2 id="summary" data-heading="anchor">
         <a href="#summary">Overview</a>
     </h2>
     {% renderTemplate "md, liquid", story %}
     {{ markdownContent }}
     {% endrenderTemplate %}
-    <h2 id="references">
+    <h2 id="references" data-heading="anchor">
         <a href="#references">Evidence and further readings</a>
     </h2>
     <p>Here you can find a list of references to dive deeper on the subject.</p>

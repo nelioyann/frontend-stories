@@ -22,6 +22,7 @@ const minifyHtml = require("./src/_11ty/utils/minifyHtml.js");
 module.exports = function (eleventyConfig) {
   // Passthrough Copy
   // eleventyConfig.addPassthroughCopy("./src/assets/styles/style.css");
+  eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
   eleventyConfig.addPassthroughCopy("./src/assets/images/");
   eleventyConfig.addPassthroughCopy({"./src/static/":"/"});
 
