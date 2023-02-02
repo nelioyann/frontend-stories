@@ -5,6 +5,8 @@ const fs = require("fs");
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const DATABASE_ID = process.env.DATABASE_ID;
 
+console.log({NOTION_TOKEN, DATABASE_ID})
+
 async function makeMeAJSON(input, path = "./pages.json") {
   // convert JSON object to a string
   const data = JSON.stringify(input, null, 4);
