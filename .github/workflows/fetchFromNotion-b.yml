@@ -1,8 +1,7 @@
 name: Fetch and Create Pull Request
 
 on:
-  schedule:
-    - cron: "0 0 * * *" # Run every day at midnight (UTC)
+  workflow_dispatch:
 
 jobs:
   fetch_and_create_pr:
