@@ -22,8 +22,8 @@ const minifyHtml = require("./src/_11ty/utils/minifyHtml.js");
 module.exports = function (eleventyConfig) {
   // Passthrough Copy
   // eleventyConfig.addPassthroughCopy("./src/assets/styles/style.css");
-  eleventyConfig.addPassthroughCopy("./src/assets/images/");
-  eleventyConfig.addPassthroughCopy({"./src/static/":"/"});
+  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy({"src/static/":"/"});
 
   // Watch Targets
   eleventyConfig.addWatchTarget("./src/assets/styles/**/*.css");
@@ -48,7 +48,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", readableDate);
   eleventyConfig.addFilter("buildRFC822Date", buildRFC822Date);
 
-  eleventyConfig.addTransform("htmlmin", minifyHtml);
+  // eleventyConfig.addTransform("htmlmin", minifyHtml);
   eleventyConfig.on("eleventy.after", generateSocialPreviewImages);
 
   // Default return

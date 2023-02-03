@@ -8,31 +8,31 @@ layout: layouts/base-layout.njk
 permalink: /{{story.slug}}/
 og_type: "article"
 eleventyComputed:
-    title: "{{ story.name | truncate(150) }} "
+    title: "{{ story.name | truncate(160) }} "
     thumbnail: "{{meta.site_url}}/assets/images/og-images/og-{{ story.slugs }}.png"
     emojicon: "{{ story.icon }}"
-    description: "{{story.excerpt}}"
+    description: "{{story.description}}"
+    markdownContent: "{{story.markdownContent}}"
     eleventyNavigation:
         key: "{{story.id}}"
         title: "{{story.name}}"
         parent: "{{story.category.name}}"
 ---
-
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
 {% block article %}
     <header aria-labelledby="headline">
-        <h1 itemprop="headline" id="headline" data-props="centered noBorder noMeasure space:2xs">
+        <h1 itemprop="headline" id="headline" data-props="centered noBorder  space:2xs">
             {% if emojicon %}
                 <span aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
             {% endif %}
             {{ story.name }}
         </h1>
-        <div data-layout="box">
+        {# <div data-layout="switcher box">
             <p>
                 <span aria-hidden="true" data-font="emoji">📁</span>
                 Filed under:
-                <a href="/categories/{{ story.category.name | slugify }}" data-button="link">{{ story.category.name }}</a>
+                <a href="/{{ story.category.name | slugify }}" data-button="link">{{ story.category.name }}</a>
             </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">📅</span>
@@ -41,20 +41,25 @@ eleventyComputed:
             </p>
             <p>
                 <span aria-hidden="true" data-font="emoji">✍</span>
-                Last updated:
+                Edited on:
                 <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
             </p>
-        </div>
+        </div> #}
+        <p>
+                <span aria-hidden="true" data-font="emoji">✍</span>
+                Edited on:
+                <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
+            </p>
         <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %} <meta itemprop="description" content="{{ story.excerpt }}"/>
         <meta itemprop="teaches" content="{{ story.category.name }}"/>
     </header>
-    <h2 id="summary">
+    <h2 id="summary" data-heading="anchor">
         <a href="#summary">Overview</a>
     </h2>
     {% renderTemplate "md, liquid", story %}
-    {{ description }}
+    {{ markdownContent }}
     {% endrenderTemplate %}
-    <h2 id="references">
+    <h2 id="references" data-heading="anchor">
         <a href="#references">Evidence and further readings</a>
     </h2>
     <p>Here you can find a list of references to dive deeper on the subject.</p>
@@ -63,7 +68,7 @@ eleventyComputed:
             {% include "partials/reference-item.njk" %}
         {% endfor -%}
     </ul>
-    <h2 id="contribute">
+    {# <h2 id="contribute">
         <a href="#contribute">Mentions</a>
     </h2>
     <p>
@@ -74,8 +79,8 @@ eleventyComputed:
         data-props="x:center space:s"
         href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
         target="_blank">
-        Share on Twitter</a>
-    <h2 id="pagination-nav">
+        Share on Twitter</a> #}
+    {# <h2 id="pagination-nav">
         <a href="#pagination-nav">Other findings</a>
     </h2>
     <p>Explore other entries by order of publication:</p>
@@ -94,5 +99,5 @@ eleventyComputed:
                 {{ pagination.page.previous.name }}
             </a>
         {% endif %}
-    </nav>
+    </nav> #}
 {% endblock %}
