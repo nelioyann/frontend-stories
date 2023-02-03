@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for page in collections.all %}
         <url>
-            <loc>{{ meta.site_url }}{{ page.url | url }}</loc>
+            <loc>{{ meta.site_url }}{{ page.url | url }} {{page.outputPath | log}}</loc>
             <lastmod>{{ page.story.edited.toISOString() if page.story else page.date.toISOString() }}</lastmod>
         </url>
     {% endfor %}
