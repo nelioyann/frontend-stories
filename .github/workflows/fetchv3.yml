@@ -14,6 +14,8 @@ jobs:
       - name: Fetch data
         run: |
           npm install
+          touch .env
+          echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
           node notion.js
 
       - name: Create Pull Request
