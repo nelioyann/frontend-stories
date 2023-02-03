@@ -16,6 +16,7 @@ jobs:
           npm install
           touch .env
           echo NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} >> .env
+          echo DATABASE_ID=${{ secrets.DATABASE_ID }} >> .env
           node notion.js
 
       - name: Create Pull Request
