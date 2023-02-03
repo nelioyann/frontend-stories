@@ -1,17 +1,21 @@
 :root {
-  --primary-hue: 217;
-  --primary-saturation: 63%;
-  --primary-lightness: 50%;
+  --primary-hue: 33;
+  --primary-saturation: 32%;
+  --primary-lightness: 31%;
   --primary-hs: var(--primary-hue), var(--primary-saturation);
   --color-primary: hsl(
     var(--primary-hue),
     var(--primary-saturation),
     var(--primary-lightness)
   );
-  --color-light: var(--gray-50);
+  /* --color-light: var(--gray-50);
   --color-light-accent: var(--gray-100);
   --color-dark-accent: var(--gray-700);
-  --color-dark: var(--gray-800);
+  --color-dark: var(--gray-900); */
+  --color-light: #ECE1CB;
+  --color-light-accent: hsl(32, 35%, 80%);
+  --color-dark-accent: #735D43;
+  --color-dark: #433523;
   
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);

@@ -1,5 +1,5 @@
 <li class="reference-item" data-props="noMeasure">
     <a rel="noopener nofollow noreferrer" data-button="link" target="{{ '_blank' if reference.url }}" href="{{ (reference.url if reference.url else '#') }}">
-        {{ reference.name }} - {{ reference.cite if reference.cite }}
+        {{ reference.citation or reference.cite }} 
     </a>
 </li>

@@ -1,5 +1,8 @@
-<header class="measured-container" data-layout="cluster" data-props="y:center x:between">
-    <a data-heading="3" data-props="y:center" data-button="text" href="/">
-        <span class="visually-hidden">{{ meta.site_name }}</span>
+<header  data-layout="cluster" data-props="y:center x:between">
+    <a data-font="sans-serif" data-props="y:center" data-button="text" href="/">
+        <span>{{ meta.site_name }}</span>
     </a>
+    {# {% include "partials/site-breadcrumbs.njk" %} #}
+
+    <a data-font="sans-serif" data-button="text" href="/about">About</a>
 </header>

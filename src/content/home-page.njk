@@ -1,26 +1,27 @@
 ---
 layout: layouts/home-layout.njk
-hero_title: Build better interfaces
-hero_description: Frontend Stories is a collection of research findings and insights about web develoment.
+hero_title: Selection of research findings related to web development
+hero_description: Frontend Stories is a collection of research findings and insights about web development.
 pagination: 
     data: collections.categoriesAndAll
     size: 1
     alias: currentCategory
+    addAllPagesToCollections: true
 permalink: "{% if currentCategory == 'All'%}/{% else %}/{{currentCategory | slugify}}/index.html{% endif %}"
 eleventyComputed:
     title: "Home - {{currentCategory}} | Frontend Stories"
     description: "{{meta.site_description}} Home - {{currentCategory}}"
     eleventyNavigation:
-        key: Home
-        title: Back to home
+        key: "{{currentCategory}}"
+        title: "Back to {{currentCategory}}"
 ---
 
-<hgroup data-layout="slice">
+{# <hgroup class="visually-hidden" data-layout="slice">
     <h1>
         {{ hero_title }}
     </h1>
     <p>{{ hero_description or meta.site_description }}</p>
-</hgroup>
+</hgroup> #}
 <nav class="categories-navigation" aria-labelledby="Navigate by topics">
     <ul role="list" data-layout="cluster" data-props="noPad">
         {%- for category in collections.categoriesAndAll %}
@@ -35,7 +36,7 @@ eleventyComputed:
 <h2>
     {{ "Latest" if currentCategory == 'All' else currentCategory }}
 </h2>
-<ul data-layout="stack" role="list" data-props="space:s">
+<ul data-layout="stack" role="list" data-props="recursive">
     {%- set entries = collections.stories | filterByCategory(currentCategory) | limit(50) -%}
     {%- for entry in entries %}
         {% include "partials/story-card-entry.njk" %}

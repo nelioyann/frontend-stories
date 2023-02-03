@@ -36,10 +36,10 @@
     <link rel="shortcut icon" href="/assets/images/icons/icon-16.png" type="image/x-icon" sizes="16x16" />
     <meta name="author" content="{{meta.site_author}}">
     {# Prefetch  main pages #}
-    {%- for category in collections.categoriesAndAll %}
+    {# {%- for category in collections.categoriesAndAll %}
         {%- set category_url = '' if category == 'All' else category | slugify -%}
         <link rel="prefetch" href="/{{ category_url }}/" as="document">
-    {%endfor%}
+    {%endfor%} #}
 
     {# {%- for story in collections.stories | limit(30) %}
         <link rel="prefetch" href="/{{story.slug}}/" as="document">

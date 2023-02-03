@@ -16,3 +16,6 @@ npm run a11y
 
 - Social preview images are automatically generated
 - Uses notion icons as favicons
+
+## Logs
+- 01-2023 Turn findings into questions

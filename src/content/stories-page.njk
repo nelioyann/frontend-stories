@@ -22,14 +22,12 @@ eleventyComputed:
         {{ collections.categories | join(", ") }} and more.
     </p>
 </hgroup>
-<section data-accordion data-props="noMeasure space:l">
+<section class="measured-container" data-accordion data-props="noMeasure space:l">
     {%- for category in collections.categories %}
         {% set entries = collections.stories | filterByCategory(category) %}
         <details>
             <summary>
-                <b>
                     {{ category }}
-                </b>
             </summary>
             <ul data-props="space:s" role="list" data-layout="stack">
                 {% for entry in collections.stories | filterByCategory(category) %}
