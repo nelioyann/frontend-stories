@@ -7,6 +7,7 @@ const fs = require("fs");
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const DATABASE_ID = process.env.DATABASE_ID;
 
+
 async function createFile(data, path = "./pages.json") {
   // write file to disk
   fs.writeFile(path, data, "utf8", (err) => {
