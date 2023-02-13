@@ -25,7 +25,7 @@ body > header {
   background-color: var(--color-light);
   z-index: 1;
   min-height: var(--header-height);
-  border-bottom: var(--border-thick) solid;
+  border-bottom: var(--border-thin) solid var(--color-light-accent);
   padding-left: var(--responsive-padding);
   padding-right: var(--responsive-padding);
 }
