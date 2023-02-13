@@ -1,10 +1,9 @@
 <li>
     <article>
-        <a itemprop="url" data-button="link" href="/{{ entry.slug }}">
-            {{ entry.name }}</a>
-        {# <p>
-                    <time itemprop="dateModified" datetime="{{ story.edited }}">{{entry.edited | readableDate}}</time>
-                </p> #}
+        <h2 data-heading="3">
+            <a itemprop="url" data-button="link" href="/{{ entry.slug }}">
+                {{ entry.name }}</a>
+        </h2>
         <p>{{entry.description}}</p>
     </article>
 </li>
