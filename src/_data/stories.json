@@ -193,7 +193,7 @@
         "description": "Required fields are essential for providing accurate and complete information. Yet, marking them can be tedious and time-consuming. Let's explore the pros and cons of marking required fields.",
         "references": [
             {
-                "citation": "",
+                "citation": "Luke Wroblewski",
                 "url": "https://www.lukew.com/ff/entry.asp?725",
                 "name": "Marking Required vs. Optional form fields"
             },
@@ -203,7 +203,7 @@
                 "name": "The Privacy Economics of Voluntary Over-disclosure in Web Forms"
             },
             {
-                "citation": "",
+                "citation": "Preibusch, S., Krol, K., & Beresford, A.R. (2012). The Privacy Economics of Voluntary Over-disclosure in Web Forms. ",
                 "url": "https://www.semanticscholar.org/paper/The-Privacy-Economics-of-Voluntary-Over-disclosure-Preibusch-Krol/3f9426bf2c0b1808db4b5ce940ed36f476bc6d61",
                 "name": "The Privacy Economics of Voluntary Over-disclosure in Web Forms"
             },
