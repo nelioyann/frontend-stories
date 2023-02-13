@@ -134,7 +134,7 @@ blockquote {
 :root {
   --page-top: var(--space-m, 6rem);
   --header-height: var(--space-xl);
-  --responsive-padding: var(--space-l-xl, 1rem);
+  --responsive-padding: var(--space-s-6xl, 1rem);
 }
 
 .measured-container {

@@ -1,9 +1,9 @@
 input,
 button,
 a {
-  transition-duration: var(--transition-duration, 300ms);
+  transition-duration: var(--transition-duration, 100ms);
   transition-timing-function: var(--bezier-snappy);
-  transition-property: background-color, color, border-color, box-shadow,
+  transition-property: border-color, box-shadow,
     transform, outline-offset;
 }
 
@@ -16,14 +16,9 @@ a {
 html {
   --document-padding: clamp(0.00rem, calc(-1.33rem + 3.33vw), 1.25rem);
   background-color: var(--color-light);
-  height: 100vh;
-  overflow: hidden;
+
 }
-body {
-  overflow: hidden;
-  border: var(--border-thick) solid;
-  height: inherit;
-}
+
 body > header {
   position: sticky;
   top: 0;
@@ -39,10 +34,6 @@ body > main {
   padding-bottom: var(--page-top);
   padding-left: var(--responsive-padding);
   padding-right: var(--responsive-padding);
-  border: var(--border-thick) solid var(--color-light);
-  height: calc(100vh - var(--document-padding) * 2 - var(--header-height));
-  overflow-y: auto; 
-  scroll-behavior: smooth;
 }
 body > footer {
   padding-top: var(--space-l);
