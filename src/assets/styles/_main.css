@@ -14,13 +14,12 @@ a {
 }
 
 html {
-  --document-padding: clamp(0.00rem, calc(-1.33rem + 3.33vw), 1.25rem);;
+  --document-padding: clamp(0.00rem, calc(-1.33rem + 3.33vw), 1.25rem);
   background-color: var(--color-light);
-  height: calc(100vh - var(--document-padding) * 2);
+  height: 100vh;
   overflow: hidden;
 }
 body {
-  margin: var(--document-padding);
   overflow: hidden;
   border: var(--border-thick) solid;
   height: inherit;
@@ -90,12 +89,17 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   outline-offset: var(--space-2xs);
   transform: translateX(var(--space-2xs));
 }
+[data-heading~="anchor"]:target a::after {
+  text-decoration: none;
+}
+
 [data-heading~="anchor"] a {
   text-decoration: none;
   pointer-events: none;
 }
 [data-heading~="anchor"] a::after {
-  content: "⚓";
+  content: "🔗";
+  text-decoration: underline;
   filter: var(--font-emoji-filter);
   font-size: 0.75em;
   padding-left: var(--space-2xs); /* to make the "#" a bigger target */
