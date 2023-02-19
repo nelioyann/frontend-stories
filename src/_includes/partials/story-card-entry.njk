@@ -1,9 +1,10 @@
 <li>
-    <article>
-        <h2 data-heading="3">
-            <a itemprop="url" data-button="link" href="/{{ entry.slug }}">
-                {{ entry.name }}</a>
-        </h2>
-        <p>{{entry.description}}</p>
-    </article>
-</li>
+    <a data-heading="5" class="headline-link" itemprop="url" data-button="link" href="/{{ entry.slug }}">
+        <span aria-hidden="true">
+            {{entry.icon}}
+        </span>
+        <span class="headline">
+            {{ entry.name }}
+        </span>
+    </a>
+</h2></li>

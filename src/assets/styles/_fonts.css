@@ -1,28 +1,26 @@
-/* literata-regular - latin */
+/* ibm-plex-sans-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Literata";
+  font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/literata-v30-latin-regular.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../assets/fonts/literata-v30-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url('../assets/fonts/ibm-plex-sans-v14-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../assets/fonts/ibm-plex-sans-v14-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* literata-700 - latin */
+/* ibm-plex-sans-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Literata";
+  font-family: 'IBM Plex Sans';
   font-style: normal;
-  font-weight: 700;
-  src: url("../assets/fonts/literata-v30-latin-700.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../assets/fonts/literata-v30-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-weight: 600;
+  src: url('../assets/fonts/ibm-plex-sans-v14-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../assets/fonts/ibm-plex-sans-v14-latin-600.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 :root {
-  --font-sans-serif: "-apple-system",
+  --font-sans-serif: "IBM Plex Sans","-apple-system",
     "BlinkMacSystemFont", "avenir next", "avenir", "segoe ui", "helvetica neue",
     "helvetica", "Cantarell", "Ubuntu", "roboto", "noto", arial, sans-serif;
-  --font-serif: "Literata", "Georgia", "Apple Garamond", "Times New Roman",
+  --font-serif: "Georgia", "Apple Garamond", "Times New Roman",
     "Baskerville", "Droid Serif", "Times", "Source Serif Pro", serif;
   --font-monospace: "Menlo", "Consolas", "Monaco", "Liberation Mono",
     "Lucida Console", monospace;
