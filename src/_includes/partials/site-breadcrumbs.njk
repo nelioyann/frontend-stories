@@ -1,11 +1,11 @@
-{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key , {allowMissing: true, includeSelf: true}) %}
+{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key , {allowMissing: true, includeSelf: false}) %}
 {% if navPages.length > 0 %}
     <nav aria-label="Breadcrumbs" class="breadcrumbs-navigation">
         <span class="visually-hidden">You are here</span>
         <ul data-layout="cluster" data-props="space:2xs">
             {%- for entry in navPages %}
                 <li {% if entry.url == page.url %} class="my-active-class" {% endif %}>
-                    <a data-button="tag small" href="{{ entry.url }}">{{ entry.title }}</a>
+                    <a data-button="tag" href="{{ entry.url }}">{{ entry.title }}</a>
                 </li>
             {%- endfor %}
         </ul>

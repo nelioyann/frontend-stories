@@ -23,33 +23,11 @@ eleventyComputed:
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
 {% block article %}
     <header aria-labelledby="headline">
-        <h1 itemprop="headline" id="headline" data-props="centered noBorder  space:2xs">
-            {% if emojicon %}
-                <span aria-hidden="true" data-font="emoji">{{ emojicon }}</span>
-            {% endif %}
-            {{ story.name }}
-        </h1>
-        {# <div data-layout="switcher box">
-                            <p>
-                                <span aria-hidden="true" data-font="emoji">📁</span>
-                                Filed under:
-                                <a href="/{{ story.category.name | slugify }}" data-button="link">{{ story.category.name }}</a>
-                            </p>
-                            <p>
-                                <span aria-hidden="true" data-font="emoji">📅</span>
-                                Created on:
-                                <time itemprop="datePublished" datetime="{{ story.created }}">{{ story.created | readableDate }}</time>
-                            </p>
-                            <p>
-                                <span aria-hidden="true" data-font="emoji">✍</span>
-                                Edited on:
-                                <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
-                            </p>
-                        </div> #}
-        <time itemprop="dateModified" datetime="{{ story.edited }}">{{ story.edited | readableDate }}</time>
-        <link itemprop="thumbnailUrl" href="{{ thumbnail }}"/> {% set type = story.type.name %} <meta itemprop="description" content="{{ story.excerpt }}"/>
-        <meta itemprop="teaches" content="{{ story.category.name }}"/>
+        <h1 itemprop="headline" id="headline">
+            {{story.name }}
+            </h1>
     </header>
+    <p>{{description}}</p>
     <h2 id="summary" data-heading="anchor">
         <a href="#summary">Overview</a>
     </h2>

@@ -32,11 +32,9 @@
   --horizontal-line: var(--horizontal-line-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-dark: hsl(40, 46%, 80%);
-    --color-dark-accent: hsl(32, 35%, 80%);
-    --color-light-accent: hsl(32, 26%, 10%);
-    --color-light: hsl(34, 31%, 2%);
-  }
+[data-theme-preference="dark"] {
+    --color-dark: hsl(40, 26%, 80%);
+    --color-dark-accent: hsl(32, 15%, 80%);
+    --color-light-accent: hsl(210, 10%, 10%);
+    --color-light: hsl(210, 10%, 8%);
 }

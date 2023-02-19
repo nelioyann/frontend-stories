@@ -25,7 +25,7 @@ body > header {
   background-color: var(--color-light);
   z-index: 1;
   min-height: var(--header-height);
-  border-bottom: var(--border-thin) solid var(--color-light-accent);
+  border-bottom: var(--border-thin) solid var(--color-dark-accent);
   padding-left: var(--responsive-padding);
   padding-right: var(--responsive-padding);
 }
@@ -42,7 +42,6 @@ body > footer {
 }
 body > header a[href="/"] {
   --button-display: flex;
-  font-weight: bold;
 }
 body > header > a[href="/"]::before {
   content: "";
@@ -64,6 +63,7 @@ hr {
   background-size: 100% auto;
   background-position-y: center;
 }
+
 
 /*=============================================
 =            Anchor Heading            =
@@ -112,11 +112,6 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   --button-padding-x: var(--space-xs);
 }
 
-.breadcrumbs-navigation li:first-child a::before {
-  visibility: visible;
-  content: "🏠 ";
-  filter: var(--font-emoji-filter);
-}
 .breadcrumbs-navigation li:not(:first-child)::before {
   content: ">";
   font-family: var(--font-monospace);
@@ -274,3 +269,31 @@ textarea {
 .site-search {
   width: clamp(20ch, 100%, var(--measure));
 }
+/* 
+.headline-link{
+  color: var(--color-light);
+}
+.headline-link:after{
+  display: inline-block;
+  font-size: var(--step--1);
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: var(--space-s);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  content: "Visited";
+  border: 1px solid;
+  opacity: 0.4;
+  vertical-align: text-bottom;
+}
+.headline{
+  color: #EA1744;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.headline-link:visited, .headline-link:visited .headline {
+  color: #777;
+} */
+/* https://codepen.io/ines/pen/EKOYQr */
