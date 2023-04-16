@@ -4,9 +4,9 @@
         "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
         "notion_url": "https://www.notion.so/Why-is-copywriting-important-for-a-website-a1043815b34041d4888b9271bf10e94b",
         "icon": "📝",
-        "edited": "2023-02-01T23:11:00.000Z",
+        "edited": "2023-02-20T12:37:00.000Z",
         "created": "2023-02-01T23:06:00.000Z",
-        "description": "Copywriting is essential for webpages: engage users, boost performance & drive satisfaction.",
+        "description": "Website copy is the core text that narrates visitors through your website and tells them what they need to know about a brand or the site.",
         "references": [
             {
                 "citation": "Morkes, J., and Nielsen, J. (1998). \"Applying Writing Guidelines to Web Pages.\" White Paper.",
@@ -26,16 +26,16 @@
         },
         "slugs": "webpages-copy-writing-guidelines",
         "name": "Why is copywriting important for a website?",
-        "markdownContent": "\nAccording to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n- On the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website.\n- On the average Web page, users have time to read at most 28% of the words during an average visit.\n\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. They cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n\nRecommendation for writting copy text\n\n- Conciseness can be achieved by removing small details.\n- Ease of reading can be achieved by adding tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Greater objectivity is possible by removing commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
+        "markdownContent": "\nAccording to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n\nOn the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. Researchers cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n\nRecommendation for writing copy text outlined in this study:\n\n\nConciseness can be achieved by removing small details.\n\n\nEase of reading can be achieved by adding tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n\n- Greater objectivity is possible by removing commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\nMain takeaways\n\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
     },
     {
         "id": "31f53350-2f61-41b2-b803-f5ceb2e99139",
         "cover": "https://images.unsplash.com/photo-1551730459-398260e2d0ed",
         "notion_url": "https://www.notion.so/How-does-color-contrast-affect-readability-31f533502f6141b2b803f5ceb2e99139",
         "icon": "📖",
-        "edited": "2023-02-01T23:06:00.000Z",
+        "edited": "2023-02-20T12:34:00.000Z",
         "created": "2023-02-01T23:03:00.000Z",
-        "description": "Improve user experience with color combinations and readability. Learn evidence-based guidelines to help designers create better visuals.",
+        "description": "By using appropriate colors combination you can improve user experience and readability.",
         "references": [
             {
                 "citation": "Richard H Hall & Patrick Hanna (2004) The impact of web page text-background colour combinations on readability, retention, aesthetics and behavioural intention, Behaviour & Information Technology, 23:3, 183-195",
@@ -81,7 +81,7 @@
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
         "notion_url": "https://www.notion.so/What-impact-do-breadcrumbs-have-on-user-navigation-eae8ae69c02546d68d127de14c71ded5",
         "icon": "🧭",
-        "edited": "2023-02-01T22:58:00.000Z",
+        "edited": "2023-02-20T12:38:00.000Z",
         "created": "2023-02-01T22:56:00.000Z",
         "description": "Help users easily navigate your website by using breadcrumbs. Make the most of them and see how they can improve the user experience.",
         "references": [
@@ -103,7 +103,7 @@
         },
         "slugs": "do-users-use-breadcrumbs",
         "name": "What impact do breadcrumbs have on user navigation?",
-        "markdownContent": "\nBreadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n\n`Home > Furniture > Chairs > Leather Chairs`\n\n\nIt provides the following advantages:\n\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage\n"
+        "markdownContent": "\nBreadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n\n`Home > Furniture > Chairs > Leather Chairs`\n\n\nIt provides the following advantages:\n\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n<u>Main takeaways</u>\n\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage\n"
     },
     {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
@@ -188,7 +188,7 @@
         "cover": "https://images.unsplash.com/photo-1573046171778-f6506436ec62",
         "notion_url": "https://www.notion.so/What-is-the-most-effective-way-to-clearly-identify-required-fields-6fdacd63da3a40c0a6b650d3599a4c20",
         "icon": "✳️",
-        "edited": "2023-02-01T22:56:00.000Z",
+        "edited": "2023-02-13T21:50:00.000Z",
         "created": "2023-01-31T12:55:00.000Z",
         "description": "Required fields are essential for providing accurate and complete information. Yet, marking them can be tedious and time-consuming. Let's explore the pros and cons of marking required fields.",
         "references": [
@@ -196,11 +196,6 @@
                 "citation": "Luke Wroblewski",
                 "url": "https://www.lukew.com/ff/entry.asp?725",
                 "name": "Marking Required vs. Optional form fields"
-            },
-            {
-                "citation": "Preibusch, S., Krol, K., & Beresford, A.R. (2012). The Privacy Economics of Voluntary Over-disclosure in Web Forms. ",
-                "url": "https://www.semanticscholar.org/paper/The-Privacy-Economics-of-Voluntary-Over-disclosure-Preibusch-Krol/3f9426bf2c0b1808db4b5ce940ed36f476bc6d61",
-                "name": "The Privacy Economics of Voluntary Over-disclosure in Web Forms"
             },
             {
                 "citation": "Preibusch, S., Krol, K., & Beresford, A.R. (2012). The Privacy Economics of Voluntary Over-disclosure in Web Forms. ",
@@ -285,9 +280,9 @@
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d",
         "notion_url": "https://www.notion.so/How-long-can-users-wait-for-a-page-to-load-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
-        "edited": "2023-02-01T22:41:00.000Z",
+        "edited": "2023-02-20T12:20:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
-        "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user. Studies have shown that are users are willing to wait between 2 to 10 seconds for a page to load.",
+        "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user.",
         "references": [
             {
                 "citation": "Nah, F. F. H. (2004). \"A study on tolerable waiting time: how long are Web users willing to wait?\" ",
@@ -307,16 +302,16 @@
         },
         "slugs": "how-long-users-can-wait",
         "name": "How long can users wait for a page to load?",
-        "markdownContent": "\nPage load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user. Studies have shown that are users are willing to wait between 2 to 10 seconds for a page to load.\n\n\nWebsites that are slow often induce frustration, especially when there is only a blank screen to stare at. In fact, research has shown that faster web pages are perceived as more interesting than slower ones (Ramsay, Barbesi and Preece, 1998). \n\nIn a study, Nah found that the tolerable waiting time for a page to load was 2 seconds (Nah, 2004). At the time it also found that a page took on average about 10.3 seconds on a desktop computer and 27.3 seconds on a mobile phone. Thus concluding that your average website take more time to load than what we supposedly tolerate.\n\n\nThis suggests that loading times exceeding this 2 second threshold can have a negative impact on the user experience. And unfortunately, the reduction of load times often depends on factors that cannot be easily controlled (e.g. request of the server, large assets etc.). In such cases, Nah proposes a different solution to maintain a good user experience, namely feedback. \n\n\nEvidence suggests that the availability of feedback extends the tolerable waiting time of web users. This is because it provides transparency into the hidden processes of the interface as well as an estimate of the waiting time. When presented with an estimation of an ongoing process, users are able to alleviate this wait time by engaging in other activities. Without a feedback users are left to guess at what point a process will conclude.\n\n1. Faster pages are perceived as more interesting than slower pages.\n2. When loading feedback is provided, it reaches 10 seconds.\n3. Tolerable waiting time for a page to load is about 2 seconds.\n"
+        "markdownContent": "\nPage load time is how long it takes for all content on a webpage to appear. Studies show users are willing to wait 2-10 seconds. Slow pages often cause frustration and longer load times than we tolerate (10.3 secs on desktop, 27.3 secs on mobile). Reducing load times is not always easy, so feedback is another solution to maintain user experience. This allows transparency into the process and gives an estimation of waiting time, allowing users to do other activities while waiting.\n\n1. Faster pages are perceived as more interesting than slower pages.\n2. When loading feedback is provided, it reaches 10 seconds.\n3. Tolerable waiting time for a page to load is about 2 seconds.\n"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1",
         "notion_url": "https://www.notion.so/Why-are-more-user-friendly-error-messages-important-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
-        "edited": "2023-02-01T22:41:00.000Z",
+        "edited": "2023-02-20T12:40:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
-        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?",
+        "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response.",
         "references": [
             {
                 "citation": "Jeng-Yi Tzeng. 2004. Toward a more civilized design: studying the effects of computers that apologize. Int. J. Hum.-Comput. Stud. 61, 3 (September 2004), 319–345.",
@@ -341,14 +336,14 @@
         },
         "slugs": "when-computers-apologize",
         "name": "Why are more user-friendly error messages important?",
-        "markdownContent": "\nWhen a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.\n"
+        "markdownContent": "\nWhen a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n\n<u>Main takeaways</u>\n\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.\n"
     },
     {
         "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
         "cover": "https://images.unsplash.com/photo-1591117752671-541f3495dc93",
         "notion_url": "https://www.notion.so/How-does-a-visible-sitemap-influence-user-behavior-on-websites-7edbc73cbef944248cccfa87b8722d64",
         "icon": "🗺️",
-        "edited": "2023-02-01T22:44:00.000Z",
+        "edited": "2023-02-20T12:40:00.000Z",
         "created": "2022-07-21T21:49:00.000Z",
         "description": "Discover how a visible site map can improve user experience on websites by reducing the use of the Back button and aiding navigation.",
         "references": [
@@ -365,6 +360,6 @@
         },
         "slugs": "sitemap-facilitates-navigation",
         "name": "How does a visible sitemap influence user behavior on websites?",
-        "markdownContent": "\nA sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n\nSearch engines such as Google understand the structure of websites from the sitemap.\n\n\n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure.\n\n- make less use of the browser's Back button\n- make navigational movements of great hierarchical distances\n"
+        "markdownContent": "\nA sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n\nSearch engines such as Google understand the structure of websites from the sitemap.\n\n\n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure, make less use of the browser's Back button, and make navigational movements of great hierarchical distances\n\n"
     }
 ]
