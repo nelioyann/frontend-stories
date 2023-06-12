@@ -149,7 +149,7 @@
         "cover": "https://images.unsplash.com/photo-1566416548759-caf7a5ef3c57",
         "notion_url": "https://www.notion.so/What-are-the-benefits-of-providing-text-alternatives-for-non-text-content-592c4c9184c542739a24eb155e53e43a",
         "icon": "🈂️",
-        "edited": "2023-01-31T21:04:00.000Z",
+        "edited": "2023-06-06T08:58:00.000Z",
         "created": "2023-01-31T13:14:00.000Z",
         "description": "Everyone should have equal access to content online. Text alternatives help make this a reality by ensuring everyone can understand and interact with digital content, regardless of their ability.",
         "references": [
@@ -186,11 +186,11 @@
     {
         "id": "6fdacd63-da3a-40c0-a6b6-50d3599a4c20",
         "cover": "https://images.unsplash.com/photo-1573046171778-f6506436ec62",
-        "notion_url": "https://www.notion.so/What-is-the-most-effective-way-to-clearly-identify-required-fields-6fdacd63da3a40c0a6b650d3599a4c20",
+        "notion_url": "https://www.notion.so/What-is-the-most-effective-way-to-identify-required-fields-6fdacd63da3a40c0a6b650d3599a4c20",
         "icon": "✳️",
-        "edited": "2023-02-13T21:50:00.000Z",
+        "edited": "2023-06-11T17:16:00.000Z",
         "created": "2023-01-31T12:55:00.000Z",
-        "description": "Required fields are essential for providing accurate and complete information. Yet, marking them can be tedious and time-consuming. Let's explore the pros and cons of marking required fields.",
+        "description": "Required fields are essential for providing accurate and complete information. Yet, marking them can be tedious and time-consuming. Let’s explore the pros and cons of marking required fields.",
         "references": [
             {
                 "citation": "Luke Wroblewski",
@@ -211,6 +211,11 @@
                 "citation": "Accessibility Developer Guide, 2018",
                 "url": "https://www.accessibility-developer-guide.com/examples/forms/required/",
                 "name": "Indicating form controls as required using asterisks (*)"
+            },
+            {
+                "citation": "Adam Silver – designer, London, UK",
+                "url": "https://adamsilver.io/blog/how-to-highlight-required-and-optional-form-fields/",
+                "name": "How to highlight required and optional form fields"
             }
         ],
         "category": {
@@ -219,8 +224,8 @@
             "color": "pink"
         },
         "slugs": "required-fields-asterisk",
-        "name": "What is the most effective way to clearly identify required fields?",
-        "markdownContent": "\nAssuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.”\n\n\n> “The implications for industry are quite profound. The single most important  \n> message is to mandate fewer fields. More mandatory fields mean less voluntary  \n> data disclosure whatever the sensitivity of a data item. Optional fields yield a  \n> good data return. A company that wants to extract many details should use  \n> optional fields but not highlight them. When users are unsure whether a field is  \n> optional or mandatory, users would rather fill in a field than skip it.”  \n> (Preibush, 2012)\n\n"
+        "name": "What is the most effective way to identify required fields?",
+        "markdownContent": "\nAssuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.” (ADG)\n\n\n> “The implications for industry are quite profound. The single most important  \n> message is to mandate fewer fields. More mandatory fields mean less voluntary data disclosure whatever the sensitivity of a data item. Optional fields yield a good data return. A company that wants to extract many details should use optional fields but not highlight them. When users are unsure whether a field is optional or mandatory, users would rather fill in a field than skip it.” (Preibush, 2012)\n\n"
     },
     {
         "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
