@@ -193,7 +193,7 @@
         "description": "Required fields are essential for providing accurate and complete information. Yet, marking them can be tedious and time-consuming. Let’s explore the pros and cons of marking required fields.",
         "references": [
             {
-                "citation": "Luke Wroblewski",
+                "citation": "Luke Wroblewski, 2008",
                 "url": "https://www.lukew.com/ff/entry.asp?725",
                 "name": "Marking Required vs. Optional form fields"
             },
@@ -213,7 +213,7 @@
                 "name": "Indicating form controls as required using asterisks (*)"
             },
             {
-                "citation": "Adam Silver – designer, London, UK",
+                "citation": "Adam Silver – designer, London, UK, 2023",
                 "url": "https://adamsilver.io/blog/how-to-highlight-required-and-optional-form-fields/",
                 "name": "How to highlight required and optional form fields"
             }
