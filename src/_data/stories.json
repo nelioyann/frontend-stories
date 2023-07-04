@@ -4,7 +4,7 @@
         "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
         "notion_url": "https://www.notion.so/Why-is-copywriting-important-for-a-website-a1043815b34041d4888b9271bf10e94b",
         "icon": "📝",
-        "edited": "2023-02-20T12:37:00.000Z",
+        "edited": "2023-06-27T11:13:00.000Z",
         "created": "2023-02-01T23:06:00.000Z",
         "description": "Website copy is the core text that narrates visitors through your website and tells them what they need to know about a brand or the site.",
         "references": [
@@ -26,7 +26,7 @@
         },
         "slugs": "webpages-copy-writing-guidelines",
         "name": "Why is copywriting important for a website?",
-        "markdownContent": "\nAccording to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n\nOn the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. Researchers cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n\nRecommendation for writing copy text outlined in this study:\n\n\nConciseness can be achieved by removing small details.\n\n\nEase of reading can be achieved by adding tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n\n- Greater objectivity is possible by removing commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\nMain takeaways\n\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
+        "markdownContent": "\nAccording to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n\nOn the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. Researchers cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n\nRecommendation for writing copy text outlined in this study:\n\n- Remove small details.\n- Add tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Remove commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\nMain takeaways\n\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
     },
     {
         "id": "31f53350-2f61-41b2-b803-f5ceb2e99139",
@@ -81,7 +81,7 @@
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
         "notion_url": "https://www.notion.so/What-impact-do-breadcrumbs-have-on-user-navigation-eae8ae69c02546d68d127de14c71ded5",
         "icon": "🧭",
-        "edited": "2023-02-20T12:38:00.000Z",
+        "edited": "2023-06-27T11:17:00.000Z",
         "created": "2023-02-01T22:56:00.000Z",
         "description": "Help users easily navigate your website by using breadcrumbs. Make the most of them and see how they can improve the user experience.",
         "references": [
@@ -103,14 +103,14 @@
         },
         "slugs": "do-users-use-breadcrumbs",
         "name": "What impact do breadcrumbs have on user navigation?",
-        "markdownContent": "\nBreadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n\n`Home > Furniture > Chairs > Leather Chairs`\n\n\nIt provides the following advantages:\n\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\n<u>Main takeaways</u>\n\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage\n"
+        "markdownContent": "\nBreadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n\n`Home > Furniture > Chairs > Leather Chairs`\n\n\nIt provides the following advantages:\n\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\nMain takeaways\n\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage\n"
     },
     {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
         "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
-        "notion_url": "https://www.notion.so/Radio-and-checkbox-inputs-are-perceived-differently-cffcf98342c54f3e986e5af360b4c946",
+        "notion_url": "https://www.notion.so/When-should-you-use-radio-and-checkbox-inputs-cffcf98342c54f3e986e5af360b4c946",
         "icon": "📻",
-        "edited": "2023-02-01T22:52:00.000Z",
+        "edited": "2023-06-27T11:15:00.000Z",
         "created": "2023-02-01T22:50:00.000Z",
         "description": "Radio and checkbox inputs are a fundamental part of modern web forms. By understanding how users perceive them, designers can create better user experiences.",
         "references": [
@@ -141,7 +141,7 @@
             "color": "pink"
         },
         "slugs": "checkboxes-or-radio-buttons",
-        "name": "Radio and checkbox inputs are perceived differently",
+        "name": "When should you use radio and checkbox inputs ?",
         "markdownContent": "\nCheckboxes and radio controls are a type of input element used to make a choice between several options. These controls are often used in online forms where their actual meaning may be unclear yet they may trigger a distinctive interpretation.\n\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.\n\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time.\n\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” by Jeremy Keith (Resilient Web Design)\n\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".\n\n"
     },
     {
@@ -312,9 +312,9 @@
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1",
-        "notion_url": "https://www.notion.so/Why-are-more-user-friendly-error-messages-important-af855c922a3b45ceb4ea0a8156daf7b9",
+        "notion_url": "https://www.notion.so/Why-should-you-write-user-friendly-error-messages-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
-        "edited": "2023-02-20T12:40:00.000Z",
+        "edited": "2023-06-27T11:18:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
         "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response.",
         "references": [
@@ -340,8 +340,8 @@
             "color": "green"
         },
         "slugs": "when-computers-apologize",
-        "name": "Why are more user-friendly error messages important?",
-        "markdownContent": "\nWhen a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n\n<u>Main takeaways</u>\n\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.\n"
+        "name": "Why should you write user-friendly error messages ?",
+        "markdownContent": "\nWhen a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface's response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n\nMain takeaways\n\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.\n"
     },
     {
         "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
