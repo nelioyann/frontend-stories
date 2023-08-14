@@ -2,9 +2,9 @@
     {
         "id": "a1043815-b340-41d4-888b-9271bf10e94b",
         "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
-        "notion_url": "https://www.notion.so/Why-is-copywriting-important-for-a-website-a1043815b34041d4888b9271bf10e94b",
+        "notion_url": "https://www.notion.so/Why-is-copywriting-important-for-websites-a1043815b34041d4888b9271bf10e94b",
         "icon": "📝",
-        "edited": "2023-06-27T11:13:00.000Z",
+        "edited": "2023-08-13T09:48:00.000Z",
         "created": "2023-02-01T23:06:00.000Z",
         "description": "Website copy is the core text that narrates visitors through your website and tells them what they need to know about a brand or the site.",
         "references": [
@@ -25,7 +25,7 @@
             "color": "default"
         },
         "slugs": "webpages-copy-writing-guidelines",
-        "name": "Why is copywriting important for a website?",
+        "name": "Why is copywriting important for websites?",
         "markdownContent": "\nAccording to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n\nOn the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. Researchers cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n\nRecommendation for writing copy text outlined in this study:\n\n- Remove small details.\n- Add tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Remove commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\nMain takeaways\n\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
     },
     {
@@ -186,9 +186,9 @@
     {
         "id": "6fdacd63-da3a-40c0-a6b6-50d3599a4c20",
         "cover": "https://images.unsplash.com/photo-1573046171778-f6506436ec62",
-        "notion_url": "https://www.notion.so/What-is-the-most-effective-way-to-identify-required-fields-6fdacd63da3a40c0a6b650d3599a4c20",
+        "notion_url": "https://www.notion.so/How-to-mark-required-fields-6fdacd63da3a40c0a6b650d3599a4c20",
         "icon": "✳️",
-        "edited": "2023-06-11T17:16:00.000Z",
+        "edited": "2023-08-13T09:48:00.000Z",
         "created": "2023-01-31T12:55:00.000Z",
         "description": "Required fields are essential for providing accurate and complete information. Yet, marking them can be tedious and time-consuming. Let’s explore the pros and cons of marking required fields.",
         "references": [
@@ -216,6 +216,11 @@
                 "citation": "Adam Silver – designer, London, UK, 2023",
                 "url": "https://adamsilver.io/blog/how-to-highlight-required-and-optional-form-fields/",
                 "name": "How to highlight required and optional form fields"
+            },
+            {
+                "citation": "Axess Lab, 2023",
+                "url": "https://axesslab.com/toggles-suck/",
+                "name": "Axess Lab | Toggles suck!"
             }
         ],
         "category": {
@@ -224,8 +229,8 @@
             "color": "pink"
         },
         "slugs": "required-fields-asterisk",
-        "name": "What is the most effective way to identify required fields?",
-        "markdownContent": "\nAssuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.” (ADG)\n\n\n> “The implications for industry are quite profound. The single most important  \n> message is to mandate fewer fields. More mandatory fields mean less voluntary data disclosure whatever the sensitivity of a data item. Optional fields yield a good data return. A company that wants to extract many details should use optional fields but not highlight them. When users are unsure whether a field is optional or mandatory, users would rather fill in a field than skip it.” (Preibush, 2012)\n\n"
+        "name": "How to mark required fields?",
+        "markdownContent": "\nAssuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.” (ADG)\n\n\n> “The implications for industry are quite profound. The single most important  \n> message is to mandate fewer fields. More mandatory fields mean less voluntary data disclosure whatever the sensitivity of a data item. Optional fields yield a good data return. A company that wants to extract many details should use optional fields but not highlight them. When users are unsure whether a field is optional or mandatory, users would rather fill in a field than skip it.” (Preibush, 2012)\n\n\n> “In our user tests, a majority of users will assume an empty text field is actually mandatory and expect an input to be made.   \n> So much so that we even recommend you to not use asterisks * to indicate mandatory fields, and instead mark optional fields as “optional”. (Axess Lab, 2023)\n\n"
     },
     {
         "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
