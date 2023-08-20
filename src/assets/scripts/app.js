@@ -6,7 +6,6 @@ document.addEventListener("themechange", (event) => {
 });
 // 
 document.addEventListener("visitedchange", (event) => {
-	console.log("visitedchange")
 	let visited = event.detail;
 	document.documentElement.setAttribute("data-visited-preference", visited);
 	localStorage.setItem("visited-preference", visited);
@@ -26,10 +25,10 @@ prefersDark.addEventListener("change", (event) => {
 document.dispatchEvent(
 	new CustomEvent("themechange", {
 		detail: localStorage.getItem("theme-preference")
-			? localStorage.getItem("theme-preference")
-			: prefersDark.matches
-				? "dark"
-				: "light",
+			??
+			prefersDark.matches
+			? "dark"
+			: "light",
 	})
 );
 document.dispatchEvent(

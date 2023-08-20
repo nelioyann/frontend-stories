@@ -15,3 +15,9 @@ toggle.addEventListener("click", function (event) {
 			: "dark";
 	document.dispatchEvent(new CustomEvent("themechange", { detail: theme }));
 });
+
+(function () {
+	let theme =
+		document.documentElement.getAttribute("data-theme-preference") ?? "light";
+	toggle.setAttribute("aria-pressed", theme === "dark");
+})()

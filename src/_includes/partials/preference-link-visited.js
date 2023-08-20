@@ -15,3 +15,12 @@ document.addEventListener("visitedchange", (event) => {
     let visited = event.detail;
     document.querySelector(`input[name="link-visited"][value="${visited}"`).checked = true;
 });
+
+
+// Use self invoking function because I want to keep same var names
+(function(){
+    // Get and set DOM value
+    let visited =
+    document.documentElement.getAttribute("data-visited-preference") ?? "false";
+    document.querySelector(`input[name="link-visited"][value="${visited}"`).checked = true;
+})()
