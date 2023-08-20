@@ -55,9 +55,9 @@
     {
         "id": "322c97d2-723e-4741-99ef-8b4086ea38ab",
         "cover": "https://images.unsplash.com/photo-1601137176664-638517a123fe",
-        "notion_url": "https://www.notion.so/What-are-the-risks-of-using-Unicode-characters-online-322c97d2723e474199ef8b4086ea38ab",
+        "notion_url": "https://www.notion.so/What-are-the-risks-of-using-Unicode-characters-322c97d2723e474199ef8b4086ea38ab",
         "icon": "🔣",
-        "edited": "2023-02-01T23:02:00.000Z",
+        "edited": "2023-08-20T12:02:00.000Z",
         "created": "2023-02-01T23:01:00.000Z",
         "description": "Writing online? Avoid using Unicode characters in your posts. Standard characters ensure everyone can read your message and make your content accessible.",
         "references": [
@@ -73,15 +73,15 @@
             "color": "pink"
         },
         "slugs": "avoid-unicode-characters",
-        "name": "What are the risks of using Unicode characters online?",
+        "name": "What are the risks of using Unicode characters?",
         "markdownContent": "\nBy avoiding special characters from Unicode, you can ensure that your content is easy to read for all users, regardless of the device they are using. Additionally, screen readers may have difficulty recognizing special characters, making them inaccessible to those using assistive technology. \n\n"
     },
     {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
-        "notion_url": "https://www.notion.so/What-impact-do-breadcrumbs-have-on-user-navigation-eae8ae69c02546d68d127de14c71ded5",
+        "notion_url": "https://www.notion.so/What-impact-do-breadcrumbs-have-on-navigation-eae8ae69c02546d68d127de14c71ded5",
         "icon": "🧭",
-        "edited": "2023-06-27T11:17:00.000Z",
+        "edited": "2023-08-20T12:03:00.000Z",
         "created": "2023-02-01T22:56:00.000Z",
         "description": "Help users easily navigate your website by using breadcrumbs. Make the most of them and see how they can improve the user experience.",
         "references": [
@@ -102,7 +102,7 @@
             "color": "yellow"
         },
         "slugs": "do-users-use-breadcrumbs",
-        "name": "What impact do breadcrumbs have on user navigation?",
+        "name": "What impact do breadcrumbs have on navigation?",
         "markdownContent": "\nBreadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n\n`Home > Furniture > Chairs > Leather Chairs`\n\n\nIt provides the following advantages:\n\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n\nMain takeaways\n\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage\n"
     },
     {
@@ -147,9 +147,9 @@
     {
         "id": "592c4c91-84c5-4273-9a24-eb155e53e43a",
         "cover": "https://images.unsplash.com/photo-1566416548759-caf7a5ef3c57",
-        "notion_url": "https://www.notion.so/What-are-the-benefits-of-providing-text-alternatives-for-non-text-content-592c4c9184c542739a24eb155e53e43a",
+        "notion_url": "https://www.notion.so/What-are-the-benefits-of-providing-text-alternatives-592c4c9184c542739a24eb155e53e43a",
         "icon": "🈂️",
-        "edited": "2023-06-06T08:58:00.000Z",
+        "edited": "2023-08-20T12:02:00.000Z",
         "created": "2023-01-31T13:14:00.000Z",
         "description": "Everyone should have equal access to content online. Text alternatives help make this a reality by ensuring everyone can understand and interact with digital content, regardless of their ability.",
         "references": [
@@ -180,7 +180,7 @@
             "color": "pink"
         },
         "slugs": "provide-alt-text",
-        "name": "What are the benefits of providing text alternatives for non-text content?",
+        "name": "What are the benefits of providing text alternatives ?",
         "markdownContent": "\nIcons should only be used if their message is completely clear to everyone. Adding text labels can help to improve clarity.\n\n\n\n> ”Icons should be simple, easy to understand, and consistent. Icons almost always require familiarity in order to be useful. Across cultures and languages, they can be misinterpreted. In many cases, adjacent text is helpful. “(WebAim)\n\n"
     },
     {
