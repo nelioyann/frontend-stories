@@ -26,9 +26,9 @@ document.dispatchEvent(
 	new CustomEvent("themechange", {
 		detail: localStorage.getItem("theme-preference")
 			??
-			prefersDark.matches
-			? "dark"
-			: "light",
+			(prefersDark.matches
+				? "dark"
+				: "light"),
 	})
 );
 document.dispatchEvent(
