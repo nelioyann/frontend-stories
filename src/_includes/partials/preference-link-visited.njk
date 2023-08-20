@@ -1,0 +1,32 @@
+<template class="link-visited-template">
+    <form class="link-visited-form">
+        <fieldset>
+            <legend>Mark visited page</legend>
+            <label>
+                <input type="radio" name="link-visited" value="true"/> Enabled
+            </label>
+            <label>
+                <input type="radio" name="link-visited" value="false"/> Disabled
+            </label>
+            <output data-layout="box">
+                <p>
+                    <a class="headline-entry" data-button="link noHover" href="/preferences">
+                        <span class="headline-text">
+                            This page have been visited
+                        </span>
+                    </a>
+                </p>
+                <p>
+                    <!-- Disable the link by removing the href -->
+                    <a class="headline-entry" data-button="link noHover">
+                        <span class="headline-text">
+                            This links a page not yet visited
+                        </span>
+                    </a>
+                </p>
+            </output>
+        </fieldset>
+    </form>
+</template>
+<script>
+    {% include "./preference-link-visited.js" %}</script>

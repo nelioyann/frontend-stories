@@ -1,6 +1,4 @@
-*,
-:after,
-:before {
+*{
   color: inherit;
 }
 html {
@@ -136,8 +134,6 @@ blockquote {
   width: fit-content;
 }
 
-
-
 .measured-container {
   max-width: var(--measure);
   width: 100%;
@@ -157,17 +153,6 @@ blockquote {
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
-input,
-select,
-textarea {
-  min-height: var(--controls-minimum-height);
-  padding-left: var(--space-2xs);
-  padding-right: var(--space-2xs);
-  border: var(--border-thick) solid;
-  border-color: var(--color-dark-accent);
-  border-radius: var(--border-radius);
-  width: 100%;
-}
 
 pre {
   background-color: var(--color-light-accent);

@@ -28,7 +28,6 @@
   --button-hover-background-color: var(--color-light);
   --button-hover-color: var(--color-dark-accent);
   font-family: var(--font-sans-serif);
-
 }
 [data-button~="outline"],
 [data-button~="tag"] {
@@ -37,7 +36,6 @@
   --button-hover-border-color: var(--color-dark);
   --button-hover-color: var(--color-light);
   font-family: var(--font-sans-serif);
-
 }
 
 [data-button~="text"],
@@ -76,7 +74,6 @@
   font-size: calc(var(--step-0) * 0.75);
 }
 
-
 @media (hover: hover) {
   /* On desktop and hover capable screens */
   [data-button~="link"] {
@@ -84,12 +81,14 @@
     --button-padding-x: 0;
     --button-border-radius: 0;
   }
+  [data-button]:not([data-button~="noHover"]):not([data-button~="link"]):hover {
+    color: var(--button-hover-color, var(--button-color));
+  }
   [data-button]:not([data-button~="noHover"]):hover {
     background-color: var(
       --button-hover-background-color,
       var(--button-background-color)
     );
-    color: var(--button-hover-color, var(--button-color));
     border-color: var(--button-hover-border-color, var(--button-border-color));
   }
   [data-button~="link"]:not([data-button~="noHover"]):hover {
@@ -98,5 +97,4 @@
   [data-button~="text"]:not([data-button~="noHover"]):hover {
     --button-text-decoration: underline;
   }
-
 }
