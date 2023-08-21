@@ -3,8 +3,7 @@ button,
 a {
   transition-duration: var(--transition-duration, 100ms);
   transition-timing-function: var(--bezier-snappy);
-  transition-property: border-color, box-shadow,
-    transform, outline-offset;
+  transition-property: border-color, box-shadow, transform, outline-offset;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14,31 +13,24 @@ a {
 }
 
 html {
-  --document-padding: clamp(0.00rem, calc(-1.33rem + 3.33vw), 1.25rem);
+  --document-padding: clamp(0rem, calc(-1.33rem + 3.33vw), 1.25rem);
   background-color: var(--color-light);
-
 }
 
-body > header {
-  position: sticky;
-  top: 0;
-  background-color: var(--color-light);
-  z-index: 1;
-  min-height: var(--header-height);
-  border-bottom: var(--border-thin) solid var(--color-dark-accent);
+body > header,
+body > main {
   padding-left: var(--responsive-padding);
   padding-right: var(--responsive-padding);
+}
+body > header {
+  background-color: var(--color-light);
+  min-height: var(--header-height);
 }
 body > main {
-  padding-top: var(--page-top);
-  padding-bottom: var(--page-top);
-  padding-left: var(--responsive-padding);
-  padding-right: var(--responsive-padding);
+  padding-block: var(--page-top);
 }
 body > footer {
-  padding-top: var(--space-l);
-  padding-bottom: var(--space-l);
-  border-top: var(--border-thick) solid;
+  padding-block: var(--space-l);
 }
 body > header a[href="/"] {
   --button-display: flex;
@@ -63,7 +55,6 @@ hr {
   background-size: 100% auto;
   background-position-y: center;
 }
-
 
 /*=============================================
 =            Anchor Heading            =
@@ -245,10 +236,11 @@ textarea {
   width: clamp(20ch, 100%, var(--measure));
 }
 
-[data-visited-preference="true"] .headline-entry{
+[data-visited-preference="true"] .headline-entry {
   color: var(--color-light);
+  --button-text-decoration-color: currentColor;
 }
-[data-visited-preference="true"] .headline-entry:after{
+/* [data-visited-preference="true"] .headline-entry:after {
   display: inline-block;
   font-size: small;
   padding-inline: 5px;
@@ -259,16 +251,16 @@ textarea {
   border: 1px solid;
   opacity: 0.7;
   vertical-align: text-bottom;
-}
-[data-visited-preference="true"] .headline-text{
+} */
+[data-visited-preference="true"] .headline-text {
   color: var(--color-dark);
   margin-right: var(--space-2xs);
-  /* padding: 0; */
-  /* margin: 0; */
   display: inline;
 }
 
-[data-visited-preference="true"] .headline-entry:visited, [data-visited-preference="true"] .headline-entry:visited .headline-text {
+[data-visited-preference="true"] .headline-entry:visited,
+[data-visited-preference="true"] .headline-entry:visited .headline-text {
   color: #777;
+  
 }
 /* https://codepen.io/ines/pen/EKOYQr */

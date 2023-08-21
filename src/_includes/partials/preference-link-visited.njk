@@ -1,5 +1,5 @@
 <template class="link-visited-template">
-    <form class="link-visited-form">
+    <form class="link-visited-form measured-container">
         <fieldset>
             <legend>Mark visited page</legend>
             <label>
@@ -8,22 +8,25 @@
             <label>
                 <input type="radio" name="link-visited" value="false"/> Disabled
             </label>
-            <output data-layout="box">
-                <p>
-                    <a class="headline-entry" data-button="link noHover" href="/preferences">
-                        <span class="headline-text">
-                            This page have been visited
-                        </span>
-                    </a>
-                </p>
-                <p>
-                    <!-- Disable the link by removing the href -->
-                    <a class="headline-entry" data-button="link noHover">
-                        <span class="headline-text">
-                            This links a page not yet visited
-                        </span>
-                    </a>
-                </p>
+            <output data-layout="box" data-props="noPad">
+                <b data-layout="box" data-props="invert noBorder space:xs">preview</b>
+                <ul role="list" data-layout="box" data-props="noBorder">
+                    <li>
+                        <a class="headline-entry" data-button="link noHover" href="/preferences">
+                            <span class="headline-text">
+                                This page have been visited
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Disable the link by removing the href -->
+                        <a class="headline-entry" data-button="link noHover">
+                            <span class="headline-text">
+                                This links a page not yet visited
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </output>
         </fieldset>
     </form>
