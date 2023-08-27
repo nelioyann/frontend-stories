@@ -1,0 +1,18 @@
+[data-complexity-preference^="IIIIII"]::-webkit-scrollbar {
+  width: 10px;
+  height: var(--space-2xs);
+}
+/* Track */
+[data-complexity-preference^="IIIIII"]::-webkit-scrollbar-track {
+  border: var(--border-thin, 1px) solid var(--color-light-accent);
+}
+
+/* Handle */
+[data-complexity-preference^="IIIIII"]::-webkit-scrollbar-thumb {
+  background: var(--color-dark-accent);
+}
+
+/* Handle on hover */
+[data-complexity-preference^="IIIIII"]::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark);
+}

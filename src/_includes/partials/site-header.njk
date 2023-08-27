@@ -3,8 +3,9 @@
         <span>{{ meta.site_name }}</span>
     </a>
     <aside data-layout="cluster" data-props="y:center">
-        <a data-button="text" href="/about">About</a>
-        <a data-button="text" href="/preferences">Preferences</a>
-        {# {% include "partials/site-theme-toggle.njk" %} #}
+        {# <a data-button="link" href="/about">About</a> #}
+        <a data-button="link" href="/preferences">Preferences</a>
+        <a data-button="link" href="/style-guide">Style Guide</a>
+        {% include "partials/site-theme-toggle.njk" %}
     </aside>
 </header>

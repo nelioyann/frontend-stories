@@ -2,6 +2,7 @@
     transform: scale(1, -1);
 }
 .theme-toggle {
+    color: inherit;
     --theme-toggle__horizon--duration: 500ms;
 }
 .theme-toggle__horizon g path {

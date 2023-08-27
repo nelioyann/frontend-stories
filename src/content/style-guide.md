@@ -2,13 +2,13 @@
 title: Style Guide
 tags:
   - webpage
-layout: layouts/nested-article-layout.njk
+layout: layouts/nested-page-layout.njk
 permalink: /style-guide/
 eleventyComputed:
   description: "Style guide for Frontend Stories"
   eleventyNavigation:
     key: Style Guide
-    parent: Home
+    parent: All
 ---
 
 # Style Guide
@@ -68,6 +68,20 @@ Font sizes can be controlled through the use of the `data-heading` attribute. Fo
   </header>
 
 <div data-layout="box stack" data-props="noBorder">
+
+### Details
+
+<details data-accordion>
+  <summary>Accordion</summary>
+  <div>
+  According to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.
+
+  Why does it matter ?
+
+  On the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.
+  </div>
+
+</details>
 
 ### Blockquote
 
@@ -172,5 +186,6 @@ The horizontal separator is customized to look like a rugged line.
 <hr>
 
 This is made possible by using an `svg` as the background of the `<hr>` element.
+
 
 </section>

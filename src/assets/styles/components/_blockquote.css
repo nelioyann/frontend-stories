@@ -1,0 +1,6 @@
+[data-complexity-preference^="IIIII"] blockquote {
+    border-left: var(--border-thick) solid var(--color-dark);
+    background-color: var(--color-light-accent);
+    padding: var(--space-2xs) var(--space-s);
+    width: fit-content;
+  }

@@ -10,6 +10,11 @@ document.addEventListener("visitedchange", (event) => {
 	document.documentElement.setAttribute("data-visited-preference", visited);
 	localStorage.setItem("visited-preference", visited);
 });
+document.addEventListener("complexitychange", (event) => {
+	let complexity = event.detail;
+	document.documentElement.setAttribute("data-complexity-preference", complexity);
+	localStorage.setItem("complexity-preference", complexity);
+});
 
 
 // Listen for system User preference
@@ -34,5 +39,10 @@ document.dispatchEvent(
 document.dispatchEvent(
 	new CustomEvent("visitedchange", {
 		detail: localStorage.getItem("visited-preference") ?? true
+	})
+);
+document.dispatchEvent(
+	new CustomEvent("complexitychange", {
+		detail: localStorage.getItem("complexity-preference") ?? "III"
 	})
 );

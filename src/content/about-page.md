@@ -8,7 +8,7 @@ eleventyComputed:
   description: "About Frontend Stories. {{meta.site_description}}"
   eleventyNavigation:
     key: About
-    parent: Home
+    parent: All
 ---
 
 <!-- <h1 class="visually-hidden">
