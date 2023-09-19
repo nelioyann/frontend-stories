@@ -1,0 +1,209 @@
+---
+title: Style Guide
+tags:
+  - webpage
+layout: layouts/nested-page-layout.njk
+permalink: /style-guide/
+eleventyComputed:
+  description: "Style guide for Frontend Stories"
+eleventyNavigation:
+  key: Style Guide
+  parent: All
+---
+
+
+<h1>
+  Style Guide
+</h1>
+<p>
+  Below is a minimal style guide inspired by
+  <a target="_blank" rel="noopener nofollow noreferrer" href="https://danabyerly.com/style-guide/">Dana Byerly's Style
+    Guide</a>.
+</p>
+<aside style="position: sticky; top: 0; background-color: var(--color-light, white); z-index: 1;">
+{% include "partials/preference-complexity.njk"%}
+</aside>
+<b>
+  Table of Contents
+</b>
+<nav>
+  <ul>
+    <li><a href="#headings">Headings</a></li>
+    <li><a href="#block-elements">Block elements</a></li>
+    <li><a href="#code">Code</a></li>
+    <li><a href="#lists">Lists</a></li>
+  </ul>
+</nav>
+{# HEADINGS #}
+<section data-layout="box" data-props="noPad" class="measured-container">
+  <header data-layout="box" data-props="invert noBorder">
+    <h2 id="headings" data-heading="anchor">
+      <a href="#headings">Headings</a>
+    </h2>
+  </header>
+  <div data-layout="box stack" data-props="noBorder">
+    <p>
+      All headings within content pages have anchors. Based on their importance, the size can be changed with `data-heading`
+      attribute.
+    </p>
+    <h1>
+      FIRST LEVEL HEADER
+    </h1>
+    <h2>
+      SECOND LEVEL HEADER
+    </h2>
+    <h3>
+      THIRD LEVEL HEADER
+    </h3>
+    <h4>
+      Fourth Level Header
+    </h4>
+    <hr/>
+    <p>
+      Font sizes can be controlled through the use of the
+      <code>data-heading</code>
+      attribute. For example:
+    </p>
+    <h1 data-heading='4'>First Level sized like a fourth level heading</h1>
+  </div>
+</section>
+{# BLOCK ELEMENTS #}
+<section data-layout="box" data-props="noPad" class="measured-container">
+  <header data-layout="box" data-props="invert noBorder">
+    <h2 id="block-elements" data-heading="anchor">
+      <a href="#block-elements">Block elements</a>
+    </h2>
+  </header>
+  <div data-layout="box stack" data-props="noBorder">
+    <h3>
+      Details
+    </h3>
+    <details data-accordion="data-accordion">
+      <summary>Accordion</summary>
+      <div>
+        <p>
+          According to research, web users generally prefer writing that is concise, easy to scan, and objective rather than
+          promotional in style. Why does it matter ? On the web, you have less than 15 seconds to grab somebody's attention when
+          they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an
+          average visit.
+        </p>
+      </div>
+    </details>
+    <h3>
+      Blockquote
+    </h3>
+    <blockquote>
+      A little learning is a dangerous thing. &mdash; Japanese Proverb
+    </blockquote>
+    <h3>
+      Paragraph text
+    </h3>
+    <p>
+      Here's an example of paragraph text that is long enough to show line-height. Here is an example of a link that
+      <a href="/">goes back to the homepage</a>. And here is an example of
+      <b>bold text</b>.
+    </p>
+  </div>
+</section>
+{# CODE #}
+<section data-layout="box" data-props="noPad" class="measured-container">
+  <header data-layout="box" data-props="invert noBorder">
+    <h2 id="code" data-heading="anchor">
+      <a href="#code">Code</a>
+    </h2>
+  </header>
+  <div data-layout="box stack" data-props="noBorder">
+    <h3>
+      Code within text
+    </h3>
+    <p>
+      Here's an example of mentioning code, like `figure` or `display: flex` within paragraph text.
+    </p>
+    <h3>
+      Code snippets
+    </h3>
+    <pre>
+      <code tabindex="0" class="language-css">
+.wrapper-content {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+      </code>
+    </pre>
+  </div>
+</section>
+{# LISTS #}
+<section data-layout="box" data-props="noPad" class="measured-container">
+  <header data-layout="box" data-props="invert noBorder">
+    <h2 id="lists" data-heading="anchor">
+      <a href="#lists">Lists</a>
+    </h2>
+  </header>
+  <div data-layout="box stack" data-props="noBorder">
+    <h3>
+      Ordered list
+    </h3>
+    <p>
+      Ordered list will be displayed horizontally until the number of items exceed 3 (in which case the rest collapses in a
+      column).
+    </p>
+    <ol>
+      <li>
+        Cats
+      </li>
+      <li>
+        Dogs
+      </li>
+      <li>
+        Horses
+      </li>
+    </ol>
+    <h3>
+      Unordered list
+    </h3>
+    <ul>
+      <li>
+        Cats
+      </li>
+      <li>
+        Dogs
+      </li>
+      <li>
+        Horses
+      </li>
+    </ul>
+    <h3>
+      List with longer text
+    </h3>
+    <ul>
+      <li>Here is a list example with more text to illustrate the line-height and spacing between the bullets.</li>
+      <li>In my opinion this nuance is often overlooked, resulting in the same amount of space between lines in a single
+        bullet and between the bullets, making it harder to read.</li>
+      <li>Both ordered and unordered list using this spacing.</li>
+    </ul>
+  </div>
+</section>
+<section data-layout="box" data-props="noPad" class="measured-container">
+  <header data-layout="box" data-props="invert noBorder">
+    <h2 id="buttons" data-heading="anchor">
+      <a href="#buttons">Buttons</a>
+    </h2>
+  </header>
+  <div data-layout="box" data-props="noBorder">
+    <div data-layout="cluster" data-props="y:end space:2xs">
+      <button data-button="primary">Primary</button>
+      <button data-button="outline">Outline</button>
+      <button data-button="link">Link</button>
+      <button data-button="text">Text</button>
+    </div>
+  </div>
+</section>
+<section data-layout="box" class="measured-container">
+  <p>
+    The horizontal separator is customized to look like a rugged line.
+  </p>
+  <hr>
+    <p>
+      This is made possible by using an `svg` as the background of the <code>hr</code> tag.
+    </p>
+</section>

@@ -1,21 +1,21 @@
 <template class="link-visited-template">
     <form class="link-visited-form measured-container">
-        <fieldset>
-            <legend>Mark visited page</legend>
+        <fieldset data-layout="stack" data-props="space:2xs">
+            <legend>Mark visited page (works with a complexity level of 4 and more)</legend>
             <label>
                 <input type="radio" name="link-visited" value="true"/> Enabled
             </label>
             <label>
                 <input type="radio" name="link-visited" value="false"/> Disabled
             </label>
-            <details data-layout="box" data-props="noPad" data-accordion>
+            <details >
                 <summary>
                     Preview
                 </summary>
-                <output data-layout="box" data-props=" noBorder">
+                <output>
                     <ul role="list">
                         <li>
-                            <a class="headline-entry" data-button="link noHover" href="/preferences">
+                            <a tabIndex="-1" class="headline-entry" data-button="link noHover" href="/preferences">
                                 <span class="headline-text">
                                     This page have been visited
                                 </span>
@@ -23,7 +23,7 @@
                         </li>
                         <li>
                             <!-- Disable the link by removing the href -->
-                            <a class="headline-entry" data-button="link noHover">
+                            <a tabIndex="-1" style="text-decoration: underline;" class="headline-entry" data-button="link noHover">
                                 <span class="headline-text">
                                     This links a page not yet visited
                                 </span>

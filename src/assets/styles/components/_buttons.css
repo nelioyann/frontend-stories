@@ -14,7 +14,7 @@
   );
   text-decoration-thickness: var(--border-thin);
   color: var(--button-color, var(--color-dark));
-  background-color: var(--button-background-color, var(--color-light));
+  background-color: var(--button-background-color);
   cursor: pointer;
   text-underline-offset: var(--button-underline-offset, 0.25em);
   display: var(--button-display, inline-flex);
@@ -80,7 +80,6 @@
 @media (hover: hover) {
   /* On desktop and hover capable screens */
   [data-complexity-preference^="IIIII"] [data-button~="link"] {
-    --button-background-color: var(--color-light);
     --button-padding-x: 0;
     --button-border-radius: 0;
   }

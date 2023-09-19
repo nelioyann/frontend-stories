@@ -9,7 +9,7 @@
 }
 
 /*  */
-[data-complexity-preference^="IIIII"] [data-accordion] summary ~ * {
+[data-complexity-preference^="IIIII"] details > summary ~ * {
   padding-inline: var(--space-s);
   padding-block: var(--space-2xs);
   background-color: var(--color-light-accent);

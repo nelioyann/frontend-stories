@@ -56,7 +56,7 @@ body {
 
 
 
-[data-complexity-preference^="IIIIII"] .visually-hidden {
+[data-complexity-preference^="III"] .visually-hidden {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -89,7 +89,7 @@ body {
   font-weight: bold;
   display: block;
   color: var(--color-dark-accent);
-  border-bottom: var(--border-thick) solid var(--color-dark-accent);
+  border-bottom: var(--border-thick) solid var(--color-dark-accent, currentColor);
   padding-bottom: var(--space-2xs);
   margin-bottom: var(--space-2xs);
 }
@@ -97,4 +97,9 @@ body {
 [data-complexity-preference^="III"] ol > li:nth-child(n + 4) ~ * {
   /* Switch to a vertical configuration if there are more than 4 child elements */
   flex-basis: 100%;
+}
+
+
+[data-complexity-preference^="III"] output{
+  display: block;
 }

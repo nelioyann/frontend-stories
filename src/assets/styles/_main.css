@@ -1,16 +1,9 @@
-/* input,
-button,
-a {
-  transition-duration: var(--transition-duration, 100ms);
-  transition-timing-function: var(--bezier-snappy);
-  transition-property: border-color, box-shadow, transform, outline-offset;
-}
 
 @media (prefers-reduced-motion: reduce) {
   :root {
     --transition-duration: 0ms;
   }
-} */
+} 
 
 [data-complexity-preference^="III"] body > header,
 [data-complexity-preference^="III"] body > main {
@@ -59,7 +52,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 [data-complexity-preference^="IIIIII"] [data-heading~="anchor"] {
   scroll-margin-top: var(--header-height);
   transform: translateX(0);
-  transition: transform var(--transition-duration, 300ms) var(--bezier-snappy);
+  /* transition: transform var(--transition-duration, 300ms) var(--bezier-snappy); */
 }
 [data-complexity-preference^="IIIIII"] [data-heading~="anchor"]:target {
   outline: var(--border-thin) solid var(--color-dark-accent);
@@ -86,7 +79,7 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 /* PAGE LEVEL BREADCRUMBS */
 [data-complexity-preference^="IIIII"] .breadcrumbs-navigation li:not(:first-child)::before {
   content: ">";
-  padding-inline: 0.5ch;
+  padding-inline-end: var(--space-2xs);
 }
 
 /* HOME PAGE CATEGORIES CHIPS FILTER */
@@ -100,31 +93,29 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 =      https://codepen.io/ines/pen/EKOYQr            =
 =============================================*/
 
-[data-visited-preference="true"] .headline-entry {
-  color: var(--color-light);
+[data-complexity-preference^="IIII"][data-visited-preference="true"] .headline-entry {
   --button-text-decoration-color: currentColor;
 }
-/* [data-visited-preference="true"] .headline-entry:after {
-  display: inline-block;
-  font-size: small;
-  padding-inline: 5px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  content: "Visited";
-  border: 1px solid;
-  opacity: 0.7;
-  vertical-align: text-bottom;
-} */
-[data-visited-preference="true"] .headline-text {
+
+[data-complexity-preference^="IIII"][data-visited-preference="true"] .headline-text {
   color: var(--color-dark);
   margin-right: var(--space-2xs);
   display: inline;
 }
 
-[data-visited-preference="true"] .headline-entry:visited,
-[data-visited-preference="true"] .headline-entry:visited .headline-text {
-  color: #777;
+[data-complexity-preference^="IIII"][data-visited-preference="true"] .headline-entry:visited,
+[data-complexity-preference^="IIII"][data-visited-preference="true"] .headline-entry:visited .headline-text {
+  color: var(--color-visited);
   
+}
+
+
+
+html,
+html *,
+html *:before,
+html *:after {
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+  transition-delay: 0 !important;
 }
 

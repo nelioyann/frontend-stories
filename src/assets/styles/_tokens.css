@@ -141,3 +141,35 @@
   --measure: initial;
 }
 
+/* TODO: Find a better way */
+
+[data-layout~="stack"][data-props~="space:0"] {
+  --stack-space: 0;
+}
+[data-layout~="stack"][data-props~="space:flow"] {
+  --stack-space: 1em;
+}
+[data-layout~="stack"][data-props~="space:2xs"] {
+  --stack-space: var(--space-2xs);
+}
+[data-layout~="stack"][data-props~="space:xs"] {
+  --stack-space: var(--space-xs);
+}
+[data-layout~="stack"][data-props~="space:s"] {
+  --stack-space: var(--space-s);
+}
+[data-layout~="stack"][data-props~="space:m"] {
+  --stack-space: var(--space-m);
+}
+[data-layout~="stack"][data-props~="space:l"] {
+  --stack-space: var(--space-l);
+}
+[data-layout~="stack"][data-props~="space:xl"] {
+  --stack-space: var(--space-xl);
+}
+[data-layout~="stack"][data-props~="space:2xl"] {
+  --stack-space: var(--space-2xl);
+}
+[data-layout~="stack"][data-props~="space:3xl"] {
+  --stack-space: var(--space-3xl);
+}

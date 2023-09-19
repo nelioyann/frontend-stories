@@ -4,7 +4,7 @@
         <span class="visually-hidden">You are here</span>
         <ul role="list" data-layout="cluster" data-props="space:2xs">
             {%- for entry in navPages %}
-                <li {% if entry.url == page.url %} class="my-active-class" {% endif %}>
+                <li data-layout="cluster" data-props="space:0" {% if entry.url == page.url %} class="my-active-class" {% endif %}>
                     <a data-button="link" href="{{ entry.url }}">{{ entry.title }}</a>
                 </li>
             {%- endfor %}
