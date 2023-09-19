@@ -1,0 +1,16 @@
+<template class="color-scheme-template">
+    <form class="color-scheme-form measured-container">
+        <fieldset data-layout="stack" data-props="space:2xs">
+            <legend>Theme (works with a complexity level of 4 and more)</legend>
+            <label>
+                <input type="radio" name="color-scheme" value="dark"/> Dark
+            </label>
+            <label>
+                <input type="radio" name="color-scheme" value="light"/> Light
+            </label>
+        </fieldset>
+    </form>
+</template>
+<script>
+    {% include "./preference-color-scheme.js"%}
+</script>

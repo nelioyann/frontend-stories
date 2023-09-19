@@ -1,0 +1,18 @@
+---
+title: Preferences
+tags:
+  - webpage
+layout: layouts/nested-page-layout.njk
+permalink: /preferences/
+eleventyComputed:
+  description: "Set your preferences"
+  eleventyNavigation:
+    key: Preferences
+    parent: All
+---
+
+<h1>Preferences</h1>
+
+{% include "partials/preference-complexity.njk"%}
+{% include "partials/preference-color-scheme.njk"%}
+{% include "partials/preference-link-visited.njk"%}

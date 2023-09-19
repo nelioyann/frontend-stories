@@ -1,4 +1,4 @@
-:root {
+[data-complexity-preference^="IIII"]:root {
   --primary-hue: 33;
   --primary-saturation: 32%;
   --primary-lightness: 31%;
@@ -8,13 +8,15 @@
     var(--primary-saturation),
     var(--primary-lightness)
   );
-  --color-light: #ECE1CB;
+  --color-light: #ece1cb;
   --color-light-accent: hsl(32, 35%, 80%);
-  --color-dark-accent: #735D43;
+  --color-dark-accent: #735d43;
   --color-dark: #433523;
 
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);
+
+  --color-visited: hsl(273 32% 47%);
 
   --shadow-color: 240deg 2% 66%;
   --shadow-elevation-low: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
@@ -32,9 +34,16 @@
   --horizontal-line: var(--horizontal-line-dark);
 }
 
-[data-theme-preference="dark"] {
-    --color-dark: hsl(40, 26%, 80%);
-    --color-dark-accent: hsl(32, 15%, 80%);
-    --color-light-accent: hsl(210, 10%, 10%);
-    --color-light: hsl(210, 10%, 8%);
+[data-complexity-preference^="IIII"][data-theme-preference="dark"] {
+  --color-dark: hsl(40, 26%, 80%);
+  --color-dark-accent: hsl(32, 15%, 80%);
+  --color-light-accent: hsl(210, 10%, 10%);
+  --color-light: hsl(210, 10%, 8%);
+  --primary-saturation: 12%;
+  --primary-lightness: 31%;
+  --color-visited: hsl(273 100% 76%);
+}
+
+[data-complexity-preference^="IIII"][data-theme-preference="dark"] hr{
+  filter: invert(100%);
 }

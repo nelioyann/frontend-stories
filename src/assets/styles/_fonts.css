@@ -16,7 +16,7 @@
   src: url('../assets/fonts/ibm-plex-sans-v14-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
        url('../assets/fonts/ibm-plex-sans-v14-latin-600.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-:root {
+[data-complexity-preference^="II"]:root {
   --font-sans-serif: "IBM Plex Sans","-apple-system",
     "BlinkMacSystemFont", "avenir next", "avenir", "segoe ui", "helvetica neue",
     "helvetica", "Cantarell", "Ubuntu", "roboto", "noto", arial, sans-serif;

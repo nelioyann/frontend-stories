@@ -22,82 +22,8 @@
     </button>
 </template>
 <style>
-    .theme-toggle.theme-toggle--reversed .theme-toggle__horizon {
-        transform: scale(1, -1);
-    }
-    .theme-toggle {
-        --theme-toggle__horizon--duration: 500ms;
-    }
-    .theme-toggle__horizon g path {
-        transition: transform var(--theme-toggle__horizon--duration) cubic-bezier(0, 0, 0.15, 1);
-    }
-    .theme-toggle[aria-pressed="true"]:not(label).theme-toggle .theme-toggle__horizon g path {
-        transform: translate3d(0, 50%, 0);
-    }
-    .theme-toggle {
-        border: none;
-        background: none;
-        cursor: pointer;
-    }
-    .theme-toggle .theme-toggle-sr {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-    }
-    @media(prefers-reduced-motion: reduce) {
-        .theme-toggle:not(.theme-toggle--force-motion) * {
-            transition: none !important;
-        }
-    }
+    {% include "./site-theme-toggle.css"%}
 </style>
 <script>
-    // Progressive Enhancement
-    const toggleTemplate = document.querySelector(".theme-toggle-template");
-    const toggleContent = toggleTemplate.content.cloneNode(true);
-    toggleTemplate.replaceWith(toggleContent)
-    var toggle = document.querySelector(".theme-toggle");
-    // User preference
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    var currentTheme;
-    initTheme()
-    function setTheme(currentTheme) {
-        var pressed = currentTheme === 'dark'
-            ? 'true'
-            : 'false';
-        toggle
-            .setAttribute("aria-pressed", pressed)
-            document
-            .documentElement
-            .setAttribute('data-theme-preference', currentTheme);
-        localStorage.setItem('theme-preference', currentTheme);
-    }
-    //
-    function initTheme() {
-        if (localStorage.getItem('theme-preference')) {
-            currentTheme = localStorage.getItem('theme-preference');
-        } else if (prefersDark.matches) {
-            currentTheme = 'dark';
-        } else { // default
-            currentTheme = 'light';
-        };
-        setTheme(currentTheme);
-    }
-    toggle.addEventListener('click', function (event) {
-        currentTheme = document.documentElement.getAttribute('data-theme-preference') === "dark"
-            ? "light"
-            : "dark";
-        setTheme(currentTheme);
-    });
-    prefersDark.addEventListener('change', function (event) {
-        currentTheme = event.matches
-            ? 'dark'
-            : 'light';
-        setTheme(currentTheme);
-    });
+    {% include "./site-theme-toggle.js"%}
 </script>

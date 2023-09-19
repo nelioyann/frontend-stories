@@ -3,11 +3,10 @@
     {% include "partials/site-head.njk" %}
     <body>
         {% include "partials/site-header.njk" %}
-        <main id="main-content" data-layout="stack" data-props="x:stretch space:l">
+        <main id="main-content"  data-layout="stack" data-props="x:stretch">
             {% block content %}
                 {{ content | safe }}
             {% endblock %}
         </main>
-        {# {% include "partials/site-footer.njk" %} #}
     </body>
 </html>

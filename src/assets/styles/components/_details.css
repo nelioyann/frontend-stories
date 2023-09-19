@@ -1,0 +1,41 @@
+
+/* Safely remove the default marker */
+[data-complexity-preference^="IIIII"] details > summary::-webkit-details-marker,
+[data-complexity-preference^="IIIII"] details > summary::marker {
+  content: "";
+}
+[data-complexity-preference^="IIIII"] details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/*  */
+[data-complexity-preference^="IIIII"] details > summary ~ * {
+  padding-inline: var(--space-s);
+  padding-block: var(--space-2xs);
+  background-color: var(--color-light-accent);
+}
+
+[data-complexity-preference^="IIIII"] summary::before {
+  --marker-side: .75rem;
+  content: "";
+  margin-right: var(--space-2xs);
+  border-width: calc(var(--marker-side) * 0.5);
+  border-style: solid;
+  border-color: transparent transparent transparent var(--color-dark);
+  transform: rotate(0);
+  transform-origin: calc(var(--marker-side) * 0.25) 50%;
+  transition: transform var(--transition-duration, 300ms) var(--bezier-snappy) 75ms;
+}
+[data-complexity-preference^="IIIII"] details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+[data-complexity-preference^="IIIII"] summary {
+  padding-inline: var(--space-xs);
+  padding-block: var(--space-2xs);
+  background-color: var(--color-light-accent);
+  border-bottom: var(--border-thin) solid var(--color-light);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

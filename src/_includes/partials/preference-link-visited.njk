@@ -1,0 +1,39 @@
+<template class="link-visited-template">
+    <form class="link-visited-form measured-container">
+        <fieldset data-layout="stack" data-props="space:2xs">
+            <legend>Mark visited page (works with a complexity level of 4 and more)</legend>
+            <label>
+                <input type="radio" name="link-visited" value="true"/> Enabled
+            </label>
+            <label>
+                <input type="radio" name="link-visited" value="false"/> Disabled
+            </label>
+            <details >
+                <summary>
+                    Preview
+                </summary>
+                <output>
+                    <ul role="list">
+                        <li>
+                            <a tabIndex="-1" class="headline-entry" data-button="link noHover" href="/preferences">
+                                <span class="headline-text">
+                                    This page have been visited
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Disable the link by removing the href -->
+                            <a tabIndex="-1" style="text-decoration: underline;" class="headline-entry" data-button="link noHover">
+                                <span class="headline-text">
+                                    This links a page not yet visited
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </output>
+            </details>
+        </fieldset>
+    </form>
+</template>
+<script>
+    {% include "./preference-link-visited.js" %}</script>

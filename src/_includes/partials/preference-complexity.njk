@@ -1,0 +1,28 @@
+<template class="complexity-template">
+    <form class="complexity-form measured-container">
+        <fieldset >
+            <legend>Complexity</legend>
+            <label>
+                <input type="radio" name="complexity" value="I"/> Level 1
+            </label>
+            <label>
+                <input type="radio" name="complexity" value="II"/> Level 2
+            </label>
+            <label>
+                <input type="radio" name="complexity" value="III"/> Level 3
+            </label>
+            <label>
+                <input type="radio" name="complexity" value="IIII"/> Level 4
+            </label>
+            <label>
+                <input type="radio" name="complexity" value="IIIII"/> Level 5
+            </label>
+            <label>
+                <input type="radio" name="complexity" value="IIIIII"/> Level 6
+            </label>
+        </fieldset>
+    </form>
+</template>
+<script>
+    {% include "./preference-complexity.js"%}
+</script>

@@ -1,10 +1,8 @@
-*,
-:after,
-:before {
+/* [data-complexity-preference^="IIII"] * {
   color: inherit;
-}
-html {
-  scroll-behavior: smooth;
+} */
+html[data-complexity-preference^="IIIIII"] {
+  scroll-behavior : smooth;
 }
 
 body {
@@ -13,89 +11,61 @@ body {
   background-color: var(--color-light);
   color: var(--color-dark);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+[data-complexity-preference^="II"] :is(h1, h2, h3, h4, h5, h6) {
   --measure: 50ch;
   line-height: 1.2;
   font-family: var(--font-sans-serif);
-  
 }
-h3,
-h4,
-h5,
-h6 {
+[data-complexity-preference^="II"] :is(h3, h4, h5, h6) {
   font-weight: normal;
-
 }
-h1,
-[data-heading~="1"] {
+[data-complexity-preference^="II"] :is(h1, [data-heading~="1"]) {
   font-size: var(--step-5);
 }
-h2,
-[data-heading~="2"] {
+[data-complexity-preference^="II"] :is(h2, [data-heading~="2"]) {
   font-size: var(--step-4);
 }
-h3,
-[data-heading~="3"] {
+[data-complexity-preference^="II"] :is(h3, [data-heading~="3"]) {
   font-size: var(--step-3);
 }
-h4,
-[data-heading~="4"] {
+[data-complexity-preference^="II"] :is(h4, [data-heading~="4"]) {
   font-size: var(--step-2);
 }
-h5,
-[data-heading~="5"] {
+[data-complexity-preference^="II"] :is(h5, [data-heading~="5"]) {
   font-size: var(--step-1);
 }
-h6,
-[data-heading~="6"] {
+[data-complexity-preference^="II"] :is(h6, [data-heading~="6"]) {
   font-size: var(--step-0);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+[data-complexity-preference^="II"] :is(h1, h2, h3, h4, h5, h6, p) {
   max-width: var(--measure);
 }
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: var(--space-2xs);
-}
-/* Track */
-::-webkit-scrollbar-track {
-  border: var(--border-thin, 1px) solid var(--color-light-accent);
+[data-complexity-preference^="II"] :is(h1, h2, h3, h4, h5, h6, p, a) {
+  color: inherit;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--color-dark-accent);
-}
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-dark);
-}
-
-ul, ol, menu{
+[data-complexity-preference^="II"] :is(ul, ol, menu) {
   max-width: var(--list-measure, var(--measure));
-
 }
-ul[role="list"],
-ol[role="list"] {
+[data-complexity-preference^="II"] :is(ul[role="list"], ol[role="list"]) {
   list-style: none;
   padding-left: var(--padding, initial);
   --list-measure: initial;
 }
 
-ol {
+
+
+[data-complexity-preference^="III"] .visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+} 
+
+
+[data-complexity-preference^="III"] ol {
   --space: var(--space-s);
   --threshold: 30rem;
   display: flex;
@@ -107,87 +77,29 @@ ol {
   padding-left: 0;
 }
 
-ol > li {
+[data-complexity-preference^="III"] ol > li {
   flex-grow: 1;
   flex-basis: calc((var(--threshold) - 100%) * 999);
   position: relative;
   font-size: var(--step--1);
 }
-ol > li::before {
+[data-complexity-preference^="III"] ol > li::before {
   counter-increment: items;
   content: counter(items);
   font-weight: bold;
   display: block;
   color: var(--color-dark-accent);
-  border-bottom: var(--border-thick) solid var(--color-dark-accent);
+  border-bottom: var(--border-thick) solid var(--color-dark-accent, currentColor);
   padding-bottom: var(--space-2xs);
   margin-bottom: var(--space-2xs);
 }
-ol > li:nth-child(n + 4),
-ol > li:nth-child(n + 4) ~ * {
+[data-complexity-preference^="III"] ol > li:nth-child(n + 4),
+[data-complexity-preference^="III"] ol > li:nth-child(n + 4) ~ * {
   /* Switch to a vertical configuration if there are more than 4 child elements */
   flex-basis: 100%;
 }
 
-blockquote {
-  border-left: var(--border-thick) solid var(--color-dark);
-  background-color: var(--color-light-accent);
-  padding: var(--space-2xs) var(--space-s);
-  width: fit-content;
-}
 
-
-
-.measured-container {
-  max-width: var(--measure);
-  width: 100%;
-  /* margin-left: auto;
-  margin-right: auto; */
-}
-
-:where(button, a):where(:not(:active)):focus-visible {
-  outline-offset: var(--outline-offset, 5px);
-}
-
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-}
-
-input,
-select,
-textarea {
-  min-height: var(--controls-minimum-height);
-  padding-left: var(--space-2xs);
-  padding-right: var(--space-2xs);
-  border: var(--border-thick) solid;
-  border-color: var(--color-dark-accent);
-  border-radius: var(--border-radius);
-  width: 100%;
-}
-
-pre {
-  background-color: var(--color-light-accent);
-  padding: var(--space-2xs);
-  margin: var(--space-2xs) 0 var(--space-s);
-  border-radius: var(--border-radius);
-  overflow: auto;
-  display: flex;
-}
-
-code {
-  font-family: var(--font-monospace);
-  font-size: var(--step--1);
-  padding: calc(var(--space-2xs) * 0.75) var(--space-2xs);
-  border-radius: 5px;
-  background-color: var(--color-light-accent);
-}
-
-pre code {
-  padding: 0;
-  border: none;
-  background-color: var(--color-light-accent);
+[data-complexity-preference^="III"] output{
+  display: block;
 }

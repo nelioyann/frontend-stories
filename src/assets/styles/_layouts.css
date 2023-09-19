@@ -1,5 +1,5 @@
 /*----------  Box Layout  ----------*/
-[data-layout~="box"] {
+[data-complexity-preference^="III"] [data-layout~="box"] {
   --padding: var(--space-s);
   display: block;
   padding-top: var(--padding, var(--space-s));
@@ -12,22 +12,16 @@
   outline: var(--border-width) transparent;
   outline-offset: calc(var(--border-width) * -1);
 }
-/* [data-layout~="box"] */
-[data-props~="invert"] {
-  color: var(--color-light);
-  background-color: var(--color-dark);
-}
-
 
 /* Slice credits: https://www.sarasoueidan.com/ */
-[data-layout~="slice"] {
+[data-complexity-preference^="III"] [data-layout~="slice"] {
   padding-top: var(--space-xs-3xl, 1rem);
   padding-bottom: var(--space-xs-3xl, 1rem);
 }
 
 /*----------  Center Layout  ----------*/
 
-[data-layout~="center"] {
+[data-complexity-preference^="III"] [data-layout~="center"] {
   box-sizing: content-box;
   max-width: var(--measure);
   margin-left: auto;
@@ -35,41 +29,41 @@
   padding-left: var(--padding, var(--space-s));
   padding-right: var(--padding, var(--space-s));
 }
-[data-layout~="center"][data-props~="andText"] {
+[data-complexity-preference^="III"] [data-layout~="center"][data-props~="andText"] {
   text-align: center;
 }
 /* Allows centering of a child element */
-[data-layout~="center"][data-props~="intrinsic"] {
+[data-complexity-preference^="III"] [data-layout~="center"][data-props~="intrinsic"] {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 /*----------  Stack Layout  ----------*/
-[data-layout~="stack"] {
+[data-complexity-preference^="III"] [data-layout~="stack"] {
   /* --space: 1em; */
   display: flex;
   flex-direction: column;
   justify-content: var(--vertical-alignment, flex-start);
   align-items: var(--horizontal-alignment, center);
 }
-[data-layout~="stack"] > * {
+[data-complexity-preference^="III"] [data-layout~="stack"] > * {
   margin-top: 0;
   margin-bottom: 0;
 }
-[data-layout~="stack"] > :only-child {
+[data-complexity-preference^="III"] [data-layout~="stack"] > :only-child {
   height: 100%;
 }
-[data-layout~="stack"][data-props~="recursive"] * + *,
-[data-layout~="stack"]:not([data-props~="recursive"]) > * + * {
+[data-complexity-preference^="III"] [data-layout~="stack"][data-props~="recursive"] * + *,
+[data-complexity-preference^="III"] [data-layout~="stack"]:not([data-props~="recursive"]) > * + * {
   margin-top: var(--stack-space, 1.25em);
 }
-[data-layout~="stack"] > [data-props~="split"] {
+[data-complexity-preference^="III"] [data-layout~="stack"] > [data-props~="split"] {
   margin-bottom: auto;
 }
 
 /*----------  CLUSTER Layout   ----------*/
-[data-layout~="cluster"] {
+[data-complexity-preference^="III"] [data-layout~="cluster"] {
   /* --space: var(--space-s);  */
   display: flex;
   flex-wrap: wrap;
@@ -79,7 +73,7 @@
 }
 
 /*----------  Sidebar   ----------*/
-[data-layout~="with-sidebar"] {
+[data-complexity-preference^="III"] [data-layout~="with-sidebar"] {
   display: flex;
   flex-wrap: wrap;
   gap: 0 var(--space, var(--space-s)); /* */
@@ -88,14 +82,14 @@
 }
 
 /* Sidebar */
-[data-layout~="with-sidebar"][data-props~="side:left"] > :nth-child(1),
-[data-layout~="with-sidebar"][data-props~="side:right"] > :nth-child(2) {
+[data-complexity-preference^="III"] [data-layout~="with-sidebar"][data-props~="side:left"] > :nth-child(1),
+[data-complexity-preference^="III"] [data-layout~="with-sidebar"][data-props~="side:right"] > :nth-child(2) {
   /** sideWidth Represents the width of the sidebar adjacent. If not set ( ) it defaults to the sidebar's content width */
   flex-basis: var(--side-width, auto);
   flex-grow: 1;
 }
-[data-layout~="with-sidebar"][data-props~="side:left"] > :nth-child(2),
-[data-layout~="with-sidebar"][data-props~="side:right"] > :nth-child(1) {
+[data-complexity-preference^="III"] [data-layout~="with-sidebar"][data-props~="side:left"] > :nth-child(2),
+[data-complexity-preference^="III"] [data-layout~="with-sidebar"][data-props~="side:right"] > :nth-child(1) {
   flex-basis: 0;
   flex-grow: 999;
   /**  contentMin A CSS value. The minimum width of the content element in the horizontal configuration. Prefer % values */
@@ -103,7 +97,7 @@
 }
 
 /*----------  Switcher  ----------*/
-[data-layout~="switcher"] {
+[data-complexity-preference^="III"] [data-layout~="switcher"] {
   --space: var(--space-s);
   --threshold: 30rem;
   display: flex;
@@ -112,35 +106,35 @@
   justify-content: var(--horizontal-alignment, flex-start);
   align-items: var(--vertical-alignment, center);
 }
-[data-layout~="switcher"] > * {
+[data-complexity-preference^="III"] [data-layout~="switcher"] > * {
   flex-grow: 1;
   flex-basis: calc((var(--threshold) - 100%) * 999);
 }
-[data-layout~="switcher"] > :nth-child(n + 5),
-[data-layout~="switcher"] > :nth-child(n + 5) ~ * {
+[data-complexity-preference^="III"] [data-layout~="switcher"] > :nth-child(n + 5),
+[data-complexity-preference^="III"] [data-layout~="switcher"] > :nth-child(n + 5) ~ * {
   /* Switch to a vertical configuration if there are more than 4 child elements */
   flex-basis: 100%;
 }
 
 /* The Icon */
-[data-layout~="icon"] {
+[data-complexity-preference^="III"] [data-layout~="icon"] {
   height: var(--icon-size, 0.75em);
   height: 1cap;
   width: var(--icon-size, 0.75em);
   width: 1cap;
 }
-[data-layout~="with-icon"] {
+[data-complexity-preference^="III"] [data-layout~="with-icon"] {
   display: inline-flex;
   align-items: baseline;
   justify-content: var(--horizontal-alignment, flex-start);
   align-items: var(--vertical-alignment, baseline);
 }
-[data-layout~="with-icon"] [data-layout~="icon"] {
+[data-complexity-preference^="III"] [data-layout~="with-icon"] [data-layout~="icon"] {
   margin-right: var(--space, var(--space-xs));
 }
 
 /* THE GRID */
-[data-layout~="grid"] {
+[data-complexity-preference^="III"] [data-layout~="grid"] {
   --grid-min-item-size: 20rem;
   --grid-placement: auto-fill;
   display: grid;
@@ -152,7 +146,7 @@
 }
 
 @supports (width: min(var(--grid-min-item-size), 100%)) {
-  [data-layout~="grid"] {
+  [data-complexity-preference^="III"] [data-layout~="grid"] {
     grid-template-columns: repeat(
       var(--grid-placement),
       minmax(min(var(--grid-min-item-size), 100%), 1fr)
@@ -161,7 +155,7 @@
 }
 
 /* The Reel */
-[data-layout~="reel"] {
+[data-complexity-preference^="III"] [data-layout~="reel"] {
   --space: var(--space-s);
   --threshold: 30rem;
   display: flex;
@@ -171,36 +165,56 @@
   border-style: solid;
   border-width: var(--border-thick, 2px);
 }
-[data-layout~="reel"][data-props~="overflowing"] {
+[data-complexity-preference^="III"] [data-layout~="reel"][data-props~="overflowing"] {
   padding: var(--space, var(--space-s));
 }
-[data-layout~="reel"][data-props~="overflowing:noBar"] {
+[data-complexity-preference^="III"] [data-layout~="reel"][data-props~="overflowing:noBar"] {
   scrollbar-width: none;
 }
 
-[data-layout~="reel"] > img {
+[data-complexity-preference^="III"] [data-layout~="reel"] > img {
   height: 100% ;
   flex-basis: auto ;
   width: auto;
 }
-[data-layout~="reel"] > * {
+[data-complexity-preference^="III"] [data-layout~="reel"] > * {
   flex: 0 0 var(--reel-item-width, 25ch);
   margin: var(--reel-item-margin, var(--space-s));
 }
-[data-layout~="reel"] > * + * {
+[data-complexity-preference^="III"] [data-layout~="reel"] > * + * {
   margin-left: var(--space, var(--space-s));
 }
-[data-layout~="reel"]::after{
+[data-complexity-preference^="III"] [data-layout~="reel"]::after{
   content: "";
   flex-basis: var(--space-s, 0.25rem);
   flex-shrink: 0;
 }
-[data-layout~="reel"] > *:only-child {
+[data-complexity-preference^="III"] [data-layout~="reel"] > *:only-child {
   flex-grow: 1;
 }
 
-[data-layout~="switcher"] > *,
-[data-layout~="cluster"] > *,
+[data-complexity-preference^="III"] [data-layout~="switcher"] > *,
+[data-complexity-preference^="III"] [data-layout~="cluster"] > *,
 ol > li  {
   --stack-space: 0;
+}
+
+
+[data-complexity-preference^="III"] .measured-container {
+  max-width: var(--measure);
+  width: 100%;
+}
+
+
+/**
+ *
+ * COLORS
+ *
+ */
+
+
+
+[data-complexity-preference^="IIII"] [data-props~="invert"] {
+  color: var(--color-light);
+  background-color: var(--color-dark);
 }

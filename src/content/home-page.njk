@@ -13,9 +13,11 @@ eleventyComputed:
     description: "{{meta.site_description}} Home - {{currentCategory}}"
     eleventyNavigation:
         key: "{{currentCategory}}"
-        title: "{{currentCategory}}"
+        title: "{{'Home' if currentCategory == 'All' else currentCategory}}"
 ---
-
+<h1 class="visually-hidden">
+    {{ "All entries" if currentCategory == 'All' else currentCategory }}
+</h1>
 <nav class="categories-navigation" aria-labelledby="Navigate by topics">
     <ul role="list" data-layout="cluster" data-props="noPad">
         {%- for category in collections.categoriesAndAll %}
@@ -27,9 +29,7 @@ eleventyComputed:
         {% endfor -%}
     </ul>
 </nav>
-<h1 class="visually-hidden">
-    {{ "Latest" if currentCategory == 'All' else currentCategory }}
-</h1>
+
 <ul  data-layout="stack" data-props="recursive" role="list" >
     {%- set entries = collections.stories | filterByCategory(currentCategory) | limit(50) -%}
     {%- for entry in entries %}

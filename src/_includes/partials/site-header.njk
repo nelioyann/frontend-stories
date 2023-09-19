@@ -1,15 +1,11 @@
-<header data-layout="cluster" data-props="y:center x:between">
+<header data-layout="cluster" data-props="y:center">
     <a data-font="sans-serif" data-props="y:center" data-button="text" href="/">
         <span>{{ meta.site_name }}</span>
     </a>
-    <ul role="list" data-layout="cluster">
-        <li>
-            <a data-button="text" href="/about">About</a>
-        </li>
-        <li>
-            <a data-button="text" href="/feed.xml">RSS</a>
-        </li>
-    </ul>
-    {% include "partials/site-theme-toggle.njk" %}
-
+    <aside data-layout="cluster" data-props="y:center">
+        {# <a data-button="link" href="/about">About</a> #}
+        <a data-button="link" href="/preferences">Preferences</a>
+        <a data-button="link" href="/style-guide">Style Guide</a>
+        {% include "partials/site-theme-toggle.njk" %}
+    </aside>
 </header>
