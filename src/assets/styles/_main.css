@@ -111,11 +111,3 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 
 
 
-html,
-html *,
-html *:before,
-html *:after {
-  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1) !important;
-  transition-delay: 0 !important;
-}
-

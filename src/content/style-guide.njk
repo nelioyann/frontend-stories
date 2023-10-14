@@ -11,7 +11,15 @@ eleventyNavigation:
   parent: All
 ---
 
-
+<style>
+  html,
+  html *,
+  html *:before,
+  html *:after {
+    transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+    transition-delay: 0 !important;
+  }
+</style>
 <h1>
   Style Guide
 </h1>
@@ -21,7 +29,7 @@ eleventyNavigation:
     Guide</a>.
 </p>
 <aside style="position: sticky; top: 0; background-color: var(--color-light, white); z-index: 1;">
-{% include "partials/preference-complexity.njk"%}
+  {% include "partials/preference-complexity.njk"%}
 </aside>
 <b>
   Table of Contents
@@ -204,6 +212,8 @@ eleventyNavigation:
   </p>
   <hr>
     <p>
-      This is made possible by using an `svg` as the background of the <code>hr</code> tag.
+      This is made possible by using an `svg` as the background of the
+      <code>hr</code>
+      tag.
     </p>
-</section>
+  </section>

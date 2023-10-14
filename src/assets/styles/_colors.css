@@ -8,15 +8,15 @@
     var(--primary-saturation),
     var(--primary-lightness)
   );
-  --color-light: #ece1cb;
-  --color-light-accent: hsl(32, 35%, 80%);
+  --color-light: #fffcf2;
+  --color-light-accent: hsl(32, 35%, 88%);
   --color-dark-accent: #735d43;
   --color-dark: #433523;
 
   --color-focus: var(--color-dark);
   --color-focus-shadow: var(--color-dark-accent);
 
-  --color-visited: hsl(273 32% 47%);
+  --color-visited: #31068f;
 
   --shadow-color: 240deg 2% 66%;
   --shadow-elevation-low: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
@@ -26,7 +26,7 @@
   --text-color: var(--color-dark);
   --color-hover: var(--color-light-accent);
 
-  --border-radius: 0.25rem;
+  --border-radius: 0;
 
   --bezier-snappy: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --bezier-swift: cubic-bezier(0.175, 0.885, 0.32, 1.275);
