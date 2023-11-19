@@ -8,7 +8,8 @@
     "start:dev": "set ELEVENTY_ENV=development & eleventy --serve",
     "a11y": "evaluatory --sitemap http://localhost:8080/sitemap.xml",
     "notion": "node ./notion.js",
-    "test": "node -v"
+    "test": "node -v",
+    "clean": "rimraf _site && npm run start"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-navigation": "^0.3.4",
-    "@11ty/eleventy-plugin-rss": "^1.2.0"
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "rimraf": "^5.0.5"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^2.0.1",

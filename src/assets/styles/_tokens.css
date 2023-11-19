@@ -34,7 +34,7 @@
   --space-xs-3xl: clamp(0.75rem, calc(-1.25rem + 10.00vw), 6.25rem);
 
 
-  --measure: 80ch;
+  --measure: 70ch;
 
   --border-thin: 0.5px;
   --border-thick: 4px;

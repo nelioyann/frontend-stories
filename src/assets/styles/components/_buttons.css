@@ -50,9 +50,10 @@
   --button-padding-y: 0;
 }
 [data-complexity-preference^="IIIII"] :is([data-button~="text"], [data-button~="link"]) {
-  --button-padding-x: 0;
+  --button-padding-x: 2px;
+  --button-padding-y: 1px;
   --button-border-width: 0;
-  --button-border-radius: 0;
+  /* --button-border-radius: 0; */
   --button-display: inline;
   --button-line-height: 1.5;
 }
@@ -61,8 +62,7 @@
 }
 
 [data-complexity-preference^="IIIII"] :is([data-button~="active"], [data-button]:active) {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  --button-text-decoration: underline;
 }
 
 /**
