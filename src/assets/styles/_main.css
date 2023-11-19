@@ -67,10 +67,9 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
   pointer-events: none;
 }
 [data-complexity-preference^="IIIIII"] [data-heading~="anchor"] a::after {
-  content: "#";
-  text-decoration: underline;
+  content: "¶";
+  font-weight: normal;
   filter: var(--font-emoji-filter);
-  font-size: 0.75em;
   padding-left: var(--space-2xs); /* to make the "#" a bigger target */
   padding-right: var(--space-2xs);
   pointer-events: auto;

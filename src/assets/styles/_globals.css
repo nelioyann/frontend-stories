@@ -81,7 +81,6 @@ body {
   flex-grow: 1;
   flex-basis: calc((var(--threshold) - 100%) * 999);
   position: relative;
-  font-size: var(--step--1);
 }
 [data-complexity-preference^="III"] ol > li::before {
   counter-increment: items;
