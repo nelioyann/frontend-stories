@@ -47,10 +47,11 @@ body {
 
 [data-complexity-preference^="II"] :is(ul, ol, menu) {
   max-width: var(--list-measure, var(--measure));
+  padding-left: var(--padding, initial);
+  list-style-position: inside;
 }
 [data-complexity-preference^="II"] :is(ul[role="list"], ol[role="list"]) {
   list-style: none;
-  padding-left: var(--padding, initial);
   --list-measure: initial;
 }
 
