@@ -196,9 +196,9 @@
     {
         "id": "6fdacd63-da3a-40c0-a6b6-50d3599a4c20",
         "cover": "https://images.unsplash.com/photo-1573046171778-f6506436ec62",
-        "notion_url": "https://www.notion.so/Marking-Required-Form-fields-6fdacd63da3a40c0a6b650d3599a4c20",
+        "notion_url": "https://www.notion.so/Avoid-marking-required-fields-with-an-asterisk-6fdacd63da3a40c0a6b650d3599a4c20",
         "icon": "✳️",
-        "edited": "2023-11-19T18:34:00.000Z",
+        "edited": "2023-11-21T06:47:00.000Z",
         "created": "2023-01-31T12:55:00.000Z",
         "description": "Required fields are essential for providing accurate and complete information. Yet, marking them can be tedious and time-consuming. Let’s explore the pros and cons of marking required fields.",
         "references": [
@@ -239,7 +239,7 @@
             "color": "pink"
         },
         "slugs": "required-fields-asterisk",
-        "name": "Marking Required Form fields",
+        "name": "Avoid marking required fields with an asterisk ",
         "markdownContent": "\nAssuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.” (ADG)\n\n\n> “The implications for industry are quite profound. The single most important  \n> message is to mandate fewer fields. More mandatory fields mean less voluntary data disclosure whatever the sensitivity of a data item. Optional fields yield a good data return. A company that wants to extract many details should use optional fields but not highlight them. When users are unsure whether a field is optional or mandatory, users would rather fill in a field than skip it.” (Preibush, 2012)\n\n\n> “In our user tests, a majority of users will assume an empty text field is actually mandatory and expect an input to be made. So much so that we even recommend you to not use asterisks * to indicate mandatory fields, and instead mark optional fields as “optional”. (Axess Lab, 2023)\n\n"
     },
     {
@@ -298,9 +298,9 @@
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d",
-        "notion_url": "https://www.notion.so/Leverage-Page-Load-Time-728073c284d043d58a4403c7f479d72a",
+        "notion_url": "https://www.notion.so/Page-load-times-induce-frustration-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
-        "edited": "2023-11-19T19:13:00.000Z",
+        "edited": "2023-11-28T12:25:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
         "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user.",
         "references": [
@@ -321,8 +321,8 @@
             "color": "green"
         },
         "slugs": "how-long-users-can-wait",
-        "name": "Leverage Page Load Time",
-        "markdownContent": "\nPage load time is how long it takes for all content on a webpage to appear. Studies show **users are willing to wait 2-10 seconds**. Slow pages often cause frustration and longer load times than we tolerate (10.3 secs on desktop, 27.3 secs on mobile). Reducing load times is not always easy, so **feedback is another solution to maintain user experience**. This allows transparency into the process and gives an estimation of waiting time, allowing users to do other activities while waiting.\n\n1. Faster pages are perceived as more interesting than slower pages.\n2. When loading feedback is provided, it reaches 10 seconds.\n3. Tolerable waiting time for a page to load is about 2 seconds.\n\n> The results suggest that the presence of feedback prolongs Web users’ tolerable waiting time and the tolerable waiting time for information retrieval is approximately 2 seconds. (Nah, [2004](https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f))\n\n\n> Pages which were retrieved faster were judged significantly more interesting than their slower counterparts. (Ramsay, [1998](https://academic.oup.com/iwc/article-abstract/10/1/77/913206))\n\n"
+        "name": "Page load times induce frustration",
+        "markdownContent": "\nPage load time is how long it takes for all content on a webpage to appear. Studies show **users are willing to wait 2-10 seconds**. Slow pages often cause frustration and longer load times than we tolerate (10.3 secs on desktop, 27.3 secs on mobile). \n\n1. Faster pages are perceived as more interesting than slower pages.\n2. Tolerable waiting time for a page to load is about 2 seconds.\n3. When loading feedback is provided, it reaches 10 seconds.\n\n> The results suggest that the presence of feedback prolongs Web users’ tolerable waiting time and the tolerable waiting time for information retrieval is approximately 2 seconds. (Nah, [2004](https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f))\n\n\n> Pages which were retrieved faster were judged significantly more interesting than their slower counterparts. (Ramsay, [1998](https://academic.oup.com/iwc/article-abstract/10/1/77/913206))\n\n\nReducing load times is not always easy, so **feedback is another solution to maintain user experience**. This allows transparency into the process and gives an estimation of waiting time, allowing users to do other activities while waiting.\n\n"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
