@@ -98,8 +98,6 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 
 [data-complexity-preference^="IIII"][data-visited-preference="true"] .headline-text {
   color: var(--color-dark);
-  font-family: var(--font-sans-serif);
-  font-weight: 600;
   margin-right: var(--space-2xs);
   display: inline;
 }

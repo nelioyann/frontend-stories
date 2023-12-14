@@ -1,9 +1,11 @@
 <article>
-    <a class="headline-entry" itemprop="url" data-button="link" href="/{{ entry.slug }}" data-icon="{{entry.icon}}">
+    <a class="headline-entry" data-font="sans-serif" itemprop="url" data-button="link" href="/{{ entry.slug }}" data-icon="{{entry.icon}}">
         <span aria-hidden="true">
             {{entry.icon}}
         </span>
-        {{ entry.name }}
+        <b>
+            {{ entry.name }}
+        </b>
     </a>
     <p>
         {{entry.excerpt}}
