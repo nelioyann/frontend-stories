@@ -1,7 +1,7 @@
 /* [data-complexity-preference^="IIII"] * {
   color: inherit;
 } */
-html[data-complexity-preference^="IIIIII"] {
+html[data-complexity-preference^="IIIII"] {
   scroll-behavior : smooth;
 }
 

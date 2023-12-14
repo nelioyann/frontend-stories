@@ -20,10 +20,10 @@
   padding-block: var(--space-l);
 }
 
-[data-complexity-preference^="IIIIII"] body > header a[href="/"] {
+[data-complexity-preference^="IIIII"] body > header a[href="/"] {
   --button-display: flex;
 }
-[data-complexity-preference^="IIIIII"] body > header > a[href="/"]::before {
+[data-complexity-preference^="IIIII"] body > header > a[href="/"]::before {
   content: "";
   background-size: contain;
   background-repeat: no-repeat;
@@ -34,7 +34,7 @@
   display: inline-block;
 }
 
-[data-complexity-preference^="IIIIII"] hr {
+[data-complexity-preference^="IIIII"] hr {
   height: 1em;
   width: 100%;
   border: none;
@@ -49,24 +49,24 @@
 inspiration: https://codepen.io/thierry/pen/qBqYmgw
 =============================================*/
 
-[data-complexity-preference^="IIIIII"] [data-heading~="anchor"] {
+[data-complexity-preference^="IIIII"] [data-heading~="anchor"] {
   scroll-margin-top: var(--header-height);
   transform: translateX(0);
   /* transition: transform var(--transition-duration, 300ms) var(--bezier-snappy); */
 }
-[data-complexity-preference^="IIIIII"] [data-heading~="anchor"]:target {
+[data-complexity-preference^="IIIII"] [data-heading~="anchor"]:target {
   outline: var(--border-thin) solid var(--color-dark-accent);
   outline-offset: var(--space-2xs);
 }
-[data-complexity-preference^="IIIIII"] [data-heading~="anchor"]:target a::after {
+[data-complexity-preference^="IIIII"] [data-heading~="anchor"]:target a::after {
   text-decoration: none;
 }
 
-[data-complexity-preference^="IIIIII"] [data-heading~="anchor"] a {
+[data-complexity-preference^="IIIII"] [data-heading~="anchor"] a {
   text-decoration: none;
   pointer-events: none;
 }
-[data-complexity-preference^="IIIIII"] [data-heading~="anchor"] a::after {
+[data-complexity-preference^="IIIII"] [data-heading~="anchor"] a::after {
   content: "¶";
   font-weight: normal;
   filter: var(--font-emoji-filter);

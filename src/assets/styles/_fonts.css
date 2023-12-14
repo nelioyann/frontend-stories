@@ -24,7 +24,7 @@
     "Baskerville", "Droid Serif", "Times", "Source Serif Pro", serif;
   --font-monospace: "Menlo", "Consolas", "Monaco", "Liberation Mono",
     "Lucida Console", monospace;
-  --font-emoji-filter: sepia(1) saturate(2) grayscale(0.5)
+  --font-emoji-filter: saturate(2) grayscale(0.9)
     hue-rotate(calc(var(--primary-hue) * 1deg - 50deg));
 }
 
@@ -36,4 +36,7 @@
 }
 [data-font="sans-serif"] {
   font-family: var(--font-sans-serif);
+}
+[data-font="monospace"] {
+  font-family: var(--font-monospace);
 }

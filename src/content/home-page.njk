@@ -29,11 +29,35 @@ eleventyComputed:
     {% endfor -%}
 </nav> #}
 <section data-layout="stack">
-    <h1 data-heading="5">
+    <h1 data-heading="5" class="visually-hidden">
         {{ "All entries" if currentCategory == 'All' else 'Entries tagged with: '+currentCategory }}
     </h1>
-        {%- set entries = collections.stories | filterByCategory(currentCategory) | limit(50) -%}
-        {%- for entry in entries %}
-            {% include "partials/story-card-entry.njk" %}
-        {% endfor -%}
+    {%- set entries = collections.stories | filterByCategory(currentCategory) | limit(50) -%}
+    {%- for entry in entries %}
+        {% include "partials/story-card-entry.njk" %}
+    {% endfor -%}
 </section>
+<hr/>
+<footer data-layout="stack">
+    <h2 data-heading="4">Website settings (Experimental)</h2>
+    <aside>
+        <details>
+            <summary data-font="sans-serif">
+                <b>Levels of complexity</b>
+            </summary>
+            {% include "partials/preference-complexity.njk" %}
+        </details>
+        <details>
+            <summary data-font="sans-serif">
+                <b>Theme</b>
+            </summary>
+            {% include "partials/preference-color-scheme.njk" %}
+        </details>
+        <details>
+            <summary data-font="sans-serif">
+                <b>Visited Stories</b>
+            </summary>
+            {% include "partials/preference-link-visited.njk" %}
+        </details>
+    </aside>
+</footer>
