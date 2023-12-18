@@ -2,9 +2,9 @@
     {
         "id": "a1043815-b340-41d4-888b-9271bf10e94b",
         "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
-        "notion_url": "https://www.notion.so/Importance-of-Copywriting-a1043815b34041d4888b9271bf10e94b",
+        "notion_url": "https://www.notion.so/Effective-copywriting-improves-usability-a1043815b34041d4888b9271bf10e94b",
         "icon": "📝",
-        "edited": "2023-08-27T22:29:00.000Z",
+        "edited": "2023-12-17T22:06:00.000Z",
         "created": "2023-02-01T23:06:00.000Z",
         "description": "Website copy is the core text that narrates visitors through your website and tells them what they need to know about a brand or the site.",
         "references": [
@@ -25,15 +25,15 @@
             "color": "default"
         },
         "slugs": "webpages-copy-writing-guidelines",
-        "name": "Importance of Copywriting",
+        "name": "Effective copywriting improves usability",
         "markdownContent": "\nAccording to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n\nOn the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. Researchers cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n\nRecommendation for writing copy text outlined in this study:\n\n- Remove small details.\n- Add tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Remove commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\nMain takeaways\n\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
     },
     {
         "id": "31f53350-2f61-41b2-b803-f5ceb2e99139",
         "cover": "https://images.unsplash.com/photo-1551730459-398260e2d0ed",
-        "notion_url": "https://www.notion.so/Color-Contrast-and-Readability-31f533502f6141b2b803f5ceb2e99139",
+        "notion_url": "https://www.notion.so/Good-color-contrast-improves-readability-31f533502f6141b2b803f5ceb2e99139",
         "icon": "📖",
-        "edited": "2023-11-19T19:05:00.000Z",
+        "edited": "2023-12-17T21:56:00.000Z",
         "created": "2023-02-01T23:03:00.000Z",
         "description": "By using appropriate colors combination you can improve user experience and readability.",
         "references": [
@@ -41,6 +41,11 @@
                 "citation": "Richard H Hall & Patrick Hanna (2004) The impact of web page text-background colour combinations on readability, retention, aesthetics and behavioural intention, Behaviour & Information Technology, 23:3, 183-195",
                 "url": "https://www.tandfonline.com/doi/full/10.1080/01449290410001669932",
                 "name": "The impact of web page text-background colour combinations on readability, retention, aesthetics and behavioural intention: Behaviour & Information Technology: Vol 23, No 3"
+            },
+            {
+                "citation": "Contrast (Minimum) | WAI | W3C",
+                "url": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html#benefits",
+                "name": "Understanding Success Criterion: Contrast (Minimum) | WAI | W3C"
             }
         ],
         "category": {
@@ -49,15 +54,15 @@
             "color": "default"
         },
         "slugs": "contrasts-and-readability ",
-        "name": "Color Contrast and Readability",
-        "markdownContent": "\nThe core findings of [the study](https://www.tandfonline.com/doi/full/10.1080/01449290410001669932) are that **colors with a greater contrast ratio generally result in more readable text**, that there is no significant difference in retention based on color combination, and that **preferred colors (such as blues and chromatic colors) lead to a higher rating of aesthetic quality** and intention to purchase.\n\n\nThe article states that for educational sites, where retention and readability are a major concern, black on white or a closely related combination of text should be used. This is because black and white have a high contrast ratio and because white on black text is less common. \n\n\nThe text also states that for commercial sites, where aesthetic and purchasing behavior factors are a major concern, chromatic (colored) text/background combinations should be used. \n\n\nThat’s because they are more likely to lead the viewer to see a site as more visually pleasing and stimulating. Most importantly, these colors are more likely to lead a viewer to the intention to purchase products advertised on the site.\n\n"
+        "name": "Good color contrast improves readability",
+        "markdownContent": "\n> Major findings were: **Colours with greater contrast ratio generally lead to greater readability**; colour combination did not significantly affect retention; (c) preferred colours (i.e., blues and chromatic colours) led to higher ratings of aesthetic quality and intention to purchase (Source: [Hall, 2004](https://www.tandfonline.com/doi/full/10.1080/01449290410001669932))\n\n\n> People with low vision often have difficulty reading text that does not contrast with its background. This can be exacerbated if the person has a color vision deficiency that lowers the contrast even further. Providing a minimum luminance contrast ratio between the text and its background can make the text more readable even if the person does not see the full range of colors. It also works for the rare individuals who see no color. (Source: [WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))\n\n"
     },
     {
         "id": "322c97d2-723e-4741-99ef-8b4086ea38ab",
         "cover": "https://images.unsplash.com/photo-1601137176664-638517a123fe",
-        "notion_url": "https://www.notion.so/Risks-with-Unicode-Characters-322c97d2723e474199ef8b4086ea38ab",
+        "notion_url": "https://www.notion.so/Special-characters-impact-accessibility-322c97d2723e474199ef8b4086ea38ab",
         "icon": "🔣",
-        "edited": "2023-11-19T19:16:00.000Z",
+        "edited": "2023-12-17T22:12:00.000Z",
         "created": "2023-02-01T23:01:00.000Z",
         "description": "Writing online? Avoid using Unicode characters in your posts. Standard characters ensure everyone can read your message and make your content accessible.",
         "references": [
@@ -78,8 +83,8 @@
             "color": "pink"
         },
         "slugs": "avoid-unicode-characters",
-        "name": "Risks with Unicode Characters",
-        "markdownContent": "\nBy avoiding special characters from Unicode, you can ensure that your content is easy to read for all users, regardless of the device they are using. Additionally, screen readers may have difficulty recognizing special characters, making them inaccessible to those using assistive technology. \n\n"
+        "name": "S",
+        "markdownContent": "\n> Screen readers read out what’s on the screen. They turn the text on screen into speech. But screen readers treat special characters differently to the standard alphabet. This can cause issues as assistive technologies cannot always ‘read’ them. Sometimes they will skip them altogether. (Source: [Holly Tuke for Scope, 2021](https://business.scope.org.uk/article/accessibility-screen-readers-special-characters-and-unicode-symbols#The_problem_with_special_characters_and_accessibility))\n\n\nBy avoiding special characters from Unicode, you can ensure that your content is easy to read for all users, regardless of the device they are using. Additionally, screen readers may have difficulty recognizing special characters, making them inaccessible to those using assistive technology. \n\n"
     },
     {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
@@ -152,9 +157,9 @@
     {
         "id": "592c4c91-84c5-4273-9a24-eb155e53e43a",
         "cover": "https://images.unsplash.com/photo-1566416548759-caf7a5ef3c57",
-        "notion_url": "https://www.notion.so/Text-alternatives-for-everyone-592c4c9184c542739a24eb155e53e43a",
+        "notion_url": "https://www.notion.so/Providing-text-alternatives-help-everyone-592c4c9184c542739a24eb155e53e43a",
         "icon": "🈂️",
-        "edited": "2023-11-19T19:02:00.000Z",
+        "edited": "2023-12-17T22:17:00.000Z",
         "created": "2023-01-31T13:14:00.000Z",
         "description": "Everyone should have equal access to content online. Text alternatives help make this a reality by ensuring everyone can understand and interact with digital content, regardless of their ability.",
         "references": [
@@ -174,6 +179,11 @@
                 "name": "Web Content Accessibility Guidelines (WCAG) 2.0"
             },
             {
+                "citation": "The A11Y Project, 2013",
+                "url": "https://www.a11yproject.com/posts/alt-text/",
+                "name": "Quick tip: Using alt text properly - The A11Y Project"
+            },
+            {
                 "citation": "Zoltan Kollin, Medium, 2015",
                 "url": "https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570",
                 "name": "Misused mobile UX patterns. If you are an experienced designer, you… "
@@ -190,8 +200,8 @@
             "color": "pink"
         },
         "slugs": "provide-alt-text",
-        "name": "Text alternatives for everyone",
-        "markdownContent": "\nIcons should only be used if their message is completely clear to everyone. Adding text labels instead can help to improve clarity.\n\n\n\n> Icons should be simple, easy to understand, and consistent. Icons almost always require familiarity in order to be useful. Across cultures and languages, they can be misinterpreted. In many cases, adjacent text is helpful. (WebAim, [2020](https://webaim.org/techniques/images/#icons))\n\n\n> Don’t use an icon if its meaning isn’t a 100% clear to everyone. When in doubt, skip the icon. Reside to simple copy. A text label is always clearer. (Thomas Byttebier, [2015](https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label))\n\n\n> Basic functionality can be effectively represented by icons but for complex features, text labels should be used. And if you use icons, always have them usability tested. (Zoltan Kollin, [2015](https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570))\n\n"
+        "name": "Providing text alternatives help everyone",
+        "markdownContent": "\nIcons should only be used if their message is completely clear to everyone. Adding text labels instead can help to improve clarity. \n\n\nFor screen readers users this provides a comparable experience for consuming the content especially when images are not purerly decorative. For sighted users this ensure that broken images can still have their message conveyed.\n\n\n\n> Icons should be simple, easy to understand, and consistent. Icons almost always require familiarity in order to be useful. Across cultures and languages, they can be misinterpreted. In many cases, adjacent text is helpful. (WebAim, [2020](https://webaim.org/techniques/images/#icons))\n\n\n> Don’t use an icon if its meaning isn’t a 100% clear to everyone. When in doubt, skip the icon. Reside to simple copy. A text label is always clearer. (Thomas Byttebier, [2015](https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label))\n\n\n> Basic functionality can be effectively represented by icons but for complex features, text labels should be used. And if you use icons, always have them usability tested. (Zoltan Kollin, [2015](https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570))\n\n"
     },
     {
         "id": "6fdacd63-da3a-40c0-a6b6-50d3599a4c20",
@@ -274,9 +284,9 @@
     {
         "id": "2601b3b7-ba19-4d70-ab8f-3bb15a1c2d2d",
         "cover": "https://images.unsplash.com/photo-1594321120041-00d204971461",
-        "notion_url": "https://www.notion.so/Scanning-Long-Content-2601b3b7ba194d70ab8f3bb15a1c2d2d",
+        "notion_url": "https://www.notion.so/Pagination-helps-with-scanning-Long-content-2601b3b7ba194d70ab8f3bb15a1c2d2d",
         "icon": "🔎",
-        "edited": "2023-11-19T19:15:00.000Z",
+        "edited": "2023-12-17T21:52:00.000Z",
         "created": "2023-01-31T12:27:00.000Z",
         "description": "This document examines the differences between paging and scrolling as methods of presenting search results, and evaluates which is the best approach for users.",
         "references": [
@@ -292,15 +302,15 @@
             "color": "red"
         },
         "slugs": "paging-or-scrolling-information",
-        "name": "Scanning Long Content",
+        "name": "Pagination helps with scanning Long content",
         "markdownContent": "\nStudies have found that shorter documents that require more paging tend to be superior in both performance and preference to longer pages that require more scrolling. \n\n\n> Web designers are constantly confronted with the problem of displaying large amounts of information in confined spaces. To deal with this designers usually have two options, either present the information on one long scrolling page or divide it into smaller amounts on multiple web pages. (Bernard, [2002](https://www.researchgate.net/publication/242537467_Paging_vs_Scrolling_Looking_for_the_Best_Way_to_Present_Search_Results))\n\n"
     },
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d",
-        "notion_url": "https://www.notion.so/Page-load-times-induce-frustration-728073c284d043d58a4403c7f479d72a",
+        "notion_url": "https://www.notion.so/Long-page-load-times-induce-frustration-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
-        "edited": "2023-11-28T12:25:00.000Z",
+        "edited": "2023-12-17T21:50:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
         "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user.",
         "references": [
@@ -321,15 +331,15 @@
             "color": "green"
         },
         "slugs": "how-long-users-can-wait",
-        "name": "Page load times induce frustration",
+        "name": "Long page load times induce frustration",
         "markdownContent": "\nPage load time is how long it takes for all content on a webpage to appear. Studies show **users are willing to wait 2-10 seconds**. Slow pages often cause frustration and longer load times than we tolerate (10.3 secs on desktop, 27.3 secs on mobile). \n\n1. Faster pages are perceived as more interesting than slower pages.\n2. Tolerable waiting time for a page to load is about 2 seconds.\n3. When loading feedback is provided, it reaches 10 seconds.\n\n> The results suggest that the presence of feedback prolongs Web users’ tolerable waiting time and the tolerable waiting time for information retrieval is approximately 2 seconds. (Nah, [2004](https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f))\n\n\n> Pages which were retrieved faster were judged significantly more interesting than their slower counterparts. (Ramsay, [1998](https://academic.oup.com/iwc/article-abstract/10/1/77/913206))\n\n\nReducing load times is not always easy, so **feedback is another solution to maintain user experience**. This allows transparency into the process and gives an estimation of waiting time, allowing users to do other activities while waiting.\n\n"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1",
-        "notion_url": "https://www.notion.so/Prefer-User-Friendly-Error-Messages-af855c922a3b45ceb4ea0a8156daf7b9",
+        "notion_url": "https://www.notion.so/Friendly-error-messages-provide-a-pleasant-interaction-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
-        "edited": "2023-11-19T19:14:00.000Z",
+        "edited": "2023-12-17T21:49:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
         "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface’s response may fall somewhere between a \"friendly apology\" or a generic uninformative response.",
         "references": [
@@ -355,7 +365,7 @@
             "color": "green"
         },
         "slugs": "when-computers-apologize",
-        "name": "Prefer User-Friendly Error Messages",
+        "name": "Friendly error messages provide a pleasant interaction",
         "markdownContent": "\nWhen a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface’s response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that **users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback** (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n"
     },
     {
