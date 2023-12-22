@@ -83,7 +83,7 @@
             "color": "pink"
         },
         "slugs": "avoid-unicode-characters",
-        "name": "S",
+        "name": "Special characters impact accessibility",
         "markdownContent": "\n> Screen readers read out what’s on the screen. They turn the text on screen into speech. But screen readers treat special characters differently to the standard alphabet. This can cause issues as assistive technologies cannot always ‘read’ them. Sometimes they will skip them altogether. (Source: [Holly Tuke for Scope, 2021](https://business.scope.org.uk/article/accessibility-screen-readers-special-characters-and-unicode-symbols#The_problem_with_special_characters_and_accessibility))\n\n\nBy avoiding special characters from Unicode, you can ensure that your content is easy to read for all users, regardless of the device they are using. Additionally, screen readers may have difficulty recognizing special characters, making them inaccessible to those using assistive technology. \n\n"
     },
     {
