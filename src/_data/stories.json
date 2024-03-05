@@ -62,7 +62,7 @@
         "cover": "https://images.unsplash.com/photo-1601137176664-638517a123fe",
         "notion_url": "https://www.notion.so/Special-characters-impact-accessibility-322c97d2723e474199ef8b4086ea38ab",
         "icon": "🔣",
-        "edited": "2023-12-17T22:12:00.000Z",
+        "edited": "2023-12-22T13:57:00.000Z",
         "created": "2023-02-01T23:01:00.000Z",
         "description": "Writing online? Avoid using Unicode characters in your posts. Standard characters ensure everyone can read your message and make your content accessible.",
         "references": [
@@ -83,7 +83,7 @@
             "color": "pink"
         },
         "slugs": "avoid-unicode-characters",
-        "name": "Special characters impact accessibility",
+        "name": "Sp",
         "markdownContent": "\n> Screen readers read out what’s on the screen. They turn the text on screen into speech. But screen readers treat special characters differently to the standard alphabet. This can cause issues as assistive technologies cannot always ‘read’ them. Sometimes they will skip them altogether. (Source: [Holly Tuke for Scope, 2021](https://business.scope.org.uk/article/accessibility-screen-readers-special-characters-and-unicode-symbols#The_problem_with_special_characters_and_accessibility))\n\n\nBy avoiding special characters from Unicode, you can ensure that your content is easy to read for all users, regardless of the device they are using. Additionally, screen readers may have difficulty recognizing special characters, making them inaccessible to those using assistive technology. \n\n"
     },
     {
