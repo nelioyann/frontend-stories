@@ -37,27 +37,3 @@ eleventyComputed:
         {% include "partials/story-card-entry.njk" %}
     {% endfor -%}
 </section>
-<hr/>
-<footer data-layout="stack">
-    <h2 data-heading="4">Website settings (Experimental)</h2>
-    <aside>
-        <details>
-            <summary data-font="sans-serif">
-                <b>Levels of complexity</b>
-            </summary>
-            {% include "partials/preference-complexity.njk" %}
-        </details>
-        <details>
-            <summary data-font="sans-serif">
-                <b>Theme</b>
-            </summary>
-            {% include "partials/preference-color-scheme.njk" %}
-        </details>
-        <details>
-            <summary data-font="sans-serif">
-                <b>Visited Stories</b>
-            </summary>
-            {% include "partials/preference-link-visited.njk" %}
-        </details>
-    </aside>
-</footer>

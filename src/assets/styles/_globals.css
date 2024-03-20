@@ -1,12 +1,10 @@
-/* [data-complexity-preference^="IIII"] * {
-  color: inherit;
-} */
+
 html[data-complexity-preference^="IIIII"] {
   scroll-behavior : smooth;
 }
 
 body {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans-serif);
   font-size: var(--step-0);
   background-color: var(--color-light);
   color: var(--color-dark);

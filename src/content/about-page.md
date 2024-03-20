@@ -31,6 +31,8 @@ This project is maintained by [Yannick Nana](https://yannicknana.fr).
 Email me</a>
 <a data-button="outline" href="/feed.xml">RSS Feed</a>
 <a data-button="outline" href="/preferences">Preferences</a>
+<a data-button="outline" href="/style-guide">Style Guide</a>
+
 <p>
 Powered by Notion + Eleventy + GitHub + Netlify + Coffee
 </p>
