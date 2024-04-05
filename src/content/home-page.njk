@@ -16,18 +16,9 @@ eleventyComputed:
         title: "{{'Home' if currentCategory == 'All' else currentCategory}}"
 ---
 
-{# <nav  class="categories-navigation" data-layout="cluster" aria-labelledby="Navigate by topics">
-    <strong data-font="sans-serif">Browse by topics:</strong>
-    {%- for category in collections.categoriesAndAll %}
-        {% set category_url = '' if category == 'All' else category | slugify %}
-        {% set category_count = collections.stories | filterByCategory(category) | length %}
-        {% set isActive = 'active noHover' if currentCategory == category %}
-        <a rel="tag" data-props="x:center" href="/{{ category_url }}">
-            <span aria-hidden>#</span>{{ 'All' if category == 'All' else category }} 
-            <span>({{ category_count }})</span>
-            </a>
-    {% endfor -%}
-</nav> #}
+<i>
+    Frontend Stories aims to provide you with accessible research data, facts, quotes, and articles about frontend development.
+</i>
 <section data-layout="stack">
     <h1 data-heading="5" class="visually-hidden">
         {{ "All entries" if currentCategory == 'All' else 'Entries tagged with: '+currentCategory }}

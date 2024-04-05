@@ -2,3 +2,4 @@ node_modules
 evaluatory-results
 .env
 _site
+src/_data/stories.json
