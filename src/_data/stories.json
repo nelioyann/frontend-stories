@@ -2,9 +2,9 @@
     {
         "id": "a1043815-b340-41d4-888b-9271bf10e94b",
         "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
-        "notion_url": "https://www.notion.so/Effective-copywriting-improves-usability-a1043815b34041d4888b9271bf10e94b",
+        "notion_url": "https://www.notion.so/Copywriting-a1043815b34041d4888b9271bf10e94b",
         "icon": "📝",
-        "edited": "2023-12-17T22:06:00.000Z",
+        "edited": "2024-04-04T21:27:00.000Z",
         "created": "2023-02-01T23:06:00.000Z",
         "description": "Website copy is the core text that narrates visitors through your website and tells them what they need to know about a brand or the site.",
         "references": [
@@ -25,15 +25,15 @@
             "color": "default"
         },
         "slugs": "webpages-copy-writing-guidelines",
-        "name": "Effective copywriting improves usability",
-        "markdownContent": "\nAccording to research, web users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n\nOn the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n\nThe study found that making web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. Researchers cut the text by 54%, and users still found the shorter version more complete. The study also found that task errors were reduced when users didn't have to wade through long blocks of text.\n\n\nRecommendation for writing copy text outlined in this study:\n\n- Remove small details.\n- Add tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Remove commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\nMain takeaways\n\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
+        "name": "Copywriting",
+        "markdownContent": "\nAccording to research, users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n\nOn the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n\nMaking web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. **Researchers cut the text by 54%, and users still found the shorter version more complete.** The study also found that task errors were reduced when users didn't have to go through long blocks of text.\n\n\nRecommendation for writing copy text outlined in this study:\n\n- Remove small details.\n- Add tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Remove commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\nMain takeaways\n\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
     },
     {
         "id": "31f53350-2f61-41b2-b803-f5ceb2e99139",
         "cover": "https://images.unsplash.com/photo-1551730459-398260e2d0ed",
-        "notion_url": "https://www.notion.so/Good-color-contrast-improves-readability-31f533502f6141b2b803f5ceb2e99139",
+        "notion_url": "https://www.notion.so/Color-31f533502f6141b2b803f5ceb2e99139",
         "icon": "📖",
-        "edited": "2023-12-17T21:56:00.000Z",
+        "edited": "2024-04-05T03:46:00.000Z",
         "created": "2023-02-01T23:03:00.000Z",
         "description": "By using appropriate colors combination you can improve user experience and readability.",
         "references": [
@@ -54,15 +54,15 @@
             "color": "default"
         },
         "slugs": "contrasts-and-readability ",
-        "name": "Good color contrast improves readability",
+        "name": "Color",
         "markdownContent": "\n> Major findings were: **Colours with greater contrast ratio generally lead to greater readability**; colour combination did not significantly affect retention; (c) preferred colours (i.e., blues and chromatic colours) led to higher ratings of aesthetic quality and intention to purchase (Source: [Hall, 2004](https://www.tandfonline.com/doi/full/10.1080/01449290410001669932))\n\n\n> People with low vision often have difficulty reading text that does not contrast with its background. This can be exacerbated if the person has a color vision deficiency that lowers the contrast even further. Providing a minimum luminance contrast ratio between the text and its background can make the text more readable even if the person does not see the full range of colors. It also works for the rare individuals who see no color. (Source: [WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))\n\n"
     },
     {
         "id": "322c97d2-723e-4741-99ef-8b4086ea38ab",
         "cover": "https://images.unsplash.com/photo-1601137176664-638517a123fe",
-        "notion_url": "https://www.notion.so/Special-characters-impact-accessibility-322c97d2723e474199ef8b4086ea38ab",
+        "notion_url": "https://www.notion.so/Special-Characters-322c97d2723e474199ef8b4086ea38ab",
         "icon": "🔣",
-        "edited": "2023-12-17T22:12:00.000Z",
+        "edited": "2024-04-04T21:31:00.000Z",
         "created": "2023-02-01T23:01:00.000Z",
         "description": "Writing online? Avoid using Unicode characters in your posts. Standard characters ensure everyone can read your message and make your content accessible.",
         "references": [
@@ -70,6 +70,11 @@
                 "citation": "Twitter, @kentcdodds, 2019",
                 "url": "https://twitter.com/kentcdodds/status/1083073242330361856",
                 "name": "Kent C. Dodds on unicode characters"
+            },
+            {
+                "citation": "Sophie Ragas on Eleven Ways, 2023",
+                "url": "https://elevenways.be/en/articles/screenreaders-special-characters?utm_source=cassidoo&utm_medium=email&utm_campaign=all-we-have-to-decide-is-what-to-do-with-the-time-1254",
+                "name": "How screen readers read special characters"
             },
             {
                 "citation": "Stéphanie Walter, 2018",
@@ -83,15 +88,15 @@
             "color": "pink"
         },
         "slugs": "avoid-unicode-characters",
-        "name": "Special characters impact accessibility",
+        "name": "Special Characters",
         "markdownContent": "\n> Screen readers read out what’s on the screen. They turn the text on screen into speech. But screen readers treat special characters differently to the standard alphabet. This can cause issues as assistive technologies cannot always ‘read’ them. Sometimes they will skip them altogether. (Source: [Holly Tuke for Scope, 2021](https://business.scope.org.uk/article/accessibility-screen-readers-special-characters-and-unicode-symbols#The_problem_with_special_characters_and_accessibility))\n\n\nBy avoiding special characters from Unicode, you can ensure that your content is easy to read for all users, regardless of the device they are using. Additionally, screen readers may have difficulty recognizing special characters, making them inaccessible to those using assistive technology. \n\n"
     },
     {
         "id": "eae8ae69-c025-46d6-8d12-7de14c71ded5",
         "cover": "https://images.unsplash.com/photo-1584983085273-503dfa5a7ac3",
-        "notion_url": "https://www.notion.so/Breadcrumbs-and-Exploration-eae8ae69c02546d68d127de14c71ded5",
+        "notion_url": "https://www.notion.so/Breadcrumbs-eae8ae69c02546d68d127de14c71ded5",
         "icon": "🧭",
-        "edited": "2023-11-19T19:16:00.000Z",
+        "edited": "2024-04-04T21:25:00.000Z",
         "created": "2023-02-01T22:56:00.000Z",
         "description": "Help users easily navigate your website by using breadcrumbs. Make the most of them and see how they can improve the user experience.",
         "references": [
@@ -112,15 +117,15 @@
             "color": "yellow"
         },
         "slugs": "do-users-use-breadcrumbs",
-        "name": "Breadcrumbs and Exploration",
+        "name": "Breadcrumbs",
         "markdownContent": "\nBreadcrumbs are small textual representations of your location in the structure of a site. Often present at the top of blog pages, they are useful for quickly figuring out the page current relation to the website. Research have shown that less than half users actively use breadcrumbs.\n\n\nInside an online shop you could discover a breadcrumbs such as the following:\n\n\n`Home > Furniture > Chairs > Leather Chairs`\n\n\nIt provides the following advantages:\n\n- information to the user about where they are in the site\n- shortcut links that allow users to \"jump\" to previous categories in the sequence without using the Return key.\n1. Less than half of users use the breadcrumb trail to navigate a website.\n2. Most users reported that they noticed its presence.\n3. Being taught about the usefulness of breadcrumb trails led to increased usage\n"
     },
     {
         "id": "cffcf983-42c5-4f3e-986e-5af360b4c946",
         "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
-        "notion_url": "https://www.notion.so/Radio-buttons-or-checkboxes-cffcf98342c54f3e986e5af360b4c946",
+        "notion_url": "https://www.notion.so/Radio-Buttons-vs-Checkboxes-cffcf98342c54f3e986e5af360b4c946",
         "icon": "📻",
-        "edited": "2023-11-19T18:51:00.000Z",
+        "edited": "2024-04-05T03:46:00.000Z",
         "created": "2023-02-01T22:50:00.000Z",
         "description": "Radio and checkbox inputs are a fundamental part of modern web forms. By understanding how users perceive them, designers can create better user experiences.",
         "references": [
@@ -151,15 +156,15 @@
             "color": "pink"
         },
         "slugs": "checkboxes-or-radio-buttons",
-        "name": "Radio buttons or checkboxes",
+        "name": "Radio Buttons vs Checkboxes",
         "markdownContent": "\nCheckboxes and radio controls are a type of input element used to make a choice between several options. These controls are often used in online forms where their actual meaning may be unclear yet they may trigger a distinctive interpretation.\n\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.\n\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time.\n\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” by Jeremy Keith (Resilient Web Design)\n\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".\n\n"
     },
     {
         "id": "592c4c91-84c5-4273-9a24-eb155e53e43a",
         "cover": "https://images.unsplash.com/photo-1566416548759-caf7a5ef3c57",
-        "notion_url": "https://www.notion.so/Providing-text-alternatives-help-everyone-592c4c9184c542739a24eb155e53e43a",
+        "notion_url": "https://www.notion.so/Text-Alternatives-592c4c9184c542739a24eb155e53e43a",
         "icon": "🈂️",
-        "edited": "2023-12-17T22:17:00.000Z",
+        "edited": "2024-04-05T04:45:00.000Z",
         "created": "2023-01-31T13:14:00.000Z",
         "description": "Everyone should have equal access to content online. Text alternatives help make this a reality by ensuring everyone can understand and interact with digital content, regardless of their ability.",
         "references": [
@@ -200,15 +205,15 @@
             "color": "pink"
         },
         "slugs": "provide-alt-text",
-        "name": "Providing text alternatives help everyone",
-        "markdownContent": "\nIcons should only be used if their message is completely clear to everyone. Adding text labels instead can help to improve clarity. \n\n\nFor screen readers users this provides a comparable experience for consuming the content especially when images are not purerly decorative. For sighted users this ensure that broken images can still have their message conveyed.\n\n\n\n> Icons should be simple, easy to understand, and consistent. Icons almost always require familiarity in order to be useful. Across cultures and languages, they can be misinterpreted. In many cases, adjacent text is helpful. (WebAim, [2020](https://webaim.org/techniques/images/#icons))\n\n\n> Don’t use an icon if its meaning isn’t a 100% clear to everyone. When in doubt, skip the icon. Reside to simple copy. A text label is always clearer. (Thomas Byttebier, [2015](https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label))\n\n\n> Basic functionality can be effectively represented by icons but for complex features, text labels should be used. And if you use icons, always have them usability tested. (Zoltan Kollin, [2015](https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570))\n\n"
+        "name": "Text Alternatives",
+        "markdownContent": "\nIcons should only be used if their message is completely clear to everyone. Adding text labels instead can help to improve clarity.\n\n\nFor screen readers users this provides a [comparable experience](https://www.tpgi.com/inclusive-design-principle-provide-a-comparable-experience/) for consuming the content especially when images are not purely decorative. And for sighted users this ensures that broken images can still have their message conveyed.\n\n\n\n> Icons should be simple, easy to understand, and consistent. Icons almost always require familiarity in order to be useful. Across cultures and languages, they can be misinterpreted. In many cases, adjacent text is helpful. (WebAim, [2020](https://webaim.org/techniques/images/#icons))\n\n\n> Don’t use an icon if its meaning isn’t a 100% clear to everyone. When in doubt, skip the icon. Reside to simple copy. A text label is always clearer. (Thomas Byttebier, [2015](https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label))\n\n\n> Basic functionality can be effectively represented by icons but for complex features, text labels should be used. And if you use icons, always have them usability tested. (Zoltan Kollin, [2015](https://medium.com/@kollinz/misused-mobile-ux-patterns-84d2b6930570))\n\n"
     },
     {
         "id": "6fdacd63-da3a-40c0-a6b6-50d3599a4c20",
         "cover": "https://images.unsplash.com/photo-1573046171778-f6506436ec62",
-        "notion_url": "https://www.notion.so/Avoid-marking-required-fields-with-an-asterisk-6fdacd63da3a40c0a6b650d3599a4c20",
+        "notion_url": "https://www.notion.so/Required-Fields-6fdacd63da3a40c0a6b650d3599a4c20",
         "icon": "✳️",
-        "edited": "2023-11-21T06:47:00.000Z",
+        "edited": "2024-04-05T04:42:00.000Z",
         "created": "2023-01-31T12:55:00.000Z",
         "description": "Required fields are essential for providing accurate and complete information. Yet, marking them can be tedious and time-consuming. Let’s explore the pros and cons of marking required fields.",
         "references": [
@@ -249,15 +254,15 @@
             "color": "pink"
         },
         "slugs": "required-fields-asterisk",
-        "name": "Avoid marking required fields with an asterisk ",
-        "markdownContent": "\nAssuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.” (ADG)\n\n\n> “The implications for industry are quite profound. The single most important  \n> message is to mandate fewer fields. More mandatory fields mean less voluntary data disclosure whatever the sensitivity of a data item. Optional fields yield a good data return. A company that wants to extract many details should use optional fields but not highlight them. When users are unsure whether a field is optional or mandatory, users would rather fill in a field than skip it.” (Preibush, 2012)\n\n\n> “In our user tests, a majority of users will assume an empty text field is actually mandatory and expect an input to be made. So much so that we even recommend you to not use asterisks * to indicate mandatory fields, and instead mark optional fields as “optional”. (Axess Lab, 2023)\n\n"
+        "name": "Required Fields",
+        "markdownContent": "\nAssuming a form only ask for information it requires, it would make better sense to highlight behavior that go against that idea; which are optional fields. Avoiding the asterisk can also remove the ambiguity of asterisks.\n\n\n\n> \"Literally including the phrase “optional” after a label is much clearer than any visual symbol you could use to mean the same thing. Someone may always wonder 'what does this asterisk mean?' and have to go hunting for a legend that explains things.” (Luke Wroblewski)\n\n\n> ”While visual users usually see both the asterisk and the explanation at a glance and can connect them with each other intuitively, screen reader users have to manually search for the asterisk's purpose.” (ADG)\n\n\n> “The implications for industry are quite profound. The single most important message is to mandate fewer fields. More mandatory fields mean less voluntary data disclosure whatever the sensitivity of a data item. Optional fields yield a good data return. A company that wants to extract many details should use optional fields but not highlight them. When users are unsure whether a field is optional or mandatory, users would rather fill in a field than skip it.” (Preibush, 2012)\n\n\n> “In our user tests, a majority of users will assume an empty text field is actually mandatory and expect an input to be made. So much so that we even recommend you to not use asterisks * to indicate mandatory fields, and instead mark optional fields as “optional”. (Axess Lab, 2023)\n\n"
     },
     {
         "id": "c0e2023f-9395-4f2e-84da-b5b709767163",
         "cover": "https://images.unsplash.com/photo-1532630571098-79a3d222b00d",
-        "notion_url": "https://www.notion.so/Placeholders-are-problematic-c0e2023f93954f2e84dab5b709767163",
+        "notion_url": "https://www.notion.so/Placeholders-c0e2023f93954f2e84dab5b709767163",
         "icon": "🔤",
-        "edited": "2023-11-19T19:03:00.000Z",
+        "edited": "2024-04-04T21:25:00.000Z",
         "created": "2023-01-31T12:49:00.000Z",
         "description": "Placeholder text can be a great way to speed up form completion, but it can also have a downside. This article looks at the effects of placeholder text on user accuracy when filling out forms.",
         "references": [
@@ -265,6 +270,11 @@
                 "citation": "UXmatters, 2010",
                 "url": "https://www.uxmatters.com/mt/archives/2010/03/dont-put-hints-inside-text-boxes-in-web-forms.php",
                 "name": "Don’t Put Hints Inside Text Boxes in Web Forms"
+            },
+            {
+                "citation": "Daniel Berryhill, 2024",
+                "url": "https://uxdesign.cc/stop-using-placeholders-3b9f362a50d8",
+                "name": "Why you should stop using placeholders in text boxes"
             },
             {
                 "citation": "Mozilla, MDN Docs",
@@ -278,15 +288,15 @@
             "color": "pink"
         },
         "slugs": "placeholders-for-hint-text",
-        "name": "Placeholders are problematic",
+        "name": "Placeholders",
         "markdownContent": "\nPlaceholder text can cause users to forget what they need to type in, or to think that a certain field is not required. Additionally, the text is often low contrast making it difficult to read.\n\n\n\n> The placeholder attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text must not include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is \"First Name\", a suitable placeholder might be \"e.g. Mustafa\".Note: The placeholder attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. (MDN)\n\n"
     },
     {
         "id": "2601b3b7-ba19-4d70-ab8f-3bb15a1c2d2d",
         "cover": "https://images.unsplash.com/photo-1594321120041-00d204971461",
-        "notion_url": "https://www.notion.so/Pagination-helps-with-scanning-Long-content-2601b3b7ba194d70ab8f3bb15a1c2d2d",
+        "notion_url": "https://www.notion.so/Scanning-Content-2601b3b7ba194d70ab8f3bb15a1c2d2d",
         "icon": "🔎",
-        "edited": "2023-12-17T21:52:00.000Z",
+        "edited": "2024-04-05T03:42:00.000Z",
         "created": "2023-01-31T12:27:00.000Z",
         "description": "This document examines the differences between paging and scrolling as methods of presenting search results, and evaluates which is the best approach for users.",
         "references": [
@@ -302,15 +312,15 @@
             "color": "red"
         },
         "slugs": "paging-or-scrolling-information",
-        "name": "Pagination helps with scanning Long content",
+        "name": "Scanning Content",
         "markdownContent": "\nStudies have found that shorter documents that require more paging tend to be superior in both performance and preference to longer pages that require more scrolling. \n\n\n> Web designers are constantly confronted with the problem of displaying large amounts of information in confined spaces. To deal with this designers usually have two options, either present the information on one long scrolling page or divide it into smaller amounts on multiple web pages. (Bernard, [2002](https://www.researchgate.net/publication/242537467_Paging_vs_Scrolling_Looking_for_the_Best_Way_to_Present_Search_Results))\n\n"
     },
     {
         "id": "728073c2-84d0-43d5-8a44-03c7f479d72a",
         "cover": "https://images.unsplash.com/photo-1607434472257-d9f8e57a643d",
-        "notion_url": "https://www.notion.so/Long-page-load-times-induce-frustration-728073c284d043d58a4403c7f479d72a",
+        "notion_url": "https://www.notion.so/Page-Speed-728073c284d043d58a4403c7f479d72a",
         "icon": "⏳",
-        "edited": "2023-12-17T21:50:00.000Z",
+        "edited": "2024-04-05T04:48:00.000Z",
         "created": "2022-07-21T23:10:00.000Z",
         "description": "Page load time is the time it takes to display all the content on a web page. In some cases, these load times can be significantly long and induce frustration to the end user.",
         "references": [
@@ -318,6 +328,11 @@
                 "citation": "Nah, F. F. H. (2004). \"A study on tolerable waiting time: how long are Web users willing to wait?\" ",
                 "url": "https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f",
                 "name": "A study on tolerable waiting time: how long are Web users willing to wait?"
+            },
+            {
+                "citation": "Carl J. Pearson Phd, 2024",
+                "url": "https://carljpearson.com/can-longer-task-times-for-users-be-a-good-thing/",
+                "name": "Can longer task times for users be a good thing?"
             },
             {
                 "citation": "Ramsay, J., Barbesi, A. and Preece, J., 1998, A psychological investigation of long retrieval times on the world wide web. Interacting with Computer",
@@ -331,15 +346,15 @@
             "color": "green"
         },
         "slugs": "how-long-users-can-wait",
-        "name": "Long page load times induce frustration",
-        "markdownContent": "\nPage load time is how long it takes for all content on a webpage to appear. Studies show **users are willing to wait 2-10 seconds**. Slow pages often cause frustration and longer load times than we tolerate (10.3 secs on desktop, 27.3 secs on mobile). \n\n1. Faster pages are perceived as more interesting than slower pages.\n2. Tolerable waiting time for a page to load is about 2 seconds.\n3. When loading feedback is provided, it reaches 10 seconds.\n\n> The results suggest that the presence of feedback prolongs Web users’ tolerable waiting time and the tolerable waiting time for information retrieval is approximately 2 seconds. (Nah, [2004](https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f))\n\n\n> Pages which were retrieved faster were judged significantly more interesting than their slower counterparts. (Ramsay, [1998](https://academic.oup.com/iwc/article-abstract/10/1/77/913206))\n\n\nReducing load times is not always easy, so **feedback is another solution to maintain user experience**. This allows transparency into the process and gives an estimation of waiting time, allowing users to do other activities while waiting.\n\n"
+        "name": "Page Speed",
+        "markdownContent": "\nPage load time is how long it takes for all content on a webpage to appear. Studies show **users are willing to wait 2-10 seconds**. Slow pages often cause frustration and longer load times than we tolerate (10.3 secs on desktop, 27.3 secs on mobile). \n\n\n> The results suggest that the presence of feedback prolongs Web users’ tolerable waiting time and the tolerable waiting time for information retrieval is approximately 2 seconds. (Nah, [2004](https://www.researchgate.net/publication/240624333_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Citation_Nah_F_2004_A_study_on_tolerable_waiting_time_how_long_are_Web_users_willing_to_wait_Behaviour_Information_Technology_f))\n\n\n> Pages which were retrieved faster were judged significantly more interesting than their slower counterparts. (Ramsay, [1998](https://academic.oup.com/iwc/article-abstract/10/1/77/913206))\n\n\nReducing load times is not always easy, so feedback is another solution to maintain user experience. This allows transparency into the process and gives an estimation of waiting time, allowing users to do other activities while waiting.\n\n1. Faster pages are perceived as more interesting than slower pages.\n2. Tolerable waiting time for a page to load is about 2 seconds.\n3. When loading feedback is provided, it reaches 10 seconds.\n"
     },
     {
         "id": "af855c92-2a3b-45ce-b4ea-0a8156daf7b9",
         "cover": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1",
-        "notion_url": "https://www.notion.so/Friendly-error-messages-provide-a-pleasant-interaction-af855c922a3b45ceb4ea0a8156daf7b9",
+        "notion_url": "https://www.notion.so/Error-Messages-af855c922a3b45ceb4ea0a8156daf7b9",
         "icon": "🤖",
-        "edited": "2023-12-17T21:49:00.000Z",
+        "edited": "2024-04-05T04:49:00.000Z",
         "created": "2022-07-21T23:07:00.000Z",
         "description": "When a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface’s response may fall somewhere between a \"friendly apology\" or a generic uninformative response.",
         "references": [
@@ -347,6 +362,11 @@
                 "citation": "Jeng-Yi Tzeng. 2004. Toward a more civilized design: studying the effects of computers that apologize. Int. J. Hum.-Comput. Stud. 61, 3 (September 2004), 319–345.",
                 "url": "https://doi.org/10.1016/j.ijhcs.2004.01.002",
                 "name": "Toward a more civilized design: studying the effects of computers that apologize"
+            },
+            {
+                "citation": "Baymard Institute",
+                "url": "https://baymard.com/blog/adaptive-validation-error-messages",
+                "name": "Improve Validation Errors with Adaptive Messages"
             },
             {
                 "citation": "B.J. Fogg, and C. Nass. “Silicon Sycophans: The Effects of Computers That Flatter.”International Journal of Human-Computer Studies",
@@ -365,15 +385,15 @@
             "color": "green"
         },
         "slugs": "when-computers-apologize",
-        "name": "Friendly error messages provide a pleasant interaction",
-        "markdownContent": "\nWhen a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface’s response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that **users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback** (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\n\n\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n"
+        "name": "Error Messages",
+        "markdownContent": "\nWhen a user interacts with an interface in an unintended way, some errors may be generated. In these circumstances, the interface’s response may fall somewhere between a \"friendly apology\" or a generic uninformative response. Are we more tolerant of a computer that apologizes?\n\n\nSome research has shown that users will spend more time interacting with a system that provides emotional responses than with a system that provides generic feedback. For example, Nass showed that **users who received flattery from a computer thought the interaction was more pleasant than users who received generic feedback** (Nass, 1997). Meanwhile, Tzeng found that apologetic responses gave users a better impression of the overall interaction with the system (Tzeng, 2004).\nAccording to WIX, a good error message explains what happened and why, provides reassurance, is empathetic, helps the user fix the issue and gives the user a way out.\n\n\n> Instead of focusing on eliminating errors entirely, sites should ensure that when users encounter an error they are **provided with the information they need** to know specifically what went wrong with their input.  \n> [Baymard Institute](https://baymard.com/blog/adaptive-validation-error-messages)\n\n1. Flattering responses provide a more pleasant interaction than generic messages.\n2. Apologetic responses give users a better impression of the overall interaction.\n"
     },
     {
         "id": "7edbc73c-bef9-4424-8ccc-fa87b8722d64",
         "cover": "https://images.unsplash.com/photo-1591117752671-541f3495dc93",
-        "notion_url": "https://www.notion.so/Benefits-of-a-Visible-Sitemap-7edbc73cbef944248cccfa87b8722d64",
+        "notion_url": "https://www.notion.so/Sitemaps-7edbc73cbef944248cccfa87b8722d64",
         "icon": "🗺️",
-        "edited": "2023-08-28T05:57:00.000Z",
+        "edited": "2024-04-05T05:02:00.000Z",
         "created": "2022-07-21T21:49:00.000Z",
         "description": "Discover how a visible site map can improve user experience on websites by reducing the use of the Back button and aiding navigation.",
         "references": [
@@ -389,7 +409,7 @@
             "color": "yellow"
         },
         "slugs": "sitemap-facilitates-navigation",
-        "name": "Benefits of a Visible Sitemap",
+        "name": "Sitemaps",
         "markdownContent": "\nA sitemap is an overview diagram of a site. It provides information about the pages, videos, and their files on your site. Whether a website provides one is optional, and most websites do not do so. Research shows that including one might improve the browsing experience.\n\n\nSearch engines such as Google understand the structure of websites from the sitemap.\n\n\n\nResearch shows that displaying a sitemap lead users to dig deeper in a site structure, make less use of the browser's Back button, and make navigational movements of great hierarchical distances\n\n"
     }
 ]
