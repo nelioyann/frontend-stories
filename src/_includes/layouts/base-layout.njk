@@ -2,7 +2,9 @@
 <html lang="en" data-complexity-preference="IIIII" data-visited-preference="true" data-theme-preference="light">
     {% include "partials/site-head.njk" %}
     <body>
-        {% include "partials/site-header.njk" %}
+        {% if showHeader %}
+            {% include "partials/site-header.njk" %}
+        {% endif %}
         <main id="main-content"  data-layout="stack center" data-props="x:stretch">
             {% block content %}
                 {{ content | safe }}

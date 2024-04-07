@@ -16,25 +16,28 @@ eleventyComputed:
     eleventyNavigation:
         key: "{{story.id}}"
         title: "{{story.name}}"
-        parent: "{{story.category.name}}"
+        parent: "All"
 ---
 
 {% extends "layouts/story-layout.njk" %}
 {% set story_contribution_url = contribute.tally_url+"?slugs="+story.slugs+"&title="+story.name+"&category="+story.category.name %}
 {% block article %}
-    <header aria-labelledby="headline">
-        <h1 itemprop="headline" id="headline">
-            {{story.name }}
-            </h1>
+    <header class="headline" data-layout="center" data-props="andText intrinsic">
+        <div class="headline-icon" data-heading="1" aria-hidden data-font="emoji">
+            {{ story.icon }}
+        </div>
+        <h1>
+            {{ story.name }}
+        </h1>
+    <p>{{ description }}</p>
     </header>
-    <p>{{description}}</p>
-    <h2 id="summary" data-heading="anchor">
-        <a href="#summary">Overview</a>
-    </h2>
+    {# <h2 id="summary" data-heading="anchor">
+            <a href="#summary">Overview</a>
+        </h2> #}
     {% renderTemplate "md, liquid", story %}
     {{ markdownContent }}
     {% endrenderTemplate %}
-    <h2 id="references" data-heading="anchor">
+    <h2 id="references" data-heading="3 anchor">
         <a href="#references">Evidence and further readings</a>
     </h2>
     <p>Here you can find a list of references to dive deeper on the subject.</p>
@@ -44,35 +47,35 @@ eleventyComputed:
         {% endfor -%}
     </ul>
     {# <h2 id="contribute">
-                <a href="#contribute">Mentions</a>
-            </h2>
-            <p>
-                Share ideas, suggestions, or comments on this entry:
-            </p>
-            <a
-                data-button="outline"
-                data-props="x:center space:s"
-                href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
-                target="_blank">
-                Share on Twitter</a> #}
+                    <a href="#contribute">Mentions</a>
+                </h2>
+                <p>
+                    Share ideas, suggestions, or comments on this entry:
+                </p>
+                <a
+                    data-button="outline"
+                    data-props="x:center space:s"
+                    href="https://twitter.com/intent/tweet?text={{ story.name }}%20via%20@FrontendStories&url={{ meta.site_url }}{{ page.url }}"
+                    target="_blank">
+                    Share on Twitter</a> #}
     {# <h2 id="pagination-nav">
-                <a href="#pagination-nav">Other findings</a>
-            </h2>
-            <p>Explore other entries by order of publication:</p>
-            <nav
-                class="story-pagination-navigation"
-                aria-labelledby="pagination-nav"
-                data-layout="switcher"
-                data-props="x:between y:stretch space:xs">
-                {% if pagination.href.next %}
-                    <a class="next-button" data-button="outline" href="{{ pagination.href.next }}">
-                        {{ pagination.page.next.name }}
-                    </a>
-                {% endif %}
-                {% if pagination.href.previous %}
-                    <a data-button="outline" class="previous-button" href="{{ pagination.href.previous }}">
-                        {{ pagination.page.previous.name }}
-                    </a>
-                {% endif %}
-            </nav> #}
+                    <a href="#pagination-nav">Other findings</a>
+                </h2>
+                <p>Explore other entries by order of publication:</p>
+                <nav
+                    class="story-pagination-navigation"
+                    aria-labelledby="pagination-nav"
+                    data-layout="switcher"
+                    data-props="x:between y:stretch space:xs">
+                    {% if pagination.href.next %}
+                        <a class="next-button" data-button="outline" href="{{ pagination.href.next }}">
+                            {{ pagination.page.next.name }}
+                        </a>
+                    {% endif %}
+                    {% if pagination.href.previous %}
+                        <a data-button="outline" class="previous-button" href="{{ pagination.href.previous }}">
+                            {{ pagination.page.previous.name }}
+                        </a>
+                    {% endif %}
+                </nav> #}
 {% endblock %}

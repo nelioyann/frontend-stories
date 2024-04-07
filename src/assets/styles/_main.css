@@ -105,8 +105,18 @@ inspiration: https://codepen.io/thierry/pen/qBqYmgw
 [data-complexity-preference^="IIII"][data-visited-preference="true"] .headline-entry:visited,
 [data-complexity-preference^="IIII"][data-visited-preference="true"] .headline-entry:visited .headline-text {
   color: var(--color-visited);
-  
 }
 
 
 
+[data-complexity-preference^="IIIII"] .headline {
+  margin-block: var(--space-l);
+}
+[data-complexity-preference^="IIIII"] .headline-icon {
+  padding: var(--space-m);
+  background-color: var(--color-light-accent);
+  border: var(--border-thin) solid var(--color-dark-accent);
+  aspect-ratio: 1;
+  width: fit-content;
+  border-radius: 50%;
+}
