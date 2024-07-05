@@ -1,0 +1,111 @@
+---
+title: Decision Trees
+tags:
+  - webpage
+layout: layouts/nested-page-layout.njk
+permalink: /decision-trees/
+eleventyComputed:
+  description: "An interactive alt Decision Tree"
+  eleventyNavigation:
+    key: Decision Trees
+    parent: All
+---
+
+<h1>An interactive alt Decision Tree</h1>
+
+{# Initial Question #}
+{% set depth = 0 %}
+{% set maxDepth = 6 %}
+{% set leaf = trees.images %}
+{% set options = ["yes", "no"] %}
+
+
+{% for i in range(0, maxDepth) -%}
+  
+{% if leaf.question %}
+{% set depth = i %}
+
+  {# FIELDSET #}
+  <fieldset id="fieldset_{{ depth }}">
+    <legend>{{ leaf.question }}</legend>
+    {% for option in options %}
+      {% if leaf[option] %}
+        <input type="radio" name="control_{{ depth }}" id="control_{{ depth }}_{{ option }}">
+          <label for="control_{{ depth }}_{{ option }}">{{ option }}</label>
+        {% endif %}
+      {% endfor %}
+    </fieldset>
+    {# CONTENT #}
+    {% for option in options %}
+      {% if leaf[option].title %}
+        <h2 class="hide">{{ leaf[option].title }}</h2>
+      {% endif %}
+      {% if leaf[option].conclusions %}
+        <ul id="control_{{ depth }}_{{ option }}_content">
+          {% for conclusion in leaf[option].conclusions %}
+            <li>{{ conclusion }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+    {# Set Up New Leaf #}
+    {% set _leaf = false %}
+    {% for option in options %}
+      {% if leaf[option].question %}{% set _leaf = leaf[option] %}{% endif %}
+    {% endfor %}
+    {% set leaf = _leaf %}
+  {% endif %}
+{%- endfor %}
+
+
+{% macro generateLeafStyles(depth, isLastLeaf) %}
+  /* Depth {{ depth }} */
+
+  {% set nextLeaf = "ul#control_"+depth+"_no_content" if isLastLeaf else "fieldset#fieldset_"+(depth + 1)  %}
+
+  /* If NO not checked, hide the fields */
+  fieldset#fieldset_{{ depth }}:has(#control_{{ depth }}_no:not(:checked)) ~ {{nextLeaf}} {
+    display: none;
+  }
+  /* If YES not checked, hide the list */
+  fieldset#fieldset_{{ depth }}:has(#control_{{ depth }}_yes:not(:checked)) ~ ul#control_{{ depth }}_yes_content {
+    display: none;
+  }
+
+  {% for i in range(depth) %}
+
+  {% if loop.first %}
+    /* If YES checked in prior question, this cannot show */
+  fieldset#fieldset_{{ depth - 1 - i }}:has(#control_{{ depth - 1 - i }}_yes:checked) ~ ul#control_{{ depth }}_yes_content {
+    display: none;
+  }
+  /* If YES checked in prior question, this cannot show */
+  fieldset#fieldset_{{ depth - 1 - i }}:has(#control_{{ depth - 1 - i }}_yes:checked) ~ {{nextLeaf}} {
+    display: none;
+  }
+  {% else %}
+  /* If YES checked in prior - {{i}} question, this cannot show */
+  fieldset#fieldset_{{ depth - 1 - i }}:has(#control_{{ depth - 1 - i }}_yes:checked) ~ {{nextLeaf}} {
+    display: none;
+  }
+  {% endif %}
+
+  {% endfor %}
+{% endmacro %}  
+
+
+{% macro generateDecisionTreeStyles(depth) %}
+  /* Convoluted, but hides only if browser */
+/* supports :has(), ensuring display parity */
+fieldset:has(legend)~h2.hide {
+  display: none;
+}
+  {% for d in range(depth + 1) %}
+    {{generateLeafStyles(d, loop.last)}}
+  {% endfor %}
+{% endmacro %}
+
+
+<style>
+  {{generateDecisionTreeStyles(depth)}}
+</style>
