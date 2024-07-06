@@ -1,8 +1,8 @@
 module.exports = {
     "title": "Interactive alt text",
-    "question": "Does the image contain text?",
+    "question": "Is the button the main call to action?",
     "yes": {
-        "title": "If yes, the image contains text…",
+        "title": "This action is the main call to action…",
         "conclusions": [
             "… and the text is also present as real text nearby. Use an empty alt attribute.",
             "… and the text is only shown for visual effects. Use an empty alt attribute.",

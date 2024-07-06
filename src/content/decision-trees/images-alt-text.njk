@@ -1,0 +1,16 @@
+---
+title: An interactive alt decision tree
+tags:
+  - webpage
+  - decision-tree
+layout: layouts/nested-page-layout.njk
+permalink: /decision-trees/image-alt-text/
+eleventyComputed:
+  eleventyNavigation:
+    key: Decision Trees
+    parent: All
+---
+
+<h1>{{title}}</h1>
+{% set leaf = trees.images %}
+{% include "partials/decision-tree.njk" %}
