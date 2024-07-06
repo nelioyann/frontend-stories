@@ -1,22 +1,7 @@
----
-title: Decision Trees
-tags:
-  - webpage
-layout: layouts/nested-page-layout.njk
-permalink: /decision-trees/
-eleventyComputed:
-  description: "An interactive alt Decision Tree"
-  eleventyNavigation:
-    key: Decision Trees
-    parent: All
----
-
-<h1>An interactive alt Decision Tree</h1>
-
 {# Initial Question #}
 {% set depth = 0 %}
 {% set maxDepth = 6 %}
-{% set leaf = trees.images %}
+{# {% set leaf = trees.images %} #}
 {% set options = ["yes", "no"] %}
 
 
@@ -84,6 +69,10 @@ eleventyComputed:
     display: none;
   }
   {% else %}
+  {# When pevious leaves are set to Yes, hide the current yes&no content #}
+  {# {% set nextLeaf = ":is(ul#control_"+depth+"_no_content, ul#control_"+depth+"_yes_content)" if loop.last else "fieldset#fieldset_"+(depth + 1)  %} #}
+  {% set nextLeaf = ":is(ul#control_"+depth+"_no_content, ul#control_"+depth+"_yes_content, fieldset#fieldset_"+(depth + 1)+")"  %}
+
   /* If YES checked in prior - {{i}} question, this cannot show */
   fieldset#fieldset_{{ depth - 1 - i }}:has(#control_{{ depth - 1 - i }}_yes:checked) ~ {{nextLeaf}} {
     display: none;

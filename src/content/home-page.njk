@@ -17,15 +17,25 @@ eleventyComputed:
         title: "{{'Home' if currentCategory == 'All' else currentCategory}}"
 ---
 
-<i>
-    Frontend Stories aims to provide you with accessible research data, facts, quotes, and articles about frontend development.
-</i>
+<p>
+    Frontend Stories aims to provide you with accessible research data, facts, quotes, and articles about frontend
+    development.
+</p>
 <section data-layout="stack">
-    <h1 data-heading="5" class="visually-hidden">
-        {{ "All entries" if currentCategory == 'All' else 'Entries tagged with: '+currentCategory }}
-    </h1>
+    <h2>
+        {{ "Stories" if currentCategory == 'All' else 'Entries tagged with: '+currentCategory }}
+    </h2>
+    <p>
+        Stories are insights backed by research papers
+    </p>
     {%- set entries = collections.stories | filterByCategory(currentCategory) | limit(50) -%}
     {%- for entry in entries %}
         {% include "partials/story-card-entry.njk" %}
     {% endfor -%}
+
+    <h2>Interactive decision trees</h2>
+    <p>Decision trees are a simple and effective tool for making design choices in user interfaces.</p>
+    <a class="headline-entry" data-heading="6" data-font="sans-serif" itemprop="url" data-button="link" href="/decision-trees/image-alt-text/index.html" data-icon="{{ entry.icon }}">
+        Images Alternative text
+    </a>
 </section>
