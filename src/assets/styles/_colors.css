@@ -9,7 +9,7 @@
     var(--primary-lightness)
   );
 
-  --color-light: #FFFFFF;
+  --color-light: hsl(40, 6%, 86%);
   --color-light-accent: hsl(32, 35%, 80%);
   --color-dark-accent: #735D43;
   --color-dark: hsl(33, 32%, 20%);
