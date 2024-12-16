@@ -3,3 +3,5 @@ evaluatory-results
 .env
 _site
 src/_data/stories.json
+src/content/.DS_Store
+pnpm-lock.yaml

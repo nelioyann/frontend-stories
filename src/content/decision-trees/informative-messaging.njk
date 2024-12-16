@@ -1,0 +1,17 @@
+---
+title: Informative Messaging
+tags:
+  - webpage
+  - decision-tree
+layout: layouts/nested-page-layout.njk
+permalink: /decision-trees/informative-messaging/index.html
+eleventyComputed:
+  eleventyNavigation:
+    key: Informative Messaging
+    parent: All
+---
+
+<h1>{{title}}</h1>
+<i>Uses CSS :has instead of JS for interactivity</i>
+{% set leaf = trees['informative-messaging'] %}
+{% include "partials/decision-tree.njk" %}
