@@ -2,9 +2,9 @@
     {
         "id": "a1043815-b340-41d4-888b-9271bf10e94b",
         "cover": "https://images.unsplash.com/photo-1588287055455-9fb0ca7a2d02",
-        "notion_url": "https://www.notion.so/Copywriting-a1043815b34041d4888b9271bf10e94b",
+        "notion_url": "https://www.notion.so/Microcopy-a1043815b34041d4888b9271bf10e94b",
         "icon": "📝",
-        "edited": "2024-04-04T21:27:00.000Z",
+        "edited": "2024-04-07T22:56:00.000Z",
         "created": "2023-02-01T23:06:00.000Z",
         "description": "Website copy is the core text that narrates visitors through your website and tells them what they need to know about a brand or the site.",
         "references": [
@@ -17,6 +17,11 @@
                 "citation": "Jakob Nielsen, nnGroup, 2008",
                 "url": "https://www.nngroup.com/articles/how-little-do-users-read/",
                 "name": "How Little Do Users Read?"
+            },
+            {
+                "citation": "Nielsen Norman Group",
+                "url": "https://www.nngroup.com/articles/microcontent-how-to-write-headlines-page-titles-and-subject-lines/",
+                "name": "Microcontent: How to Write Headlines, Page Titles, and Subject Lines"
             }
         ],
         "category": {
@@ -25,7 +30,7 @@
             "color": "default"
         },
         "slugs": "webpages-copy-writing-guidelines",
-        "name": "Copywriting",
+        "name": "Microcopy",
         "markdownContent": "\nAccording to research, users generally prefer writing that is concise, easy to scan, and objective rather than promotional in style.\n\n\nWhy does it matter ?\n\n\nOn the web, you have less than 15 seconds to grab somebody's attention when they first arrive on your website. On the average Web page, users have time to read at most 28% of the words during an average visit.\n\n\nMaking web pages more concise had a positive effect on users' performance, satisfaction, and overall usability. **Researchers cut the text by 54%, and users still found the shorter version more complete.** The study also found that task errors were reduced when users didn't have to go through long blocks of text.\n\n\nRecommendation for writing copy text outlined in this study:\n\n- Remove small details.\n- Add tables of contents and section summaries, bullets, numbered lists, bold and colored text to highlight key words, additional headings and shorter paragraphs.\n- Remove commercialism from the text. Adjectives (e.g., \"formidable\" and \"overwhelming\"), buzzwords (e.g., \"paradigm\"), and unsupported claims.\n\nMain takeaways\n\n1. Be short, and use simple language\n2. Write with a clear structure\n3. Provide relevant information\n"
     },
     {
@@ -125,7 +130,7 @@
         "cover": "https://images.unsplash.com/photo-1556009148-ed88760014c4",
         "notion_url": "https://www.notion.so/Radio-Buttons-vs-Checkboxes-cffcf98342c54f3e986e5af360b4c946",
         "icon": "📻",
-        "edited": "2024-04-05T03:46:00.000Z",
+        "edited": "2024-04-18T09:41:00.000Z",
         "created": "2023-02-01T22:50:00.000Z",
         "description": "Radio and checkbox inputs are a fundamental part of modern web forms. By understanding how users perceive them, designers can create better user experiences.",
         "references": [
@@ -133,6 +138,11 @@
                 "citation": "Daniel De Laney, 2015",
                 "url": "http://danieldelaney.net/checkboxes/",
                 "name": "Checkboxes Are Never Round"
+            },
+            {
+                "citation": "In Loving Memory of Square Checkbox, Tonsky 2024",
+                "url": "https://tonsky.me/blog/checkbox/",
+                "name": "In Loving Memory of Square Checkbox @ tonsky.me"
             },
             {
                 "citation": "Laws of UX",
@@ -157,7 +167,7 @@
         },
         "slugs": "checkboxes-or-radio-buttons",
         "name": "Radio Buttons vs Checkboxes",
-        "markdownContent": "\nCheckboxes and radio controls are a type of input element used to make a choice between several options. These controls are often used in online forms where their actual meaning may be unclear yet they may trigger a distinctive interpretation.\n\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.\n\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time.\n\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” by Jeremy Keith (Resilient Web Design)\n\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".\n\n"
+        "markdownContent": "\nCheckboxes and radio controls are a type of input element used to make a choice between several options. These controls are often used in online forms where their actual meaning may be unclear yet they may trigger a distinctive interpretation.\n\n\nCheckboxes are a type of HTML `input` element used to select multiple options.  They can be seen as square boxes for checking the presented options. Checklists for example, known for splitting a complex goal into simple steps, use this exact pattern.\n\n\nRadio buttons on the other hand are used when one option is required out of many options. The name \"radio Buttons\" comes from the **physical buttons used on older radios**. Whenever one button was pressed the previously selected one popped out, leaving only a single pressed button at a time.\n\n\nBoth element have been designed with a real life equivalent in mind to make their usage simple and familiar. That’s why checkboxes are square and radio buttons are round. Their appearance is not just visual, but indicates what can be expected of them. Making a round checkbox would be like naming the \"push\" side of a door \"pull\".\n\n\n> “one material should not be used as a substitute for another, otherwise the end result is deceptive” by Jeremy Keith (Resilient Web Design)\n\n\n> Apple is the first major operating system vendor who had abandoned a four-decades-long tradition. Their new visionOS — **for the first time in the history of Apple — will have round checkboxes**. […] I therefore officially announce 2024 to be the year when the square checkbox has finally died. ([Tonsky, 2024](https://tonsky.me/blog/checkbox/))\n\n"
     },
     {
         "id": "592c4c91-84c5-4273-9a24-eb155e53e43a",
